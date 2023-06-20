@@ -92,5 +92,39 @@ notifications. This device token uniquely identifies an app for a particular dev
 ## Request Authorization
 
 Before starting to push notifications to app, the app must ask for permissions to
-use notifications, basically asking user's consent for 
+use notifications, basically asking user's consent for getting these notifications.
+Consent is required because user might consider notification based interactions as
+disruptions, so permission must be obtained.
 
+To ask for permission one should get shared instance of UNUserNotificationCenter
+and call requestAuthorization(options:completionHandler:) method.
+This requests user's authorization to allow :
+- Local notifications
+- Remote notifications
+
+```
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
+            print("Permission granted: \(granted)")
+        }
+```
+
+### Note
+1. Always request for authorization before registering with Apple Push Notification
+service.
+
+2. Authorization should NOT be blindly requested at app launch, instead it should
+be asked in a context which helps user understand why app needs authorization. It's 
+not necessary or desirable to request for authorization on app launch itself. 
+This ideally should be asked within some relvant context so as to give user more 
+insight of what notification will be like. 
+For e.g. suppose a grocery app let's you add some available coupon codes, so when 
+user adds a coupon that time request can be made telling user that app can notify 
+for coupons when available. This way user will get an understanding of why and how 
+the notification can be helpful to him/her and can take informed decision.
+
+3. First time authorization promp is shown and user's response is recorded, subsequent
+calls for authorization doesn't show prompt again, unless app is deleted from device.
+
+4. User at anytime can go to settings app and change the configurations for push
+notifications. UNUserNotificationCenter's getNotificationSettings(completionHandler:)
+can be used to retrieve the authorization and feature-related settings.
