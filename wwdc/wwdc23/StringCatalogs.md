@@ -28,17 +28,69 @@ to use specific string for specific platform.
 ## Extract
 
 Xcode can extract localizable strings from :
-- Code
-- Interface builder files
-- Plists
+- Swift/Objective C code
+- SwiftUI Views
+- Storyboards & xibs
+- C code
+- Info plist
+
+Localizable.xcstrings(the string catalog) if exists, Xcode will pull localizable 
+strings from these sources and update the file.
+
+LocalizedStringResource is the recommended type for representing and passing around
+localizable strings. This is because it supports initialization using string literal
+and can also be provided with a comment, table name and a default value.
+
+Custom MACROS in Objective C taking string can also be configured via build settings
+to get extracted.
+
+NOTE: One needs to enable in Build Settings _Use Compiler to Extract Swift Strings_
+
+Xcode will make best efforts to keep string catalog up to date
+
+Everytime project is build, Xcode will extract and update string catalogs.
+
+If for a localized string there is no localizations added yet, then if this string
+is removed from code/storyboard etc then Xcode will update and delete it from
+string catalog as well.
+If however the localized string did had translation present, then when deleted from
+source, Xcode will mark the entry in string catalog as STALE.
+One can also mark a string to be manually managed so as to avoid Xcode updating or
+deleting it after build.
 
 
 ## Edit
 
+String catalog provides first class support for showing the state of localized string
+and the progress of translations achieved.
+
+State badges
+- STALE : Not found in code
+- NEW : Not translated
+- NEEDS REVIEW : May need some change
+- Green Checkmark : Translated
+
+String pluralization with String Catalog
+- String catalog has built in support for string variation workflows requiring string
+pluralization. Context menu on a string in string catalog can help add a variation
+to it by plural.
+- Complext plural strings (where more than one word can be plural with various combinations),
+string catalog provide built in support to add substitution for each of those words
+prefixed with @ sign.
+
 
 ## Export
 
+Xcode offers export localizations generating industry standard .xliff files
 
 ## Build
 
+Under the hood, the string catalog files are JSON, so they are easily diffable in
+version control systems.
+At build time, string catalog files are compiled to .strings and .stringsdict files.
+
+NOTE: Strings catalog are back-deployable, so can be used for any OS.
+
 ## Migrate
+
+Right click on existing localizable file and choose migrate to string catalog
