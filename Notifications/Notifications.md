@@ -182,6 +182,49 @@ center.getNotificationSettings { settings in
 }
 ```
 
+## Actionable notifications
+
+Usually notifications display the information as per payload received from APNs,
+user's only action is to view or launch the app.
+Actionable notifications enable user to respond to a received notification without
+launching the app. Along with notification, system will display one or more buttons.
+Tapping these buttons will send selected action to app. The action is then processed
+in background.
+
+Supporting actionable notifications include below steps:
+1. Declaring one or more notification categories (UNNotificationCategory)
+2. Assign required actions to categories (UNNotificationAction)
+3. Handle actions (UNUserNotificationCenterDelegate)
+4. Assign declared categories to notification payloads
+
+```swift
+    func scheduleActionableLocalNotification() {
+        let goodAction = UNNotificationAction(identifier: "actionableLocalNotification.goodAction", title: "Good")
+        let badAction = UNNotificationAction(identifier: "actionableLocalNotification.badAction", title: "Bad")
+        let actionableLocalNotificationCategory = UNNotificationCategory(identifier: "actionableLocalNotificationCategory",
+                                                                         actions: [goodAction, badAction],
+                                                                         intentIdentifiers: [])
+        UNUserNotificationCenter.current().setNotificationCategories([actionableLocalNotificationCategory])
+        
+        let notificationContent = UNMutableNotificationContent()
+        notificationContent.title = "An actionable local notification"
+        notificationContent.subtitle = "This is example of an actionable local notification. We simply ask user how's user feeling, Good or Bad"
+        notificationContent.categoryIdentifier = "actionableLocalNotificationCategory"
+        
+        let notificationTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        let notificationRequest = UNNotificationRequest(identifier: UUID().uuidString,
+                                                        content: notificationContent,
+                                                        trigger: notificationTrigger)
+        
+        UNUserNotificationCenter.current().add(notificationRequest)
+    }
+```
+
+### Note: Quoting from Apple Docs 
+_All of your action objects must have unique identifiers. When handling actions, 
+the identifier is the only way to distinguish one action from another, even when 
+those actions belong to different categories._
+
 ## Notification management players
 
 ### UNUserNotificationCenter
@@ -193,4 +236,6 @@ for app or app extension. It's role includes :
 2. Declare notification types app supports
 3. Schedule local notification delivery
 4. Process remote notifications payload
+5. Manage delivered notifications
+6. Handle user-selected actions from custom notifications
 
