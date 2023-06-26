@@ -66,3 +66,36 @@ types like Date and Calendar
 
 - JSON coding 200-500% faster
 
+- New opt-in features to achieve a new level of control.
+
+- One can make a struct non copyable like below, this also allows to provide a deinit
+in struct
+
+```swift
+struct NonCopyableStruct: ~Copyable {
+
+}
+```
+
+## C++ interoperability
+
+Many codes not just have Swift and Objective C code both interoperating, but also
+have some core business logic implemented in C++.
+
+Swift 5.9 introduces ability to interact with C++ types and functions directly from
+Swift.
+
+C++ can directly use most of Swift types and their full APIs without using any attribute
+like @objc which is required for Swift and Objective C interoperability.
+
+Support for Swift in CMake.
+
+
+## Abstract concurrency model
+
+Abstract model has two main pieces:-
+- Tasks 
+    Tasks are sequential unit of work which can be run anywhere, can be suspended
+- Actors
+    Actors are a synchronization mechanism that provide mutually exclusive access 
+    to isolated state
