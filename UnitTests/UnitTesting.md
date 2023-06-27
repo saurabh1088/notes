@@ -142,3 +142,13 @@ one needs to:-
 
 📔 NOTE: TEST ASSERTIONS require a test class instance, hence these aren't allowed
 in class methods of XCTestCase
+
+### continueAfterFailure
+
+It's an instance property of XCTestCase with default set to true. This means that
+the execution of test method where failure occured, should continue by default even
+after that failure.
+This can be set to false in a test method as soon as failure occurs.
+📔 NOTE: Other test methods may still execute after a test fails with continueAfterFailure
+set to false.
+
