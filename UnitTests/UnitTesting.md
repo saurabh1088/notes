@@ -119,3 +119,26 @@ one needs to:-
 2. Set/reset state for each test method execution
 3. Release/delete resource once test method completes
 4. Release/delete resource once test case completes
+
+### Sequence of set up and tear down methods executed by XCTest
+
+1. XCTestCase - class method - setUp() -- Common to all test methods -- 🚫 NO ASSERTIONS
+
+2. Each test method is run next with below sequence of methods -- ✅ ASSERTIONS ALLOWED
+    
+    1a. setUp() async throws
+    1b. setUpWithError()
+    1c. setUp()
+    All these setup methods can be used to prepare state for each test method going
+    to be executed.
+
+    2. Test method
+    3. Tear down blocks in test method LIFO order
+    4a. tearDown()
+    4b. tearDownWithError()
+    4c. tearDown() async throws
+    
+3. XCTestCase - class method - tearDown() -- Common to all test methods -- 🚫 NO ASSERTIONS
+
+📔 NOTE: TEST ASSERTIONS require a test class instance, hence these aren't allowed
+in class methods of XCTestCase
