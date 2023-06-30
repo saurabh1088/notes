@@ -8,11 +8,13 @@ It’s for :
 - focuses entirely on code with no external file formats
 - Uses Swift’s new macro system
 - Naturally integrated with SwiftUI
+- Available across all the platforms
 
 ## @Macro
 Model macro
 
 - New Swift macro
+- Using Model macro makes a class fully persistable with SwiftData
 - Defines schema with code
 - Adds SwiftData functionality to model types
 - Models in SwiftData are source of truth of app’s schema and drive the persistence experience
@@ -50,3 +52,31 @@ Model macro
 
 - Seemless integration
 - Automatically fetch data and update views
+
+## @Query
+
+- New property wrapper
+- To use data managed by SwiftData in a view one needs to use this property wrapper
+- Triggers view update whenever model changes
+- Views can have multiple @Query annotated properties
+- @Query is using ModelContext behind the scenes as source of data
+
+
+## Building app with SwiftData
+
+- One needs to use @Model macro on the models which would have initially conformed
+ObservableObject protocol with @Published annotated properties.
+
+- Conformance to ObservableObject is not required.
+
+- @Published property wrapper is also not required.
+
+- View's using any ObservableObject needed to annotate property with @ObservedObject.
+This need to be replaced with @Bindable property wrapper.
+
+- To use data managed by SwiftData in a view one needs to use property wrapper
+@Query
+
+- @Query is a new property wrapper.
+
+- To use SwiftData, any application need to set up at least one ModelContainer
