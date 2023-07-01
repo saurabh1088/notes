@@ -105,7 +105,62 @@ TODO: Watch : Fix failures faster with Xcode test reports
 - Metadata fields are hidden by default, but always just a couple of clicks away
 - One can jump from a log entry in Xcode console, directly to the line of code which created it.
 
-TODO: Watch : Debug with structured logging
+### Xcode Debug Console
+
+### New in debug console
+
+- Console no longer pre-fixes metadata before each log line
+
+- Metadata can still be opted to be shown with option to select what information 
+one wants to see
+
+- Metadata now comes below each log line, with smaller font and is more subtle 
+so focus isn’t drawn away from intended output
+
+- Logs also come with some background appropriately representing error or fault etc
+
+- A pop up window can also show when a log line is selected showing it’s related 
+metadata, if one doesn’t wants to see metadata for all the log lines at once, this 
+also displays the name of the function which emitted the log line.
+
+- Console has some new tricks for filtering, it can perform complex, tokenized 
+filtering. Also console has options to create filters.
+
+- Filter box in console bottom right corner now gives suggestions in a pop-over 
+window as well as some pre-defined filters which can be applied.
+
+- Right clicking a log line in Xcode console also gives a context menu from where 
+one can hide or show similar logs
+
+- Hovering over a log line in console also enables a source code locator which 
+can be used to jump to the code producing the log line
+
+
+### LLDB
+
+- po will simply print address of a type if the type doesn’t conforms to CustomStringConvertible, 
+so p can be used. Similarly there are various other options which one can use from 
+LLDB which could be overwhelming to remember. So NEW dwim-print is introduced where 
+dwim stands for do-what-i-mean. dwim allows to use a single command to evaluate 
+many different expressions in code
+
+- Previous p alias is replaced to perform dwip-print command
+
+- Previous po alias is also replaced to perform dwip-print + object description 
+
+
+### Tips for logging
+
+- print should rarely be used for logging, it’s far better to use OSLog to obtain 
+structured logging
+
+- Always create multiple log handles as per different componenets, this allows 
+to set meaningful search terms
+
+- Use OSLogStore to collect valuable diagnostics
+
+- OSLog is a tracing facility capable of providing complex performance analysis 
+using instruments tracing
 
 
 ## Distribution
