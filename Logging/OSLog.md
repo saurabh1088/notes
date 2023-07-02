@@ -2,8 +2,12 @@
 
 ## Apple’s Unified logging APIs
 
-import os
-os module define new Logging APIs introduced with Xcode 12
+- import os
+
+- os module define new Logging APIs introduced with Xcode 12
+
+- In comparison to `print` or `NSLog`, `OSLog` has a low-performance overhead and is 
+archived on the device for later retrieval.
 
 - log messages are different from print statement in a key way. Log message is not 
 fully converted into a string as that would be very slow. Instead the compiler 
@@ -41,6 +45,9 @@ Persistence depends on log levels, persistence increases with the log level impo
 
 This persistence is on the device. One can use log collect to get logs from device 
 to MacBook
+
+> One can override default storage behaviour for each log level using tools or custom
+configuration profiles.
 
 ### Performance
 
