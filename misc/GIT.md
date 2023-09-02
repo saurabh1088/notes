@@ -35,7 +35,7 @@ Nowhere it can be figured out where feature began and where it ended and where m
 was done. It also will be difficult if one were to revert the feature. Only way to
 revert the feature would be to figure out all commits and revert those.
 
-![git merge using fast forward](/resources/git-merge-fast-forward.png "git merge using fast forward")
+![git merge using fast forward](resources/git-merge-fast-forward.png "git merge using fast forward")
 
 
 Below screenshot shows how branch revision history appears in Fork when fast forward
@@ -43,4 +43,4 @@ strategy is NOT used. In this case it's clearly visualised that a branch was cre
 then some commits were added and finally it was merged. There is a merge commit as
 well. This merge commmit can be reverted to revert the feature from main branch.
 
-![git merge not using fast forward](/resources/git-merge-no-ff.png "git merge not using fast forward")
+![git merge not using fast forward](resources/git-merge-no-ff.png "git merge not using fast forward")
