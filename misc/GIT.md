@@ -65,3 +65,52 @@ example screenshots from Fork, how it visualizes.
 - Easily identiy what all commits went to the feature branch merged back to main.
 
 ![git merge not using fast forward](resources/git-merge-no-ff.png "git merge not using fast forward")
+
+
+## git stash
+
+Often while working we need to go back to a clean working directory, this could be
+due to switching to a different branch or wanting to test some behaviour on clean
+codebase. In this case one needs to park local changes somewhere, this is when git
+stash comes to help.
+Git stash records the current state of the working directory. 
+
+```
+git stash
+```
+
+Stashes current working directoy changes
+
+```
+git stash list
+```
+
+Lists down all the modifications currently stashed away.
+
+```
+git stash show
+```
+
+Shows changes in stash similar to how git diff lists the changes against original.
+This shows the stash content for the most recent stash.
+
+
+## git branch
+
+```
+git branch
+```
+
+Lists down all the LOCAL branches and highlights the current one using asterisk *
+
+```
+git branch -a
+``` 
+
+Lists down all the LOCAL & REMOTE branches
+
+```
+git branch new-branch-name
+```
+
+Creates a new branch with name _new-branch-name_
