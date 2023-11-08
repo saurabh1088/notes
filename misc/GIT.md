@@ -114,3 +114,15 @@ git branch new-branch-name
 ```
 
 Creates a new branch with name _new-branch-name_
+
+
+## git reset HEAD~1 
+
+```
+git reset HEAD~1
+```
+
+This command will revert a local commit which is NOT pushed to remote yet. Sometimes
+when a commit is done locally and then push is tried, the push may fail and ask for
+first to take a pull, in this case one can revert local commit using this command
+take pull first and then proceed with commit and push.
