@@ -46,4 +46,10 @@ NSManagedObjects.
 Router is kind of a wireframe which has all the navigation logic, it tells which
 screen need to be shown and when.
 
+
+View KNOWS Presenter
+Presenter KNOWS Router & Interactor
+Interactor CONNECTS TO Networking/Core Data etc services
+
+
 ## https://www.objc.io/issues/13-architecture/viper/
