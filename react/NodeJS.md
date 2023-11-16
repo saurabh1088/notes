@@ -63,6 +63,12 @@ Both browser and Node.js provide environment allowing JavaScript code to execute
 However building an application which runs in a browser is altogether different
 from a Node.js application.
 
+We don't have window or document in Node, these are available as a part of runtime
+environment available with browsers.
+
+*window* is a global object present in browsers.
+*global* is a global object present in Node.
+
 | Browser                                                              | Node.js |
 | Client side environment                                              | Server side environment |
 | JavaScript is executed within context of a web browser               | JavaScript is run on server |
@@ -87,3 +93,20 @@ So in this case if number of requests increases more threads will get created an
 at some point maximum thread will reach and further requests will have to wait till
 a thread gets free. Now to serve more requests/clients one has to throw in more
 hardware.
+
+
+## Node Module System
+
+Variables by default get added to global scope, which can lead to conflict if same
+name is used in multiple places. Hence a modularity is required to avoid this problem.
+
+Every file in Node.js is considered a module. All functions and variables defined
+in the file are private and by default not accessible outside of the file. In order
+to use outside one has to explicitly export these. 
+One only need to export the variables and functions that need to be accessed from
+outside of module, rest all which aren't required can stay private or un-exported.
+
+### Module wrapper function
+
+
+## JSHint
