@@ -70,6 +70,7 @@ environment available with browsers.
 *global* is a global object present in Node.
 
 | Browser                                                              | Node.js |
+|---|---|
 | Client side environment                                              | Server side environment |
 | JavaScript is executed within context of a web browser               | JavaScript is run on server |
 | JavaScript here can perform DOM manipulation                         | NO DOM manipulation  |
