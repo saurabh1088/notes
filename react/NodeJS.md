@@ -95,6 +95,10 @@ at some point maximum thread will reach and further requests will have to wait t
 a thread gets free. Now to serve more requests/clients one has to throw in more
 hardware.
 
+JavaScript is designed to be non-blocking on the *main* thread, somewhat similar
+to how in iOS applications it is expected to have all UI operations on main thread.
+If not for this behaviour then one will experience UI freezing.
+
 
 ## Node Module System
 
@@ -111,3 +115,5 @@ outside of module, rest all which aren't required can stay private or un-exporte
 
 
 ## JSHint
+
+## libuv
