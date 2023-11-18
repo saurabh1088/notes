@@ -118,6 +118,10 @@ outside of module, rest all which aren't required can stay private or un-exporte
 
 ## libuv
 
+JavaScript is synchronous, blocking, single threaded programming language.
+Node.js we defined above as asynchronous and non-blocking which is possible with
+the help of *libuv*
+
 ## Behind the scenes
 We have a client which makes a http call. The call eventually will be processed
 at a server hosted in a machine on a port. By default the port is 80. All requests
@@ -142,3 +146,26 @@ So *libuv* will look for route in the incoming request and emit an event and the
 Node.js will execute the function associated with that route as per definition.
 While executing the route defined method, Node.js will also provide access to request
 as well.
+
+
+## Event Loop
+
+Node handles requests using an Event loop inside the NodeJS environment.
+Event could be anything. Event loop basically could be defined as an event listener
+which funtions inside Node.js and is always ready to listen, process and output
+for some event.
+
+Technically *Event Loop* is just a C program and it is a part of *libuv*.
+
+Event loop is alive as long as the Node.js application is up and running.
+
+There are six queues which are part of every event loop in every iteration.
+
+All synchronous JavaScript code will take priority over async code.
+
+
+### Question : When some async task completes in libuv then when does Node runs the
+associated callback?
+
+Ans: Normal flow of execution will not be interrupted, callback functions will be
+executed only when call stack becomes empty.
