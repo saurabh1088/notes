@@ -25,3 +25,22 @@ have a monitor or profiler which while code is getting executed by the interpret
 will keep track of how many times the different statements get hit. This way it
 will detect parts of code being used most and those can be compiled and stored.
 
+JavaScript however is still considered an interpreted language, since the compilation 
+is handled at run time, rather than ahead of time.
+
+
+JavaScript
+- lightweight
+- interpreted or just in time compiled
+- first-class functions
+- prototype-based
+- multi-paradigm
+- single-threaded
+- dynamic language
+- object-oriented
+- imperative and declarative
+
+On a web browser, each tab is having it's own environment for execution. This means
+usually the code in each tab run completely independent of each other. This is good
+from security point of view. There are however ways to safely send code and data 
+between different websites/tabs
