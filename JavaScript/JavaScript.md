@@ -39,8 +39,45 @@ JavaScript
 - dynamic language
 - object-oriented
 - imperative and declarative
+- dynamically typed
 
 On a web browser, each tab is having it's own environment for execution. This means
 usually the code in each tab run completely independent of each other. This is good
 from security point of view. There are however ways to safely send code and data 
 between different websites/tabs
+
+## Adding JavaScript to HTML
+
+### Internal JavaScript
+
+```
+<script>
+  // Internal JavaScript code comes here
+</script>
+```
+
+### External JavaScript
+
+Internal JavaScript option works fine, but is not a great way to manage code. It's
+a lot better to have JavaScript code live outside of HTML files with only reference
+to the actual file from HTML.
+
+```
+<script src="externalJavaScript.js"></script>
+```
+
+### Inline JavaScript handlers
+
+One can also have JavaScript literally living inside HTML. However this is BAD PRACTICE,
+and should be AVOIDED.
+
+```
+<button onclick="buttonClickHandler()">Click me!</button>
+```
+
+## Script loading strategies in JavaScript
+
+Webpages are loaded with HTML from top.
+
+
+## async and defer
