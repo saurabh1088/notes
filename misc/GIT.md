@@ -1,5 +1,33 @@
 #  GIT
 
+*git is free, git is open source. It is a distributed version control system.*
+
+
+## Distributed Version Control Systems
+
+In a Distributed Version Control Systems when one checks out a repository locally
+then checked out content is not just the latest snapshot, instead it fully mirror 
+the repository. Means one gets the complete repository locally with all its history.
+
+This has a huge advantage for Distributed Version Control Systems as in case of
+issues with remote hosting the contents, any of the locally checked out repository
+can be used to back up and restore.
+
+
+## GIT vs Other VCS like SVN
+
+Apart from following distributed approach the way Git stores and thinks about
+information is also very different. Most systems treat information as a set of files
+and then changes to those files over time.
+
+Git however doesn't stored information this way (i.e. file plus it's deltas over time).
+In Git, information or data is more like a snapshots. Every time some changes are
+made Git will take a snapshot and store a reference to that snapshot. In this way
+for Git information or data is more of a stream of snapshots. 
+
+
+
+
 ## git merge : fast-forward vs no fast-forward
 
 ### Example :
