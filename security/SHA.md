@@ -28,7 +28,26 @@ When a user signs in then a hashing function is used to convert password into a
 hash value and stored, next time when user logs in then the hash value of entered
 password is compared with stored hash.
 
+Hashing can be used to indicate a file's integrity. If a file's content is tampered
+with then it's hash value will change than what it would have been originally and
+this can be used to determine file's integrity. Git uses hashing with SHA algorith
+to maintain file integrity.
+
 ### Collisions
 
 A collision is said to happen when two values have same hash digest. SHA-1 can easily
 create collisions.
+
+
+## MD5 vs SHA
+
+Both MD5 and SHA are cryptographic hash functions differing in following ways:
+
+|MD5|SHA|
+|---|---|
+|Message Digest|Secure Hash Algorithm|
+|Fast|Slower than MD5|
+|Simpler than SHA|Complex than MD5|
+|128 bit hash value|160 bit hash value for SHA-1, 256/512 bit for SHA-2|
+|Less secure as is more susceptible to collision attacks|SHA-2 is very secure|
+|No longer considered for cryptographic purposes|SHA-2 is widely used in cryptography|
