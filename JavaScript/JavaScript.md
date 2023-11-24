@@ -81,3 +81,35 @@ Webpages are loaded with HTML from top.
 
 
 ## async and defer
+
+
+## JavaScript Objects
+
+To create an object in JavaScript one can simply declare like below. This is creating
+object using object literal. This is the easiest approach and one can both define
+and create object in single line.
+
+```
+This will create an empty object employee
+const employee = {}
+```
+
+```
+const employee = {name: "Batman", employeeId: 1}
+```
+
+Another approach is to use *new Object()*
+
+```
+const employee = new Object()
+employee.name = "Batman"
+employee.employeeId = 1
+```
+
+Accessing the property can be done using dot notation and also using a bracket
+notation.
+
+```
+console.log(employee.name)
+console.log(employee["name"])
+```
