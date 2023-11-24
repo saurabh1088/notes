@@ -14,3 +14,10 @@ and communications. It aims to
 - Integrity
 - Authentication
 - Non-repudiation
+
+
+## Types of Cryptography
+
+- Symmetric
+- Asymmetric
+- Hash
