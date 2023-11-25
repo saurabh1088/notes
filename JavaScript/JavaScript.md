@@ -113,3 +113,24 @@ notation.
 console.log(employee.name)
 console.log(employee["name"])
 ```
+
+
+## JavaScript Object prototypes
+
+Prototypes is a mechanism in JavaScript through which JavaScript objects inherit
+properties and methods from other objects. 
+
+Every object in JavaScript has a built in property i.e. *prototype*. This prototype
+is basically a reference to another object which will have it's own *prototype*.
+This creates a chain till the point when an object is reached which is having *null*
+as it's *prototype*.
+
+When a property or method is accessed on an object, JavaScript looks for it in
+the object itself. If it doesn't find it, it looks in the object's prototype, and
+so on, until it finds the property/method or reaches the end of the chain.
+
+This *prototype* property for an object is not called prototype, all browsers use
+*__proto__*. Usage of *__proto__* is discouraged as per official documentation.
+Source : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto
+
+Standard way to access an object's prototype is *Object.getPrototypeOf()* method.
