@@ -36,3 +36,17 @@ Called symmetric as same key is used for encryption and decryption.
 as encryption and decryption uses same key so an encrypted data with a key can't
 be decrypted by using any other key. This with assumption the key is secured by both
 parties.
+- The most commonly used symmetric algorithm is the Advanced Encryption Standard (AES)
+
+Usage for Symmetric Cryptography
+- Due to better performance and faster speed of symmetric encryption (compared
+to asymmetric), symmetric cryptography is typically used for bulk encryption /
+encrypting large amounts of data, e.g. for database encryption.
+
+Drawbacks
+- Weakest aspect of Symmetric Cryptography is key management.
+
+
+### Asymmetric Cryptography
+
+Uses public and private key pairs.
