@@ -21,3 +21,18 @@ and communications. It aims to
 - Symmetric
 - Asymmetric
 - Hash
+
+### Symmetric Cryptography
+
+*Symmetric Cryptography, which is also called private-key cryptography, uses a
+key (which may be a password or digital certificate) to encode the message into
+ciphertext, and the recipient uses the same key to decrypt it.*
+
+Called symmetric as same key is used for encryption and decryption.
+
+- Same key is used for both encryption and decryption.
+- Algorithm is inexpensive
+- Between the two parties sharing encrypted data, it can maintain a degree of authentication
+as encryption and decryption uses same key so an encrypted data with a key can't
+be decrypted by using any other key. This with assumption the key is secured by both
+parties.
