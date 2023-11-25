@@ -134,3 +134,36 @@ This *prototype* property for an object is not called prototype, all browsers us
 Source : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto
 
 Standard way to access an object's prototype is *Object.getPrototypeOf()* method.
+
+### Setting a prototype
+
+Prototype for an object in JavaScript can be set while creating the object using
+*Object.create()* method.
+
+
+```
+const employee = {name: "Batman", powers() { console.log("Because I'am Batman")}}
+
+Create a prototype of employee which will inherit all from it.
+const employeePrototype = Object.create(employee)
+
+console.log(employee.powers)
+console.log(employeePrototype.powers())
+
+Both will print "Because I'am Batman"
+```
+
+In the example above an object *employee* was defined and then a prototype was
+created using it. The prototype object created *employeePrototype* inherits all
+properties and methods defined from object it was created.
+
+One can get the prototype of *employeePrototype* like below, note however *__proto__*
+is NOT recommended.
+
+```
+NOT RECOMMENDED
+console.log(employeePrototype.__proto__)
+
+RECOMMENDED
+console.log(Object. getPrototypeOf(employeePrototype))
+```
