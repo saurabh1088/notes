@@ -167,3 +167,9 @@ console.log(employeePrototype.__proto__)
 RECOMMENDED
 console.log(Object. getPrototypeOf(employeePrototype))
 ```
+
+JavaScript is a prototype-based language
+JavaScript follows Prototype-Based Inheritance
+
+Classes in JavaScript were introduced from ES6. With introduction of class keyword,
+JavaScript also got a traditional class-based way of creating objects.
