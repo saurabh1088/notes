@@ -171,5 +171,18 @@ console.log(Object. getPrototypeOf(employeePrototype))
 JavaScript is a prototype-based language
 JavaScript follows Prototype-Based Inheritance
 
+### Classes in JavaScript
+
 Classes in JavaScript were introduced from ES6. With introduction of class keyword,
-JavaScript also got a traditional class-based way of creating objects.
+JavaScript also got a traditional class-based way of creating objects. This introduction
+enabled a more convenient way to create a constructors and work with prototypes.
+
+JavaScript's inheritance model still remains prototype-based, even after introduction
+of class keyword.
+
+*class* in JavaScript is actually a syntactic sugar over the existing prototype
+based system.
+
+So basically class keyword provides a more familiar and clean syntax for creating
+objects and their methods, but under the hood, it still uses prototypes to link
+objects and inherit properties and methods.
