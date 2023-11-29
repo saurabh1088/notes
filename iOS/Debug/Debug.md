@@ -44,23 +44,32 @@ do the same thing*
 - This command pretty much gives Xcode variables view.
 - It lets us look at local variables.
 - One can specify a variable and it will let us look at only that variable.
+- This is not compiling the code so if fast, but won't be able to work for say for e.g. computed properties
+as computed property will need code to be run.
+- This will be able to perform better at dynamic type resolution without needing
+to explicit casting compared to p and po commands.
 
 ### The expression command
 
 - This can be also run as shortened form as *p*
 - Used to run expressions, for example this can run simple arithmatic commands.
 - One can use previous results and do further processing on those.
+- Result of each expression are given names like $R0, $R1 and so on.
 
 ### The expression -O or po command
 
 - This can be also run as shortened form as *po*
 - Can create object and print their description printed out.
+- Can evaluate arbitrary expression, it anyways is an alias for command expression
 
 
 |frame variable|expression|expression -O|
 |---|---|---|
 |does not runs code|runs code|runs code|
 |uses LLDB formatters|uses LLDB formatters|runs some extra code behind the scenes to format|
+|Data formatters|Data formatters|Object description|
+|Not full access to language|full access to language|full access to language|
+|Iterative dynamic type resolution|Dynamic type resolution only once|Dynamic type resolution only once|
 
 The *po* command follows a in-process formatting model where
 - Data and formatter live together and writter with same language
