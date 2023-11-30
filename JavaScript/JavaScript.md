@@ -186,3 +186,24 @@ based system.
 So basically class keyword provides a more familiar and clean syntax for creating
 objects and their methods, but under the hood, it still uses prototypes to link
 objects and inherit properties and methods.
+
+
+## Asynchronous JavaScript
+
+JavaScript is single-threaded. This implicated it will only execute one thing at
+a time. It has only one execution thread in it's runtime environment (be it browser
+or Node.js).
+
+This single thread in JavaScript is hence responsible for lot of things :
+- Executing code
+- Event handling
+- DOM handling
+
+Now in order to support tasks which can be potentially long running, synchronous
+operations for those wouldn't make sense. Luckily JavaScript supports asynchronous
+programming which allows those operations to be executed asynchronously without
+blocking and achieving concurrent like behaviour.
+
+Note however asynchronous tasks in JavaScript won't be creating any additional thread,
+instead an event loop within the main thread itself will handle those operations
+efficiently.
