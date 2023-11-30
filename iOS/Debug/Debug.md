@@ -91,6 +91,32 @@ Protocols for Swift in-process formatting
 These protocol conformances can be added at runtime as well through expression command.
 
 
+## How LLDB works
+
+Compiler compiles the source code to generate the machine code. In doing so it also
+leaves breadcrumbs for the debugger so that an address can be mapped to source file,
+line number etc. These breadcrumbs are called debug-info. Debug info on apple
+systems is stored in object files. For archiving and distribution, debug info can
+be linked into .dSYM bundles. The debug info linker is called *dsymutil*
+
+LLDB can map to source path using below command
+
+```
+settings set target.source-map prefix new
+```
+
+## Breakpoints
+
+- Source file breakpoints
+    - Line breakpoint (applied in gutter)
+    - Column breakpoints(introduced with Xcode 13)
+        Column breakpoint is very useful for scenario where there are multiple
+        nested closures and one needs to apply breakpoint to one of those.
+- Symbolic breakpoints
+    - These are breakpoints on function names
+    - Can be useful when one doesn't have access to source file.
+- Runtime issue breakpoints
+    - Xcode records a backtrace and shows it.
 
 // TODO: Check latest on this and confirm
 LLDB consists of two compilers
