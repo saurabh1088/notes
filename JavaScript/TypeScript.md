@@ -71,16 +71,48 @@ Enums are a great way to club well named defined constants providing type safety
 
 ### Union and Intersection types
 
+One can define a type in typescript using a union of differnt types for example.
+
+```
+Here we are telling that variable can either be a string or a number
+
+let variable: string | number = 'some value';
+variable = 100;
+```
+
 ### Generics
 
+TypeScript enables capability of *generic* types such that functions or classes
+can work with differnt data types without need to re-declare those with each required
+types.
+
 ### Type Inference
+
+There is no need to explicitly provide type while declaring a variable if the initial
+value is provided while declaration itself, the TypeScript can infer type based
+on value which is assigned.
 
 ### Advanced Function Types
 
 ### Namespace and Module Support
 
+TypeScript provides a module system to organize code into reusable components.
+Namespaces and modules help avoid naming conflicts and manage code dependencies.
+
 ### Decorators
 
 ### Declaration Files
 
+
+## type vs interface
+
+Both *type* and *interface* are keywords in TypeScript which can help to define
+the structure of objects, however there are some differences
+
+|type|interface|
+|---|---|
+|It's kind of an alias, like typealias in Swift|It's used to declare a named set|
+|No declaration merging|Declaration merging is possible|
+|Classes can't implement type|Classes can implement interface|
+|-|interfaces can extend other interface|
 
