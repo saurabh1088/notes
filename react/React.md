@@ -56,6 +56,18 @@ can use these independent of each other.
 |---|---|
 |Is a syntax extension|Is a JavaScript library|
 
+JSX enforces some rules :
+
+- One need to return a single root element.
+When there are multiple elements then one can wrap those in a <div> OR one can also
+use empty tag <> and </> know as *Fragment*. *Fragments* will not leave any trace
+in the HTML tree in the browser and also group and return multiple required elements.
+Reason JSX doesn't returns multiple elements is because behind the scenes JSX gets
+transformed into JavaScript objects and a function can't return multiple objects
+unless one is returning multiple elements wrapped in an array.
+
+- One needs to explicitly close all tags
+
 ## Markup : Displaying data
 
 
