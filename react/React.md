@@ -71,3 +71,9 @@ unless one is returning multiple elements wrapped in an array.
 ## Markup : Displaying data
 
 
+## Use of {}
+
+While using JSX one can add markup in JavaScript code. In the markup one may need
+to refer to JavaScript again, to perform operation like say display some data.
+For this scenario one need to jump back to JavaScript from markup and one can do so
+wrapping JavaScript code under {}
