@@ -77,3 +77,16 @@ can be accessed by anyone having physical access to device.
 For masking one can also use hash, which gives a benefit over using private that 
 one can compare hashes of a sensitive data to track where same data is used without 
 exposing it.
+
+### Example
+
+```
+let logger = Logger(subsystem: "com.apple.Project.Subsystem", category: "main")
+logger.info("Logging \(obj.description, privacy: .public)")
+logger.info("Logging \(obj.someSensitiveData, privacy: .private)")
+
+Here someSensitiveDataNeedsCorrelation will be hidden but logger will include a
+hash mask so that some correlation can be established across different log messages 
+for same value of someSensitiveDataNeedsCorrelation
+logger.info("Logging \(obj.someSensitiveDataNeedsCorrelation, privacy: .private(mask: .hash))")
+```
