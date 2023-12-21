@@ -7,6 +7,9 @@ LLDB is the standard debugger in Xcode.
 
 ## LLDB Commands
 
+### run
+Start or if not running then re-start the code being debugged.
+
 ### help
 List down all commands available
 
@@ -24,8 +27,9 @@ Prints list all threads.
 Prints the variable. Note : angular brackets are not required.
 
 ### frame variable OR fr v
-Displays local variables in the current stack frame.
+Displays all local variables in the current stack frame.
 
+// TODO : Confirm this command (type lookup) if it's valid
 ### type lookup
 
 
@@ -44,7 +48,8 @@ do the same thing*
 - This command pretty much gives Xcode variables view.
 - It lets us look at local variables.
 - One can specify a variable and it will let us look at only that variable.
-- This is not compiling the code so if fast, but won't be able to work for say for e.g. computed properties
+- This is not compiling the code so it is fast, but it won't be able to work in 
+case of say for e.g. computed properties
 as computed property will need code to be run.
 - This will be able to perform better at dynamic type resolution without needing
 to explicit casting compared to p and po commands.
@@ -72,7 +77,7 @@ to explicit casting compared to p and po commands.
 |Iterative dynamic type resolution|Dynamic type resolution only once|Dynamic type resolution only once|
 
 The *po* command follows a in-process formatting model where
-- Data and formatter live together and writter with same language
+- Data and formatter live together and written with same language
 - Has easy access to object model
 - One need to be careful to not alter state of program
 - Swift Playgrounds follows a in-process formatting model
