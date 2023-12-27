@@ -63,8 +63,22 @@ Both MD5 and SHA are cryptographic hash functions differing in following ways:
 ## SHA Family
 
 Broadly there are only two types SHA-1 and SHA-2. One often come across various others
-like SHA-256m but those are mostly versions of SHA-2 only
+like SHA-256m but those are mostly versions of SHA-2 only.
+There is one latest SHA-3 as well released in Aug, 2015
 
 ### SHA-1
 
+- 160 bits
+- Due to short length, it can be easily brute forced.
+- Can easily create collisions.
+
 ### SHA-2
+
+- 256 to 512 bits
+- Brute force attacks can take years to crack.
+- SHA-224, SHA-256, SHA-384, SHA-512
+
+### SHA-3
+
+- More secure than SHA-2
+- Employs sponge construction
