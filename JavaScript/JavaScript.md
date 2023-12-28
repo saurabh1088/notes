@@ -1,5 +1,8 @@
 #  JavaScript
 
+JavaScript is a scripting or programming language allowing one to implement complex
+featured for a web page.
+
 Initially JavaScript used to be interpreted language, as when web browsers used
 to come across JavaScript, they used to interpret it line by line and execute it
 on the fly.
@@ -77,7 +80,14 @@ and should be AVOIDED.
 
 ## Script loading strategies in JavaScript
 
-Webpages are loaded with HTML from top.
+Webpages are loaded with HTML from top. There may happen issues wherein a JavaScript
+loads and executed before the HTML content loads on which the JavaScript was expected
+to perform some DOM manipulatiions, in this case it will give error.
+One way to overcome this is to take help of event listener `DOMContentLoaded`
+
+`DOMContentLoaded` is an event which signifies that HTML body is completely loaded
+and parsed. One can put JavaScript logic manipulating DOM under this event check
+so as to run only when HTML is completely loaded.
 
 
 ## async and defer
@@ -207,3 +217,44 @@ blocking and achieving concurrent like behaviour.
 Note however asynchronous tasks in JavaScript won't be creating any additional thread,
 instead an event loop within the main thread itself will handle those operations
 efficiently.
+
+## JavaScript declare variables/constants
+
+### const, let and var
+// TODO: Dig in let, var and const
+
+
+## JavaScript Events
+
+JavaScript Events are actions happening in browser in response to user interactions
+or possibly some other events.
+
+An Event can be :
+- a button clicked
+- a page loading
+- a video playing
+- cursor moved
+etc.
+
+There are Event listeners which observes events and call event handlers. Event handlers
+are blocks of code running in response to event firing.
+
+
+Example below shows how to use event handler in HTML
+```
+<button onclick="buttonTapped()">Click me</button>
+
+function buttonTapped() {
+  alert("Button tapped!");
+}
+```
+
+However a better practice is to use like below, using this way the code is all in
+JavaScript file and HTML is seperated leading to flexibility and separation of concern.
+```
+var button = document.getElementById("someButton");
+
+button.addEventListener("click", function() {
+  alert("Button tapped!");
+});
+```
