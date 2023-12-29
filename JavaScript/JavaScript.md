@@ -221,8 +221,49 @@ efficiently.
 ## JavaScript declare variables/constants
 
 ### const, let and var
-// TODO: Dig in let, var and const
 
+*let* is used in JavaScript to declare a variable (unlike Swift where let is used
+to declare a constant)
+
+```
+let someVariable = "some value";
+someVariable = "some other value";
+```
+
+*var* is another way to declare a variable in JavaScript. So basically one can
+declare a variable in JavaScript using *let* OR *var* (Contrast this with Swift
+where *let* declares a constant and *var* a variable)
+
+### About let and var
+
+When JavaScript was created *var* was only way to declare variables. Due to issues
+with few aspects of *var*, *let* was introduced in modern JavaScript to erase the
+issues with *var*. Few difference in these two are :
+
+- With *var* in a multiline JavaScript program one can actually declare a variable
+with *var* after it's initialized and code will work just fine. This happens due
+to *Hoisting*
+
+What is hoisting?
+*Hoisting* in JavaScript is a process via which interpreter appears to move
+declarations of functions, variables etc to the top of their scope before execution.
+Declaration anywhere in code is equivalent to declaring right at top, hence it also
+means that the variable can appear to be used before being declared itself.
+
+This code is completely valid and won't give any issues, provided one is not executing
+this line by line in console.
+
+```
+someVar = "value";
+var someVar;
+```
+
+However one important point to be noted is that only the declaration is hoiseted
+but not the initialization so below code will give error
+
+```
+console.log
+```
 
 ## JavaScript Events
 
