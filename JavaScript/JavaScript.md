@@ -322,3 +322,30 @@ button.addEventListener("click", function() {
   alert("Button tapped!");
 });
 ```
+
+## Number
+
+Unlike other programming languages having different types for integer and decimal
+types, for example Swift has Int, Float, Double etc, JavaScript has single data 
+type i.e. *Number*
+
+```
+var someInteger = 1;
+var someFloat = 2.5;
+typeof someInteger; // prints 'number'
+typeof someFloat; // prints 'number'
+```
+
+## Strings
+
+### Single quotes, double quotes, and backticks
+
+Strings can be declared in JavaScript using single quotes, double quotes or backticks.
+Using single quotes OR double quotes is same.
+
+String declared using backticks are a special kind of strings. These strings are
+called *template literal* and these have some special properties.
+
+Using *template literal* one can :
+- embed JavaScript in these strings
+- declare multiple lines
