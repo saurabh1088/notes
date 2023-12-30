@@ -244,6 +244,8 @@ issues with *var*. Few difference in these two are :
 with *var* after it's initialized and code will work just fine. This happens due
 to *Hoisting*
 
+- With *var* redeclaration is possible
+
 What is hoisting?
 *Hoisting* in JavaScript is a process via which interpreter appears to move
 declarations of functions, variables etc to the top of their scope before execution.
@@ -262,7 +264,28 @@ However one important point to be noted is that only the declaration is hoiseted
 but not the initialization so below code will give error
 
 ```
-console.log
+console.log(someVar); // undefined
+var someVar = "value";
+```
+
+Should one use *var* now?
+
+Features supported by *var* like hoisting and redeclaration are confusing. Hence
+it is advisable to use *let* instead, there is no reason in using *var* now as all
+modern browsers support *let*.
+
+### const
+
+*const* in JavaScript is used to create constants, these need to be initialized
+while declaration itself and can't be assigned new value post that.
+
+However if *const* is refering to an object, then the object itself can be updated.
+Note that only object properties can be updated, being declared a const, the const
+can't be assigned a new object.
+
+```
+const someObject = { name: "Batman" };
+someObject.name = "Superman";
 ```
 
 ## JavaScript Events
