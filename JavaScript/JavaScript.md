@@ -381,3 +381,57 @@ function someFunction() {
 Anonymous function in JavaScript are function which are defined without any names.
 Mostly the use-case of anonymous functions is for certain short lived operations
 or passing as arguments to other functions.
+
+Below is example of declaring anonymous function. This way is also called as
+*function expression*.
+*Function expressions are not Hoisted*
+```
+(function () {
+  alert("This is an anonymous function");
+});
+```
+
+Functions can also be assigned to variables, so one can declare a anonymous function
+and assign it to some variable like below:
+
+```
+var someAnonymousFunction = (function () {
+  alert("This is an anonymous function");
+});
+
+This will be called like below :
+someAnonymousFunction()
+```
+
+When passing a funtion to another function 
+
+```
+function someFunctionWithCallback(callback) {
+    console.log("This is a function which takes another function as argument");
+    callback();
+}
+
+
+Option 1
+One way is to define a function and pass it
+function callbackFunction() {
+    console.log("I am a function passed to another function")
+}
+
+someFunctionWithCallback(callbackFunction)
+
+
+Option 2
+Calling using anonymous function syntax
+someFunctionWithCallback(function() {
+    console.log("I am a function passed to another function")
+});
+
+
+Option 3
+If option 2 is used, then there is another syntax which is available which is called
+as Arrow functions
+someFunctionWithCallback(() => {
+    console.log("I am a function passed to another function using arrow function syntax")
+});
+```
