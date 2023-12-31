@@ -349,3 +349,35 @@ called *template literal* and these have some special properties.
 Using *template literal* one can :
 - embed JavaScript in these strings
 - declare multiple lines
+
+
+## Arrays
+
+JavaScript arrays can contain multiple data types in a single array like below.
+
+```
+const someArray = ["batman", 1, 2.5, "Gotham"]
+```
+
+## Functions
+
+In JavaScript one uses *function* keyword to define a function.
+
+Functions in JavaScript are *hoisted*, this means irrespective of where those are
+declared those are hoisted and moved to the top of scope. for example below a function
+someFunction is defined, however it is used before the declaration starts, but due
+to it being hoisted there won't be any issues with this code.
+
+```
+someFunction();
+
+function someFunction() {
+  console.log('Function is hoisted!');
+}
+```
+
+### Anonymous functions
+
+Anonymous function in JavaScript are function which are defined without any names.
+Mostly the use-case of anonymous functions is for certain short lived operations
+or passing as arguments to other functions.
