@@ -56,3 +56,13 @@ up a process for running the JavaScript code.
 |Managed app development||
 |Convenient||
 |Can be left anytime to use React Native CLI|It's easy to integrate with native source code|
+
+There is no CSS in React Native, so no CSS files are used. One provide style either using Inline styles or using StyleSheet
+Objects. React Native uses props for styling which are inspired by CSS so sometimes naming might match.
+
+## Flexbox
+
+Flexbox stands for Flexible Box Layout is a layout model in CSS which aims at providing efficient way to lay out, align 
+and distribute space among items in a container, even when their size is unknown and/or dynamic (thus the word “flex”).
+
+Source : https://css-tricks.com/snippets/css/a-guide-to-flexbox/
