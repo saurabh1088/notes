@@ -18,6 +18,17 @@ native components.
 <ScrollView>
 <TextInput>
 
+### <Pressable>
+
+To make a componenet react to press events one needs to wrap it inside <Pressable> component. Then we can provide a function
+to call like below :
+
+```
+<Pressable onPress={someFunctionHandlingEvent}>
+    <Text>Some Text</Text>
+</Pressable>
+```
+
 React Native runs on React
 
 ## What is React Native?
@@ -91,6 +102,10 @@ Source : https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 ## Handling Events
 
 Handling events in React Native works same as it works in React using event listeners, handlers and hooks.
+Usually when one makes components so that those could be re-used elsewhere in app as well and avoid code repitition, one
+can pass props so as to pass data from the point where the create component will get used. There might be elements like
+buttons as well in these components which need some event handlers. One can also pass event handler functions as part of
+props as well.
 
 ## <ScrollView>
 

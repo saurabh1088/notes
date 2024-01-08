@@ -435,3 +435,21 @@ someFunctionWithCallback(() => {
     console.log("I am a function passed to another function using arrow function syntax")
 });
 ```
+
+## <script src="externalJavaScript.js"> : <head> vs <body>
+
+IMP : Does it makes a difference if external JavaScript is added via <script> tag
+is added in <head> vs <body>?
+
+One can place an enternal JavaScript file reference using <script> tag with src
+inside HTML document either in <head> or in <body>. Both options can work depending
+upon scenarios.
+
+### <script src="externalJavaScript.js"> in <head>
+
+- JavaScript will be loaded before the HTML page content gets loaded.
+- Page load can get slower as before loading page, scripts need to be fetched and executed.
+
+### <script src="externalJavaScript.js"> in <body>
+
+- HTML page content will get loaded before executing script, so page load will be faster. 
