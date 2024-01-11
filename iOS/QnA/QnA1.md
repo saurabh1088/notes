@@ -111,11 +111,44 @@ UIViewController object in responder chain is inserted in between the viewcontro
 root view and root view's superview.
 
 
-### UIViewController's view property
+### UIViewController's *view* property
 
 - Job of UIViewController is to manage a view hierarchy.
 - The root view of this hierarchy is stored in UIViewController's view property.
+- UIViewController will load *view* lazily, i.e. when the view property is accessed
+for the first time then only viewcontroller's views are loaded or created.
+- Initially the value of *view* is nil. If one accesses this property when value is
+nil, then viewcontroller will automatically call loadView() method and return the
+resulting view. 
 
 ### What is root viewcontroller?
 
 The viewcontroller owned by the window is the app's root viewcontroller.
+
+
+## 3. Can one access UIViewController's *view* property?
+
+Yes one can access UIViewController's *view* property, the only caveat to accessing
+it is that if this property have value nil then accessing this property can cause
+the view to be loaded automatically, as the viewcontroller will automatically call
+loadView() method and return the resulting view.
+
+Hence safe way to access *view* property is to use property *isViewLoaded* which
+tells if the view is currently in memory or not. Accessing *isViewLoaded* will not
+force calling loadView() method or trigger loading of view.
+
+
+## 4. How do you specify *view* for a UIViewController?
+
+Following are ways to specify *view* for a UIViewController subclass. We mention
+subclass here as UIViewController is rarely instantiated and any app will subclass
+it to provide implementation and then provide *view* using one of the below approach.
+
+All three approaches mentioned below have same result which aims at creating views
+for viewcontroller and expose the hierarchy through *view* property.
+
+### Storyboards
+
+### NIB Files
+
+### loadView()
