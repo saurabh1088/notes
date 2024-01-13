@@ -453,3 +453,41 @@ upon scenarios.
 ### <script src="externalJavaScript.js"> in <body>
 
 - HTML page content will get loaded before executing script, so page load will be faster. 
+
+
+## Event Handlers : EventTarget Interface
+
+In JavaScript we have an interface *EventTarget* which is implemented by objects which
+need to receive events and add listeners to those events.
+
+Following objects do implement *EventTarget*
+
+- Element and it's children
+- Document
+- Window
+- IDBRequest
+- AudioNode
+- AudioContext
+
+*EventTarget* provides the methods :
+- addEventListener()
+- removeEventListener()
+- dispatchEvent()
+
+
+### Event handling using addEventListener()
+
+We know the objects in JavaScript which can fire events, do implement interface
+*EventTarget* and thus have an *addEventListener()* method available to call.
+
+Events can be added using addEventListener(), check below for example :
+https://github.com/saurabh1088/JavaScript/blob/main/java-script-playground/external-in-separate-js-files/ExternalJavaScriptFile.js
+
+Same object can make more than one call to addEventListener() and provide different
+handlers and this is valid. This way one can have multiple handlers for a single
+event. For e.g. below code is perectly valid.
+
+```
+someElement.addEventListener("click", functionEventHandlerOne);
+someElement.addEventListener("click", functionEventHandlerTwo);
+```
