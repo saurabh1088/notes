@@ -91,6 +91,11 @@
  *URLSessionTaskDelegate* inherits from *URLSessionDelegate*.
  *URLSessionDataDelegate*, *URLSessionDownloadDelegate*, *URLSessionStreamDelegate*
  & *URLSessionWebSocketDelegate* all inherit from *URLSessionTaskDelegate*
+ 
+ ### resume()
+ 
+ When a data task is created using a session object, the task created is by default
+ created in a suspended state. One need to start is calling *resume()*
 
 ## Cache Policy
 
@@ -114,3 +119,8 @@ own policy which is covered below in URLRequest.
 
 Cache policy set at URLRequest will override the one defined in URLSessionConfiguration
 so this comes in handy if for certain requests one want a different behaviour.
+
+## TODOs
+
+1. Instruments to analyze HTTP Traffic
+- Ref doc : https://developer.apple.com/documentation/foundation/url_loading_system/analyzing_http_traffic_with_instruments

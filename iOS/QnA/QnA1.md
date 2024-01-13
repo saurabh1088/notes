@@ -152,3 +152,9 @@ for viewcontroller and expose the hierarchy through *view* property.
 ### NIB Files
 
 ### loadView()
+
+## 5. Why is it important for URLSession's dataTask method completion handler to update UI always on DispatchQueue.main block?
+
+The completion handler associated with URLSession's dataTask method gets called on
+a different queue than the one created the task in first place so any work in the
+completion handler updating UI should be explicitly placed on the main queue.
