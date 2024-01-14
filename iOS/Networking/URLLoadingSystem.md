@@ -120,6 +120,13 @@ own policy which is covered below in URLRequest.
 Cache policy set at URLRequest will override the one defined in URLSessionConfiguration
 so this comes in handy if for certain requests one want a different behaviour.
 
+### URLCache
+
+- *URLCache* is used for caching responses from network resources.
+- URLSessionConfiguration has *urlCache* property which is of type URLCache, this
+property determines the URL cache object used.
+- *URLCache* basically maps a URL request to response object.
+
 ## TODOs
 
 1. Instruments to analyze HTTP Traffic
