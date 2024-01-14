@@ -491,3 +491,36 @@ event. For e.g. below code is perectly valid.
 someElement.addEventListener("click", functionEventHandlerOne);
 someElement.addEventListener("click", functionEventHandlerTwo);
 ```
+
+### Event handler properties
+
+Objects which can fire events also have properties. For example, elements have a
+property *onclick* to which one can assign a handler function and it will behave
+in similar manner as using addEventListener().
+
+For e.g. in below example calling and assigning again to onclick will override the
+previous handler and thus only eventHandlerTwo will get called.
+
+```
+someElement.onclick = eventHandlerOne
+someElement.onclick = eventHandlerTwo
+
+function eventHandlerOne() {
+  console.log("Event handler one");
+}
+
+function eventHandlerTwo() {
+  console.log("Event handler two");
+}
+```
+
+### Inline event handlers - NOT RECOMMENDED
+
+In example mentioned at below HTML for button with id *changeBackgroundColorToRed*
+one can also set event handler inline like below
+
+https://github.com/saurabh1088/JavaScript/blob/main/java-script-playground/embedded-using-script-tag/html-with-embedded-javascript.html
+
+```
+<button id="changeBackgroundColorToRed" onclick="changeColorToRed">Red</button>
+```

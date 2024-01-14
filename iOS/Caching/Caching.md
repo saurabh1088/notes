@@ -33,6 +33,11 @@ arise.
 While using NSCache, one can add, remove, and query items in cache from different
 threads without the need of locking the cache.
 
+### Class restricted
+
+Looking at declaration for NSCache it tell that both key and value are restricted
+to be of class types only. This restricts usage of NSCache to class types only.
+
 
 ## TODOs
 
