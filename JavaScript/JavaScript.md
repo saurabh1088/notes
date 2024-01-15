@@ -522,5 +522,17 @@ one can also set event handler inline like below
 https://github.com/saurabh1088/JavaScript/blob/main/java-script-playground/embedded-using-script-tag/html-with-embedded-javascript.html
 
 ```
-<button id="changeBackgroundColorToRed" onclick="changeColorToRed">Red</button>
+<button id="changeBackgroundColorToRed" onclick="changeColorToRed()">Red</button>
 ```
+
+This way was very early way of managing event handlers. There are many HTML attributes
+like one in example above - *onclick*, however these are NOT RECOMMENDED to use.
+
+This way is like mixing HTML and JavaScript, which should be separate. Keeping HTML
+and JavaScript code separate and in separate files is a good practice and it helps
+code re-use as well.
+
+
+## Event Objects
+
+
