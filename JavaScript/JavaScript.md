@@ -521,6 +521,9 @@ one can also set event handler inline like below
 
 https://github.com/saurabh1088/JavaScript/blob/main/java-script-playground/embedded-using-script-tag/html-with-embedded-javascript.html
 
+One important point to note here is that in quotes for attribute onclick one needs
+to use brackets (), otherwise it will not work.
+
 ```
 <button id="changeBackgroundColorToRed" onclick="changeColorToRed()">Red</button>
 ```
@@ -535,4 +538,17 @@ code re-use as well.
 
 ## Event Objects
 
+Event handler functions can have parameter specified with some name which is event
+object, this object gets automatically passed to event handler function to provide
+extra information. For e.g.
+
+Full example details in file :
+https://github.com/saurabh1088/JavaScript/blob/main/java-script-playground/events-in-javascript/events.js
+
+```
+function eventHandlerExploringEventObject(event) {
+  console.log("Here's the event object received...")
+  console.log(event)
+}
+```
 
