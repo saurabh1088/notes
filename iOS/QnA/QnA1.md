@@ -158,3 +158,27 @@ for viewcontroller and expose the hierarchy through *view* property.
 The completion handler associated with URLSession's dataTask method gets called on
 a different queue than the one created the task in first place so any work in the
 completion handler updating UI should be explicitly placed on the main queue.
+
+
+## 6. What are @IBDesignable and @IBInspectable in Swift?
+
+TODO : Hands on with IBDesignable and IBInspectable
+TODO : Read throught and try out https://nshipster.com/ibinspectable-ibdesignable/
+
+### @IBDesignable
+
+@IBDesignable is an attribute which when is applied to a UIView or NSView subclass,
+tells Interface Builder in Xcode to render the view directly in the canvas. This
+allows seeing how that custom views will appear without building and running the
+app after each change.
+
+### @IBInspectable
+
+XIB/NIB and Storyboards have an old feature - user-defined runtime attributes. These
+were accessible from identity inspector in Xcode's Interface builder.
+@IBInspectable properties provides new access to this old feature. 
+
+@IBInspectable is an attribute which help exposing a property to Interface Builder
+in Xcode. When a property is marked with @IBInspectable attribute, then it becomes
+editable in Attributes inspector within Interface Builder in Xcode. This implies that
+one can set or adjust it from Interface Builder, without writing code.
