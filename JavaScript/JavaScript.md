@@ -552,3 +552,22 @@ function eventHandlerExploringEventObject(event) {
 }
 ```
 
+## Preventing Default Behaviour
+
+For example, we have a scenario where there is a form in HTML with some input fields,
+when submit action is performed form will get submitted. Form submission is the
+default behaviour of submit action.
+
+### What is the default behaviour of form submission?
+
+HTML form tag has an *action* attribute. This attribute specifies where to send
+the form-data when a form is submitted. So by default when submit action is performed
+as per action attribute all form data will be send to it.
+
+Now suppose before sending data right away to action attribute, we want to perform
+some validation, then based on certain conditions we need to skip the default behaviour
+of form submission. This is where *preventDefault()* comes into play.
+*preventDefault()* method comes from *Event* interface.
+
+Example link :
+https://github.com/saurabh1088/JavaScript/tree/main/java-script-playground/events-in-javascript
