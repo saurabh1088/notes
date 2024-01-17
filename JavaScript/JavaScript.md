@@ -571,3 +571,11 @@ of form submission. This is where *preventDefault()* comes into play.
 
 Example link :
 https://github.com/saurabh1088/JavaScript/tree/main/java-script-playground/events-in-javascript
+
+## Event bubbling
+
+Event Bubbling is a concept in DOM(Document Object Model) which happens when an element
+receives an event and the event gets transmitted or propagated to its parent elements
+till it gets to the root element. One can say the event bubbles up, hence the terminology.
+
+This is the default behaviour of events on elements unless stopped explicitly.
