@@ -579,3 +579,13 @@ receives an event and the event gets transmitted or propagated to its parent ele
 till it gets to the root element. One can say the event bubbles up, hence the terminology.
 
 This is the default behaviour of events on elements unless stopped explicitly.
+
+### How to prevent unexpected event bubbling?
+
+As event bubbling to parent elements is default behaviour, it can sometimes create
+issue. So sometimes if required to prevent this default behaviour one can use
+*stopPropagation()* method from Event interface. *stopPropagation()* when called
+inside event handler will prevent the event from bubbling up to other elements.
+
+Example link :
+https://github.com/saurabh1088/JavaScript/tree/main/java-script-playground/events-in-javascript
