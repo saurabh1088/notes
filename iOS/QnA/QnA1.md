@@ -182,3 +182,6 @@ were accessible from identity inspector in Xcode's Interface builder.
 in Xcode. When a property is marked with @IBInspectable attribute, then it becomes
 editable in Attributes inspector within Interface Builder in Xcode. This implies that
 one can set or adjust it from Interface Builder, without writing code.
+
+Example :
+https://github.com/saurabh1088/uikit/blob/main/UIKitLearnings/UIKitLearnings/BezierPaths/RectangularView.swift

@@ -572,7 +572,7 @@ of form submission. This is where *preventDefault()* comes into play.
 Example link :
 https://github.com/saurabh1088/JavaScript/tree/main/java-script-playground/events-in-javascript
 
-## Event bubbling
+## Event Bubbling
 
 Event Bubbling is a concept in DOM(Document Object Model) which happens when an element
 receives an event and the event gets transmitted or propagated to its parent elements
@@ -587,5 +587,73 @@ issue. So sometimes if required to prevent this default behaviour one can use
 *stopPropagation()* method from Event interface. *stopPropagation()* when called
 inside event handler will prevent the event from bubbling up to other elements.
 
+### Can bubbling be useful?
+
+Yes, see topic Event Delegation below.
+
+- Bubbling can help in attaching a single event listener to a hierarchy of parent
+chile elements instead of attaching individual listeners to each element, simplifying
+the code.
+
+- If any element is dynamically added in DOM, then bubbling will ensure that it will
+still be part of propagation.
+
+- Multiple events can be handled by using a single event listener.
+
 Example link :
 https://github.com/saurabh1088/JavaScript/tree/main/java-script-playground/events-in-javascript
+
+## Event Capture
+
+Event capture is a different form of event propagation which is reverse of event
+bubbling. So here event travels from parent to child elements.
+
+Unlike event bubbling, event capture is DISABLED by default. In order to enable event
+capture one needs to pass *capture* option in *addEventListener()* like below.
+
+```
+someElement.addEventListener("click", eventHandler, { capture: true });
+```
+
+Example link :
+https://github.com/saurabh1088/JavaScript/tree/main/java-script-playground/events-in-javascript
+
+## Event Propagation
+
+Event Propagation in JavaScript refers to process through which an event travels
+through the Document Object Model (DOM) tree. The DOM being a tree structure contains
+parent/child/sibling elements. Event propagation is the event travelling through
+these till those reach the destination. The event needs to pass through every node
+on the DOM until it reaches the end, or if it is forcibly stopped.
+
+Event bubbling and event capture are two phases of event propagation. During event
+propagation, the event passes through each ancestor of the target element. The order
+for this propagation is opposite for event bubbling and event capture.
+
+Target is the DOM node where for e.g. click happened.
+
+|Event Bubbling|Event Capture|
+|---|---|
+|Target -> Root|Root -> Target|
+
+
+## Why both bubbling and capture?
+
+This ended up this way as in older times some browsers used to support bubbling while
+others capture. W3C finally at some point decided to standardize behaviour and since
+then browsers included both.
+
+So by default events will bubble, but one has control of which one to use as per
+use case.
+
+
+## Event Delegation
+
+Event delegation is enabled by event bubbling which can be utilised to advantage.
+In DOM when dealing with several number of child elements, using event bubbling
+one can set event listener on parent and have event bubble up to the parent rather
+than adding listener to each child element.
+
+## TODOs
+
+1. Add example for Event Delegation
