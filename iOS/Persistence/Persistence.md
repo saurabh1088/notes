@@ -22,8 +22,13 @@ NSDictionary. Complex objects can be converted to NSData and saved.
 
 ### What's the limit on data which can be stored in UserDefaults?
 
-sizeLimitExceededNotification
+There is NO LIMIT on data which can be stored in UserDefaults EXCEPT for tvOS.
 
+UserDefaults has a class/type property sizeLimitExceededNotification. This is a notification which gets posted once more
+data is stored in user defaults than allowed.
+
+For tvOS the size limit will post the notification when user defaults storage reaches 512kB in size. Also tvOS app will
+get terminated if user defaults storage reaches 1MB in size.
 
 
 ## Plists
