@@ -30,13 +30,38 @@ data is stored in user defaults than allowed.
 For tvOS the size limit will post the notification when user defaults storage reaches 512kB in size. Also tvOS app will
 get terminated if user defaults storage reaches 1MB in size.
 
+sizeLimitExceededNotification is posted on the main queue.
 
 ## Plists
+
+
 
 ## SQLite
 
 ## Core Data
 
+Core Data is a Framework provided by Apple to manage object graph.
+
 ## Realm
+
+Realm is an alternative to SQLite. It is backed by MongoDB.
+
+It is/has:-
+- fast
+- lightweight
+- scalable
+- lazy loading
+- zero-copy architecture
+- Built-in mobile to cloud sync
+
+
+## NSUbiquitousKeyValueStore
+
+This is iCloud based container saving key-value pairs which are tied to iCloud account and enable access to data among
+instances of user's apps running across connected devices.
+
+## TODOs
+
+1. Explore iCloud Storage and NSUbiquitousKeyValueStore
 
 
