@@ -42,6 +42,8 @@ sizeLimitExceededNotification is posted on the main queue.
 
 Core Data is a Framework provided by Apple to manage object graph.
 
+Explore : https://github.com/saurabh1088/notes/blob/main/iOS/Persistence/CoreData.md
+
 ## Realm
 
 Realm is an alternative to SQLite. It is backed by MongoDB.
