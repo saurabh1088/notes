@@ -36,18 +36,7 @@ Core Data can also help keeping views updated.
 Core Data has provision for versioning data model and also migrating user data.
 
 
-## Is Core Data a database?
-Core Data is NOT a database. It is as mentioned above a framework managing object graph. Data persistence in Core Data is
-an optional feature. One can go ahead and use Core Data very well for in-memory data management without ever persisting to
-some database.
 
-
-## Core Data persistence options?
-Yes, persistence is optional in Core Data. If one chooses Core Data for data persistence, then one can also specify the type
-of persistece store one want to use. Following are options :
-- SQLite
-- XML
-- Binary
 
 
 ## Core Data Stack
@@ -82,9 +71,36 @@ Following all form the core data stack
 
 
 ## NSPersistentContainer
-Core data is initialized on app’s startup.
+NSPersistentContainer class represents or encapsulates the Core Data stack in an app. It manages and simplifies the creation
+and management of Core Data stack.
 Persistent container is defined as a lazy variable (so as to defer instantiation until first use)
+
+So NSPersistentContainer creates:-
+- Managed object model (NSManagedObjectModel)
+- Persistent store coordinator (NSPersistentStoreCoordinator)
+- Managed object context (NSManagedObjectContext)
+
+Example : Refer AppDelegate in below project
+https://github.com/saurabh1088/uikit
+https://github.com/saurabh1088/uikit/blob/main/UIKitLearnings/UIKitLearnings/AppDelegate.swift
+
+
+## QnA
+### When is Core Data initialized?
+Core data is initialized on app’s startup.
+
+### Is Core Data a database?
+Core Data is NOT a database. It is as mentioned above a framework managing object graph. Data persistence in Core Data is
+an optional feature. One can go ahead and use Core Data very well for in-memory data management without ever persisting to
+some database.
+
+### Core Data persistence options?
+Yes, persistence is optional in Core Data. If one chooses Core Data for data persistence, then one can also specify the type
+of persistece store one want to use. Following are options :
+- SQLite
+- XML
+- Binary
 
 
 ## TODOs
-[ ] Check how to specify which persistent store to use and which is default one core data uses.
+- [ ] Check how to specify which persistent store to use and which is default one core data uses.
