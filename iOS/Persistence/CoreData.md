@@ -14,6 +14,33 @@ It can help to
 - Sync data across multiple devices(using CloudKit working with CoreData)
 
 
+## Features from bird's eye view
+
+### Persistence
+
+Core Data as mentioned can be used for data persistence by opting for a persistent store. The default store is SQLite.
+Core Data proves abstraction over objects mapping to persistent store. This makes easy to save data without having to administer
+database directly.
+
+### Undo/Redo
+
+Core Data comes with an undo manager which tracks changes to it. This undo manager can roll the changes back either individually
+or in groups. This makes adding undo/redo support in apps convinient and easy to implement.
+
+NSManagedObjectContext has instance property undoManager of type UndoManager.
+
+### Background data tasks
+
+Potential UI blocking tasks can be performed in background.
+
+### View synchronization
+
+Core Data can also help keeping views updated.
+
+### Versioning and migration
+
+Core Data has provision for versioning data model and also migrating user data.
+
 ## Is Core Data a database?
 
 Core Data is NOT a database. It is as mentioned above a framework managing object graph. Data persistence in Core Data is
@@ -49,6 +76,24 @@ in the Attribute Inspector. We do this because when we initialize the Core Data,
 we have a lot of saved images, we don’t want them to get loaded every time we open the app, but only when it’s time to 
 show/use them. This way, we’ll avoid any performance issues.
 
+
+## Working with Core Data
+
+### Creating a Data Model File (.xcdatamodeld)
+
+Select Core Data checkbox while creating a new project in Xcode, or if project is already created then one needs to add
+a new file of type Data Model from Core Data section. In both the cases one sees a file with extension *.xcdatamodeld* added
+to project.
+
+### Setting up Core Data stack
+
+Core Data stack refers to set of objects which work together in Core Data framework to manage and persist the app’s objects.
+Following all form the core data stack
+
+- Persistent container (NSPersistentContainer)
+- Model (NSManagedObjectModel)
+- Context (NSManagedObjectContext)
+- Store coordinator (NSPersistentStoreCoordinator)
 
 ## TODOs
 
