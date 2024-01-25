@@ -85,6 +85,26 @@ https://github.com/saurabh1088/uikit
 https://github.com/saurabh1088/uikit/blob/main/UIKitLearnings/UIKitLearnings/AppDelegate.swift
 
 
+## NSManagedObjectModel
+When Core Data is opted for a project either from start or added in between, one ends up with generating a *.xcdatamodeld*
+file. NSManagedObjectModel is the programmatic representation of this *.xcdatamodeld* file.
+
+The *.xcdatamodeld* file when opened in Xcode editor allows one to add entities. So basically *.xcdatamodeld* describes the
+objects of the object graph Core Data will eventually manage. These entities are represented by NSEntityDescription.
+
+Check file *UIKitLearnings.xcdatamodeld* in project https://github.com/saurabh1088/uikit
+
+So we have a NSManagedObjectModel which is basically *.xcdatamodeld* file, this file contains one or many NSEntityDescription.
+NSEntityDescription are the entities which have properties represented by NSPropertyDescription.
+
+An entity's property represented by NSPropertyDescription could be of following types:-
+- Attribute (NSAttributeDescription)
+- Relationships (NSRelationshipDescription)
+- Fetched Properties (NSFetchedPropertyDescription)
+
+NSAttributeDescription, NSRelationshipDescription, and NSFetchedPropertyDescription are all derived from NSPropertyDescription.
+
+
 ## QnA
 ### When is Core Data initialized?
 Core data is initialized on app’s startup.
@@ -104,3 +124,24 @@ of persistece store one want to use. Following are options :
 
 ## TODOs
 - [ ] Check how to specify which persistent store to use and which is default one core data uses.
+- [ ] What is Core Data, and what is its primary purpose in iOS development?
+- [ ] Explain the role of the Managed Object Model in Core Data.
+- [ ] What is a Managed Object Context, and how is it used in Core Data?
+- [ ] Describe the purpose of the Persistent Store Coordinator in the Core Data stack.
+- [ ] What is a Managed Object, and how does it relate to entities in Core Data?
+- [ ] Explain the differences between an entity and an attribute in Core Data.
+- [ ] How do you define relationships between entities in the Core Data model?
+- [ ] What are fetched properties in Core Data, and when might you use them?
+- [ ] What is an NSFetchedResultsController, and how is it used?
+- [ ] Compare and contrast NSFetchRequest and NSPredicate in Core Data.
+- [ ] How do you perform a fetch request with a sort descriptor in Core Data?
+- [ ] Explain the role of the persistent store in Core Data.
+- [ ] What types of persistent stores does Core Data support, and how do you choose one for your application?
+- [ ] How can you migrate data when you update your Core Data model?
+- [ ] What is the typical pattern for managing Core Data contexts in a multithreaded environment?
+- [ ] What is a NSManagedObjectContextDidSave notification, and how can it be useful?
+- [ ] How can you optimize Core Data fetch requests for better performance?
+- [ ] Explain the concept of faulting in Core Data and its impact on performance.
+- [ ] How do you handle errors when working with Core Data operations?
+- [ ] What is the purpose of the Core Data lightweight migration?
+- [ ] How do you implement undo and redo functionality using Core Data's undo manager?
