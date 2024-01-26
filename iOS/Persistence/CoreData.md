@@ -13,6 +13,13 @@ Core Data can help to
 - Sync data across multiple devices(using CloudKit working with CoreData)
 
 
+## What is an Object Graph?
+We say Core Data manages object graph, let's see what an object graph is. Objects can and will have references to other
+objects in any object oriented programming. These relationships form a graph. One can say that an object graph is conceptualization 
+of all instances of the objects from one's object model (the classes in the program) and their interconnections.
+So an Object graph is basically a dependency graph between objects.
+
+
 ## Features from bird's eye view
 ### 1. Persistence
 
@@ -104,6 +111,30 @@ An entity's property represented by NSPropertyDescription could be of following 
 
 NSAttributeDescription, NSRelationshipDescription, and NSFetchedPropertyDescription are all derived from NSPropertyDescription.
 
+
+## NSManagedObjectContext
+Persistent container has a viewContext property of type NSManagedObjectContext, which can be referred as below. NSManagedObjectContext
+represents a context which consists of a group of related model objects. These related model objects can represent internally
+consistent view of one or more persistent stores. 
+
+```
+let managedContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+```
+
+Using this managed context one can access managed objects and have changes apply to those. Changes which are applied to managed
+objects will remain in memory until the context is saved to persistent store by Core Data.
+
+Context object has a central role in managing life cycle of managed objects.
+
+### Responsibilities of NSManagedObjectContext
+1. Managed objects life cycle management.
+2. Undo/Redo
+3. Fetch objects from a persistent store
+4. Fetch and make changes to objects from persistent store
+5. Discard or commit changes to persistent store
+6. Watch changes in managed objects
+7. Maintains an undo manager
+8. Insert new objects or delete existing
 
 ## QnA
 ### When is Core Data initialized?
