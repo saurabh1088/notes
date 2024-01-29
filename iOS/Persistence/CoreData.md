@@ -52,6 +52,10 @@ Core Data has provision for versioning data model and also migrating user data.
 - Context (NSManagedObjectContext)
 - Store coordinator (NSPersistentStoreCoordinator)
 
+Context needs to know the coordinator to do it's work. Coordinator needs to know about model so that it can make sense of
+the persistent stores it manages. So Model, Context and Coordinator are all sufficiently interdependent.
+Core Data provided one encapsulated type i.e. NSPersistentContainer which represents this entire stack.
+
 
 ## Good Thing to Know: 
 When one want to store images, then one have to set the type to Binary Data and check the Allows External Storage
@@ -136,6 +140,10 @@ Context object has a central role in managing life cycle of managed objects.
 7. Maintains an undo manager
 8. Insert new objects or delete existing
 
+## NSPersistentStoreCoordinator
+Responsible for managing the persistent stores. Most of the time a persistent store is a database which lives on filesystem.
+It's possible to have many persistent stores at once. One can also have custome made one derived from NSPersistentStore.
+
 ## QnA
 ### When is Core Data initialized?
 Core data is initialized on app’s startup.
@@ -151,6 +159,20 @@ of persistece store one want to use. Following are options :
 - SQLite
 - XML
 - Binary
+
+
+## WWDC
+
+### Making Apps with Core Data
+https://developer.apple.com/videos/play/wwdc2019/230/
+
+Cascade deletion rule.
+Batch Insertions.
+fetchBatchSize : This will set the batch size which gets loaded in memory and not all records from fetch.
+NSDiffableDataSourceSnapshot
+
+Core Data objects have supported KVO since beginning, however now once can use Combine to drive changes to UI by subscribing
+to publishers on Core Data object properties.
 
 
 ## TODOs
@@ -176,3 +198,4 @@ of persistece store one want to use. Following are options :
 - [ ] How do you handle errors when working with Core Data operations?
 - [ ] What is the purpose of the Core Data lightweight migration?
 - [ ] How do you implement undo and redo functionality using Core Data's undo manager?
+- [ ] Watch https://developer.apple.com/videos/play/wwdc2019/220
