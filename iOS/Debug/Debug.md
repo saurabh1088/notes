@@ -128,3 +128,18 @@ LLDB consists of two compilers
 - Clang for Objective C
 - Swift compiler
 What's REPL
+
+
+## Crashes
+
+The point where the execution reaches where only option is to crash, then when using Xcode in debug mode, the debugger receives
+a signal that the app is about to crash and debugger pauses the app. This is when we can see the execution paused in Xcode
+and can view the stack trace.
+Now when we are not attached to the debugger, the operating system will capture the backtrace in plaintext and save it out
+to disk in human readable crash log. Now the release build logs won't be as readable, it will consist a list of binary names,
+which is the unsymbolicated crash log. As Xcode takes care of symbolicating crash logs, we see the details of methods, class
+name, line number etc.
+
+### How to view crash logs on Xcode for your apps in TestFlight and AppStore?
+Got to Xcode -> Window -> Organizer
+Choose App and one can view crash logs, hang logs, etc.
