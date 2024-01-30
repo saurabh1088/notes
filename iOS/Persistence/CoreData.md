@@ -170,6 +170,9 @@ Cascade deletion rule.
 Batch Insertions.
 fetchBatchSize : This will set the batch size which gets loaded in memory and not all records from fetch.
 NSDiffableDataSourceSnapshot
+Denormalization
+Derived Attributes : Makes Denormalization super easy
+Remote Change Notifications
 
 Core Data objects have supported KVO since beginning, however now once can use Combine to drive changes to UI by subscribing
 to publishers on Core Data object properties.
