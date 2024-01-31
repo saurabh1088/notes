@@ -143,6 +143,17 @@ to disk in human readable crash log. Now the release build logs won't be as read
 which is the unsymbolicated crash log. As Xcode takes care of symbolicating crash logs, we see the details of methods, class
 name, line number etc.
 
+### What are the reasons crashes can happen due to OS deciding to terminate application?
+- Watchdog events
+- Device overheating
+- Memory Issues
+- Invalid code signature
+
+Operating system may decide to kill the application at launch itself if the application took too long to launch. This may
+also result in app store rejection. Obviously to avoid launch timeouts one needs to test the app properly before submitting
+to app store but the launch timeout watchdog is disabled in Simulator and it is disabled in the debugger. So watchdog timeout
+will not be observed in simulator and with debugger attached. So one needs to test app on device without debugger.
+
 ### How to view crash logs on Xcode for your apps in TestFlight and AppStore?
 Got to Xcode -> Window -> Organizer
 Choose App and one can view crash logs, hang logs, etc.
@@ -162,3 +173,5 @@ and perform local symbolification when it's necessary automatically.
 any dSYMs which comes as part of store side bitcode compilation.
 
 Crash log files contains much more information than just the stack trace.
+
+### What are watchdog events?
