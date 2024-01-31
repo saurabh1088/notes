@@ -132,6 +132,9 @@ What's REPL
 
 ## Crashes
 
+wwdc : https://developer.apple.com/videos/play/wwdc2018/414/
+Understanding Crashes and Crash Logs
+
 The point where the execution reaches where only option is to crash, then when using Xcode in debug mode, the debugger receives
 a signal that the app is about to crash and debugger pauses the app. This is when we can see the execution paused in Xcode
 and can view the stack trace.
@@ -143,3 +146,19 @@ name, line number etc.
 ### How to view crash logs on Xcode for your apps in TestFlight and AppStore?
 Got to Xcode -> Window -> Organizer
 Choose App and one can view crash logs, hang logs, etc.
+
+### How can one share logs from device?
+Device, if is connected to Xcode, then once can use Xcode's Device menu to view logs. 
+Also on device one can view logs under :
+
+Settings -> Privacy & Security -> Analytics & Improvements -> Analytica Data
+
+
+## Symbolification
+1. Upload symbols with the app, this will ensure that server side symbolification works.
+2. Save the app archives, as archives contains a copy of the debug symbols, the dSYMs. Xcode uses spotlight to find these dSYMs
+and perform local symbolification when it's necessary automatically.
+3. If app is uploaded which contains bitcode, then one should use the archive organizer download debug symbol button to download
+any dSYMs which comes as part of store side bitcode compilation.
+
+Crash log files contains much more information than just the stack trace.
