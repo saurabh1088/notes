@@ -32,6 +32,9 @@ Displays all local variables in the current stack frame.
 // TODO : Confirm this command (type lookup) if it's valid
 ### type lookup
 
+### lldb
+*lldb* itself is a command which can be run in terminal on Mac to start a debug session.
+Once the session is open then one can use commads to import for example crash logs to analyse those.
 
 ## Examining Data
 
@@ -165,7 +168,7 @@ Also on device one can view logs under :
 Settings -> Privacy & Security -> Analytics & Improvements -> Analytica Data
 
 
-## Symbolification
+### Symbolification
 1. Upload symbols with the app, this will ensure that server side symbolification works.
 2. Save the app archives, as archives contains a copy of the debug symbols, the dSYMs. Xcode uses spotlight to find these dSYMs
 and perform local symbolification when it's necessary automatically.
@@ -175,3 +178,44 @@ any dSYMs which comes as part of store side bitcode compilation.
 Crash log files contains much more information than just the stack trace.
 
 ### What are watchdog events?
+
+### Memory Errors
+What memory errors look like in crash logs.
+
+Memory error can occur due to:
+- Reference counting of an object being over-released.
+- Using an object after it has been freed.
+- Buffer overflow, like when there is a byte array or C array and that array is accessed out of bounds.
+
+Exception type in crash logs in these errors is usually
+EXC_BAD_ACCESS (SIGSEGV - SEG Violation Signal)
+Also crash logs will give the invalid memory address which was accessed at the time of crash.
+The invalid address itself sometimes will contain usefule information
+In stack trace one might observe call made to function *objc_release* and also possible *objc_dispose*
+One can look at the stack trace to track funtion performing the bad access.
+
+### EXC_BAD_ACCESS
+This usually means:
+- either we are writing to memory which is read only.
+- Or we are reading from memory which doesn not exists.
+
+### objc_release
+This function is part of implementation of reference counting in Objective C and some Swift objects.
+*objc_release* reads the isa field and then dereferences the isa field to get to the class object and perform method lookup.
+When object gets freed, then instead of isa, there is a rotated free list pointer. Now when objc_release will try to read
+isa field, it will instead get rotated free list pointer, which when dereferenced crashes the app.
+
+### objc_dispose
+This is a function in Objective C runtime which is used to deallocate objects.
+
+### ivar_destroyer
+ivar_destroyer function is part of Swift code. This function cleans up the properties, cleans up the ivar storage of an object
+when the object is being deallocated.
+This is a compiler generated function, so one might see ivar_destroyer called in crash logs stack trace, but we won't get
+to know which property was being destroyed.
+
+### lldb on Mac Terminal
+One need to have following to analyse crash log inside debugger session provided by running lldb command on terminal:
+- The crash log
+- The app
+- dSYM
