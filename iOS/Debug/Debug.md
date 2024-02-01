@@ -194,7 +194,7 @@ The invalid address itself sometimes will contain usefule information
 In stack trace one might observe call made to function *objc_release* and also possible *objc_dispose*
 One can look at the stack trace to track funtion performing the bad access.
 
-### EXC_BAD_ACCESS
+1. EXC_BAD_ACCESS
 This usually means:
 - either we are writing to memory which is read only.
 - Or we are reading from memory which doesn not exists.
@@ -219,3 +219,15 @@ One need to have following to analyse crash log inside debugger session provided
 - The crash log
 - The app
 - dSYM
+
+2. Unrecognized selector exception
+Sometimes an object is deallocated but the reference is still being used after the deallocation. Now if another object
+occupies the same memory address space as the deallocated object, the usage of previous object's reference will result
+in this exception and crashes related to it.
+
+3. abort() inside malloc/free
+This is another reason of memory error leading to crashes, where abort() is called inside memory allocator itself, i.e. inside
+the malloc or free functions. This is due to precondition inside the memory allocator. This may be due to heap datastructure
+of the malloc memory allocator itself gets corrupted by a memory error thereby leading to halting of process. Or this maybe
+due to incorrect usage of malloc APIs, like if one frees an object twice in a row, then the malloc allocator can recognize this
+as double free leading to immediately halting the process.
