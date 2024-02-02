@@ -231,3 +231,8 @@ the malloc or free functions. This is due to precondition inside the memory allo
 of the malloc memory allocator itself gets corrupted by a memory error thereby leading to halting of process. Or this maybe
 due to incorrect usage of malloc APIs, like if one frees an object twice in a row, then the malloc allocator can recognize this
 as double free leading to immediately halting the process.
+
+## Multithreading Issues
+Some of the memory corruptions could be result of multithreading issues.
+If in crash logs one observes same class appearing for multiple thread, then this could be the case of multithreading issues.
+One can use *Thread Sanitizer* to analyze some of the issues arising due to multithreading.
