@@ -38,6 +38,10 @@ threads without the need of locking the cache.
 Looking at declaration for NSCache it tell that both key and value are restricted
 to be of class types only. This restricts usage of NSCache to class types only.
 
+### Purgeable
+
+The way NSCache allocates its memory it is purgeable, so NSCache performs better in memory-constrained environment.
+
 
 ## TODOs
 
