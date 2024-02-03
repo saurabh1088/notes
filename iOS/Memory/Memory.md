@@ -45,6 +45,54 @@ Following are the segment of memory one finds in a typical apps memory profile
 
 - Clean memory is the one which has data that can be paged out. These are memory mapped files.
 - Dirty memory is any memory that has been written to by the app.
+- In iOS there is a memory compressor which takes unaccessed pages and squeeze those down to create more space. When those
+pages are read then those will be decompressed again by compressor to read.
+
+For example there is a dictionary in app which is being used for caching. Now, suppose it is using ten pages of memory
+right now, but if this cached content isn't accessed for quite a while and the system needs some space, it can actually
+squeeze it down into fewer pages. Now memory holding this cache is compressed and we save some space getting few extra
+memory pages. When in future the cache is accessed again. memory will grow back.
 
 Apps memory footprint = Dirty memory + Compressed memory
 
+## Tools for profiling footprint
+
+### Instruments
+1. Allocations
+    - Profiles the heap allocations made by app
+
+2. Leaks
+    - As name suggests, this will check memory leaks in process over time
+
+3. VM Tracker
+    - There is dirty memory and compressed memory, VM Tracker provides way to profile this.
+
+4. Virtual memory trace
+
+Xcode memory debugger under the hood uses *Memgraph* file format. These Memgraphs can also be used with command-line tools.
+One can export the Memgraph from Xcode and analyse using command-line tools like *vmmap*
+
+### Command line tool : vmmap
+It gives a high-level breakdown of memory consumption in one's app by printing the VM regions that are allocated to the
+process. It will print in details various memory like, amount of memory of region which is dirty, amount of memory which
+is swapped(compressed in iOS). The swapped or compressed size given by *vmmap* is the size before compression.
+
+### Command line tool : leaks
+*leaks* tracks objects on heap which aren't rooted anywhere at runtime. If an object is in leaks, it is a dirty memory which
+one can't free.
+
+### Command line tool : heap
+It provides all the information about object allocations in the process heap, it will list down all object allocations, the
+class name for objects and the number of objects allocated, their average size and total size, it can help one identify:
+- very large allocations
+- lots of similar objects
+
+### Command line tool : malloc_history
+
+### Now which tool to pick?
+|Creation|Reference|Size|
+|---|---|---|
+|Object Creation|References of object|How large is the object|
+|Helps find backtrace for object|Helps to find what all is referencing to the object|Helps to realize size of the object|
+|need to have malloc stack logging enabled|-|-|
+|malloc_history|leaks|vmmap, heap|
