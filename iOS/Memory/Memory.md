@@ -96,3 +96,22 @@ class name for objects and the number of objects allocated, their average size a
 |Helps find backtrace for object|Helps to find what all is referencing to the object|Helps to realize size of the object|
 |need to have malloc stack logging enabled|-|-|
 |malloc_history|leaks|vmmap, heap|
+
+## Images and implication over memory
+One of the largest objects in an iOS App can be images, hence this needs a discussion over implications over memory.
+Also about images, one of the important thing is to remember that the memory use is related to the dimensions of the image,
+not its file size.
+
+For example let's take an image of size 590KB which is of size 2048x1536 pixels. This image on disk is 590KB, but when loaded
+in memory will become of size 2048x1536x4 Bytes which turns out to be approximately 12MB. This happens because on iOS the images
+have following three phases:
+
+Load -> Decode -> Render
+
+- Load Phase : The 590KB image which is compressed format, is loaded into memory.
+- Decode Phase : This converts image to a format which the GPU can read and here it is using 4 bytes per pixel calculation
+becomes approximately 12MB, this is by SRGB format. SRGB is typically the most common format. One can go more rich formats
+or less rich formats.
+
+### Best practices when dealing with Images
+- Unload large resources which one can't see.
