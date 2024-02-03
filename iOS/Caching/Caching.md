@@ -42,6 +42,24 @@ to be of class types only. This restricts usage of NSCache to class types only.
 
 The way NSCache allocates its memory it is purgeable, so NSCache performs better in memory-constrained environment.
 
+## Caching and Memory
+
+As discussed in link https://github.com/saurabh1088/notes/blob/main/iOS/Memory/Memory.md regarding memory compressor, that
+how it will compress the memory which is not being accessed for a while, so that it can free up some memory. Now this can
+have some complications while freeing up memory once an app receives memory warnings.
+
+What complications?
+Well, suppose an app is caching a bunch of data so that it can have better performance in not making network call again and
+again to fetch that data. Now if the cache is left unused and gets compressed by the compressor, it can free up some memory.
+Now app is not always a cause of memory warning, on a low memory device with bunch of other apps open can also trigger a
+memory warning. So now our app with compressed cache receives a memory warning and as a part of handling memory warning the
+app has implementation to remove all cache. Now since in order to remove all cache the cache ends up getting accessed and
+it will cause compressor to decompress memory for it, so in a memory-contrained environment, the app actually went on to
+use more memory.
+So important thing to consider about caching is that one might use caching so as to prevent CPU from doing some task repeatedly,
+but if one ends up caching too much, then it can result in memory issues.
+
+
 
 ## TODOs
 
