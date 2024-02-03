@@ -20,12 +20,31 @@ These pages serve as a basic units of memory allocation.
 
 ## Memory Footprint
 A memory page is given by system and it can hold multiple objects on heap. Some objects can span multiple pages. In iOS
-typically pages are 16K in size. Pages can be of following type:
+typically pages are 16KB in size. Pages can be of following type:
 - Clean
 - Dirty
 
-Pages are clean when nothing is written on to them, if we write something then it's dirty.
+Pages are clean when nothing is written on to them, if we write something then it's dirty. What this means in that when
+memory is allocated, the allocated memory pages are cleab until some data is written onto those.
 
 ### Memory usage of the app
 Memory usage of the app = Number of Pages * Page size
+
+### Memory-mapped files
+These are the files which are on disk but loaded into memory. Read-only files are always clean pages. The kernet manages
+as they come on and off from disk to RAM. For example a JPEG file is stored on disk, but will be loaded onto memory to say
+for display in app. So a 32KB JEPG image file when is memory-mapped will need two memory pages at the least. If say the JPEG
+is 50KB then it will need four pages, where the fourth page will not be completely used, hence the fourth page can still
+be utilized for other purpose.
+
+### Typical Apps memory profile
+Following are the segment of memory one finds in a typical apps memory profile
+1. Dirty
+2. Compressed
+3. Clean
+
+- Clean memory is the one which has data that can be paged out. These are memory mapped files.
+- Dirty memory is any memory that has been written to by the app.
+
+Apps memory footprint = Dirty memory + Compressed memory
 
