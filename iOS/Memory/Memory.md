@@ -135,3 +135,26 @@ one only pay the dirty memory cost of the resulting image. So this will prevent 
 
 3. **For downnsampling instead of using UIImage, use *ImageIO***
 
+## Stack vs Heap
+
+|Stack|Heap|
+|---|---|
+|Region of memory used for static memory allocation|Region of memory used for dynamic memory allocation|
+|Managed by the program itself|Need to be allocated/deallocated|
+|Allocation is over contiguous blocks of memory||
+|Called stack as allocation happens in the function call stack|It's a pile of memory available for a programmer to allocate/deallocate|
+|LIFO||
+|Managed automatically|Not managed automatically|
+|Limited in size|Typically larger than stack memory|
+|It is fast|Slower than stack|
+
+### Stack Memory
+Stack memory is a region within RAM(Random Access Memory) which is used for static memory allocation managed usually by program's
+runtime environment, operating in a LIFO manner. Every time when a function is called, system allocates some stack memory
+for the funtion. When a local variables is declared, more stack memory is allocated for that function to store that variable.
+Such allocations make the stack grow downwards. After the function returns, the stack memory of this function is deallocated,
+which means all local variables become invalid. The allocation and deallocation for stack memory is automatically done.
+The variables allocated on the stack are called stack variables, or automatic variables.
+
+## TODOs
+- [ ] Watch https://developer.apple.com/videos/play/wwdc2016/416/
