@@ -113,5 +113,25 @@ Load -> Decode -> Render
 becomes approximately 12MB, this is by SRGB format. SRGB is typically the most common format. One can go more rich formats
 or less rich formats.
 
+### Downsampling Images
+In apps sometimes one has to downsample images. For example to use thumbnail images. If one uses UIImage to draw, then it
+will have implications on memory usage, as the image will first get decompressed for transformation. Instead for downsampling
+one should use *ImageIO* framework. *ImageIO* can actually downsample the image, and it will use a streaming API such that
+one only pay the dirty memory cost of the resulting image. So this will prevent a memory spike.
+
 ### Best practices when dealing with Images
-- Unload large resources which one can't see.
+1. **Unload large resources which one can't see**
+    Suppose in an app when a view opens it's showing an image. To show image, it has to be loaded into memory, now if for
+    any scenario user has to go to a different screen, or lets say if some phone call comes in user jumps to attent that
+    call and app goes to background. Now the image will still be in memory and app continues to use memory. So here it would
+    be a good practice to unload large resources which user is not seeing at the moment. One can do this in two ways
+        - One can use app life cycle notifications
+        - UIViewController life cycle methods
+
+2. **Let iOS pick the image format**
+    Instead of using now deprecated UIGraphicsBeginImageContextWithOptions API, one should switch to UIGraphicsImageRenderer.
+    UIGraphicsBeginImageContextWithOptions is always 4-byte-per-pixel format, whereas UIGraphicsImageRenderer will automatically
+    pick the best format.
+
+3. **For downnsampling instead of using UIImage, use *ImageIO***
+
