@@ -158,3 +158,4 @@ The variables allocated on the stack are called stack variables, or automatic va
 
 ## TODOs
 - [ ] Watch https://developer.apple.com/videos/play/wwdc2016/416/
+- [ ] Watch https://developer.apple.com/videos/play/wwdc2016/419
