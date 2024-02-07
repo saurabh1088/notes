@@ -97,6 +97,45 @@ at runtime. Now this is only adding some additional redirection at runtime and n
 But compiler won't be able to optimize code in dynamic dispatch scenario and perform *inlining*
 Now compiler has a full view of a chain of static dispatches, which is not viable in case of chain of dynamic dispatches.
 
+So classes results in dynamic dispatch by default, so this doesn't causes immediate increase in cost on performance but when
+there is chain of calls involved it will prevent compiler from doing optimizations like inlining and this can add up and make
+performance issues.
+
+Now not all classes will require dynamic dispatch. If there is a class which is supposed to be never subclasses then it should
+be marked as final, for final class compiler will dispatch it's method statically.
+
+## Polymorphism using Protocol Oriented Programming
+Polymorphism without inheritance and reference semantics
+
+```
+swift
+protocol Vehicle {
+    func drive()
+}
+
+struct Car: Vehicle {
+    func drive() {
+        print("Driving a Car 🚗")
+    }
+}
+
+struct Bike: Vehicle {
+    func drive() {
+        print("Driving a Bike 🏍️")
+    }
+}
+
+func examplePolymorphismUsingProtocols() {
+    var myGarage = [Vehicle]()
+    myGarage.append(Car())
+    myGarage.append(Bike())
+    for vehicle in myGarage {
+        vehicle.drive()
+    }
+}
+```
+Check example : https://github.com/saurabh1088/swift-playgrounds/blob/main/Swift.playground/Pages/Protocols.xcplaygroundpage/Contents.swift
+
 
 ## TODOs
 - [ ] Add example using code.
