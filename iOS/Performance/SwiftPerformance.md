@@ -107,6 +107,11 @@ be marked as final, for final class compiler will dispatch it's method staticall
 ## Polymorphism using Protocol Oriented Programming
 Polymorphism without inheritance and reference semantics
 
+In example method `examplePolymorphismUsingProtocols` below the `myGarage` array can hold any type which conforms to `Vehicle` 
+protocol, so basically `myGarage` can hold any `Vehicle`, but these `Vehicle` types don't share any common ancestor, which
+is there is no common inheritance relationship here. So here there is no `V-Table` dispatch happening. Instead here the
+mechanism used will be `Protocol Witness Table`.
+
 ```
 swift
 protocol Vehicle {
@@ -136,6 +141,26 @@ func examplePolymorphismUsingProtocols() {
 ```
 Check example : https://github.com/saurabh1088/swift-playgrounds/blob/main/Swift.playground/Pages/Protocols.xcplaygroundpage/Contents.swift
 
+### Protocol Witness Table
+Protocol Witness Table is a table based mechanism which helps in method dispatch in protocol oriented programming. Normally
+in inheritance using reference types there is a concept of V-Table dispatch. But when one designs using protocols then conforming
+types are not related via any parent, so there method dispatch is done via Protocol Witness Table.
+
+*So a Protocol Witness Table is a dynamic dispatch without V-Table*
+
+Every type which implements the protocol gets a Protocol Witness Table. Entries in this Protocol Witness Table link to an
+implementation in the type.
+
+**Existential Container**
+An array storing types which conform to protocols can have elements stored of unrelated types and of different memory needs.
+How Swift will decide to allocate memory while storing in Array? Well Swift uses a special storage layout which is called
+Existential Container. Some initial space/words are reserved in Existential Container for value buffer. Types not requiring
+enought memory needs can fit into this value buffer. When memory requirement is large then Swift will allocate memory on heap
+and store reference on value buffer.
+
+### Value Witness Table
+The Value Witness Table manages the lifetime of value and there is one of those tables per type in a program. The Existential Container
+discussed above has a referece to the Value Witness Table. Also the Existential Container contains reference to the Protocol Witness Table.
 
 ## TODOs
 - [ ] Add example using code.
