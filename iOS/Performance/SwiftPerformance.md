@@ -158,6 +158,12 @@ Existential Container. Some initial space/words are reserved in Existential Cont
 enought memory needs can fit into this value buffer. When memory requirement is large then Swift will allocate memory on heap
 and store reference on value buffer.
 
+An Existential Container contains:
+1. Inline Value Buffer: 3 words
+2. Reference to large values stored on Heap
+3. Reference to Value Witness Table
+4. Reference to Protocol Witness Table
+
 ### Value Witness Table
 The Value Witness Table manages the lifetime of value and there is one of those tables per type in a program. The Existential Container
 discussed above has a referece to the Value Witness Table. Also the Existential Container contains reference to the Protocol Witness Table.
