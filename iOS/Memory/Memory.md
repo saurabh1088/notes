@@ -156,6 +156,17 @@ Such allocations make the stack grow downwards. After the function returns, the 
 which means all local variables become invalid. The allocation and deallocation for stack memory is automatically done.
 The variables allocated on the stack are called stack variables, or automatic variables.
 
+## What is *words* in terms of memory?
+
+Quoting from : saylor.org
+
+*In computing, a word is the natural unit of data used by a particular processor design. A word is a fixed-sized piece of
+data handled as a unit by the instruction set or the hardware of the processor. The number of bits in a word (the word size,
+word width, or word length) is an important characteristic of any specific processor design or computer architecture.*
+
+- Size of word is expressed in bits.
+- In memory management, a word typically means the smallest addressable unit of memory.
+
 ## TODOs
 - [ ] Watch https://developer.apple.com/videos/play/wwdc2016/416/
 - [ ] Watch https://developer.apple.com/videos/play/wwdc2016/419
