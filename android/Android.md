@@ -34,6 +34,16 @@ its own virtual machine, so every app runs in isolation from other apps.
 Each Android app by default will get only the priviliges which require it to do its work and not more than that. This limits
 apps permissions and access to only those resources and capabilities which are necessary for the app's functionalities.
 
+## App Components
+Essesntial building blocks for an Android App are termed as App Components.
+1. Activities
+2. Services
+3. Broadcast receivers
+4. Content providers
+
+### Activity
+An Activity in Android represents a single screen with user interaction.
+
 ## TODOs
 
 - [ ] Can two apps in Android share data? If yes then how?
