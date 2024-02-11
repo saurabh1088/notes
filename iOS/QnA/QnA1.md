@@ -95,6 +95,7 @@ As UIViewController inherits from
 - Handling user interaction events
 - Resizing views and managing layout
 - Coordinating with other objects and other viewcontrollers in app
+- Performing segues and navigating to other viewcontrollers
 
 
 ### UIViewController as responder
