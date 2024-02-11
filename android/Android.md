@@ -43,7 +43,13 @@ Essesntial building blocks for an Android App are termed as App Components.
 
 ### Activity
 An Activity in Android represents a single screen with user interaction.
+Usually Activities are full screen windows, but these can also be used as floating windows for example.
+Activities in Android are implemented as subclass of Activity class.
+Usually in an Android app, there is one main activity, which further starts other activities as per requirements of app.
+One must register information regarding activity in the app's manifest in order to use activity.
+Activity is a child element of application in the manifest file.
+
 
 ## TODOs
 
-- [ ] Can two apps in Android share data? If yes then how?
+- [x] Can two apps in Android share data? If yes then how? [Answered Here](https://github.com/saurabh1088/notes/blob/main/android/QnA.md#can-two-apps-in-android-share-data-if-yes-then-how)
