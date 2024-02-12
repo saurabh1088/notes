@@ -14,6 +14,8 @@ or repeating the details.
 A protocol is an abstraction tool that describes the functionality of conforming types.
 Using a protocol, one can separate the ideas about what a type does from the implementation details.
 The idea is expressed through the protocol, however the implementation is separate.
+Protocols are a language construct which are designed to represent capabilities of types without the details of how the
+capability works.
 
 ## Generics
 Generics are a fundamental tool for writing abstract code in Swift. Using Generic code one can abstract away the concrete
@@ -50,3 +52,23 @@ Types of Polymorphism:
 1. Ad-hoc Polymorphism
 2. Subtype Polymorphism
 3. Parametric Polymorphism
+
+TODO: Move this to some proper place
+## WWDC https://developer.apple.com/videos/play/wwdc2022/110353 Design protocol interfaces in Swift
+
+The strategy of using the same representation for different concrete types is called type erasure.
+
+When one calls a method returning an associated type on an existential type, the compiler will use type erasure to determine
+the result type of the call. Type erasure replaces these associated types with corresponding existential types that have
+equivalent constraints.
+
+Type erasure does not allow us to work with associated types in consuming position. Instead, one must unbox the existential
+*any* type by passing it to a function that takes an opaque *some* type.
+
+Constrained opaque result types.
+
+
+## TODOs
+- [ ] Opaque types must always be named for generic types. Make a Opaque types TOPIC.
+- [ ] Watch https://developer.apple.com/videos/play/wwdc2022/110353
+- [ ] What is a lazy collection : LazyFilterSequence
