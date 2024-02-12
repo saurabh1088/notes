@@ -186,3 +186,33 @@ one can set or adjust it from Interface Builder, without writing code.
 
 Example :
 https://github.com/saurabh1088/uikit/blob/main/UIKitLearnings/UIKitLearnings/BezierPaths/RectangularView.swift
+
+
+## 7. What's the difference between these declarations?
+```
+func feed<A>(_ animal: A) where A: Animal
+
+func feed(_ animal: some Animal)
+```
+
+Both are identical. The bottom one reduces the syntactic complexity as the top one with the type parameter and where clause
+looks too complex.
+
+
+## 8. What is some keyword in Swift?
+With *some* there is a specific underlying type that cannot vary. So suppose we have a protocol, then if we want to declare
+an array which contains elements conforming to protocol declaring like [some Protocol] would not work as then all the elements
+in the array needs to be of same type. So [some Protocol] doesn't express the right thing. What needs to be used here is
+[any Protocol].
+[any Protocol] is available from Swift 5.7
+
+|some|any|
+|---|---|
+|Holds a fixed concrete type|Holds arbitrary concrete type|
+|Guarantees type relationship|Erases type relationships|
+
+Write some by default, and use any when one needs to work with arbitrary values like storing in an array any types conforming
+to a protocol.
+
+*any* provides type erasure, which allows you represent heterogeneous collections, represent the absence of an underlying
+type, using optionals, and make the abstraction an implementation detail.
