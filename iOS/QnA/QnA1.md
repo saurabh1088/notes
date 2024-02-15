@@ -9,8 +9,8 @@ iOS Architecture consists of four layers as shown in below diagram.
 ### Core OS
 
 At the core of iOS sits XNU Kernel.
-This layer is directly on top of device's underlying hardware. This layer is responsible
-for basic operating system services like
+This layer is directly on top of device's underlying hardware. This layer is responsible for basic operating system services
+like
 
 - Memory management
 - Handling file system
@@ -216,3 +216,13 @@ to a protocol.
 
 *any* provides type erasure, which allows you represent heterogeneous collections, represent the absence of an underlying
 type, using optionals, and make the abstraction an implementation detail.
+
+
+## 9. In Swift can we have stored properties in an enum?
+NO
+In Swift, Classes and Structures only can have stored properties.
+
+Let's explore why enum can't have stored properties.
+As per definition an enum is a model custom type which defines a list of possible values.
+Check example for details : [Example](https://github.com/saurabh1088/swift-playgrounds/blob/main/Swift.playground/Pages/Enumerations.xcplaygroundpage/Contents.swift)
+
