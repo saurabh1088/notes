@@ -226,3 +226,14 @@ Let's explore why enum can't have stored properties.
 As per definition an enum is a model custom type which defines a list of possible values.
 Check example for details : [Example](https://github.com/saurabh1088/swift-playgrounds/blob/main/Swift.playground/Pages/Enumerations.xcplaygroundpage/Contents.swift)
 
+
+## 10. What is a namespace?
+Namespace in software engineering refers to a container with a set of classes, structures, functions etc inside it with
+goal of organizing code and avoiding name conflicts. For example in a project we have a networking module for which we
+declared a struct Utils with some utility functions. Then later while developing style guide we again want to add some
+utility functions, so either we can add these style guide common functions to same Utility struct added for networking, which
+can work fine but it will make Utility struct having multiple things in one and very large. One can use to add extensions
+and organise code, from code organisation point of view it can work, but while using it will not make a difference visually.
+
+In this situation the concept of namespace helps. Some languages have built-in support for namespaces. For example in C++
+we have a keyword *namespace* for this purpose. In Java concept of namespace is achieved using packages.

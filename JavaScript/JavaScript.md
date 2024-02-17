@@ -95,6 +95,8 @@ so as to run only when HTML is completely loaded.
 
 ## JavaScript Objects
 
+Most of the things in JavaScript are objects.
+
 To create an object in JavaScript one can simply declare like below. This is creating
 object using object literal. This is the easiest approach and one can both define
 and create object in single line.
@@ -653,6 +655,7 @@ Event delegation is enabled by event bubbling which can be utilised to advantage
 In DOM when dealing with several number of child elements, using event bubbling
 one can set event listener on parent and have event bubble up to the parent rather
 than adding listener to each child element.
+
 
 ## TODOs
 
