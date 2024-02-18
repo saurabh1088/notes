@@ -237,3 +237,21 @@ and organise code, from code organisation point of view it can work, but while u
 
 In this situation the concept of namespace helps. Some languages have built-in support for namespaces. For example in C++
 we have a keyword *namespace* for this purpose. In Java concept of namespace is achieved using packages.
+
+In Swift one can use enums to achieve concept of namespace.
+Check example for details : [Example](https://github.com/saurabh1088/swift-playgrounds/blob/main/Swift.playground/Pages/Enumerations.xcplaygroundpage/Contents.swift)
+
+
+## 11. Why do we need to use keyword indirect for Swift's recursive enumerations?
+When we define an enum in Swift having associated value, Swift will need to determine the required memory based on the
+type of associated values. Now if the assciated value type is simple types like String, Int, Double etc. then Swift will
+be able to figure out memory requirement.
+Now Swift enums are supposed to be having value semantics. As long as we are dealing with simple enums i.e. with no associated
+values, it's all good. Swift compilor will be able to know the memory requirement. Even in case of Swift enums with associated
+type where the associated type is having simple data types, compilor can figure out memory requirement by considering the
+memory for the case which needs the largest memory.
+This however becomes complicated when we talk about recursive enums. For a recursive enum as the enum's associated value
+can be of the type of enum itself, it can go on recursively and becomes difficult to guess the memory requirement.
+So now as the compiler can't calculate the memory requirement in this case to proceed with stack allocation, it will instead
+treat this case as associated values as pointers to heap allocation. This is where the keyword *indirect* comes which states
+that the associated value for this case is indirectly stored on heap.
