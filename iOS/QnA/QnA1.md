@@ -255,3 +255,18 @@ can be of the type of enum itself, it can go on recursively and becomes difficul
 So now as the compiler can't calculate the memory requirement in this case to proceed with stack allocation, it will instead
 treat this case as associated values as pointers to heap allocation. This is where the keyword *indirect* comes which states
 that the associated value for this case is indirectly stored on heap.
+
+
+## 12. What is the relevance of capacity instancy property of an Array in Swift and how does it differs from count?
+Array's capacity is an instance property on Array, it gives a count of number of elements array can contain without allocating
+new storage. For Array the compiler will reserve certain amount of memory to hold its contents. When one appends more elements
+to the Array then if more storage is required then the new storage allocate is in multiples of old storage size. So initially
+the capacity and count when array is initialized is usually equal, but capacity can grow if more elements are inserted into
+array or appended or removed from array.
+This means the new storage follows an exponential growth strategy. For example if any array was initialised initially with
+5 elements, once we append one more element i.e. the 6th one the capacity will now be 10, one appending 11th element it
+will become 20, then 40 and so on.
+So it goes on like : 5 -> 10 -> 20 -> 40 -> 80 -> 160 ...
+Check example for details :
+[Example](https://github.com/saurabh1088/swift-playgrounds/blob/main/DataStructures.playground/Pages/Arrays.xcplaygroundpage/Contents.swift)
+
