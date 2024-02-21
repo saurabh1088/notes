@@ -283,3 +283,19 @@ Now we know that append or insert cause array allocation to grow exponentially. 
 should become rarer as one appends more and more elements.
 One can use *reserveCapacity(_:)* method to avoid multiple reallocations when we know ahead of time values needed to be appended.
 One can call *reserveCapacity(_:)* before appending and provide some minimum capacity for append to follow.
+
+
+## 14. How is inserting an element into an array is compared to appending one?
+Arrays being in a contiguous region of memory means that an insertion operation can be costly and be of the order of O(n).
+Though appending initially can be costly due to reallocation, but appending multiple times have subsequent improvements.
+
+
+## 15. What is meant by saying Swift arrays are Copy-on-Write?
+Copy-on-Write is a optimization technique used by Swift for Arrays. What this means is that suppose there is an array created
+named arrayA and then we assign this to another array arrayB, arrays being value types will mean that both arrays are not
+pointing to anything but contents should get copied when assignment was done. However to optimize the contents are not copied
+till the time one actually makes any changes to either arrayA or in arrayB.
+So Copy-on-Write optimization means that multiple copies of array will share the same storage unless one of the copies is
+modified, in which case the modified one will get a copy of itself.
+In terms of performance this means when we have a bunch of arrays sharing a storage then any first mutating operation will
+incur the cost of copying.
