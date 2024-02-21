@@ -257,7 +257,7 @@ treat this case as associated values as pointers to heap allocation. This is whe
 that the associated value for this case is indirectly stored on heap.
 
 
-## 12. What is the relevance of capacity instancy property of an Array in Swift and how does it differs from count?
+## 12. What is the relevance of instancy property, capacity, of an Array in Swift and how does it differs from count?
 Array's capacity is an instance property on Array, it gives a count of number of elements array can contain without allocating
 new storage. For Array the compiler will reserve certain amount of memory to hold its contents. When one appends more elements
 to the Array then if more storage is required then the new storage allocate is in multiples of old storage size. So initially
@@ -270,3 +270,16 @@ So it goes on like : 5 -> 10 -> 20 -> 40 -> 80 -> 160 ...
 Check example for details :
 [Example](https://github.com/saurabh1088/swift-playgrounds/blob/main/DataStructures.playground/Pages/Arrays.xcplaygroundpage/Contents.swift)
 
+
+## 13. Swift Arrays and contiguous region of memory allocation.
+Arrays in Swift hold their values in contiguous region of memory. This is true when elements type the Array is holding is
+of value semantics. When the elements type is reference type, then it may or may not hold value in contiguous region and instead
+opt for reference in NSArray.
+Now for the most part when Array is storing values in contiguous region, then when say we append some value to the array
+then if current region is not sufficient to hold all values, a fresh, larger region of memory is allocated with previous
+values copied into it along with new values appended. Now as the previous values will be copied over this makes the operation
+of append of complexity O(n). This means the worst time it takes to append will grow in proportion to the size of array.
+Now we know that append or insert cause array allocation to grow exponentially. This exponential growth means reallocations
+should become rarer as one appends more and more elements.
+One can use *reserveCapacity(_:)* method to avoid multiple reallocations when we know ahead of time values needed to be appended.
+One can call *reserveCapacity(_:)* before appending and provide some minimum capacity for append to follow.
