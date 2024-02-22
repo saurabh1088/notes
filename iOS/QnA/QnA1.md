@@ -299,3 +299,16 @@ So Copy-on-Write optimization means that multiple copies of array will share the
 modified, in which case the modified one will get a copy of itself.
 In terms of performance this means when we have a bunch of arrays sharing a storage then any first mutating operation will
 incur the cost of copying.
+
+
+## 16. What is an ArraySlice? Why should one not store a slice longer than one needs?
+ArraySlice is a view onto Arrays. It's a generic struct behaving very much same as the normal Array. ArraySlice can reference
+a part of another Array's storage and pass it of as its own. This is helpful to make it fast and efficient to perform operations
+on a section of larger array. ArraySlice doesn't copies elements of section it represents of the larger array, instead it
+present a view onto the storage of larger array. ArraySlice offers same interface as that of normal array so one performs
+same operations as one can on a normal array. 
+ArraySlice can however allocate its own memory space but that defeats the purpose of using it.
+
+One should not store an array slice longer than it is needed because slice holds reference to entire storage of the larger
+array, not just the portion of which it is representing the view. So what this means is that it will increment the reference
+count for memory of larger array and can lead to memory leakage.
