@@ -312,3 +312,20 @@ ArraySlice can however allocate its own memory space but that defeats the purpos
 One should not store an array slice longer than it is needed because slice holds reference to entire storage of the larger
 array, not just the portion of which it is representing the view. So what this means is that it will increment the reference
 count for memory of larger array and can lead to memory leakage.
+
+
+## 17. What is meant by being first-class citizen in programming world?
+This concept of first-class citizens was introduced by Christopher Strachey in the 1960s and this is a generic terms which
+applies to many programming languages and not restricted to a few. After introduction of this term, the definition was given
+modern touch Robin Popplestone to include following conditions which qualifies one to be a first-class citizen
+1. Can be passed into functions
+2. Can be returned as function result
+3. Can be assigned to variables
+4. Can be tested for equality
+
+For example a function in a programming language can be said to be first-class if it can be treated like any variable and
+passed as an argument to other functions and returned from funtions and can be assigned to other variables.
+Functions are first-class citizens in languages like:
+- Python
+- JavaScript
+- Swift
