@@ -329,3 +329,19 @@ Functions are first-class citizens in languages like:
 - Python
 - JavaScript
 - Swift
+
+
+## 18. What is ABI Stability?
+ABI stands for Application Binary Interface.
+It's an interface as the name suggests. This interface defines everything needed for binaries to interact or communicate.
+
+Swift 5 release introduced ABI Stability to Swift.
+ABI Stability is required for each platform/operating system onto which apps or libraries are compiled and runs.
+Swift's ABI stability is at present completed for Apple's platforms.
+
+ABI Stability gurantees, for example, from Swift 5 onwards, an app built with Swift 5 or say in future higher version, will
+be able to communicate with a library built using different Swift version.
+To elaborate, suppose we have an app built using Swift 5. Now if we have three different systems with Swift standard library
+versions 5, 5.1 and 6 respectively, then our app will be able to run on all three of the systems.
+Previously what used to happen was that the apps used to embed the Swift standard library in app bundle. Now with ABI stability
+this is not required hence also making app bundle reduced in size.
