@@ -24,7 +24,7 @@ So an Object graph is basically a dependency graph between objects.
 ### 1. Persistence
 
 Core Data as mentioned can be used for data persistence by opting for a persistent store. The default store is SQLite.
-Core Data proves abstraction over objects mapping to persistent store. This makes easy to save data without having to administer
+Core Data provides abstraction over objects mapping to persistent store. This makes easy to save data without having to administer
 database directly.
 
 ### 2. Undo/Redo
