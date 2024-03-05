@@ -115,6 +115,8 @@ An entity's property represented by NSPropertyDescription could be of following 
 
 NSAttributeDescription, NSRelationshipDescription, and NSFetchedPropertyDescription are all derived from NSPropertyDescription.
 
+Once entity is added to *.xcdatamodeld* file, Xcode autogenerates the entity file by naming convention Entity+CoreDataClass.
+This generated entity is a public class inheriting from NSManagedObject.
 
 ## NSManagedObjectContext
 Persistent container has a viewContext property of type NSManagedObjectContext, which can be referred as below. NSManagedObjectContext
@@ -143,6 +145,10 @@ Context object has a central role in managing life cycle of managed objects.
 ## NSPersistentStoreCoordinator
 Responsible for managing the persistent stores. Most of the time a persistent store is a database which lives on filesystem.
 It's possible to have many persistent stores at once. One can also have custome made one derived from NSPersistentStore.
+
+## NSFetchRequest
+To fetch records from Core Data, one needs to create an instance of NSFetchRequest and then pass it to NSManagedObjectContext
+API to fetch results.
 
 ## QnA
 ### When is Core Data initialized?
