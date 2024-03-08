@@ -150,6 +150,22 @@ It's possible to have many persistent stores at once. One can also have custome 
 To fetch records from Core Data, one needs to create an instance of NSFetchRequest and then pass it to NSManagedObjectContext
 API to fetch results.
 
+## Core Data and Performance considerations
+
+### Model design : Indexing
+Makes sure to design model with indexing in mind so that fetch can be faster.
+In Xcode in *.xcdatamodeld* file, for an entity long press on Add Entity button give few options where one of the option is
+*Add Fetch Index*. Selecting this options adds a child node to the entity named *byPropertyIndex*, this can be renamed and
+configured to provide the index.
+
+### Background managed object context
+NSPersistentContainer has instance property *viewContext* which is the managed object context associated with the main queue.
+In app using less amount of data in Core Data this won't cause any visible issues. However for large amount of data slow queries
+will start blocking the main queue and cause UI responsiveness issues.
+Ideally data processing should be on background queue.
+One can opt for a different managed object context operating on a background queue. NSPersistentContainer has instance method
+*newBackgroundContext()* for this purpose which creates and returns a new *NSManagedObjectContext* associated with a private queue.
+
 ## QnA
 ### When is Core Data initialized?
 Core data is initialized on app’s startup.
@@ -208,3 +224,4 @@ to publishers on Core Data object properties.
 - [ ] What is the purpose of the Core Data lightweight migration?
 - [ ] How do you implement undo and redo functionality using Core Data's undo manager?
 - [ ] Watch https://developer.apple.com/videos/play/wwdc2019/220
+- [ ] Check https://www.avanderlee.com/swift/core-data-performance/
