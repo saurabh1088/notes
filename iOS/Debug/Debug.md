@@ -51,11 +51,9 @@ do the same thing*
 - This command pretty much gives Xcode variables view.
 - It lets us look at local variables.
 - One can specify a variable and it will let us look at only that variable.
-- This is not compiling the code so it is fast, but it won't be able to work in 
-case of say for e.g. computed properties
+- This is not compiling the code so it is fast, but it won't be able to work in case of say for e.g. computed properties
 as computed property will need code to be run.
-- This will be able to perform better at dynamic type resolution without needing
-to explicit casting compared to p and po commands.
+- This will be able to perform better at dynamic type resolution without needing to explicit casting compared to p and po commands.
 
 ### The expression command
 
@@ -236,3 +234,23 @@ as double free leading to immediately halting the process.
 Some of the memory corruptions could be result of multithreading issues.
 If in crash logs one observes same class appearing for multiple thread, then this could be the case of multithreading issues.
 One can use *Thread Sanitizer* to analyze some of the issues arising due to multithreading.
+
+
+## So what's a dSYM?
+
+dSYM stands for *debug symbols*
+When code is compiled then symbols are generated, these symbols are class names, global variables, functions etc. The association
+of these symbols with file name and line number where these are defined creates a debug symbol.
+Debug build place these debug symbols inside the compiled binary itself, this is by default. Howeve the release build places
+these debug symbols in a separate file dSYM, reducing the size of the distributed app.
+
+So in order to understand dSYM files one needs to understand debug symbols.
+
+Debug symbols as mentiond above contain information about the mapping of a binary with that of the source code. A debug symbol
+contains information which maps the instructions in compiled binary to its corresponding variable, function, or line in
+the source code.
+
+Debug builds are larger and slower, as these contain debug symbols information.
+
+Every binary in an app, for example the app's main executable, frameworks, app extensions etc have their own dSYMs. Compiled
+binary and their dSYM are associated via a build UUID. A binary and a dSYM is only compatible if the UUID matches.
