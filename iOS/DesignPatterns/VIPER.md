@@ -51,5 +51,7 @@ View KNOWS Presenter
 Presenter KNOWS Router & Interactor
 Interactor CONNECTS TO Networking/Core Data etc services
 
+![VIPER Architecture](resources/viperArchitectureBasicDiagram.png "VIPER Architecture")
+
 
 ## https://www.objc.io/issues/13-architecture/viper/
