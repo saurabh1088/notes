@@ -9,11 +9,11 @@ One might slip in these terms interchangeably, HOWEVER, fundamentally Authentica
 
 |Authentication|Authorization|
 |---|---|
-|Determines if user is who they claim to be|Determines what all user can access|
+|Determines, if the user is who they claim to be|Determines, what all user can access|
 |It's before Authorization|This follows after Authentication is successfull|
-|Usuallu results in ID Token|Usually results in Access Token|
+|Usually results in ID Token|Usually results in Access Token|
 |Follows OpenID Connect (OIDC) protocol|Follows OAuth 2.0 framework|
-|This identifies user to check access to system|This checks user to proved access to a resource within system|
+|This identifies user, to check access to system|This checks user, to provide access to some resource within system|
 
 
 ## oAuth 2.0
