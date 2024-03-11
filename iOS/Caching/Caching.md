@@ -86,6 +86,21 @@ URLCache serves the purpose of caching some data which usually one fetches over 
 here is to avoid network calls for data which doesn't changes too often hence can be cached. URLCache is both in-memory and
 on-disk.
 
+
+## URLSession and cache
+
+Using URL Loading System one can set cache policies to govern if and how to cache request's responses. There are following
+ways to set a cache policy while using URLSession.
+
+1. *URLSessionConfiguration* has instance property *requestCachePolicy*, setting this impacts all the requests in the session
+configured with configuration object.
+
+2. *URLRequest* has instance property *cachePolicy*, this impacts the particular request only for which it is being set
+and will override if any cache policy was set at *URLSessionConfiguration* level.
+
+*URLSessionConfiguration* has instance property *urlCache* of type *URLCache*. This implies URLSession using URLCache for
+caching duty.
+
 ## TODOs
 
 - [ ] URLSession cache
