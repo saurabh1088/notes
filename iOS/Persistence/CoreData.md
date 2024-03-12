@@ -150,6 +150,12 @@ It's possible to have many persistent stores at once. One can also have custome 
 To fetch records from Core Data, one needs to create an instance of NSFetchRequest and then pass it to NSManagedObjectContext
 API to fetch results.
 
+## Entity Relationships
+Three possibilities in relationships:
+1. One to One
+2. One to Many
+3. Many to Many
+
 ## Core Data and Performance considerations
 
 ### Model design : Indexing

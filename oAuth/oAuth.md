@@ -72,3 +72,5 @@ Issues access tokens to the client after successful authentication.
 
 ## Are authorization server and resource server same or different?
 These can be same or different.
+
+![oAuth2.0 Basic Flow](resources/oAuth2PointOBasicFlow.png "oAuth2.0 Basic Flow")
