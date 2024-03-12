@@ -40,6 +40,8 @@ this approach create:-
 2. Servers will need to support credential authentication.
 3. Access to user's resources to third-party application.
 4. Access can't be revoked once granted, unless credentials are changed, which will impact every third-party application.
+5. The role of client and resource owner is blurred, as client is somewhat granted full access by sharing password. oAuth
+separated these roles and creates a clear distinction between client and resource owner.
 
 
 ## How oAuth fixes the issue?
@@ -48,6 +50,9 @@ client doesn't need user OR resource owner's credentials. With oAuth, client wil
 server and it will get issued a different credential than what resource owner has. So client instead of using user's credentials
 it receives an access token with some expiry. Access tokens are issues by authorization server after approval from resource
 owner.
+So in a nutshell oAuth:
+- Introduces authorization layer
+- Issues different set of credentials to client - access token
 
 
 ## Roles in oAuth
@@ -63,3 +68,7 @@ This is the application which needs access to the protected resource.
 
 ### Authorization Server
 Issues access tokens to the client after successful authentication.
+
+
+## Are authorization server and resource server same or different?
+These can be same or different.
