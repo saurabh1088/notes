@@ -345,3 +345,43 @@ To elaborate, suppose we have an app built using Swift 5. Now if we have three d
 versions 5, 5.1 and 6 respectively, then our app will be able to run on all three of the systems.
 Previously what used to happen was that the apps used to embed the Swift standard library in app bundle. Now with ABI stability
 this is not required hence also making app bundle reduced in size.
+
+
+## 19. What is an unwind segue and how to set it up?
+Unwind segue is opposite of normal segue as the name suggests. Unwind segue is used to handle the dismissal of a view controller.
+Normal segue has a specific target which is the destination view controller, this destination is known before hand.
+However for unwind segue, UIKit determines the target at runtime. Having UIKit determining the target at runtime gives
+advantage and flexibility in how the navigation hierarchy is set up. One can have complex hierarchy of view controllers
+presenting same child view controller. In this scenario one can skip adding complex logic to determine which view controller
+to go back to once child view controller is dismissed, as the UIKit runtime target determining while using uniwind segue
+simplifies the implementation.
+
+### How to set unwind segue
+For example refer code at:
+https://github.com/saurabh1088/ios/blob/main/LearningAppCoreDataUIKit/LearningAppCoreDataUIKit/Movies/MoviesViewController.swift
+
+In this example the parent view controller, *MoviesViewController* is presenting *AddMovieViewController*. Unwind segue is
+setup from *AddMovieViewController* back to *MoviesViewController*
+
+In general one needs to define a method like below in the parent view controller where one wants to come back to after unwind
+from child view controller.
+
+```
+@IBAction func unwindAction(unwindSegue: UIStoryboardSegue)
+```
+
+What this method does for the view controller in which it is defined is that it tell UIKit that this view controller is
+a potential destination for an unwind segue. If there are multiple possible destinations then all should have this method.
+Note, it is presence of this method which is important, the implementation can remain empty if nothing is required on unwind,
+else one can utilise to perform any relevant task required as per requirement on dismissal.
+Also presence of this method only will enable to create unwind segue from storyboard. As after adding this method, one needs
+to create a segue in storyboard from child view controller's control trigerring segue to the Exit control. On control dragging
+in storyboard from child view controller's control trigerring segue to the Exit control of child view controller, list of
+action methods are prsented where one needs to choose the unwind action method.
+
+### Behind the scenes
+When unwind segue is trigerred, UIKit as mentioned above will determine the target at runtime, so what happens is that
+UIKit will search in the current view hierarchy for a view controller which has implemented the IBAction method connected
+to the unwind segue. It will try to find the closest parent view controller implementing the unwind IBAction method.
+If UIKit is unable to find any appropriate view controller, then the unwind segue will fail silently, and the child view
+controlller will remain on screen.
