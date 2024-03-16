@@ -93,3 +93,21 @@ In this grant type, resource owner's credentials i.e. username and password are 
 
 ### 4. Client Credentials
 This is usually a grant type when client is itself the resource owner.
+
+
+## Access Token
+Access Token is a credential which enables a third party application to access a protected resource owned by resource owner.
+Access tokens have a specific scope and duration of access, and will expire eventually.
+
+oAuth2.0 doesn't specifies any format for access token. Most commonly used format of access token is in form of
+JSON Web Token (JWT). This format usually consists of three parts separated by dots. Advantage of this format is that one
+can also include some data in the token itself.
+
+```
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+
+```
+
+These three parts are Header, Payload and Signature.
+Here Header and Payload are base64 encoded JSON objects. Signature part is generated using client's secred and some cryptographic
+algorithm.
