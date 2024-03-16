@@ -49,6 +49,18 @@ For example, a URL scheme can be added from application target's Info tab under 
 - Once authentication is successfull, authorization server will redirect to the redirect URL configured which takes flow back to app
 - Control comes back to app and call to authorisation server completes with authorisation code OR access token as per grant type used.
 
+5. Access Token
+Once access token is received, all subsequent API calls, which are access controlled, need to have access token passed in
+the request header. Access token hence need to be stored securely on the app. Usuallly keychain is used for storing access
+token.
+
+6. Refresh Token
+Access tokens have an expiry. When Authorisation server returns access token to client, then it also includes a refresh
+token. Access tokens are short lived, refresh tokens have a longer expiry. Use of refresh token is to get a new access token
+from authorisation server once access token expires or becomes invalid.
+So the app needs to implement logic, where access token is expired or invalid, then it needs to call authorisation server
+endpoint to get new access token by providing the refresh token.
+
 
 ## Libraries in iOS for oAuth2.0 Flow
 
@@ -59,3 +71,7 @@ AppAuth library is available for following Apple platforms:
 - iOS
 - macOS
 - tvOS
+
+2. oAuthSwift
+https://github.com/OAuthSwift/OAuthSwift
+
