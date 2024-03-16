@@ -57,16 +57,16 @@ So in a nutshell oAuth:
 
 ## Roles in oAuth
 
-### Resource Owner
+### 1. Resource Owner
 Owns the resource and hence is capable of granting access to the protected resource.
 
-### Resource Server
+### 2. Resource Server
 Resource server is the server hosting the protected resources.
 
-### Client
+### 3. Client
 This is the application which needs access to the protected resource.
 
-### Authorization Server
+### 4. Authorization Server
 Issues access tokens to the client after successful authentication.
 
 
@@ -74,3 +74,22 @@ Issues access tokens to the client after successful authentication.
 These can be same or different.
 
 ![oAuth2.0 Basic Flow](resources/oAuth2PointOBasicFlow.png "oAuth2.0 Basic Flow")
+
+
+## Authorization Grant
+Authorization Grant is a credential which represents resource owner's authorization given to client to get access token to
+further use token for accessing its protected resources. Following are types of authorization grants available:
+
+### 1. Authorization Code
+Authorization Code grant type is flow where client receives a authorization code from the authorization server and then
+further uses it to exchange it for an access token.
+
+### 2. Implicit
+In implicit grant type flow, access token is issued directly, instead of involving authorization code first. So in this flow
+there is no exchange of access token for authorization code.
+
+### 3. Resource Owner Password Credentials
+In this grant type, resource owner's credentials i.e. username and password are used directly to obtain access token.
+
+### 4. Client Credentials
+This is usually a grant type when client is itself the resource owner.
