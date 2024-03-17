@@ -111,3 +111,9 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4
 These three parts are Header, Payload and Signature.
 Here Header and Payload are base64 encoded JSON objects. Signature part is generated using client's secred and some cryptographic
 algorithm.
+
+
+## TODOs
+
+- [ ] Check https://supertokens.com/blog/what-is-jwt
+- [ ] Add notes for JWT

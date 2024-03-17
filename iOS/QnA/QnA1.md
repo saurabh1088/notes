@@ -385,3 +385,22 @@ UIKit will search in the current view hierarchy for a view controller which has 
 to the unwind segue. It will try to find the closest parent view controller implementing the unwind IBAction method.
 If UIKit is unable to find any appropriate view controller, then the unwind segue will fail silently, and the child view
 controlller will remain on screen.
+
+
+## 20. How to handle SSL pinning and authentication challenges while using URLSession?
+SSL pinning and authentication challenges both are handled using URLSessionDelegate. One need to conform to URLSessionDelegate
+and implement *urlSession(_:didReceive:completionHandler:)* method
+
+```
+optional func urlSession(
+    _ session: URLSession,
+    didReceive challenge: URLAuthenticationChallenge,
+    completionHandler: @escaping @Sendable (URLSession.AuthChallengeDisposition, URLCredential?) -> Void
+)
+```
+
+This method as per signature above, receives a URLAuthenticationChallenge.
+*URLAuthenticationChallenge* is basically a challenge from remote server. *URLAuthenticationChallenge* has an instance
+property *protectionSpace*. This *protectionSpace* property provides additional information and also tells about the
+authentication challenge received, if that challenge is asking for credentials or verifying the server certificate for
+SSL pinning.
