@@ -172,6 +172,24 @@ Ideally data processing should be on background queue.
 One can opt for a different managed object context operating on a background queue. NSPersistentContainer has instance method
 *newBackgroundContext()* for this purpose which creates and returns a new *NSManagedObjectContext* associated with a private queue.
 
+## UndoManager
+
+UndoManager is not specific to Core Data Framework. It is a general purpose class which records operations performed and
+enables functionallity of undo and redo.
+*NSManagedObjectContext* has an instance propery *undoManager* on type *UndoManager* providing support for undo/redo operations
+for the context.
+
+The default value of NSManagedObjectContext's undoManager is nil, so before using, one needs to set it.
+
+*UIResponder* also has an instance property *undoManager*. Every window of an app has a undo manager, which is a shared
+object for managing undo and redo operations. Also in the responder chain any object part of responder chain can have their
+own custom undo manager.
+
+Example : Refer AppDelegate in below project
+https://github.com/saurabh1088/ios/tree/main/LearningAppCoreDataUIKit
+https://github.com/saurabh1088/ios/blob/main/LearningAppCoreDataUIKit/LearningAppCoreDataUIKit/Movies/MoviesViewModel.swift
+
+
 ## QnA
 ### When is Core Data initialized?
 Core data is initialized on app’s startup.
