@@ -154,3 +154,36 @@ This command will revert a local commit which is NOT pushed to remote yet. Somet
 when a commit is done locally and then push is tried, the push may fail and ask for
 first to take a pull, in this case one can revert local commit using this command
 take pull first and then proceed with commit and push.
+
+## git tag
+
+```
+git tag
+```
+
+Lists down all the tags, in alphabetical, not in the order those were created.
+
+
+## How to create a tag in repository from a branch command line?
+
+Suppose we need to create a tag from branch named *branch_name*. One need to checkout the branch and then use command
+git tag -a with proposed name for the tag which is here *v1.0.0* in below example.
+After this local tag will get created which needs to be pushed tp remote repository using command git push origin v1.0.0
+
+Tags in Git can be *lightweight* OR *annotated*
+
+### lightweight tag
+It is just like a branch except once created won't change. Behind the scenes it is just a pointer to the specific commit
+where tag was created.
+
+### annotated tag
+These are stored as full objects in Git database. These contain more information as well like who created the tag etc. The
+*-a* option in command *git tag -a v1.0.0* is what tells git to create annotated tag.
+
+```
+git checkout branch_name
+
+git tag -a v1.0.0
+
+git push origin v1.0.0
+```
