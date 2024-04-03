@@ -11,3 +11,8 @@ etc in the keychain.
 
 Any item stored in keychain is packaged as a keychain item. This packaging means that the keychain item stored is composed
 of the data itself as well as some publicly visible attributes.
+
+Keychain data persists even when app gets deleted. The only way to delete completely is to wipe out the device. Other apps
+however won't be able to access the data.
+
+Apple Developer thread on this : https://forums.developer.apple.com/forums/thread/36442
