@@ -15,4 +15,6 @@ of the data itself as well as some publicly visible attributes.
 Keychain data persists even when app gets deleted. The only way to delete completely is to wipe out the device. Other apps
 however won't be able to access the data.
 
+On simulator one need to reset content settings, after which the keychain saved data will be wiped out.
+
 Apple Developer thread on this : https://forums.developer.apple.com/forums/thread/36442
