@@ -49,4 +49,21 @@ Drawbacks
 
 ### Asymmetric Cryptography
 
-Uses public and private key pairs.
+Uses public and private key pairs. While sending an encrypted message to recipient, the sender uses the public key of
+recipient to encrypt the message. As it is public key, it is shared and needs no protection. Now when the recipient receives
+the encrypted message, it can decrypt the message using the corresponding private key, which only the recipient has with it.
+
+An algorithm generates these public and private key pairs, these are keys are different but related to each other mathematically.
+
+Each time one visits a website using https, we are dealing with asymmetric cryptography.
+
+
+## TLS/SSL
+
+TLS : Transport Layer Security
+SSL : Secure Socket Layer
+
+TLS and SSL are cryptographic protocols providing secure communication over network.
+TLS is an updated version of SSL and was introduced as a successor to SSL. All versions of SSL are now deprecated, however
+one finds term SSL describing TLS connection frequently. Terms SSL, SSL/TLS nowadays refers to TLS protocol for most of the
+cases.
