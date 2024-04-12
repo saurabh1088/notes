@@ -404,3 +404,24 @@ This method as per signature above, receives a URLAuthenticationChallenge.
 property *protectionSpace*. This *protectionSpace* property provides additional information and also tells about the
 authentication challenge received, if that challenge is asking for credentials or verifying the server certificate for
 SSL pinning.
+
+
+## How can one classify something in Swift as a module?
+A module is a single unit of code which is built and shipped or distributed as a single unit. In code anything one can
+import with the import statement can be termed as a module.
+Also in Xcode for a project, each build target is also a separate module.
+
+
+## For a public class what will be the default access level of its properties and methods?
+INTERNAL. It may appear it is going to be public, but actually it will be internal. Usually the access level trickles down
+to the type's members as well. However there is exception in case of when the type is declared as public. For public type,
+the default access level comes as internal. This way it prevents accidently exposing APIs which aren't meant to be public.
+
+
+## For an internal class what will be the default access level of its properties and methods?
+Internal
+
+
+## What is the use case for defining a type to be private?
+One can define a private inner type to make internal data structure cleaner, however one doesn't need to expose these details
+to outsiders, hence these can be declared as private.
