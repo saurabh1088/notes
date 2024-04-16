@@ -129,5 +129,8 @@ property determines the URL cache object used.
 
 ## TODOs
 
-1. Instruments to analyze HTTP Traffic
-- Ref doc : https://developer.apple.com/documentation/foundation/url_loading_system/analyzing_http_traffic_with_instruments
+- [ ] 1. Instruments to analyze HTTP Traffic
+      - Ref doc : https://developer.apple.com/documentation/foundation/url_loading_system/analyzing_http_traffic_with_instruments
+
+- [ ] 2. Explore data upload and download tasks, what will happen when network is lost while upload and download is in progress
+- [ ] 3. Upload/Download tasks scenarios while app goes to background or is killed, what needs to be done.

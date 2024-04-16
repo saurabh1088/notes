@@ -5,19 +5,18 @@ Abstraction separates ideas from specific details.
 
 Different ways to achieve abstraction:
 
-### Functions & Methods
-This is a general way of achieving abstraction by extracting some functionality into a function or method. What abstracting some
-functionality to a function gives is to express idea of what is happening without giving away the implementation details
+### 1. Functions & Methods
+This is a general way of achieving abstraction by extracting some functionality into a function or method. What abstracting some functionality to a function gives is to express idea of what is happening without giving away the implementation details
 or repeating the details.
 
-### Protocols
+### 2. Protocols
 A protocol is an abstraction tool that describes the functionality of conforming types.
 Using a protocol, one can separate the ideas about what a type does from the implementation details.
 The idea is expressed through the protocol, however the implementation is separate.
 Protocols are a language construct which are designed to represent capabilities of types without the details of how the
 capability works.
 
-## Generics
+### 3. Generics
 Generics are a fundamental tool for writing abstract code in Swift. Using Generic code one can abstract away the concrete
 types. If we have a set of types which are all the same idea with different details, one can write abstract code to work
 with all of those concrete types.
@@ -40,18 +39,24 @@ allows one piece of code to have many behaviors depending on how the code is use
 
 Polymorphism can be achived via:
 
-### Function Overloading
+### 1. Function Overloading
 Overloading achieves an ad-hoc Polymorphism because it isn't a general solution. Overloading leads to repetetive code. This
 will force to use reference semantics.
 
-### Function overriding
+### 2. Function overriding
 This achieves subtype Polymorphism. Here the subtype(subclass) can have a different behaviour. If a function is implemented
 by different subtypes then how it behaves will depend upon which subtype the function is called at runtime.
 
 Types of Polymorphism:
+
 1. Ad-hoc Polymorphism
+    For example: Operator + can add integers as well as concatenate strings.
+
 2. Subtype Polymorphism
+
+
 3. Parametric Polymorphism
+    For example: Generics in Swift, where a piece of code is allowed to be typed generically instead of actual types.
 
 TODO: Move this to some proper place
 ## WWDC https://developer.apple.com/videos/play/wwdc2022/110353 Design protocol interfaces in Swift
