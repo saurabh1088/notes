@@ -45,6 +45,13 @@ is not packaged with program and only reference is saved it prevents duplication
 ## Framework
 A Framework embodies some abstract design, with more behavior built in. In order to use it you need to insert your behavior into various places in the framework either by subclassing or by plugging in your own classes. The framework's code then calls your code at these points. The main control of the program is inverted, moved away from you to the framework. This phenomenon is Inversion of Control.
 
+### Where is product when a framework project is built with Xcode?
+Initially in Xcode project navigator itself one could see the generated product once the framework was built. Now however
+it is not visible in Xcoce. To go to product folder one needs to go to derived data directory in Finder. Or a shortcut way
+to reach there is using following Xcode menu option :-
+
+Xcode -> Product -> Show Build Folder in Finder
+
 
 ## Framework vs Library
 
@@ -52,3 +59,8 @@ Good discussion on this which argues that the key difference in framework and li
 
 https://martinfowler.com/bliki/InversionOfControl.html
 
+
+## TODOs
+- [ ] How to build a framework for devices and simulators via xcode and command line
+- [ ] Add command line scripts and document those for further usage
+- [ ] How to create release framework and publish it on GitHub
