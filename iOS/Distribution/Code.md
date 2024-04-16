@@ -32,10 +32,23 @@ application using the static library and it needs to be linked to it. So the sta
 source code and the library code i.e. the *.a* file and collects into single executable. This executable is loaded into
 the memory in its entirety at runtime.
 
-### Dynamic Library
+One limitation for static library is that if multiple programs are using same static library, then the static library gets
+copied for each program, basically each executable will have its own static library also loaded in memory
 
+### Dynamic Library
+Dynamic Libraries are *.dylib* files.
+The linker problem with static library is addressed by dynamic library. Dynamic library is not packaged with the main executable, instead a reference is included. Dynamic libraries stored and versioned separately.
+
+Dynamic library solves the limitation of static library where those used to get copied for each program. As dynamic library
+is not packaged with program and only reference is saved it prevents duplication.
 
 ## Framework
 A Framework embodies some abstract design, with more behavior built in. In order to use it you need to insert your behavior into various places in the framework either by subclassing or by plugging in your own classes. The framework's code then calls your code at these points. The main control of the program is inverted, moved away from you to the framework. This phenomenon is Inversion of Control.
 
+
+## Framework vs Library
+
+Good discussion on this which argues that the key difference in framework and library comes from inversion of control.
+
+https://martinfowler.com/bliki/InversionOfControl.html
 
