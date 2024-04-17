@@ -425,3 +425,9 @@ Internal
 ## What is the use case for defining a type to be private?
 One can define a private inner type to make internal data structure cleaner, however one doesn't need to expose these details
 to outsiders, hence these can be declared as private.
+
+
+## If one has to design an App which shows a large number of images, then how efficiently one can design this?
+For this use case, one can make sure to render thumbnail images of actual images on server and then download the thumbnail
+version meanwhile the actual large versions are downloaded as those can take time. The larger version of image will only
+be required once user selects the thumbnail, hence once can avoid unecessary large downloads.

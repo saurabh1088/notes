@@ -44,7 +44,11 @@
     - retrieve data in form of file
     - support background downloads and uploads
  4. Websocket task exchange
-
+ 
+*sessionDescription*
+There is a sessionDescription property of URLSession instance, which one can set. This can be used to set a human readable
+string to make is identifiable for debugging purposes. The value for sessionDescription is nil by default. Value if set will
+be visible in HTTP Traffic as viewed in instruments.
 
  ### URLSessionDelegate
 
@@ -127,6 +131,16 @@ so this comes in handy if for certain requests one want a different behaviour.
 property determines the URL cache object used.
 - *URLCache* basically maps a URL request to response object.
 
+## Timeouts
+
+### How can one configure and handle timeouts while using URL Loading System?
+
+1. One can set below properties of URLSessionConfiguration object :
+- timeoutIntervalForRequest
+- timeoutIntervalForResource
+
+2. One can handle timeout for each request by using URLRequest's *timeoutInterval* property. Default value is 60 seconds.
+
 ## TODOs
 
 - [ ] 1. Instruments to analyze HTTP Traffic
@@ -134,3 +148,4 @@ property determines the URL cache object used.
 
 - [ ] 2. Explore data upload and download tasks, what will happen when network is lost while upload and download is in progress
 - [ ] 3. Upload/Download tasks scenarios while app goes to background or is killed, what needs to be done.
+- [ ] 4. Check usage and difference in timeoutIntervalForRequest and timeoutIntervalForResource
