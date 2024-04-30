@@ -16,7 +16,7 @@ One might slip in these terms interchangeably, HOWEVER, fundamentally Authentica
 |This identifies user, to check access to system|This checks user, to provide access to some resource within system|
 
 
-## oAuth 2.0
+## What is oAuth 2.0?
 OAuth 2.0 is a widely used authorization protocol that allows third-party applications to access a user's resources without 
 having to know their credentials. This replaces oAuth 1.0 protocol.
 
@@ -27,7 +27,7 @@ are hosted on server. So basically client needs resource hosted on server which 
 way to access resourse will be to have client authenticate with server using credentials of resource owner. Once authenticated
 client can access the resource.
 
-So what's the problem?
+*So what's the problem?*
 
 Well, here the problem lies in handling the credentials of resource owner to the client. For e.g. lets suppose there is an
 application processing images. To process a image one can choose image from device itself or choose to pick one from Google
@@ -111,6 +111,50 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4
 These three parts are Header, Payload and Signature.
 Here Header and Payload are base64 encoded JSON objects. Signature part is generated using client's secred and some cryptographic
 algorithm.
+
+
+## Client ID and Client secret
+When one registers app with auth provider, then the app is issues a client ID which uniquely identifies the app.
+*Client ID* is public identifier for apps. It is public but still its not in format of a readable string which are guessable.
+
+*Client secret* for a public app should not be issued. While registering one's app the auth provider will ask to categorise
+the app be it public or confidential etc.
+A public app like an iOS mobile app release on app store should not be having *Client secret* in the app binary or bundle
+as it might be reverse engineered and leaked.
+
+
+## What are some practical use cases of oAuth2.0?
+
+### 1. Social media authentication
+Many apps, websites enable user to sign-in using their existing social media accounts like Google, Facebook, Twitter etc
+instead of creating a new account.
+
+
+## What is the format for authorisation server endpoint?
+Following is the format of authorisation server endpoint.
+
+```
+https://your-auth-server.com/auth?response_type=code&client_id=CLIENT_ID&redirect_uri=REDIRECT_URI&scope=SCOPE&state=STATE
+```
+
+Query params :
+
+1. response_type
+response_type identifies the authorisation flow client wants to use. For example in the URL mentioned above the value passed
+is *code* which means to use authorisation code flow.
+Similarly one can pass value as *token* when using implicit grant type.
+
+2. client_id
+This is the client id assigned to app when it was registered against authorisation server.
+
+3. redirect_uri
+The URI where the authorisation server will redirect to once authorisation is completed.
+
+4. scope
+Value of scope parameter limits the rights of access token which is issued. The possible values are determined by the service
+being accessed. For example some values can be read, write, profile etc.
+
+5. state
 
 
 ## TODOs
