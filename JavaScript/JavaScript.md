@@ -1,11 +1,10 @@
 #  JavaScript
 
-JavaScript is a scripting or programming language allowing one to implement complex
-featured for a web page.
+JavaScript is a scripting or programming language allowing one to implement complex features for a web page.
 
-Initially JavaScript used to be interpreted language, as when web browsers used
-to come across JavaScript, they used to interpret it line by line and execute it
-on the fly.
+Initially JavaScript used to be an interpreted language, as when web browsers used to come across JavaScript, they used
+to interpret it line by line and execute it on the fly.
+
 
 ## Just In Time Compilation
 
@@ -14,23 +13,19 @@ Nowadays we have JavaScript engines like :
 - SpiderMonkey in Firefox
 - JavaScriptCore in Safari
 
-These modern JavaScript engines employ a just-in-time (JIT) compilation process.
-When code is compiled, then compiler converts source code into machine code and then
-the generated machine code is executed. This process makes execution fast but startups
-are slow due to time it takes for compilation.
-Startup time is fast with interpreted languages as there the code is simply translated
-and executed line by line. Problem with interpretation is that for any code which
-lets say is getting repeated multiple times for example say in a loop then this
-whole interpretation is going again and again which becomes inefficient.
+These modern JavaScript engines employ a just-in-time (JIT) compilation process. When code is compiled, then compiler
+converts source code into machine code and then the generated machine code is executed. This process makes execution fast
+but startups are slow due to time it takes for compilation.
 
-Just In Time Compilation aims to fix this interpreter’s inefficiency. JITs will
-have a monitor or profiler which while code is getting executed by the interpreter
-will keep track of how many times the different statements get hit. This way it
-will detect parts of code being used most and those can be compiled and stored.
+Startup time is fast with interpreted languages as there the code is simply translated and executed line by line. Problem
+with interpretation is, that for any code, which lets say is getting repeated multiple times for example say in a loop then
+this whole interpretation is going again and again which becomes inefficient.
 
-JavaScript however is still considered an interpreted language, since the compilation 
-is handled at run time, rather than ahead of time.
+Just In Time Compilation aims to fix this interpreter’s inefficiency. JITs will have a monitor or profiler which, while
+code is getting executed by the interpreter will keep track of how many times the different statements get hit. This way
+it will detect parts of code being used most and those can be compiled and stored.
 
+JavaScript however is still considered an interpreted language, since the compilation is handled at run time, rather than ahead of time.
 
 JavaScript
 - lightweight
@@ -44,10 +39,10 @@ JavaScript
 - imperative and declarative
 - dynamically typed
 
-On a web browser, each tab is having it's own environment for execution. This means
-usually the code in each tab run completely independent of each other. This is good
-from security point of view. There are however ways to safely send code and data 
-between different websites/tabs
+On a web browser, each tab is having it's own environment for execution. This means usually the code in each tab run
+completely independent of each other. This is good from security point of view. There are however ways to safely send code
+and data between different websites/tabs
+
 
 ## Adding JavaScript to HTML
 
@@ -61,9 +56,8 @@ between different websites/tabs
 
 ### External JavaScript
 
-Internal JavaScript option works fine, but is not a great way to manage code. It's
-a lot better to have JavaScript code live outside of HTML files with only reference
-to the actual file from HTML.
+Internal JavaScript option works fine, but is not a great way to manage code. It's a lot better to have JavaScript code
+live outside of HTML files with only reference to the actual file from HTML.
 
 ```
 <script src="externalJavaScript.js"></script>
@@ -71,8 +65,7 @@ to the actual file from HTML.
 
 ### Inline JavaScript handlers
 
-One can also have JavaScript literally living inside HTML. However this is BAD PRACTICE,
-and should be AVOIDED.
+One can also have JavaScript literally living inside HTML. However this is BAD PRACTICE, and should be AVOIDED.
 
 ```
 <button onclick="buttonClickHandler()">Click me!</button>
@@ -262,7 +255,7 @@ someVar = "value";
 var someVar;
 ```
 
-However one important point to be noted is that only the declaration is hoiseted
+However one important point to be noted is that only the declaration is hoisted
 but not the initialization so below code will give error
 
 ```
