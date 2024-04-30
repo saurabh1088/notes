@@ -155,6 +155,15 @@ Value of scope parameter limits the rights of access token which is issued. The 
 being accessed. For example some values can be read, write, profile etc.
 
 5. state
+*state* is optional. This is a security measure which is employed to prevent CSRF (Cross Site Request Forgery) attacks.
+The way *state* works is by having a unique value passed in *state* param for each authorisation request. The response coming
+back from authorisation server returns back same value which is validated back at client side to confirm authenticity of
+the response.
+This prevents CSRF attacks in way that if some attacker tricks user into clicking a malicious formed URL which creates and
+sends request to authorisation server. Now the authorisation server when redirects back to client, the client has no idea
+if the response is due to authorisation request client itself initiated. This can be mitigated by including a state in the
+authorisation request which is maintained at client end. When the response from authorisation server is received then client
+can compare to verify the response received is actually the result of request client only initiated.
 
 
 ## TODOs
