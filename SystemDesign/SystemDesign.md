@@ -20,6 +20,8 @@ such that those can be implemented in efficient and effective manner.
 An application's ability to handle increased workload without sacrificing latency(delay in operation, for e.g. could be network
 latency, or event latency).
 
-Horizontal Scaling
+1. Horizontal Scaling
+For example adding more hardware to handle load.
 
-Vertical Scaling
+2. Vertical Scaling
+For example adding more capability to existing hardware to handle load.
