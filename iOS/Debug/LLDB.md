@@ -53,7 +53,7 @@ do the same thing*
 - One can specify a variable and it will let us look at only that variable.
 - This is not compiling the code so it is fast, but it won't be able to work in case of say for e.g. computed properties
 as computed property will need code to be run.
-- This will be able to perform better at dynamic type resolution without needing to explicit casting compared to p and po commands.
+- This will be able to perform better at dynamic type resolution without needing to explicit casting compared to p and po commands. (IMP : See TODOs no. 1)
 
 ### The expression command
 
@@ -116,3 +116,9 @@ settings set target.source-map prefix new
 Because po compiles code dynamically to evaluate expressions, it takes more time to evaluate your variable and log it to
 the console.
 To reduce timing issues, use v to log variable values instead.
+
+
+## TODOs
+
+- [ ] 1. As per example at below link it appears this point(_This will be able to perform better at dynamic type resolution without needing to explicit casting compared to p and po commands._) is no longer valid, need to explore more. 
+https://github.com/saurabh1088/SwiftUI/tree/main/SwiftUILearnings/Debug
