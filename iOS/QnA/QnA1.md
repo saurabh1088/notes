@@ -431,3 +431,12 @@ to outsiders, hence these can be declared as private.
 For this use case, one can make sure to render thumbnail images of actual images on server and then download the thumbnail
 version meanwhile the actual large versions are downloaded as those can take time. The larger version of image will only
 be required once user selects the thumbnail, hence once can avoid unecessary large downloads.
+
+
+## Compare Alamofire and URLSession.
+Alamofire is a popular networking library which aims at simplifying networking tasks.
+It builds on top of Apple's URL Loading System. Means underneath it is using URLSession and it's players.
+
+Alamofire advertises itself on it's ReadMe page in github as "Elegant Networking in Swift". Which takes to one obvious
+difference and possibly advantage over URLSession, that the syntax is lot easier and one has to write less code compared
+to using URLSession(considering using completion handler, latest async/await might comes to same or only marginally different)
