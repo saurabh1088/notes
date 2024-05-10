@@ -440,3 +440,9 @@ It builds on top of Apple's URL Loading System. Means underneath it is using URL
 Alamofire advertises itself on it's ReadMe page in github as "Elegant Networking in Swift". Which takes to one obvious
 difference and possibly advantage over URLSession, that the syntax is lot easier and one has to write less code compared
 to using URLSession(considering using completion handler, latest async/await might comes to same or only marginally different)
+
+Following are some features/advantages which one gets Alamofire over URLSession.
+
+1. Certificate pinning is easier to implement.
+2. Retrying request is easier.
+3. It's used widely and is tested, so one can opt to use so as to not write networking code and skip testing.
