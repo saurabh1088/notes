@@ -28,8 +28,8 @@ Core Data provides abstraction over objects mapping to persistent store. This ma
 database directly.
 
 ### 2. Undo/Redo
-Core Data comes with an undo manager which tracks changes to it. This undo manager can roll the changes back either individually
-or in groups. This makes adding undo/redo support in apps convinient and easy to implement.
+Core Data comes with an undo manager which tracks changes to it. This undo manager can roll the changes back either
+individually or in groups. This makes adding undo/redo support in apps convenient and easy to implement.
 
 NSManagedObjectContext has instance property undoManager of type UndoManager.
 
@@ -41,9 +41,6 @@ Core Data can also help keeping views updated.
 
 ### 5. Versioning and migration
 Core Data has provision for versioning data model and also migrating user data.
-
-
-
 
 
 ## Core Data Stack
@@ -65,13 +62,13 @@ show/use them. This way, we’ll avoid any performance issues.
 
 
 ## Working with Core Data
-### Creating a Data Model File (*.xcdatamodeld*)
+### 1. Creating a Data Model File (*.xcdatamodeld*)
 
 Select Core Data checkbox while creating a new project in Xcode, or if project is already created then one needs to add
 a new file of type Data Model from Core Data section. In both the cases one sees a file with extension *.xcdatamodeld* added
 to project.
 
-### Setting up Core Data stack
+### 2. Setting up Core Data stack
 Core Data stack refers to set of objects which work together in Core Data framework to manage and persist the app’s objects.
 Following all form the core data stack
 
@@ -103,7 +100,9 @@ file. NSManagedObjectModel is the programmatic representation of this *.xcdatamo
 The *.xcdatamodeld* file when opened in Xcode editor allows one to add entities. So basically *.xcdatamodeld* describes the
 objects of the object graph Core Data will eventually manage. These entities are represented by NSEntityDescription.
 
-Check file *UIKitLearnings.xcdatamodeld* in project https://github.com/saurabh1088/uikit
+Check files: 
+1. *UIKitLearnings.xcdatamodeld* in project https://github.com/saurabh1088/uikit
+2. *LearningAppCoreDataUIKit.xcdatamodeld* in project https://github.com/saurabh1088/ios/tree/main/LearningAppCoreDataUIKit
 
 So we have a NSManagedObjectModel which is basically *.xcdatamodeld* file, this file contains one or many NSEntityDescription.
 NSEntityDescription are the entities which have properties represented by NSPropertyDescription.
@@ -158,19 +157,26 @@ Three possibilities in relationships:
 
 ## Core Data and Performance considerations
 
-### Model design : Indexing
+### 1. Model design : Indexing
 Makes sure to design model with indexing in mind so that fetch can be faster.
 In Xcode in *.xcdatamodeld* file, for an entity long press on Add Entity button give few options where one of the option is
 *Add Fetch Index*. Selecting this options adds a child node to the entity named *byPropertyIndex*, this can be renamed and
 configured to provide the index.
 
-### Background managed object context
+### 2. Background managed object context
 NSPersistentContainer has instance property *viewContext* which is the managed object context associated with the main queue.
-In app using less amount of data in Core Data this won't cause any visible issues. However for large amount of data slow queries
-will start blocking the main queue and cause UI responsiveness issues.
-Ideally data processing should be on background queue.
-One can opt for a different managed object context operating on a background queue. NSPersistentContainer has instance method
-*newBackgroundContext()* for this purpose which creates and returns a new *NSManagedObjectContext* associated with a private queue.
+In app using less amount of data in Core Data this won't cause any visible issues. However for large amount of data slow queries will start blocking the main queue and cause UI responsiveness issues.
+Ideally data processing should be on background queue. One can opt for a different managed object context operating on a
+background queue. NSPersistentContainer has instance method *newBackgroundContext()* for this purpose which creates and
+returns a new *NSManagedObjectContext* associated with a private queue.
+
+### 3. Fetch : Use predicates to restrict number of fetched records
+While fetching records from core data, fetch only the records required using predicates. If data set is huge then loading
+all data without need will consume resources unnecessarily.
+
+### 4. Batch updates
+
+### 5. Faulting
 
 ## UndoManager
 
@@ -189,6 +195,16 @@ Example : Refer AppDelegate in below project
 https://github.com/saurabh1088/ios/tree/main/LearningAppCoreDataUIKit
 https://github.com/saurabh1088/ios/blob/main/LearningAppCoreDataUIKit/LearningAppCoreDataUIKit/Movies/MoviesViewModel.swift
 
+
+## Handling Conflicts
+
+### What are conflicts?
+Conflicts can arise in core data when simultaneously attempt is made to modify same data. This can happen in app multiple
+part attempting to modify same data or due to concurrency.
+
+### How to resolve the conflicts?
+1. Core Data built-in merge policies refer below for more details
+https://developer.apple.com/documentation/coredata/nsmergepolicy/merge_policies
 
 ## QnA
 ### When is Core Data initialized?
