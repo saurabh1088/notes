@@ -13,7 +13,7 @@ and communications. It aims to
 - Confidentiality
 - Integrity
 - Authentication
-- Non-repudiation
+- Non-repudiation (a user cannot deny (repudiate) having performed a transaction)
 
 
 ## Types of Cryptography

@@ -11,8 +11,8 @@ applications.
 Also we have OWASP Mobile Application Security (MAS), which provides security standard for mobile apps.
 
 OWASP MAS provides us with:
-- OWASP MASVS OWASP Mobile Application Security Verification Standard
-- OWASP MASTG OWASP Mobile Application Security Testing Guide
+- OWASP MASVS : OWASP Mobile Application Security Verification Standard
+- OWASP MASTG : OWASP Mobile Application Security Testing Guide
 
 
 ## OWASP top 10
