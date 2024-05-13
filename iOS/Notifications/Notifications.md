@@ -86,48 +86,16 @@ So after registration is done one should ask for authorisation at some appropria
 so that the user knows the context in which app will give notifications.
 https://developer.apple.com/documentation/uikit/uiapplication/1623078-registerforremotenotifications
 
-## New : WWDC 2023
-## Push Notifications Console
-
-- Send notifications
-    One can configure and send a push notification using Push Notifications Console.
-    This console also keeps a history of notifications sent, which can be edited
-    and send again.
-    
-- Examine delivery logs
-    This is required to analyze cases when a notification sent isn't received. The
-    events reflecting the delivery process for a notification as it travels through
-    APNs are recorded. This information can be retrieved now using the header returned
-    from APNs(**apns-unique-id**) when notification is sent.
-    There is a delivery log tab in push notification console where this apns-unique-id
-    can be searched to see detailed logs to understand what happened with notification.
-    
-- Debug with tools
-    Push Notifications Console comes with tool to generate APNs authentication token
-    by providing the private key generated form apple developer portal. Validity 
-    of these token cannot exceed more than 1 hour.
-    
-    There is a token validation tool as well which will validate the above generated
-    token.
-    
-    There is a device token validator.
-    
-
-## APNs Authentication
-
-- Certificate based (SSL certificate)
-- Token based (JSON based web token)
-
 
 ## Request Authorization
 
-Before starting to push notifications to app, the app must ask for permissions to
-use notifications, basically asking user's consent for getting these notifications.
-Consent is required because user might consider notification based interactions as
-disruptions, so permission must be obtained.
+Before starting to push notifications to app, the app must ask for permissions to use notifications, basically asking
+user's consent for getting these notifications. Consent is required because user might consider notification based
+interactions as disruptions, so permission must be obtained.
 
-To ask for permission one should get shared instance of UNUserNotificationCenter
-and call requestAuthorization(options:completionHandler:) method.
+To ask for permission one should get shared instance of UNUserNotificationCenter and call
+requestAuthorization(options:completionHandler:) method.
+
 This requests user's authorization to allow :
 - Local notifications
 - Remote notifications
@@ -138,26 +106,50 @@ This requests user's authorization to allow :
         }
 ```
 
+## New : WWDC 2023
+
+### Push Notifications Console
+- Send notifications
+    One can configure and send a push notification using Push Notifications Console.
+    This console also keeps a history of notifications sent, which can be edited and send again.
+    
+- Examine delivery logs
+    This is required to analyze cases when a notification sent isn't received. The events reflecting the delivery process
+    for a notification as it travels through APNs are recorded. This information can be retrieved now using the header
+    returned from APNs(**apns-unique-id**) when notification is sent. There is a delivery log tab in push notification
+    console where this apns-unique-id can be searched to see detailed logs to understand what happened with notification.
+    
+- Debug with tools
+    Push Notifications Console comes with tool to generate APNs authentication token by providing the private key
+    generated form apple developer portal. Validity of these token cannot exceed more than 1 hour.
+    
+    There is a token validation tool as well which will validate the above generated token.
+    
+    There is a device token validator.
+    
+
+## APNs Authentication
+
+- Certificate based (SSL certificate)
+- Token based (JSON based web token)
+
 ### Note
-1. Always request for authorization before registering with Apple Push Notification
-service.
+1. Always request for authorization before registering with Apple Push Notification service. THIS POINT APPEARS
+CONTRADICTORY AS PER APPLE'S DOCUMENTATION REGARDING REGISTRATION AND AUTHORISATION.
 
-2. Authorization should NOT be blindly requested at app launch, instead it should
-be asked in a context which helps user understand why app needs authorization. It's 
-not necessary or desirable to request for authorization on app launch itself. 
-This ideally should be asked within some relvant context so as to give user more 
-insight of what notification will be like. 
-For e.g. suppose a grocery app let's you add some available coupon codes, so when 
-user adds a coupon that time request can be made telling user that app can notify 
-for coupons when available. This way user will get an understanding of why and how 
-the notification can be helpful to him/her and can take informed decision.
+2. Authorization should NOT be blindly requested at app launch, instead it should be asked in a context which helps
+user understand why app needs authorization. It's not necessary or desirable to request for authorization on app
+launch itself. This ideally should be asked within some relvant context so as to give user more insight of what
+notification will be like. 
+For e.g. suppose a grocery app let's you add some available coupon codes, so when user adds a coupon that time request
+can be made telling user that app can notify for coupons when available. This way user will get an understanding of why
+and how the notification can be helpful to him/her and can take informed decision.
 
-3. First time authorization promp is shown and user's response is recorded, subsequent
-calls for authorization doesn't show prompt again, unless app is deleted from device.
+3. First time authorization promp is shown and user's response is recorded, subsequent calls for authorization doesn't
+show prompt again, unless app is deleted from device.
 
-4. User at anytime can go to settings app and change the configurations for push
-notifications. UNUserNotificationCenter's getNotificationSettings(completionHandler:)
-can be used to retrieve the authorization and feature-related settings.
+4. User at anytime can go to settings app and change the configurations for push notifications.
+UNUserNotificationCenter's getNotificationSettings(completionHandler:) can be used to retrieve the authorization and feature-related settings.
 
 ### Explicit vs Provisional authorization
 
@@ -269,3 +261,5 @@ for app or app extension. It's role includes :
 5. Manage delivered notifications
 6. Handle user-selected actions from custom notifications
 
+
+## Silent Notifications
