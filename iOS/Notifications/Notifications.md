@@ -68,7 +68,23 @@ serves any purpose as device token can be periodically changed.
 
 
 ## registerForRemoteNotifications() vs requestAuthorization(options:completionHandler:), which sequence these are called?
+As per official documentation from Apple one should register app and receive device token each time app launches. This
+indicates best place to put registerForRemoteNotifications() should be in AppDelegate's *application(_:didFinishLaunchingWithOptions:)* method. This makes sense as documentations also recommends never to cache device tokens
+in device's local storage, as APNs can issue a new token unders some scenarios, so asking each time for registration provides
+one an always up-to-date token.
 
+Reference : https://developer.apple.com/documentation/usernotifications/registering-your-app-with-apns
+
+Now this takes to next part of the problem, that should one need to ask for permission before or after registering.
+As per below documentation for registerForRemoteNotifications() method, registration is necessary to receive notifications
+so that needs to be done first and foremost. Now asking for user's permission is required so as to enable remote notifications
+to display alerts, sound, etc. So registration is important as without that device won't be able to receive any notification
+as the provider server needs to have device token in order to ask APNs to send notifications.
+Now once device is registered, without any authorisation from user if any notification is sent then the system will treat
+all notifications as silent notifications and delivers them silently.
+So after registration is done one should ask for authorisation at some appropriate point in app's flow where it makes sense
+so that the user knows the context in which app will give notifications.
+https://developer.apple.com/documentation/uikit/uiapplication/1623078-registerforremotenotifications
 
 ## New : WWDC 2023
 ## Push Notifications Console
