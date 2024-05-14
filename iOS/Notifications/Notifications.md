@@ -263,3 +263,21 @@ for app or app extension. It's role includes :
 
 
 ## Silent Notifications
+Silent notifications are the notifications which are sent to devices but without activating any sound, alert or badge the
+app icon. Purpose of these notifications is to silently wake up the app and perform some operation in background.
+
+### Use Case
+1. Suppose an app depends on some backend data which needs frequent updates, one way to make sure user doesn't miss out
+on important updates is to push a silent notification which wakes up app and makes necessary API calls.
+
+### Are silent and background notifications same?
+There is no mention of silent notifications in Apple's documentation. The only documentation available mentions the
+notifications as background notifications, refer:
+
+https://developer.apple.com/documentation/usernotifications/pushing-background-updates-to-your-app
+
+It appears silent and background notifications are same.
+
+TODO: Need to explore and confirm this point.
+
+### What happens when app receives a silent/background notification
