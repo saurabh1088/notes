@@ -208,4 +208,8 @@ git push -u origin main
 ```
 
 Note: The  can differs of folder created locally and repository created on github, that will not cause any issue. One can
-choose same name, or if choosen differently then can delete locally and clone repo created after completing all steps. 
+choose same name, or if choosen differently then can delete locally and clone repo created after completing all steps.
+
+Note: If while creating repository on GitHub, one chooses to add licence or readme file, github will create repository and
+also commit these files, then when trying to execute step 7 above will result in issues. So better to not include any files
+while creating repository.
