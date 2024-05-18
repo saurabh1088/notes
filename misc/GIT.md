@@ -187,3 +187,25 @@ git tag -a v1.0.0
 
 git push origin v1.0.0
 ```
+
+## Initialize a git repo locally and push to remote
+
+1. Create folder for e.g *test-repo*
+2. From *test-repo* execute command
+```
+git init
+```
+3. Add required files, content to the folder *test-repo*
+4. Commit changes
+5. Create a repository on github account and get the repo url
+6. Execute below command from *test-repo*
+```
+git remote add origin git@github.com:saurabh1088/test-repo-created-on-git-hub.git
+```
+7. Execute below command from *test-repo*
+```
+git push -u origin main
+```
+
+Note: The  can differs of folder created locally and repository created on github, that will not cause any issue. One can
+choose same name, or if choosen differently then can delete locally and clone repo created after completing all steps. 
