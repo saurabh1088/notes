@@ -332,7 +332,15 @@ Functions are first-class citizens in languages like:
 
 
 ## What all are treated as first class types in Swift programming language?
-
+In Swift following are treated as first class :
+- Actors
+- Classes
+- Structures
+- Functions
+- Closures
+- Enumerations
+- Tuples
+- Protocol Types
 
 
 ## 18. What is ABI Stability?
