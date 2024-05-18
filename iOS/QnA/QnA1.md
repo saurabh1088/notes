@@ -331,6 +331,10 @@ Functions are first-class citizens in languages like:
 - Swift
 
 
+## What all are treated as first class types in Swift programming language?
+
+
+
 ## 18. What is ABI Stability?
 ABI stands for Application Binary Interface.
 It's an interface as the name suggests. This interface defines everything needed for binaries to interact or communicate.
@@ -345,6 +349,8 @@ To elaborate, suppose we have an app built using Swift 5. Now if we have three d
 versions 5, 5.1 and 6 respectively, then our app will be able to run on all three of the systems.
 Previously what used to happen was that the apps used to embed the Swift standard library in app bundle. Now with ABI stability
 this is not required hence also making app bundle reduced in size.
+
+https://www.swift.org/blog/abi-stability-and-more/
 
 
 ## 19. What is an unwind segue and how to set it up?
