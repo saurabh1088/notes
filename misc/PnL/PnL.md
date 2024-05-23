@@ -6,6 +6,8 @@
 - [ ] URLSessionConfiguration
 - [ ] Cache Management
 - [ ] Alamofire
+- [ ] Requests chaining using URLSession
+- [ ] Requests chaining using Alamofire
 
 
 ## Authentication & Authorisation
@@ -29,6 +31,7 @@
 - [ ] MVVM
 - [ ] VIPER
 - [ ] Clean Architecture
+- [ ] TCA : The Composable Architecture : https://medium.com/@dmitrylupich/the-composable-architecture-swift-guide-to-tca-c3bf9b2e86ef
 
 
 ## Design Principles
@@ -44,3 +47,42 @@
 
 ## Data Persistence
 - [ ] Core Data
+
+
+## Security
+- [ ] Mobile App Security
+- [ ] Encryption/Decryption
+
+
+## Core Animation
+
+
+## Swift
+- [ ] Protocol Oriented Language
+- [ ] ABI Stability
+- [ ] Higher Order Functions
+- [ ] Autoclosures
+- [ ] Autorelease Pool
+- [ ] Mutability
+- [ ] Phantom Types
+
+
+## Objective C
+- [ ] Objective C runtime
+
+
+## Unit Testing
+- [ ] Unit test async code
+- [ ] Code Coverage
+
+
+## Accessibility
+
+
+## SwiftUI
+
+
+## Frameworks and Libraries
+
+
+## Diffable Datasource

@@ -37,8 +37,8 @@ Settings -> Privacy & Security -> Analytics & Improvements -> Analytica Data
 1. Upload symbols with the app, this will ensure that server side symbolification works.
 2. Save the app archives, as archives contains a copy of the debug symbols, the dSYMs. Xcode uses spotlight to find these dSYMs
 and perform local symbolification when it's necessary automatically.
-3. If app is uploaded which contains bitcode, then one should use the archive organizer download debug symbol button to download
-any dSYMs which comes as part of store side bitcode compilation.
+3. If app is uploaded which contains bitcode, then one should use the archive organizer download debug symbol button to
+download any dSYMs which comes as part of store side bitcode compilation.
 
 Crash log files contains much more information than just the stack trace.
 
@@ -108,8 +108,8 @@ One can use *Thread Sanitizer* to analyze some of the issues arising due to mult
 dSYM stands for *debug symbols*
 When code is compiled then symbols are generated, these symbols are class names, global variables, functions etc. The association
 of these symbols with file name and line number where these are defined creates a debug symbol.
-Debug build place these debug symbols inside the compiled binary itself, this is by default. Howeve the release build places
-these debug symbols in a separate file dSYM, reducing the size of the distributed app.
+Debug build place these debug symbols inside the compiled binary itself, this is by default. However the release build
+places these debug symbols in a separate file dSYM, reducing the size of the distributed app.
 
 So in order to understand dSYM files one needs to understand debug symbols.
 
