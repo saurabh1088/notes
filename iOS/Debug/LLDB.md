@@ -38,12 +38,12 @@ Once the session is open then one can use commads to import for example crash lo
 
 ## Examining Data
 
-*These commands below all can be used to examine data however these don't exactly
-do the same thing*
+*These commands below all can be used to examine data however these don't exactly do the same thing*
 
+- dwim-print
 - frame variable (fr v)
-- expression (p)
-- expression -O (po)
+- expression (p) (IMP : THIS IS NOW ALIASED AGAINST COMMAND : *dwim-print*)
+- expression -O (po) (IMP : THIS IS NOW ALIASED AGAINST COMMAND : *dwim-print*)
 
 ### The frame variable command
 
@@ -57,14 +57,12 @@ as computed property will need code to be run.
 
 ### The expression command
 
-- This can be also run as shortened form as *p*
 - Used to run expressions, for example this can run simple arithmatic commands.
 - One can use previous results and do further processing on those.
 - Result of each expression are given names like $R0, $R1 and so on.
 
-### The expression -O or po command
+### The expression -O
 
-- This can be also run as shortened form as *po*
 - Can create object and print their description printed out.
 - Can evaluate arbitrary expression, it anyways is an alias for command expression
 
@@ -113,9 +111,15 @@ settings set target.source-map prefix new
 
 
 ## Using po command to print variable, but seems like Xcode take too long to process, why so?
-Because po compiles code dynamically to evaluate expressions, it takes more time to evaluate your variable and log it to
+Because *po* compiles code dynamically to evaluate expressions, it takes more time to evaluate your variable and log it to
 the console.
-To reduce timing issues, use v to log variable values instead.
+To reduce timing issues, use *v* to log variable values instead.
+Also it's not just that *po* command is slow, it previously used to just print the address if *CustomStringConvertible*
+was not implemented. But in latest releases of *lldb* Apple has implemented command *dwim-print* and aliases for both
+*p* and *po* are re-defined to *dwim-print* command.
+
+NOTE: As of Swift 5.9 *po* and *p* both now provide faster variable inspection.
+Source : https://www.swift.org/blog/whats-new-swift-debugging-5.9/
 
 
 ## TODOs

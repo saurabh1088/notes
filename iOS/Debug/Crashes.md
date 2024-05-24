@@ -11,6 +11,7 @@ to disk in human readable crash log. Now the release build logs won't be as read
 which is the unsymbolicated crash log. As Xcode takes care of symbolicating crash logs, we see the details of methods, class
 name, line number etc.
 
+
 ## What are the reasons crashes can happen due to OS deciding to terminate application?
 - Watchdog events
 - Device overheating
@@ -22,9 +23,22 @@ also result in app store rejection. Obviously to avoid launch timeouts one needs
 to app store but the launch timeout watchdog is disabled in Simulator and it is disabled in the debugger. So watchdog timeout
 will not be observed in simulator and with debugger attached. So one needs to test app on device without debugger.
 
+
 ## How to view crash logs on Xcode for your apps in TestFlight and AppStore?
 Got to Xcode -> Window -> Organizer
 Choose App and one can view crash logs, hang logs, etc.
+Xcode organiser shows a bunch of information about the app. Following screenshot shows options available:
+
+![Xcode Organizer](resources/XcodeOrganizerOptions.png "Xcode Organizer")
+
+From Xcode organiser one can view a lot of information about crashed like:
+- Symbolicated crash logs
+- Option to open crash logs in project
+- Some statistics about crash like how many devices affected, distribution across os versions
+- Feedback from TestFlight testers if they have submitted for TestFlight builds
+- Option to share crash logs as a link to someone within team
+- Upto 1 year worth of crash logs are available
+
 
 ## How can one share logs from device?
 Device, if is connected to Xcode, then once can use Xcode's Device menu to view logs. 
@@ -41,6 +55,7 @@ and perform local symbolification when it's necessary automatically.
 download any dSYMs which comes as part of store side bitcode compilation.
 
 Crash log files contains much more information than just the stack trace.
+
 
 ## What are watchdog events?
 
@@ -97,6 +112,7 @@ of the malloc memory allocator itself gets corrupted by a memory error thereby l
 due to incorrect usage of malloc APIs, like if one frees an object twice in a row, then the malloc allocator can recognize this
 as double free leading to immediately halting the process.
 
+
 ## Multithreading Issues
 Some of the memory corruptions could be result of multithreading issues.
 If in crash logs one observes same class appearing for multiple thread, then this could be the case of multithreading issues.
@@ -149,6 +165,32 @@ in iOS 15.
 
 ## Examples explored at
 https://github.com/saurabh1088/SwiftUI/tree/main/SwiftUILearnings/Debug
+
+
+## One has received .ips file which is not symbolicated. How to symbolicate it and view crash logs?
+If dSYM file is available, then when .ips file is attempted to open with Xcode, Xcode should be able to symbolicate and
+enable showing crash logs.
+One can try renaming .ips file to end with extension .crash and try opening.
+
+If Xcode is not able to symbolicate, then one can try to symbolicate manually using command line tool *symbolicatecrash*
+following below steps.
+
+1. Check if *symbolicatecrash* command line tool is available running below command:
+```
+find /Applications -name symbolicatecrash
+```
+2. Above command should give path like below if tool is available:
+```
+/Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/symbolicatecrash
+```
+3. *symbolicatecrash* requires environment variable *DEVELOPER_DIR* to be set, set it executing below command:
+```
+export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
+```
+4. Execute *symbolicatecrash* command by providing path for .ips and dSYM files.
+```
+/Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/symbolicatecrash path/to/app.ips path/to/app.dSYM > SymbolicatedReport.crash
+```
 
 
 ## TODOs
