@@ -8,14 +8,15 @@ LLDB is the standard debugger in Xcode.
 ## LLDB Commands
 
 ### run
-Start or if not running then re-start the code being debugged.
+Start or if not running then re-start the code being debugged. When control pauses over breakpoint and *run* command is
+executed on *lldb* then it will run the application again.
 
 ### help
 List down all commands available
 
 ### thread backtrace
-Gives stacktrace at the execution point, can be helpful to understand the call trace
-leading to the point at which the command was executed.
+Gives stacktrace at the execution point, can be helpful to understand the call trace leading to the point at which the
+command was executed.
 
 ### bt
 Same as *thread backtrace*
@@ -29,8 +30,13 @@ Prints the variable. Note : angular brackets are not required.
 ### frame variable OR fr v
 Displays all local variables in the current stack frame.
 
-// TODO : Confirm this command (type lookup) if it's valid
-### type lookup
+### type lookup <Type>
+Prints information about the type.
+For example for type : https://github.com/saurabh1088/SwiftUI/blob/main/SwiftUILearnings/Debug/DebugViewModel.swift one
+can execute below command.
+```
+type lookup DebugViewModel
+```
 
 ### lldb
 *lldb* itself is a command which can be run in terminal on Mac to start a debug session.
@@ -61,7 +67,7 @@ as computed property will need code to be run.
 - One can use previous results and do further processing on those.
 - Result of each expression are given names like $R0, $R1 and so on.
 
-### The expression -O
+### The expression -O (DOESN'T WORKS NOW)
 
 - Can create object and print their description printed out.
 - Can evaluate arbitrary expression, it anyways is an alias for command expression
@@ -97,11 +103,10 @@ These protocol conformances can be added at runtime as well through expression c
 
 ## How LLDB works
 
-Compiler compiles the source code to generate the machine code. In doing so it also
-leaves breadcrumbs for the debugger so that an address can be mapped to source file,
-line number etc. These breadcrumbs are called debug-info. Debug info on apple
-systems is stored in object files. For archiving and distribution, debug info can
-be linked into .dSYM bundles. The debug info linker is called *dsymutil*
+Compiler compiles the source code to generate the machine code. In doing so it also leaves breadcrumbs for the debugger
+so that an address can be mapped to source file, line number etc. These breadcrumbs are called debug-info. Debug info on
+apple systems is stored in object files. For archiving and distribution, debug info can be linked into .dSYM bundles.
+The debug info linker is called *dsymutil*
 
 LLDB can map to source path using below command
 
