@@ -44,8 +44,12 @@ From Xcode organiser one can view a lot of information about crashed like:
 Device, if is connected to Xcode, then once can use Xcode's Device menu to view logs. 
 Also on device one can view logs under :
 
+```
 Settings -> Privacy & Security -> Analytics & Improvements -> Analytica Data
+```
 
+Logs on device at this location usually have app name in the file name itself. One can select a log and it shows details
+of logs. Also there is an option to share those. One can tap share option to reveal share options available and share logs. 
 
 ## Symbolification
 1. Upload symbols with the app, this will ensure that server side symbolification works.
@@ -192,6 +196,14 @@ export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
 /Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/symbolicatecrash path/to/app.ips path/to/app.dSYM > SymbolicatedReport.crash
 ```
 
+
+## How to get and view crash logs for an iOS App?
+
+### 1. Xcode Organizer
+### 2. TestFlight
+### 3. Devices
+### 4. Third party crash reporting tools
+### 5. Xcode debugger
 
 ## TODOs
 
