@@ -20,6 +20,7 @@ _Big-O notation is a mathematical concept which helps describing performance of 
 1. Time Complexity
 - Time complexity of an algorithm describes how runtime of the algorithm varies with the input size.
 2. Space Complexity
+- Space complexity of an algorithm describes how memory usage varies 
 
 ## Resources
 

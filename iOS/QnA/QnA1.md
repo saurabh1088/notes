@@ -188,6 +188,33 @@ Example :
 https://github.com/saurabh1088/uikit/blob/main/UIKitLearnings/UIKitLearnings/BezierPaths/RectangularView.swift
 
 
+## 7. What are various options to configure a viewcontroller before it is shown? OR How to provide it's dependencies?
+
+### UIViewController with NIB
+- If UIViewController derives it's view hierarchy from a NIB file, then either it's dependencies could be marked to be
+implicit unwrapped optionals, just like IBOutlets. This way these dependencies can be provided when viewcontroller is
+presented or pushed right after instantiating it from nib file.
+
+- Here one can also create an initialiser and within that initialiser call it's superclass' `init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)`. For example look at below viewcontroller
+
+https://github.com/saurabh1088/uikit/blob/main/UIKitLearnings/UIKitLearnings/ViewControllerLearnings/ViewControllers/NibInstantiatedViewController.swift
+
+### UIViewController in storyboards
+- Use `prepare(for segue: UIStoryboardSegue, sender: Any?)` and in it's implementation assign dependencies.
+- Use `@IBSegueAction` and configure UIViewController with initialiser
+
+Example for `@IBSegueAction`
+https://github.com/saurabh1088/uikit/blob/main/UIKitLearnings/UIKitLearnings/ViewControllerLearnings/ViewControllerInitOptionsViewController.swift
+
+
+## 8. prepare(for segue: UIStoryboardSegue, sender: Any?) vs @IBSegueAction
+Benefits of using @IBSegueAction
+- @IBSegueAction helps in cleaning up code as `prepare(for segue` ends up having multiple checks for segue identifiers.
+- Viewcontroller can have initialiser defined for it's dependencies, and those dependencies could be marked as private.
+- Dependencies could be marked as let constant, instead of marking as var which is required when declared as implicitly
+unwrapped optionals
+- If required for testing, Viewcontroller can be initialised with all dependencies for test.
+
 ## 7. What's the difference between these declarations?
 ```
 func feed<A>(_ animal: A) where A: Animal
