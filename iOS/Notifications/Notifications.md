@@ -286,3 +286,25 @@ TODO: Need to explore and confirm this point.
 ## Can a push notification contain a universal link or deeplink?
 YES. One need to set-up the payload of notification to include the URL and then when notification is received, at app end
 logic need to be added to identify if notification contains deeplink/universal link and then take appropriate action.
+
+
+## How to modify content of notifications?
+To modify content of notifications one have option of *UNNotificationServiceExtension* and *UNNotificationContentExtension*
+
+
+## Notifications extension types
+
+### Notification Service Extension
+Notification Service Extension type target when added to project provides object of type *UNNotificationServiceExtension*.
+This object, *UNNotificationServiceExtension*, gives an entry point and enables to customize contents of a push notification
+BEFORE it is delivered.
+This extension can be used to
+- Modify content of a notification
+- Download content related to notification
+- Perform any required encryption/decryption of notification's content
+
+Requirement:
+The payload should contain dictionary key *mutable-content* with value set to 1.
+
+### Notification Content Extension : iOS ONLY
+Notification Content Extension customizes the appearance of push notification alerts for iOS App.
