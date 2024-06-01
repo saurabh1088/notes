@@ -2,7 +2,7 @@
 
 ## What is an Augmented Reality experience?
 
-Augmented Reality is a technology which belnds digital pieces which could be 2D or
+Augmented Reality is a technology which blends digital pieces which could be 2D or
 3D with the real world environment.
 Augmented Reality tries to seamlessly blend and marry a digital piece with a real
 environment, this enhances user's perception and experience which has wide range

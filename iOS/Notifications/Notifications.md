@@ -283,6 +283,6 @@ TODO: Need to explore and confirm this point.
 ### What happens when app receives a silent/background notification
 
 
-## Can a push notification contain a universal link or deepling?
+## Can a push notification contain a universal link or deeplink?
 YES. One need to set-up the payload of notification to include the URL and then when notification is received, at app end
 logic need to be added to identify if notification contains deeplink/universal link and then take appropriate action.

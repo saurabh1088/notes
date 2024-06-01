@@ -11,7 +11,7 @@ Quoting definition from Apple's documentation page :
 
 *A mutable collection you use to temporarily store transient key-value pairs that are subject to eviction when resources are low.*
 
-NSCache is basically a NSMutableDictionary as NSCache also stored key value pairs like NSMutableDictionary, additionally
+NSCache is basically a NSMutableDictionary as NSCache also stores key value pairs like NSMutableDictionary, additionally
 NSCache provides functionality to automatically evict objects to free up memory as required.
 
 
