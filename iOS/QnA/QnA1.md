@@ -83,11 +83,10 @@ Cocoa Touch includes below frameworks and more
 UIViewController in UIKit is responsible for managing view hierarchy for the app.
 
 
-UIViewController is subclassed and inherited viewcontrollers are created to manage
-an app's view hierarchies. One doesn't need to create instances of UIViewController
-directly.
+UIViewController is subclassed and inherited viewcontrollers are created to manage an app's view hierarchies. One doesn't
+need to create instances of UIViewController directly.
 
-As UIViewController inherits from 
+As UIViewController inherits from UIResponder, hence it's also a responder object and is part of responder chain.
 
 ### Responsibilities of UIViewController
 
@@ -215,7 +214,7 @@ Benefits of using @IBSegueAction
 unwrapped optionals
 - If required for testing, Viewcontroller can be initialised with all dependencies for test.
 
-## 7. What's the difference between these declarations?
+## 9. What's the difference between these declarations?
 ```
 func feed<A>(_ animal: A) where A: Animal
 
@@ -226,7 +225,7 @@ Both are identical. The bottom one reduces the syntactic complexity as the top o
 looks too complex.
 
 
-## 8. What is some keyword in Swift?
+## 10. What is some keyword in Swift?
 With *some* there is a specific underlying type that cannot vary. So suppose we have a protocol, then if we want to declare
 an array which contains elements conforming to protocol declaring like [some Protocol] would not work as then all the elements
 in the array needs to be of same type. So [some Protocol] doesn't express the right thing. What needs to be used here is
@@ -245,16 +244,16 @@ to a protocol.
 type, using optionals, and make the abstraction an implementation detail.
 
 
-## 9. In Swift can we have stored properties in an enum?
+## 11. In Swift can we have stored properties in an enum?
 NO
 In Swift, Classes and Structures only can have stored properties.
 
 Let's explore why enum can't have stored properties.
 As per definition an enum is a model custom type which defines a list of possible values.
-Check example for details : [Example](https://github.com/saurabh1088/swift-playgrounds/blob/main/Swift.playground/Pages/Enumerations.xcplaygroundpage/Contents.swift)
+Check _Example 8 : Can Enum have stored properties._ for details at link : [Example](https://github.com/saurabh1088/swift-playgrounds/blob/main/Swift.playground/Pages/Enumerations.xcplaygroundpage/Contents.swift)
 
 
-## 10. What is a namespace?
+## 12. What is a namespace?
 Namespace in software engineering refers to a container with a set of classes, structures, functions etc inside it with
 goal of organizing code and avoiding name conflicts. For example in a project we have a networking module for which we
 declared a struct Utils with some utility functions. Then later while developing style guide we again want to add some
@@ -269,7 +268,7 @@ In Swift one can use enums to achieve concept of namespace.
 Check example for details : [Example](https://github.com/saurabh1088/swift-playgrounds/blob/main/Swift.playground/Pages/Enumerations.xcplaygroundpage/Contents.swift)
 
 
-## 11. Why do we need to use keyword indirect for Swift's recursive enumerations?
+## 13. Why do we need to use keyword indirect for Swift's recursive enumerations?
 When we define an enum in Swift having associated value, Swift will need to determine the required memory based on the
 type of associated values. Now if the assciated value type is simple types like String, Int, Double etc. then Swift will
 be able to figure out memory requirement.
@@ -284,7 +283,7 @@ treat this case as associated values as pointers to heap allocation. This is whe
 that the associated value for this case is indirectly stored on heap.
 
 
-## 12. What is the relevance of instancy property, capacity, of an Array in Swift and how does it differs from count?
+## 14. What is the relevance of instancy property, capacity, of an Array in Swift and how does it differs from count?
 Array's capacity is an instance property on Array, it gives a count of number of elements array can contain without allocating
 new storage. For Array the compiler will reserve certain amount of memory to hold its contents. When one appends more elements
 to the Array then if more storage is required then the new storage allocate is in multiples of old storage size. So initially
@@ -298,7 +297,7 @@ Check example for details :
 [Example](https://github.com/saurabh1088/swift-playgrounds/blob/main/DataStructures.playground/Pages/Arrays.xcplaygroundpage/Contents.swift)
 
 
-## 13. Swift Arrays and contiguous region of memory allocation.
+## 15. Swift Arrays and contiguous region of memory allocation.
 Arrays in Swift hold their values in contiguous region of memory. This is true when elements type the Array is holding is
 of value semantics. When the elements type is reference type, then it may or may not hold value in contiguous region and instead
 opt for reference in NSArray.
@@ -312,12 +311,12 @@ One can use *reserveCapacity(_:)* method to avoid multiple reallocations when we
 One can call *reserveCapacity(_:)* before appending and provide some minimum capacity for append to follow.
 
 
-## 14. How is inserting an element into an array is compared to appending one?
+## 16. How is inserting an element into an array is compared to appending one?
 Arrays being in a contiguous region of memory means that an insertion operation can be costly and be of the order of O(n).
 Though appending initially can be costly due to reallocation, but appending multiple times have subsequent improvements.
 
 
-## 15. What is meant by saying Swift arrays are Copy-on-Write?
+## 17. What is meant by saying Swift arrays are Copy-on-Write?
 Copy-on-Write is a optimization technique used by Swift for Arrays. What this means is that suppose there is an array created
 named arrayA and then we assign this to another array arrayB, arrays being value types will mean that both arrays are not
 pointing to anything but contents should get copied when assignment was done. However to optimize the contents are not copied
@@ -328,7 +327,7 @@ In terms of performance this means when we have a bunch of arrays sharing a stor
 incur the cost of copying.
 
 
-## 16. What is an ArraySlice? Why should one not store a slice longer than one needs?
+## 18. What is an ArraySlice? Why should one not store a slice longer than one needs?
 ArraySlice is a view onto Arrays. It's a generic struct behaving very much same as the normal Array. ArraySlice can reference
 a part of another Array's storage and pass it of as its own. This is helpful to make it fast and efficient to perform operations
 on a section of larger array. ArraySlice doesn't copies elements of section it represents of the larger array, instead it
@@ -341,7 +340,7 @@ array, not just the portion of which it is representing the view. So what this m
 count for memory of larger array and can lead to memory leakage.
 
 
-## 17. What is meant by being first-class citizen in programming world?
+## 19. What is meant by being first-class citizen in programming world?
 This concept of first-class citizens was introduced by Christopher Strachey in the 1960s and this is a generic terms which
 applies to many programming languages and not restricted to a few. After introduction of this term, the definition was given
 modern touch Robin Popplestone to include following conditions which qualifies one to be a first-class citizen
@@ -358,7 +357,7 @@ Functions are first-class citizens in languages like:
 - Swift
 
 
-## What all are treated as first class types in Swift programming language?
+## 20. What all are treated as first class types in Swift programming language?
 In Swift following are treated as first class :
 - Actors
 - Classes
@@ -370,7 +369,7 @@ In Swift following are treated as first class :
 - Protocol Types
 
 
-## 18. What is ABI Stability?
+## 21. What is ABI Stability?
 ABI stands for Application Binary Interface.
 It's an interface as the name suggests. This interface defines everything needed for binaries to interact or communicate.
 
@@ -388,7 +387,7 @@ this is not required hence also making app bundle reduced in size.
 https://www.swift.org/blog/abi-stability-and-more/
 
 
-## 19. What is an unwind segue and how to set it up?
+## 22. What is an unwind segue and how to set it up?
 Unwind segue is opposite of normal segue as the name suggests. Unwind segue is used to handle the dismissal of a view controller.
 Normal segue has a specific target which is the destination view controller, this destination is known before hand.
 However for unwind segue, UIKit determines the target at runtime. Having UIKit determining the target at runtime gives
@@ -397,7 +396,7 @@ presenting same child view controller. In this scenario one can skip adding comp
 to go back to once child view controller is dismissed, as the UIKit runtime target determining while using uniwind segue
 simplifies the implementation.
 
-### How to set unwind segue
+### 23. How to set unwind segue
 For example refer code at:
 https://github.com/saurabh1088/ios/blob/main/LearningAppCoreDataUIKit/LearningAppCoreDataUIKit/Movies/MoviesViewController.swift
 
@@ -428,7 +427,7 @@ If UIKit is unable to find any appropriate view controller, then the unwind segu
 controlller will remain on screen.
 
 
-## 20. How to handle SSL pinning and authentication challenges while using URLSession?
+## 24. How to handle SSL pinning and authentication challenges while using URLSession?
 SSL pinning and authentication challenges both are handled using URLSessionDelegate. One need to conform to URLSessionDelegate
 and implement *urlSession(_:didReceive:completionHandler:)* method
 
@@ -447,34 +446,34 @@ authentication challenge received, if that challenge is asking for credentials o
 SSL pinning.
 
 
-## How can one classify something in Swift as a module?
+## 25. How can one classify something in Swift as a module?
 A module is a single unit of code which is built and shipped or distributed as a single unit. In code anything one can
 import with the import statement can be termed as a module.
 Also in Xcode for a project, each build target is also a separate module.
 
 
-## For a public class what will be the default access level of its properties and methods?
+## 26. For a public class what will be the default access level of its properties and methods?
 INTERNAL. It may appear it is going to be public, but actually it will be internal. Usually the access level trickles down
 to the type's members as well. However there is exception in case of when the type is declared as public. For public type,
 the default access level comes as internal. This way it prevents accidently exposing APIs which aren't meant to be public.
 
 
-## For an internal class what will be the default access level of its properties and methods?
+## 27. For an internal class what will be the default access level of its properties and methods?
 Internal
 
 
-## What is the use case for defining a type to be private?
+## 28. What is the use case for defining a type to be private?
 One can define a private inner type to make internal data structure cleaner, however one doesn't need to expose these details
 to outsiders, hence these can be declared as private.
 
 
-## If one has to design an App which shows a large number of images, then how efficiently one can design this?
+## 29. If one has to design an App which shows a large number of images, then how efficiently one can design this?
 For this use case, one can make sure to render thumbnail images of actual images on server and then download the thumbnail
 version meanwhile the actual large versions are downloaded as those can take time. The larger version of image will only
 be required once user selects the thumbnail, hence once can avoid unecessary large downloads.
 
 
-## Compare Alamofire and URLSession.
+## 30. Compare Alamofire and URLSession.
 Alamofire is a popular networking library which aims at simplifying networking tasks.
 It builds on top of Apple's URL Loading System. Means underneath it is using URLSession and it's players.
 
