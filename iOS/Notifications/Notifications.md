@@ -308,3 +308,16 @@ The payload should contain dictionary key *mutable-content* with value set to 1.
 
 ### Notification Content Extension : iOS ONLY
 Notification Content Extension customizes the appearance of push notification alerts for iOS App.
+When notification content extention type target is added to an iOS app, it adds a viewcontroller conforming to protocol
+*UNNotificationContentExtension*.
+*UNNotificationContentExtension* protocol conforming viewcontroller provides the custom user interface one needs to use
+for notifications.
+
+
+|Type|Notification Service Extension|Notification Content Extension|
+|---|---|---|
+||UNNotificationServiceExtension|UNNotificationContentExtension|
+|Purpose|Modify content of push notification|Customize appearance of push notification|
+|Context|Acts before notification is delivered by system to user|Acts when notification is displayed|
+|Use cases|Modify content, encrypt/decrypt, download media etc|Rich UI, custom buttons, custom fonts|
+|Lifecycle|Short lifespan of 30 seconds|Active while notification is expanded|
