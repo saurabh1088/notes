@@ -486,3 +486,45 @@ Following are some features/advantages which one gets Alamofire over URLSession.
 1. Certificate pinning is easier to implement.
 2. Retrying request is easier.
 3. It's used widely and is tested, so one can opt to use so as to not write networking code and skip testing.
+
+
+## 31. What's the difference in UIView and CALayer?
+In iOS world, every UIView is backed by a Core Animation CALayer. UIView is kind of a light wrapper on top of CALayer.
+What UIView provides on top of CALayer is the support for user interaction.
+CALayer is available for both iOS and macOS platforms. CALayer can be used without UIView as well to display content.
+While working with UIView one may need to dig in deeper and access CALayer in some complex animations.
+
+Main job of a CALayer is to
+- Manage visual content
+- Maintain information about geometry of its content like
+    - position
+    - size
+    - transform
+
+One can modify properties of CALayer to perform animations.
+
+When working with UIView, the UIView assigns itself as a delegate to CALayer. This relationship cannot be changed.
+When used in isolation, CALayer's delegate object can be provided.
+
+
+## 32. How to optimize performance while working with UIView and CALayer?
+1. View hierarchy should be optimized such that there is no unecessary overlapping of views. This is important so that
+only a minimum number of required only views should get rendered.
+2. Opaque views should be preferred as these help optimizing performance for rendering engine.
+3. For complex animations one should leverage CALayer's animation capabilities as it is highly optimized and this reduces
+load on main thread. CALayers are drawn directly on the GPU, utilising separate thread.
+4. Views and layers should be loaded lazily. This improves initial load time and memory usage.
+5. Avoid complex drawing logic in *drawRect* method of UIView. *drawRect* gets called multiple times and can lead to
+performance issues. As an alternative one can use *CAShapeLayer* for vector based drawing.
+6. Minimize offscreen rendering.
+7. Rasterization : *shouldRasterize* property of CALayer.
+
+## TODOs
+
+- [ ] Explain the differences between UIView and CALayer. How do you optimize performance when working with these components?
+- [ ] Describe a situation where you had to deal with race conditions or deadlocks. How did you resolve it?
+- [ ] Have you implemented data migration in Core Data? If so, can you describe the process?
+- [ ] Give examples of how GCD and Operations were utilized in projects?
+- [ ] Have you worked with dependency injection in iOS? How do you manage dependencies in your projects?
+- [ ] Does opacity of a UIView has any impact on performance?
+- [ ] What is rasterization?
