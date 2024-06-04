@@ -213,3 +213,17 @@ choose same name, or if choosen differently then can delete locally and clone re
 Note: If while creating repository on GitHub, one chooses to add licence or readme file, github will create repository and
 also commit these files, then when trying to execute step 7 above will result in issues. So better to not include any files
 while creating repository.
+
+
+## Create new branch command line
+```
+git checkout main
+```
+
+```
+git checkout -b refactor-animation-views
+```
+
+```
+git push -u origin refactor-animation-views
+```
