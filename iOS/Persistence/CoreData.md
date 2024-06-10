@@ -15,8 +15,9 @@ Core Data can help to
 
 ## What is an Object Graph?
 We say Core Data manages object graph, let's see what an object graph is. Objects can and will have references to other
-objects in any object oriented programming. These relationships form a graph. One can say that an object graph is conceptualization 
-of all instances of the objects from one's object model (the classes in the program) and their interconnections.
+objects in any object oriented programming. These relationships form a graph. One can say that an object graph is
+conceptualization of all instances of the objects from one's object model (the classes in the program) and their
+interconnections.
 So an Object graph is basically a dependency graph between objects.
 
 
@@ -24,8 +25,8 @@ So an Object graph is basically a dependency graph between objects.
 ### 1. Persistence
 
 Core Data as mentioned can be used for data persistence by opting for a persistent store. The default store is SQLite.
-Core Data provides abstraction over objects mapping to persistent store. This makes easy to save data without having to administer
-database directly.
+Core Data provides abstraction over objects mapping to persistent store. This makes easy to save data without having to
+administer database directly.
 
 ### 2. Undo/Redo
 Core Data comes with an undo manager which tracks changes to it. This undo manager can roll the changes back either
@@ -223,6 +224,17 @@ of persistece store one want to use. Following are options :
 - Binary
 
 
+## How to specify which persistent store to use and which is default one core data uses?
+Core data default persistent store is SQLite. There are options to use XML, Binary o r in-memory as well. To specify a store
+other than the default one, one need to create `NSPersistentStoreDescription` and assign it's `type` property to available
+options like
+- `NSInMemoryStoreType`
+- `NSSQLiteStoreType`
+- `NSBinaryStoreType`
+For example :
+https://github.com/saurabh1088/ios/blob/main/LearningAppCoreDataInMemoryUIKit/LearningAppCoreDataInMemoryUIKit/CoreDataManager.swift
+
+
 ## WWDC
 
 ### Making Apps with Core Data
@@ -241,7 +253,7 @@ to publishers on Core Data object properties.
 
 
 ## TODOs
-- [ ] Check how to specify which persistent store to use and which is default one core data uses.
+- [x] Check how to specify which persistent store to use and which is default one core data uses.
 - [ ] What is Core Data, and what is its primary purpose in iOS development?
 - [ ] Explain the role of the Managed Object Model in Core Data.
 - [ ] What is a Managed Object Context, and how is it used in Core Data?
