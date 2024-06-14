@@ -65,6 +65,30 @@ Document-based apps is a concept used on macOS, iOS, and iPadOS. It describes th
 - If one doesn’t wants to persist some properties in model then use @Transient macro
 
 
+## Migrate to SwiftData
+
+### How can one generate SwiftData Model Classes using the Managed Object Model Editor assistant?
+From an existing Core Data model, it is possible to generate SwiftData model classes. Generated classes also follow the organization already in the preexisting model.
+To do this, one need to go through project’s Managed Object Model Editor assistant. Select the model file and then from meny bar one need to, select Editor, and click on Create SwiftData Code.
+This will generate required classes.
+
+
+### Can SwiftData and CoreData co-exist in an application?
+YES. It might be not possible to fully migrate an application from using CoreData to fully using SwiftData. In such cases one can opt for a partial conversion to SwiftData. What co-existence of CoreData and SwiftData would mean is that there are two completely separate persistent stacks, one Core Data stack and one SwiftData stack, talking to the same persistent store. What this implies is that one need not to completely rewrite existing Core Data code in order to be able to start adding SwiftData code.
+Before loading the persistent store, one need to set the persistent store URL for the container description to ensure that both stacks(CoreData and SwiftData) are writing to the same URL. Additionally, one also need to turn on persistent history tracking. While SwiftData automatically turns on persistent history tracking, Core Data does not.
+If application having both Core Data and SwiftData coexisting, tries to open a persistent store without setting the persistent history, the store will be put into read-only mode.
+Some important points to make sure when working with CoreData and SwiftData both in same application.
+- One should use namespace for preexisting NSManagedObject based entities or SwiftData classes so that they should not collide.
+- CoreData and SwiftData schemas need to be in sync.
+
+
+
+### Full migration from CoreData to SwiftData.
+When one is migrating an application from CoreData to SwiftData, then one is replacing the CoreData stack with SwiftData stack. Before this migration one need to consider how the preexisting core data model designs are structured. An application’s Core Data model designs refer to the schema, including the entities and their properties and relationships.
+One need to make sure that the Core Data model designs are supported in SwiftData as well. This means that for each entity that was defined in Core Data, there needs to be a corresponding model type with exact matches for entity name and properties in SwiftData.
+
+
+
 ## Sources
 WWDC 2023
 Meet SwiftData
@@ -78,4 +102,6 @@ WWDC 2023
 Model your schema with SwiftData
 https://developer.apple.com/videos/play/wwdc2023/10195
 
-
+WWDC 2023
+Migrate to SwiftData
+https://developer.apple.com/videos/play/wwdc2023/10189/
