@@ -26,3 +26,48 @@ SF Symbols have default rendering mode as alwaysTemplate
 - Build layout from smallest to largest
 - Caching images rarely helps performance
 - Avoid rasterizing : Try to avoid rasterising images specially SF symbol images.
+
+
+## WWDC 2020
+SF Symbols 2
+https://developer.apple.com/videos/play/wwdc2020/10207/
+
+### Higlights
+- Multicoloured symbols are introduced this year
+
+### There are three scales SF Symbol can use, small, medium and large, what is the default one?
+The default scale used for SF Symbols is medium
+
+### How does the scales compare within themselves
+Small < ~ 20% Medium < ~30% Large
+
+Small scale is approximately 20% less than the medium one and large one is approximately 30% larger than the medium one.
+
+
+## WWDC 2021
+What’s new in SF Symbols
+https://developer.apple.com/videos/play/wwdc2021/10097
+
+
+### Learnings
+- Scales small, medium and large, maintain the point size, so same point size can be used with all these three scales.
+- Symbol Variants
+    - Following are few variants one can use for SF Symbols
+        - outlined
+        - slash
+        - circle
+        - square
+        - rectangle
+        - fill
+    - The default variant of SF symbol is the outlined variant.
+
+
+- Rendering Modes
+    - New rendering modes added
+        - Hierarchical (New)
+            - Uses single color with varying opacity, creating depth and emphasis
+        - Palette (New)
+            - Gives possibility to use two or more contrasting colours
+            - Each color can be controlled independently
+        - Multicolor (Existing)
+        - Monochrome (Existing)
