@@ -158,3 +158,16 @@ One can use repeat with count to discreet animations if required to repeat anima
 Appear/Dissappear
 One can have both behaviour where symbols only disappears or appears without any changes to surrounding view OR with
 changes to surrounding views.
+
+
+## WWDC 2024
+What’s new in SF Symbols 6
+https://developer.apple.com/videos/play/wwdc2024/10188/
+
+- New Animation Presets
+    - Wiggle
+    - Rotate
+    - Breathe
+- Updates to Previous Animation Presents
+    - Replace
+    - Variable Color
