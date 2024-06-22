@@ -71,3 +71,49 @@ https://developer.apple.com/videos/play/wwdc2021/10097
             - Each color can be controlled independently
         - Multicolor (Existing)
         - Monochrome (Existing)
+
+
+## WWDC 2022
+What's new in SF Symbols 4
+https://developer.apple.com/videos/play/wwdc2022/10157
+
+- SF Symbols are designed with typography in mind.
+- SF Symbols have some awesome features like 
+    - different weight, 
+    - scales, 
+    - outlined and filled variants, 
+    - encapsulated shapes,
+    - alignments.
+
+### Automatic Rendering
+Monochrome used to be the default rendering mode, but now rendering mode will be automatically adjusted to choose the
+best symbol as per symbol’s unique characteristics. This is due the symbols having a preferred rendering mode.
+This behaviour is called as Automatic Rendering.
+
+### Variable Color
+Different layers, with some layers participating in variable color feature to represent some variable values for example
+a volume, signal strength etc.
+Variable color is opacity based and is available for all rendering modes.
+
+## WWDC 2023
+What’s new in SF Symbols 5
+https://developer.apple.com/videos/play/wwdc2023/10197
+
+### Animation : New Feature
+One can choose from a collection of different configurable animation presets, each with its own unique characteristics.
+These work on all symbols, in all scales, and all rendering modes, making symbols even more customizable than before.
+
+Each symbol in library has a unified layer structure that defines it. These layer play important role in the way color
+is applied to a symbol. Similarly layers play important role in the way symbol animate as well.
+
+By default symbol will animate by layer, which implicates animation happens one layer at a time. One can however choose 
+to animate whole symbol at once if that makes sense for the app and use case.
+
+Animation Presets :
+- Appear
+- Disappear
+- Bounce
+- Scale
+- Pulse
+- Variable Color
+- Replace
