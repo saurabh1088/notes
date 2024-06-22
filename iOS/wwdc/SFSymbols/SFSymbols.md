@@ -117,3 +117,44 @@ Animation Presets :
 - Pulse
 - Variable Color
 - Replace
+
+
+## WWDC 2023
+Animate symbols in your app
+https://developer.apple.com/videos/play/wwdc2023/10258
+
+
+Symbols Framework
+- Symbols Framework is home to all symbol animations.
+- One need not to import this framework as it's included by default while working with SwiftUI, UIKit and AppKit.
+- Each effect has a simple dot separated name.
+    - For example for bounce effect one should write .bounce
+- Effect names are real Swift code and not strings.
+- SF Symbols app has a new animations tab where one can learn about animation configuration options and copy a effect configuration as well
+
+
+Behaviours of animation
+- Discrete (For eg. bounce)
+- Indefinite (For eg. scale)
+- Transition (For eg. appear/dissappear)
+- Content Transition (For eg. replace)
+
+
+In Symbols Frameworks, each of above mentioned animation behaviours correspond to protocols
+- DiscreteSymbolEffect
+- IndefiniteSymbolEffect
+- TransitionSymbolEffect
+- ContentTransitionSymbolEffect
+
+Adding animations to SwiftUI
+- New view modifier symbolEffect()
+
+Adding animations to UIKit
+- Call addSymbolEffect() on UIImageView
+
+Discreet
+One can use repeat with count to discreet animations if required to repeat animations n number of times.
+
+Appear/Dissappear
+One can have both behaviour where symbols only disappears or appears without any changes to surrounding view OR with
+changes to surrounding views.
