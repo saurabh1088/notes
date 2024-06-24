@@ -252,6 +252,43 @@ Core Data objects have supported KVO since beginning, however now once can use C
 to publishers on Core Data object properties.
 
 
+## Core Data Migration
+### WWDC 2022
+Evolve your Core Data schema
+https://developer.apple.com/videos/play/wwdc2022/10120/
+
+
+### What is schema migration and why is it required?
+For an application using Core Data, it is a certainty that at some point the data models will need to be updated based on growing or changing business functionalities. Any updates to the data models will necessitate that the underlying persistent storage is also updated. Without updating schema to reflect changes in model will lead to issues like Core Data refusing to open the persistent store.
+
+### What is the error Core Data gives if the model mismatches with the underlying scheme?
+If one tries to open an incompatible store, which means, the model is updated but the underlying scheme is not migrated yet, then one receives error code NSPersistentStore- IncompatibleVersionHashError. Receiving this error is most likely indication of that data migration is required.
+
+### How to perform Data Migration in Core Data?
+Core Data provides built-in data migration tools which enables one to keep the app's data storage up-to-date with the current data model.
+These tools are referred to as `Lightweight Migration`
+
+### Lightweight Migration
+Lightweight migration automatically analyzes and infers the migration from the differences between the source and destination managed object models.
+
+### Lightweight Migration and changes to Attributes Support
+- Adding an attribute
+- Removing an attribute
+- Making a non-optional attribute optional
+- Making an optional attribute non-optional and defining a default value
+- Renaming an attribute
+
+### Lightweight Migration and changes to relationship support
+- Add
+- Delete
+- Change relationship cardinality (one-to-one TO one-to-many)
+
+
+### Lightweight migration is controlled by two options keys
+- NSMigratePersistentStoresAutomaticallyOption
+- NSInferMappingModelAutomaticallyOption.
+
+
 ## TODOs
 - [x] Check how to specify which persistent store to use and which is default one core data uses.
 - [ ] What is Core Data, and what is its primary purpose in iOS development?
