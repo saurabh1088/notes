@@ -88,6 +88,8 @@ When one is migrating an application from CoreData to SwiftData, then one is rep
 One need to make sure that the Core Data model designs are supported in SwiftData as well. This means that for each entity that was defined in Core Data, there needs to be a corresponding model type with exact matches for entity name and properties in SwiftData.
 
 
+## TODOs
+- [ ] Document WWDC SwiftData sessions. 
 
 ## Sources
 WWDC 2023
