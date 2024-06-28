@@ -22,7 +22,7 @@ https://developer.apple.com/videos/play/wwdc2024/10136/
 
 - Foundation + swift-corelibs-foundation = swift-foundation introduced last year.
 
-- Swift Testing
+- Swift Testing : ✨NEW THIS YEAR
     - New Framework introduced
 
 - Xcode build

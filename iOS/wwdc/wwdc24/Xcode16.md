@@ -16,7 +16,7 @@ What’s new in Xcode 16
 
 
 - Previews
-    - @Previewable MACRO : New
+    - @Previewable MACRO : ✨NEW THIS YEAR
     - PreviewModifier
     - Previews are faster than ever
 
@@ -37,8 +37,8 @@ What’s new in Xcode 16
 
 
 - Thread Performance Checker
-    - Disk write diagnostics : NEW
-    - Launch diagnostics : NEW
+    - Disk write diagnostics : ✨NEW THIS YEAR
+    - Launch diagnostics : ✨NEW THIS YEAR
     - In Xcode’s organiser, one can see the slowest code paths in launch diagnostics for customer devices.
 
 
