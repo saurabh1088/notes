@@ -1,7 +1,7 @@
 # Keychain
 
-Keychain provide secure storage and is used to securely store small amount of data.
-Keychain is used as persistence solution for data which is small and requires secure storage.
+- Keychain provide secure storage and is used to securely store small amount of data.
+- Keychain is used as persistence solution for data which is small and requires secure storage.
 
 One can store
 - passwords
@@ -35,3 +35,27 @@ in question is not protected via Touch ID/Face ID and passcode then it is always
 ## How to control access to a keychain item based on device state?
 One can specify *kSecAttrAccessible* while creating query when item is added to keychain and provide applicable value as
 per usecase.
+
+
+## What are some functionalities Keychains provide?
+1. Security
+    - As mentioned before, keychain provide a secure storage for small amount of data like passowrds, keys or certificates.
+
+2. Synchronization
+    - Data can synchronized so that a user can access same across his/her various apple devices using iCloud keychain.
+
+3. Sharing
+    - Data can be shared across different apps from same developer accounts using access group.
+
+4. Persistence
+    - Data is persisted which is saved in keychain
+
+5. Access Control
+    - Keychain in iOS provides robust access control features that allow developers to specify which applications or components can access specific Keychain items. This ensures that sensitive information is protected and only accessible by authorized apps or services
+
+
+## What are some real world use cases of using keychain?
+1. Store user credentials securely to avoid having user login again and again providing a better user experience.
+2. In an oAuth2.0 flow, store access token which need to be sent to every API call after successfull authentication and
+authorisation.
+3. Store user preferences which can be sensitive.
