@@ -1,38 +1,37 @@
 #  URL Loading System
 
+
  ## URL Loading System & it's players
- 
  
  *For examples check : https://github.com/saurabh1088/swift-playgrounds/blob/main/Networking.playground/Contents.swift*
  
- In a nutshell one creates a *URLSession* instances which is then used to create
- one or more *URLSessionTask* instances which can fetch and return some data, 
- download or upload files. Session is configured using a *URLSessionConfiguration*
+ In a nutshell one creates a `URLSession` instances which is then used to create one or more `URLSessionTask` instances
+ which can fetch and return some data, download or upload files. Session is configured using a `URLSessionConfiguration`
  object controlling ths behaviour in general.
  
  ### URLSession
+ Usually an app may create one or more `URLSession` instances, which help in coordinating group of related data-transfer
+ tasks. For e.g a web browser app might create one instance for each browser tab. A separate instance might be required
+ for creating an ephemeral browsing session.
 
- Usually an app may create one or more *URLSession* instances, which help in coordinating 
- group of related data-transfer tasks. For e.g a web browser app might create one 
- instance for each browser tab. A separate instance might be required for creating 
- an ephemeral browsing session.
-
- So basically a *URLSession* instance is created (or more than one if needed). 
- The instance gives capabilities(APIs) to perform tasks. All the tasks which a 
- *URLSession* instance performs or will perform will share same a common configuration 
- object. This configuration object is *URLSessionConfiguration*
+ So basically a `URLSession` instance is created (or more than one if needed). The instance gives capabilities(APIs) to
+ perform tasks. All the tasks which a `URLSession` instance performs or will perform will share same a common
+ configuration object. This configuration object is `URLSessionConfiguration`
  
- *URLSession* is the key object which one uses for sending requests and receiving responses.
+ `URLSession` is the key object which one uses for sending requests and receiving responses.
 
- One can create different kinds of *URLSession* instances like :-
+ One can create different kinds of `URLSession` instances like :-
 
- - *URLSession* provides a singleton shared instance (*URLSession.shared*). This shared instance doesn’t have any configuration object so is not customisable but will serve a good starting point for simple use cases.
- - *URLSession* instance initialised and configured with a default *URLSessionConfiguration* object
- - *URLSession* instance initialised and configured with a ephemeral *URLSessionConfiguration* object
- - *URLSession* instance initialised and configured with a background *URLSessionConfiguration* object which allows background operations
+ - `URLSession` provides a singleton shared instance (*URLSession.shared*).
+   - This shared instance doesn’t have any configuration object
+   - One can't set any configuration object to it
+   - hence is not customisable but will serve a good starting point for most simple use cases.
+ - `URLSession` instance initialised and configured with a default `URLSessionConfiguration` object
+ - `URLSession` instance initialised and configured with a ephemeral `URLSessionConfiguration` object
+ - `URLSession` instance initialised and configured with a background `URLSessionConfiguration` object which allows background operations
 
 
- Using a *URLSession* instance ultimately allows us to create tasks. These tasks eventually perform one of the below operations
+ Using a `URLSession` instance ultimately allows us to create tasks. These tasks eventually perform one of the below operations
 
  1. Data tasks
     - using *Data* objects
@@ -52,13 +51,13 @@ be visible in HTTP Traffic as viewed in instruments.
 
  ### URLSessionDelegate
 
- Tasks in a *URLSession* instance share a common delegate object i.e. *URLSessionDelegate*.
- *URLSessionDelegate* defines methods *URLSession* instance will call on it’s delegate to handle session-level events.
+ Tasks in a `URLSession` instance share a common delegate object i.e. *URLSessionDelegate*.
+ *URLSessionDelegate* defines methods `URLSession` instance will call on it’s delegate to handle session-level events.
  *URLAuthenticationChallenge* is received as a part of *URLSessionDelegate*.
- *URLSession* instance can be created without a *URLSessionDelegate* as well.
+ `URLSession` instance can be created without a *URLSessionDelegate* as well.
 
 
- *URLSession* APIs are highly asynchronous. There are APIs available to use with following usual ways of asynchronous programming
+ `URLSession` APIs are highly asynchronous. There are APIs available to use with following usual ways of asynchronous programming
  - async/await
  - completion handler
  - delegate callback
@@ -66,7 +65,7 @@ be visible in HTTP Traffic as viewed in instruments.
 
  ### URLSessionConfiguration
 
- *URLSessionConfiguration* object help defining the behaviour and policies when using a *URLSession*
+ `URLSessionConfiguration` object help defining the behaviour and policies when using a `URLSession`
  instance for networking. One can establish behaviour for example :
  - Caching policy
  - Timeouts
@@ -74,14 +73,14 @@ be visible in HTTP Traffic as viewed in instruments.
  - Additional HTTP headers
 
 
- When *URLSession* instance is initialised, a *URLSessionConfiguration* object can be passed.
- This *URLSessionConfiguration* object *URLSession* will copy and further no changes can be made.
- This implies once a *URLSession* instance is configured for a *URLSessionConfiguration* then the
- only way to change configuration is to create a new *URLSession* instance. So the configuration object
- *URLSessionConfiguration* should be setup very carefully.
+ When `URLSession` instance is initialised, a `URLSessionConfiguration` object can be passed.
+ This `URLSessionConfiguration` object `URLSession` will copy and further no changes can be made.
+ This implies once a `URLSession` instance is configured for a `URLSessionConfiguration` then the
+ only way to change configuration is to create a new `URLSession` instance. So the configuration object
+ `URLSessionConfiguration` should be setup very carefully.
  
  *Delegates*
- *URLSession* has a *delegate* property to which any type conforming to *URLSessionDelegate* can
+ `URLSession` has a *delegate* property to which any type conforming to *URLSessionDelegate* can
  be assigned. There are several other delegates as well which play some part in URL loading system.
  
  - *URLSessionDelegate*
