@@ -29,3 +29,17 @@ Explain how to create a sample iOS Application with push notification capability
 notification which includes images and videos. Also before pushing app to appstore, need to test the rich notification
 locally preferably on iOs simulator. Explain process on how to test this rich notification using Xcode and iOS simulator.
 ```
+
+```
+An iOS App need to download some content from a remote server. Implement this scenario using URLSession. 
+- How the download task will be performed?
+- Which APIs from URLSession will be used?
+- What kind of wrapper over URLSession can be made.
+- How to handle the UI when download starts?
+- How to show the progress of download on UI?
+- How to save the downloaded file on device?
+- How to show file is downloaded already and prevent re-trigger of download?
+- How to handle scenario where network is lost and download is not completed, how to recover from that once network is available back?
+- How to continue download when app goes to background?
+- Or what happens when app is killed with some download is in progress?
+```
