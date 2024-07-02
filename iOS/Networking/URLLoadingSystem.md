@@ -28,7 +28,8 @@
    - hence is not customisable but will serve a good starting point for most simple use cases.
  - `URLSession` instance initialised and configured with a default `URLSessionConfiguration` object
  - `URLSession` instance initialised and configured with a ephemeral `URLSessionConfiguration` object
- - `URLSession` instance initialised and configured with a background `URLSessionConfiguration` object which allows background operations
+ - `URLSession` instance initialised and configured with a background `URLSessionConfiguration` object which allows
+ background operations
 
 
  Using a `URLSession` instance ultimately allows us to create tasks. These tasks eventually perform one of the below operations
@@ -51,10 +52,10 @@ be visible in HTTP Traffic as viewed in instruments.
 
  ### URLSessionDelegate
 
- Tasks in a `URLSession` instance share a common delegate object i.e. *URLSessionDelegate*.
- *URLSessionDelegate* defines methods `URLSession` instance will call on it’s delegate to handle session-level events.
- *URLAuthenticationChallenge* is received as a part of *URLSessionDelegate*.
- `URLSession` instance can be created without a *URLSessionDelegate* as well.
+ Tasks in a `URLSession` instance share a common delegate object i.e. `URLSessionDelegate`.
+ `URLSessionDelegate` defines methods `URLSession` instance will call on it’s delegate to handle session-level events.
+ `URLAuthenticationChallenge` is received as a part of `URLSessionDelegate`.
+ `URLSession` instance can be created without a `URLSessionDelegate` as well.
 
 
  `URLSession` APIs are highly asynchronous. There are APIs available to use with following usual ways of asynchronous programming
@@ -65,8 +66,7 @@ be visible in HTTP Traffic as viewed in instruments.
 
  ### URLSessionConfiguration
 
- `URLSessionConfiguration` object help defining the behaviour and policies when using a `URLSession`
- instance for networking. One can establish behaviour for example :
+ `URLSessionConfiguration` object help defining the behaviour and policies when using a `URLSession` instance for networking. One can establish various behaviours, for example :
  - Caching policy
  - Timeouts
  - Supporting Multipath TCP - multipathServiceType
@@ -80,55 +80,55 @@ be visible in HTTP Traffic as viewed in instruments.
  `URLSessionConfiguration` should be setup very carefully.
  
  *Delegates*
- `URLSession` has a *delegate* property to which any type conforming to *URLSessionDelegate* can
+ `URLSession` has a `delegate` property to which any type conforming to `URLSessionDelegate` can
  be assigned. There are several other delegates as well which play some part in URL loading system.
  
- - *URLSessionDelegate*
-    - *URLSessionTaskDelegate*
-        - *URLSessionDataDelegate*
-        - *URLSessionDownloadDelegate*
-        - *URLSessionStreamDelegate*
-        - *URLSessionWebSocketDelegate*
+ - `URLSessionDelegate`
+    - `URLSessionTaskDelegate`
+        - `URLSessionDataDelegate`
+        - `URLSessionDownloadDelegate`
+        - `URLSessionStreamDelegate`
+        - `URLSessionWebSocketDelegate`
  
  
- *URLSessionTaskDelegate* inherits from *URLSessionDelegate*.
- *URLSessionDataDelegate*, *URLSessionDownloadDelegate*, *URLSessionStreamDelegate*
- & *URLSessionWebSocketDelegate* all inherit from *URLSessionTaskDelegate*
+ `URLSessionTaskDelegate` inherits from `URLSessionDelegate`.
+ `URLSessionDataDelegate`, `URLSessionDownloadDelegate`, `URLSessionStreamDelegate`
+ & `URLSessionWebSocketDelegate` all inherit from `URLSessionTaskDelegate`
  
  ### resume()
  
- When a data task is created using a session object, the task created is by default
- created in a suspended state. One need to start is calling *resume()*
+ When a data task is created using a session object, the task created is by default created in a suspended state. One need
+ to start is calling `resume()`
 
 ## Cache Policy
 
-There are available different caching strategies governed by cache policies which
-can help improve performance and reduce network traffic for application.
+There are available different caching strategies governed by cache policies which can help improve performance and
+reduce network traffic for application.
 
 ### URLSessionConfiguration requestCachePolicy
 
 *Default value of requestCachePolicy is useProtocolCachePolicy*
 
-This instance property for URLSessionConfiguration will determine when to return
-a response from cache. As this property is for URLSessionConfiguration instance
-hence it will affect the entire session, including how caching is handled globally 
-for all requests made within that session.
+This instance property for `URLSessionConfiguration` will determine when to return a response from cache. As this property
+is for `URLSessionConfiguration` instance hence it will affect the entire session, including how caching is handled
+globally for all requests made within that session.
 
 So all requests made under session with some cache policy set using requestCachePolicy
-on URLSessionConfiguration will get same cache policy unless a request uses it's
+on `URLSessionConfiguration` will get same cache policy unless a request uses it's
 own policy which is covered below in URLRequest.
 
 ### URLRequest cachePolicy
 
-Cache policy set at URLRequest will override the one defined in URLSessionConfiguration
+Cache policy set at `URLRequest` will override the one defined in `URLSessionConfiguration`
 so this comes in handy if for certain requests one want a different behaviour.
 
 ### URLCache
 
-- *URLCache* is used for caching responses from network resources.
-- URLSessionConfiguration has *urlCache* property which is of type URLCache, this
+- `URLCache` is used for caching responses from network resources.
+- URLSessionConfiguration has `urlCache` property which is of type `URLCache`, this
 property determines the URL cache object used.
-- *URLCache* basically maps a URL request to response object.
+- `URLCache` basically maps a URL request to response object.
+
 
 ## Timeouts
 
@@ -139,6 +139,7 @@ property determines the URL cache object used.
 - timeoutIntervalForResource
 
 2. One can handle timeout for each request by using URLRequest's *timeoutInterval* property. Default value is 60 seconds.
+
 
 ## TODOs
 
