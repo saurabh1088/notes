@@ -141,6 +141,36 @@ property determines the URL cache object used.
 2. One can handle timeout for each request by using URLRequest's *timeoutInterval* property. Default value is 60 seconds.
 
 
+## QnA
+
+### An iOS app was downloading some data using URLSession, what will happen if user puts app to background?
+### Will the download continue?
+If the app was using URLSeesion with a configuration object not configured for background tasks, then the download task
+will be suspended. To allow an iOS app to have background uploads or downloads capability, one needs to create
+`URLSessionConfiguration` using type method `background(withIdentifier:)`.
+When a session object is created configured with `URLSessionConfiguration` created with `background(withIdentifier:)`, it
+allows session object with capability to hand over control of uploads or downloads to system, with system taking those in
+separate process. This capability allows an app to continue uploads/downloads with app moving to background or even if it
+gets terminated.
+- NOTE : Suspended tasks are not resumed automatically once app returns to foreground, one need to handle resuming any
+suspended tasks if required.
+
+
+### An iOS App was downloading some data using URLSession, what will happen when app is terminated?
+### Does it makes any difference if the app is terminated by user or by system?
+If the app was using URLSeesion with a configuration object not configured for background tasks, then the download task
+will be cancelled. To allow an iOS app to have resume uploads or downloads after quit, one needs to create
+`URLSessionConfiguration` using type method `background(withIdentifier:)`.
+When a session object is created configured with `URLSessionConfiguration` created with `background(withIdentifier:)`, it
+allows session object with capability to hand over control of uploads or downloads to system, with system taking those in
+separate process. This capability allows an app to continue uploads/downloads with app moving to background or even if it
+gets terminated.
+- NOTE : This behaviour applies only if the app was terminated by system. If user themselves terminate apps, then upload and
+downloads tasks get cancelled.
+- NOTE : System, if terminates app, will not automatically relaunch it. Any upload or download tasks which were terminated
+and were correctly configured to have background performance capabilities will be resumed once user opens app again.
+
+
 ## TODOs
 
 - [ ] 1. Instruments to analyze HTTP Traffic
