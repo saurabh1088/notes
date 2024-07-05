@@ -7,8 +7,16 @@ a secure mobile application.
 App should use a secure communication protocol i.e. HTTPS/TLS. 
 
 ### App Transport Security
-On Apple platforms there is a networking feature known as *App Transport Security*. ATS mandates that all HTTP connections
-using URL Loading System MUST use HTTPS.
+On Apple platforms there is a networking feature known as *App Transport Security*. Security checks imposed by ATS.
+- ATS mandates that all HTTP connections using URL Loading System MUST use HTTPS.
+- ATS mandates use of Transport Layer Security (TLS) version 1.2 or later.
+- ATS mandates default server trust evaluation
+
+There are several other requirements which are discussed on Apple's documentation : https://developer.apple.com/documentation/security/preventing_insecure_network_connections
+
+ATS will block network connections if they fail to meet the security specifications.
+ATS operates by default and there is no setting to turn it on. System will enforce ATS by default when one uses URL loading
+system.
 
 One can add exceptions to ATS checks by adding key NSAppTransportSecurity to Info.plist
 
