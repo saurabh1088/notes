@@ -43,3 +43,10 @@ An iOS App need to download some content from a remote server. Implement this sc
 - How to continue download when app goes to background?
 - Or what happens when app is killed with some download is in progress?
 ```
+
+```
+What are different states of an iOS app?
+- List each state
+- Give examples how, when and under what condition each state is achieved for an app.
+- Provide scenarios like what happens to states when say a notification is received, or a call is received.
+```
