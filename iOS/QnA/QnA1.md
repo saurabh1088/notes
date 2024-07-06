@@ -520,6 +520,34 @@ performance issues. As an alternative one can use *CAShapeLayer* for vector base
 6. Minimize offscreen rendering.
 7. Rasterization : *shouldRasterize* property of CALayer.
 
+
+## 33. What are options for static code analysis for Swift/Objectice C projects?
+### 1. Xcode Static Analyser
+- Xcode -> Product -> Analyse
+
+### 2. SonarQube
+`SonarQube` is an open source platform which allows one to continuously inspect and measure code quality. It provides
+detailed analysis of code quality, security vulnerabilities, and technical debt.
+
+`SonarQube` :
+- Performs static code analysis to identify code quality issues without executing the code.
+- Measures metrics like
+    - Duplicate Code
+    - Code complexity
+    - Test coverage
+- Can be integrated into CI/CD pipelines.
+- Provides dashboard view displaying metrics and analysis.
+- Supports wide variety of programming languages
+    - Java
+    - C#
+    - C
+    - C++
+    - JavaScript
+    - TypeScript
+    - Python
+    - Swift
+
+
 ## TODOs
 
 - [ ] Explain the differences between UIView and CALayer. How do you optimize performance when working with these components?
