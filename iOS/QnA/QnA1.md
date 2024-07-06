@@ -463,8 +463,9 @@ Internal
 
 
 ## 28. What is the use case for defining a type to be private?
-One can define a private inner type to make internal data structure cleaner, however one doesn't need to expose these details
-to outsiders, hence these can be declared as private.
+Declaring private is helpful for encapsulating implementation details.
+One can define a private inner type to make internal data structure cleaner, however one doesn't need to expose these
+details to outsiders, hence these can be declared as private.
 
 
 ## 29. If one has to design an App which shows a large number of images, then how efficiently one can design this?
