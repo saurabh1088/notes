@@ -54,7 +54,6 @@ Types of Polymorphism:
 
 2. Subtype Polymorphism
 
-
 3. Parametric Polymorphism
     For example: Generics in Swift, where a piece of code is allowed to be typed generically instead of actual types.
 

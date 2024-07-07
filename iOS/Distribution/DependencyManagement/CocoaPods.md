@@ -43,3 +43,7 @@ One should run `pod install` when
 
 - 7. Updating CocoaPods
     - If one updates CocoaPods to newer version, it is best practice to run `pod install` once.
+
+
+## pod spec file
+A pod spec file is a specification file used by CocoaPods to describe a framework or library. Pod spec file is a ruby file.

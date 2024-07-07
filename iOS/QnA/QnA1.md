@@ -548,6 +548,26 @@ detailed analysis of code quality, security vulnerabilities, and technical debt.
     - Swift
 
 
+## 34. How many types we have in Swift programming language?
+Source : https://docs.swift.org/swift-book/documentation/the-swift-programming-language/types/
+
+Swift has two kind of types:
+1. Named Types
+    - Classes
+    - Structures
+    - Enumerations
+    - Protocols
+2. Compound Types
+    - Tuples
+    - Functions
+
+
+## 35. When does deinit is called?
+- Deinit is called immediately before a class instance is deallocated.
+- A deinit is available only for class types.
+- One isn't allows to call a deinit, these are called automatically.
+
+
 ## TODOs
 
 - [ ] Explain the differences between UIView and CALayer. How do you optimize performance when working with these components?
