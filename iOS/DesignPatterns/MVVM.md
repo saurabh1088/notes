@@ -50,3 +50,18 @@ EmployeeViewModel with added batch update functionalities. Adding a new viewmode
 existing viewmodel will eventually make it fat.
 
 A better solution could be if the business logic of adding, deleting and updating could be part of model itself.
+
+
+## For an app using MVVM design pattern, what happens to viewcontrollers. What role they play?
+Even with a UIKit app using MVVM design pattern, one still has to deal with viewcontrollers. Whole problem with MVC design
+patters with respect to iOS apps was viewcontrollers becoming too fat and having too much responsibilities. MVVM design
+tries to offload some responsibilities from viewcontrollers. Hence viewcontrollers become light weight but they still have
+key responsibilities to take care.
+- Viewcontroller will still play a role in responder chain.
+- Viewcontroller will manage the view hierarchy.
+- Viewvontroller is the place which sets up the data bindings with the viewmodels.
+- Viewcontroller take responsibility for navigation using segues or navigation controllers.
+
+## TODOs
+- [x] For an app using MVVM design pattern, what role would viewcontroller perform?
+- [ ] How does information comes to view model in MVVM design pattern?
