@@ -321,3 +321,21 @@ for notifications.
 |Context|Acts before notification is delivered by system to user|Acts when notification is displayed|
 |Use cases|Modify content, encrypt/decrypt, download media etc|Rich UI, custom buttons, custom fonts|
 |Lifecycle|Short lifespan of 30 seconds|Active while notification is expanded|
+
+
+
+## QnA
+
+### Some devices are not able to receive push notifications. What could be possible reasons and how to debug this?
+
+1. Verify if one is sending too many notifications to same device within very short span of time. APNs may consider this
+as spamming and treat it as denail-of-service attack. APNs can further block provider server for further push for some
+time.
+
+2. If device has exceeded it's power budget of the day, then silent notifications are'nt sent unless power budget gets
+reset for the device.
+
+3. Provider server should have necessary certificates installed for TLS/SSL validation.
+
+4. If provider server connects and disconnects too-often with APNs repeatedly, APNs can treat this as denail-of-service
+attack and temporarily block provider server from connecting.
