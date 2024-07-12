@@ -12,6 +12,8 @@ Core Data can help to
 - To add Undo functionality
 - Sync data across multiple devices(using CloudKit working with CoreData)
 
+Core Data abstracts the details of mapping objects to a store, making it easy to save data from Swift and Objective-C
+without administering a database directly.
 
 ## What is an Object Graph?
 We say Core Data manages object graph, let's see what an object graph is. Objects can and will have references to other
@@ -46,27 +48,20 @@ Core Data has provision for versioning data model and also migrating user data.
 
 ## Core Data Stack
 - Persistent container (NSPersistentContainer)
-- Model (NSManagedObjectModel)
-- Context (NSManagedObjectContext)
-- Store coordinator (NSPersistentStoreCoordinator)
+    - Model (NSManagedObjectModel)
+    - Context (NSManagedObjectContext)
+    - Store coordinator (NSPersistentStoreCoordinator)
 
 Context needs to know the coordinator to do it's work. Coordinator needs to know about model so that it can make sense of
 the persistent stores it manages. So Model, Context and Coordinator are all sufficiently interdependent.
 Core Data provided one encapsulated type i.e. NSPersistentContainer which represents this entire stack.
 
 
-## Good Thing to Know: 
-When one want to store images, then one have to set the type to Binary Data and check the Allows External Storage
-in the Attribute Inspector. We do this because when we initialize the Core Data, we load all the data to the memory. When 
-we have a lot of saved images, we don’t want them to get loaded every time we open the app, but only when it’s time to 
-show/use them. This way, we’ll avoid any performance issues.
-
-
 ## Working with Core Data
-### 1. Creating a Data Model File (*.xcdatamodeld*)
+### 1. Creating a Data Model File (`.xcdatamodeld`)
 
 Select Core Data checkbox while creating a new project in Xcode, or if project is already created then one needs to add
-a new file of type Data Model from Core Data section. In both the cases one sees a file with extension *.xcdatamodeld* added
+a new file of type Data Model from Core Data section. In both the cases one sees a file with extension `.xcdatamodeld` added
 to project.
 
 ### 2. Setting up Core Data stack
@@ -80,14 +75,13 @@ Following all form the core data stack
 
 
 ## NSPersistentContainer
-NSPersistentContainer class represents or encapsulates the Core Data stack in an app. It manages and simplifies the creation
-and management of Core Data stack.
-Persistent container is defined as a lazy variable (so as to defer instantiation until first use)
-
-So NSPersistentContainer creates:-
-- Managed object model (NSManagedObjectModel)
-- Persistent store coordinator (NSPersistentStoreCoordinator)
-- Managed object context (NSManagedObjectContext)
+- `NSPersistentContainer` class represents or encapsulates the Core Data stack in an app.
+- It manages and simplifies the creation and management of Core Data stack.
+- Persistent container is defined as a lazy variable (so as to defer instantiation until first use)
+- So `NSPersistentContainer` creates:-
+    - Managed object model (NSManagedObjectModel)
+    - Persistent store coordinator (NSPersistentStoreCoordinator)
+    - Managed object context (NSManagedObjectContext)
 
 Example : Refer AppDelegate in below project
 https://github.com/saurabh1088/uikit
@@ -95,28 +89,28 @@ https://github.com/saurabh1088/uikit/blob/main/UIKitLearnings/UIKitLearnings/App
 
 
 ## NSManagedObjectModel
-When Core Data is opted for a project either from start or added in between, one ends up with generating a *.xcdatamodeld*
-file. NSManagedObjectModel is the programmatic representation of this *.xcdatamodeld* file.
+When Core Data is opted for a project either from start or added in between, one ends up with generating a `.xcdatamodeld`
+file. `NSManagedObjectModel` is the programmatic representation of this `.xcdatamodeld` file.
 
-The *.xcdatamodeld* file when opened in Xcode editor allows one to add entities. So basically *.xcdatamodeld* describes the
-objects of the object graph Core Data will eventually manage. These entities are represented by NSEntityDescription.
+The `.xcdatamodeld` file when opened in Xcode editor allows one to add entities. So basically `.xcdatamodeld` describes the
+objects of the object graph Core Data will eventually manage. These entities are represented by `NSEntityDescription`.
 
 Check files: 
 1. *UIKitLearnings.xcdatamodeld* in project https://github.com/saurabh1088/uikit
 2. *LearningAppCoreDataUIKit.xcdatamodeld* in project https://github.com/saurabh1088/ios/tree/main/LearningAppCoreDataUIKit
 
-So we have a NSManagedObjectModel which is basically *.xcdatamodeld* file, this file contains one or many NSEntityDescription.
-NSEntityDescription are the entities which have properties represented by NSPropertyDescription.
+So we have a `NSManagedObjectModel` which is basically `.xcdatamodeld` file, this file contains one or many `NSEntityDescription`.
+`NSEntityDescription` are the entities which have properties represented by `NSPropertyDescription`.
 
-An entity's property represented by NSPropertyDescription could be of following types:-
-- Attribute (NSAttributeDescription)
-- Relationships (NSRelationshipDescription)
-- Fetched Properties (NSFetchedPropertyDescription)
+An entity's property represented by `NSPropertyDescription` could be of following types:-
+- Attribute (`NSAttributeDescription`)
+- Relationships (`NSRelationshipDescription`)
+- Fetched Properties (`NSFetchedPropertyDescription`)
 
-NSAttributeDescription, NSRelationshipDescription, and NSFetchedPropertyDescription are all derived from NSPropertyDescription.
+`NSAttributeDescription`, `NSRelationshipDescription`, and `NSFetchedPropertyDescription` are all derived from `NSPropertyDescription`.
 
-Once entity is added to *.xcdatamodeld* file, Xcode autogenerates the entity file by naming convention Entity+CoreDataClass.
-This generated entity is a public class inheriting from NSManagedObject.
+Once entity is added to `.xcdatamodeld` file, Xcode autogenerates the entity file by naming convention Entity+CoreDataClass.
+This generated entity is a public class inheriting from `NSManagedObject`.
 
 ## NSManagedObjectContext
 Persistent container has a viewContext property of type NSManagedObjectContext, which can be referred as below. NSManagedObjectContext
@@ -160,7 +154,7 @@ Three possibilities in relationships:
 
 ### 1. Model design : Indexing
 Makes sure to design model with indexing in mind so that fetch can be faster.
-In Xcode in *.xcdatamodeld* file, for an entity long press on Add Entity button give few options where one of the option is
+In Xcode in `.xcdatamodeld` file, for an entity long press on Add Entity button give few options where one of the option is
 *Add Fetch Index*. Selecting this options adds a child node to the entity named *byPropertyIndex*, this can be renamed and
 configured to provide the index.
 
@@ -220,7 +214,7 @@ some database.
 Yes, persistence is optional in Core Data. If one chooses Core Data for data persistence, then one can also specify the type
 of persistece store one want to use. Following are options :
 - SQLite
-- XML
+- XML (Not available on iOS)
 - Binary
 
 
@@ -289,6 +283,27 @@ Lightweight migration automatically analyzes and infers the migration from the d
 - NSInferMappingModelAutomaticallyOption.
 
 
+## TODO: Move this to proper location
+## About Transient
+Properties—relationships as well as attributes—may be transient. A managed object context knows about transient properties
+and tracks changes made to them. Transient properties are ignored by the persistent store, and not just during saves:
+one cannot fetch using a predicate based on transients (although one can use transient properties to filter in
+memory).
+
+
+## TODO: Move this to proper location
+## NSManagedObjectContext Parent Child scenario
+- It has a property `var parent: NSManagedObjectContext?`
+- This property can point to a parent context
+- This can create a chain of parent child relationship which eventually will culminate in a NSManagedObjectContext having parent as nil.
+
+## Good Thing to Know: 
+When one want to store images, then one have to set the type to Binary Data and check the Allows External Storage
+in the Attribute Inspector. We do this because when we initialize the Core Data, we load all the data to the memory. When 
+we have a lot of saved images, we don’t want them to get loaded every time we open the app, but only when it’s time to 
+show/use them. This way, we’ll avoid any performance issues.
+
+
 ## TODOs
 - [x] Check how to specify which persistent store to use and which is default one core data uses.
 - [ ] What is Core Data, and what is its primary purpose in iOS development?
@@ -314,3 +329,6 @@ Lightweight migration automatically analyzes and infers the migration from the d
 - [ ] How do you implement undo and redo functionality using Core Data's undo manager?
 - [ ] Watch https://developer.apple.com/videos/play/wwdc2019/220
 - [ ] Check https://www.avanderlee.com/swift/core-data-performance/
+- [ ] Can a persistent container have multiple managed object model. Case in point NSPersistentContainer has a property managedObjectModel. Explore this.
+- [ ] How to define a transient entity?
+- [ ] What is the role of NSManagedObjectID?
