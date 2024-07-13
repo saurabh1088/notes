@@ -603,6 +603,21 @@ source view controllers of the segues. To address these differences interface bu
 when resolving the inferred metrics for the destination view controller.
 
 
+## 37. What's a NIB and what's XIB?
+`NIB` comes from NeXTSTEP Interface Builder and `XIB` comes from Xcode Interface Builder.
+`XIBs` are what one works with in Xcode's interface builder at the time of development. `NIBs` are what get produced when
+build is created. When one compiles an app, the `XIB` is compiled into a `NIB` file for inclusion in the app. The compiled
+`NIB` that is included in the app bundle is no longer editable in Interface Builder and is much smaller than the equivalent
+`XIB` or legacy `NIB` file.
+
+`NIB` file one can find after build in built app folder.
+For example: In project [UIKitLearnings](https://github.com/saurabh1088/uikit/tree/main/UIKitLearnings)
+`NavigationTestViewController.xib` once app is built can be found at below location as `NIB`
+```
+~/Library/Developer/Xcode/DerivedData/UIKitLearnings-bownfyjkrexaodexwgefociuzhbk/Build/Products/Debug-iphonesimulator/UIKitLearnings.app/NavigationTestViewController.nib
+```
+
+
 ## TODOs
 
 - [ ] Explain the differences between UIView and CALayer. How do you optimize performance when working with these components?
