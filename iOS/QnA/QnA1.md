@@ -568,6 +568,41 @@ Swift has two kind of types:
 - One isn't allows to call a deinit, these are called automatically.
 
 
+## 36. How to resolve storyboard merge conflicts?
+Biggest problem with using a storyboard is when multiple developers work on it and it causes conflicts while merging all
+changes. Conflicts are difficult to comprehend for storyboards hence are difficult to resolve. Following are some ways to
+resolve these.
+
+1. Avoid large storyboard files. Instead of few large storyboard files with huge flows, aim for small storyboards based
+on smaller modules and simple flows which if needed can be worked upon by a single developer. This way one can reduce chances
+of having multiple developers working on same storyboard file. One can choose a large storyboard file and take Xcode's help
+to refactor it into smaller storyboard files from `Xcode -> Editor -> Refactor to Storyboard...` option.
+
+2. Sometimes when one only opens a storyboard in Xcode and doesn't even make any changes, still the file shows changes in
+diff. This can happen due to different Xcode versions used to edit and open storyboard file. One should in a team sync and
+be on same version of Xcode and synchronise their Xcode version update plans.
+
+3. For custom views always use nib file instead of storyboards.
+
+4. Better to plan forward and see through tasks while assigning that which all tasks could possibly impact any large
+storyboards in project and if possible assing tasks to same member to avoid multiple members working on same storyboard.
+
+5. If tasks assignment to single developer is not feasible then plan work in a way that each developer instead of finishing
+work and then commiting changes, should plan to make small iterating changes and commit with others taking pull and so on.
+
+6. Make sure to check the diff properly when commiting changes to storyboard, unwanted changes should be discarded.
+
+7. Follow practice of commiting a storyboard with the same preview device. Multiple developers using different preview
+devices lead to changes which will creep into merge conflicts.
+
+8. Sometimes conflicts are observed in `inferredMetricsTieBreakers`. But what does this mean. `inferredMetricsTieBreakers`
+mean that the context of the view controller can change how it appears. Storyboards use `inferredMetricsTieBreakers` to
+determine which context to display a view controller in, when there could be multiple ways for it to appear. Ff a given
+view controller is the destination of multiple segues, there could be differences between the simulated metrics of the
+source view controllers of the segues. To address these differences interface builder picks a segue to break the tie
+when resolving the inferred metrics for the destination view controller.
+
+
 ## TODOs
 
 - [ ] Explain the differences between UIView and CALayer. How do you optimize performance when working with these components?
