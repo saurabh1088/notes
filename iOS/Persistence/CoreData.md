@@ -304,6 +304,11 @@ we have a lot of saved images, we don’t want them to get loaded every time we 
 show/use them. This way, we’ll avoid any performance issues.
 
 
+## Can a core data stack have more than one managed object model, the `.xcdatamodeld` file?
+YES, this is possible by merging all the `NSManagedObjectModel` together into one single model using instance method
+`mergedModel(from:)`.
+
+
 ## TODOs
 - [x] Check how to specify which persistent store to use and which is default one core data uses.
 - [ ] What is Core Data, and what is its primary purpose in iOS development?

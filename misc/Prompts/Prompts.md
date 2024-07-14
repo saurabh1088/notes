@@ -50,3 +50,8 @@ What are different states of an iOS app?
 - Give examples how, when and under what condition each state is achieved for an app.
 - Provide scenarios like what happens to states when say a notification is received, or a call is received.
 ```
+
+```
+How to setup a core data stack with multiple managed contexts. Also give practical use cases why a multiple managed
+context could be required 
+```
