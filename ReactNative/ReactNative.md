@@ -1,5 +1,6 @@
 #  ReactNative
 
+
 - React Native is an open-source Framework which was developed by FaceBook. 
 - React Native enables one to build mobile applications using JavaScript and React. Aim here is to create cross-platform 
 applications which can run both on iOS and Android platforms sharing a huge chunk of codebase.
@@ -10,8 +11,8 @@ applications which can run both on iOS and Android platforms sharing a huge chun
 - React Native comes with some *Core Components* which are ready to use components for builiding UI. One can also build custom
 native components.
 
-## React Native UI Components
 
+## React Native UI Components
 <View>
 <Text>
 <Image>
@@ -19,7 +20,6 @@ native components.
 <TextInput>
 
 ### <Pressable>
-
 To make a componenet react to press events one needs to wrap it inside <Pressable> component. Then we can provide a function
 to call like below :
 
@@ -32,7 +32,6 @@ to call like below :
 React Native runs on React
 
 ## What is React Native?
-
 We have React.js which is a JavaScript library for building UI for web development. Actually it's react-dom which adds the
 web support. React by itself is platform-agnostic, it doesn not cares about underlying platform. React just gives one tools
 to manage state for building virtual components then one needs react-dom which translates this React to platform dependent
@@ -70,8 +69,8 @@ Objects. React Native uses props for styling which are inspired by CSS so someti
 CSS cascading styling where the child elements by default get styling coming from parent elements isn't replicated in React
 Native.
 
-## Flexbox
 
+## Flexbox
 Flexbox stands for Flexible Box Layout is a layout model in CSS which aims at providing efficient way to lay out, align 
 and distribute space among items in a container, even when their size is unknown and/or dynamic (thus the word “flex”).
 
@@ -100,15 +99,14 @@ Source : https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 
 ## Handling Events
-
 Handling events in React Native works same as it works in React using event listeners, handlers and hooks.
 Usually when one makes components so that those could be re-used elsewhere in app as well and avoid code repitition, one
 can pass props so as to pass data from the point where the create component will get used. There might be elements like
 buttons as well in these components which need some event handlers. One can also pass event handler functions as part of
 props as well.
 
-## <ScrollView>
 
+## <ScrollView>
 ScrollView will always render all the elements even if those are currently not being displayed on screen. This can become
 a performance issue if one is showing a list of views running too large. One should use another component <FlatList> for
 such case. <FlatList> will only render elements which are needed to show.
