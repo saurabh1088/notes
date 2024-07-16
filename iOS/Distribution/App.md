@@ -38,11 +38,7 @@ The signing certificate is a public private pair with
 
 
 ## TODOs
-- [ ] Move size classes to proper place.
+- [x] Move size classes to proper place.
 
-Size Classes : These are means for creating adaptive layout which can look great on all sizes and orientations on iPhone and iPad devices.
-- Compact
-- Regular
-- traitCollectionDidChange(_:)
 
 https://www.bounteous.com/insights/2018/08/08/demystifying-ios-app-provisioning-process

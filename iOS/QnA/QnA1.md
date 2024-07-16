@@ -618,6 +618,13 @@ For example: In project [UIKitLearnings](https://github.com/saurabh1088/uikit/tr
 ```
 
 
+## 38. What are size classes?
+Size Classes : These are means for creating adaptive layout which can look great on all sizes and orientations on iPhone and iPad devices.
+- Compact
+- Regular
+- traitCollectionDidChange(_:)
+
+
 ## TODOs
 
 - [ ] Explain the differences between UIView and CALayer. How do you optimize performance when working with these components?
