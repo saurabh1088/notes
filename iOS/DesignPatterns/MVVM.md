@@ -62,6 +62,7 @@ key responsibilities to take care.
 - Viewvontroller is the place which sets up the data bindings with the viewmodels.
 - Viewcontroller take responsibility for navigation using segues or navigation controllers.
 
+
 ## TODOs
 - [x] For an app using MVVM design pattern, what role would viewcontroller perform?
 - [ ] How does information comes to view model in MVVM design pattern?

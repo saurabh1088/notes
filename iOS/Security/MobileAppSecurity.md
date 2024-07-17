@@ -11,6 +11,7 @@ On Apple platforms there is a networking feature known as *App Transport Securit
 - ATS mandates that all HTTP connections using URL Loading System MUST use HTTPS.
 - ATS mandates use of Transport Layer Security (TLS) version 1.2 or later.
 - ATS mandates default server trust evaluation
+- ATS mandates that the server with which app is connecting to, should meet certain requirements.
 
 There are several other requirements which are discussed on Apple's documentation : https://developer.apple.com/documentation/security/preventing_insecure_network_connections
 

@@ -625,8 +625,32 @@ Size Classes : These are means for creating adaptive layout which can look great
 - traitCollectionDidChange(_:)
 
 
-## TODOs
+## What's difference in NULL, nil, Nil and NSNull?
+### NULL
+`NULL` is the literal null value for arbitrary C pointers
+```
+int *somePointer = NULL;
+```
 
+### nil
+`nil` is the literal null value for Objective-C objects
+```
+id someObject = nil;
+NSString *someString = nil;
+```
+
+### Nil
+`Nil` is the literal null value for Objective-C classes
+```
+Class someClass = Nil;
+```
+
+### NSNull
+`NSNull` quoting from Apple's official documentation:
+_A singleton object used to represent null values in collection objects that don’t allow nil values._
+
+
+## TODOs
 - [ ] Explain the differences between UIView and CALayer. How do you optimize performance when working with these components?
 - [ ] Describe a situation where you had to deal with race conditions or deadlocks. How did you resolve it?
 - [ ] Have you implemented data migration in Core Data? If so, can you describe the process?
