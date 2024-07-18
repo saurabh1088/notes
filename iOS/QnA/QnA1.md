@@ -650,6 +650,16 @@ Class someClass = Nil;
 _A singleton object used to represent null values in collection objects that don’t allow nil values._
 
 
+## How to declare a static lazy property in Swift?
+From Apple's official documentation:
+_Stored type properties are lazily initialized on their first access. They’re guaranteed to be initialized only once,even when accessed by multiple threads simultaneously, and they don’t need to be marked with the lazy modifier._
+
+This means `static` properties in Swift are implicitly `lazy` and one doesn't need to use `lazy` keyword while declaration.
+```
+static let shared = SomeSingleton()
+```
+
+
 ## TODOs
 - [ ] Explain the differences between UIView and CALayer. How do you optimize performance when working with these components?
 - [ ] Describe a situation where you had to deal with race conditions or deadlocks. How did you resolve it?
