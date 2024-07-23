@@ -660,6 +660,25 @@ static let shared = SomeSingleton()
 ```
 
 
+## Can a property declaration in protocol be let?
+NO, for a protocol, property requirements are always declared to be var. This is a restriction imposed from compiler itself.
+Attempt to do so results in below compiler error:
+```
+Protocols cannot require properties to be immutable; declare read-only properties by using 'var' with a '{ get }' specifier
+```
+
+Now the official documentation doesn't explains any reason, so let's discuss to understand why this behaviour is followed.
+1. If protocol were to allow property requirement with let, then such a protocol will be a rigid protocol, mandating
+conforming types to declare a constant property. Imposing var declarations give a great deal of flexibility to conforming
+types. Conforming types have flexibility to implement the property requirement either a stored property or a computed one,
+it can implement it as a constant or a variable, read-only or read-write both.
+
+2. If let was allowed, then think abount conforming types and their initialisation. A type if tries to implement such
+protocol will need to provide the constant property with proper initialisation. This will require adding and updating
+initialisers. This can be comlicated especially in case of classes. This becomes even more complicated if type tries to
+conform protocol in an extension, one can't add stored properties to extension, also just think about initialisers.
+
+
 ## TODOs
 - [ ] Explain the differences between UIView and CALayer. How do you optimize performance when working with these components?
 - [ ] Describe a situation where you had to deal with race conditions or deadlocks. How did you resolve it?
