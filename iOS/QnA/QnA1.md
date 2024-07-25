@@ -9,16 +9,24 @@ iOS Architecture consists of four layers as shown in below diagram.
 ### Core OS
 
 At the core of iOS sits XNU Kernel.
-This layer is directly on top of device's underlying hardware. This layer is responsible for basic operating system services
-like
+This layer is directly on top of device's underlying hardware. This layer is responsible for basic operating system
+services like
 
-- Memory management
-- Handling file system
+- Kernel
+    - The XNU Kernel which provides the core operating system services
+    - Process management
+    - Memory management
+    - Handling file system
+    - Networking protocols & low level networking
+- Drivers
+    - Device drivers helping communicate with harware components like CPU, GPU, storage etc.
+- Security
+    - Encryption
+    - Keychain services
+    - Sandboxing
+    - Secure Enclave
 - Threading and concurrency
-- Low level networking
 - Access to external accessories
-- Security & Encryption features like Secure Enclave
-- Device drivers helping communicate with harware components like CPU, GPU, storage etc.
 - Components for power management
 - Inter Process Communication (IPC) 
 
@@ -73,6 +81,7 @@ touch and motion capabilities.
 
 Cocoa Touch includes below frameworks and more
 
+- UIKit Framework
 - EventKit Framework
 - GameKit Framework
 - MapKit Framework
@@ -82,14 +91,12 @@ Cocoa Touch includes below frameworks and more
 
 UIViewController in UIKit is responsible for managing view hierarchy for the app.
 
-
 UIViewController is subclassed and inherited viewcontrollers are created to manage an app's view hierarchies. One doesn't
 need to create instances of UIViewController directly.
 
 As UIViewController inherits from UIResponder, hence it's also a responder object and is part of responder chain.
 
 ### Responsibilities of UIViewController
-
 - Updating the views it manages
 - Handling user interaction events
 - Resizing views and managing layout
@@ -98,7 +105,6 @@ As UIViewController inherits from UIResponder, hence it's also a responder objec
 
 
 ### UIViewController as responder
-
 - UIViewController inherits from UIResponder. 
 - So techincally a UIViewController object is also a UIResponder object.
 - UIViewController objects are part of responder chain.
@@ -106,7 +112,6 @@ As UIViewController inherits from UIResponder, hence it's also a responder objec
 has option of handling it or passing it to superview.
 
 ### UIViewController placement in responder chain
-
 UIViewController object in responder chain is inserted in between the viewcontroller's
 root view and root view's superview.
 
@@ -153,6 +158,7 @@ for viewcontroller and expose the hierarchy through *view* property.
 
 ### loadView()
 
+
 ## 5. Why is it important for URLSession's dataTask method completion handler to update UI always on DispatchQueue.main block?
 
 The completion handler associated with URLSession's dataTask method gets called on
@@ -166,14 +172,12 @@ TODO : Hands on with IBDesignable and IBInspectable
 TODO : Read throught and try out https://nshipster.com/ibinspectable-ibdesignable/
 
 ### @IBDesignable
-
 @IBDesignable is an attribute which when is applied to a UIView or NSView subclass,
 tells Interface Builder in Xcode to render the view directly in the canvas. This
 allows seeing how that custom views will appear without building and running the
 app after each change.
 
 ### @IBInspectable
-
 XIB/NIB and Storyboards have an old feature - user-defined runtime attributes. These
 were accessible from identity inspector in Xcode's Interface builder.
 @IBInspectable properties provides new access to this old feature. 
@@ -273,8 +277,8 @@ When we define an enum in Swift having associated value, Swift will need to dete
 type of associated values. Now if the assciated value type is simple types like String, Int, Double etc. then Swift will
 be able to figure out memory requirement.
 Now Swift enums are supposed to be having value semantics. As long as we are dealing with simple enums i.e. with no associated
-values, it's all good. Swift compilor will be able to know the memory requirement. Even in case of Swift enums with associated
-type where the associated type is having simple data types, compilor can figure out memory requirement by considering the
+values, it's all good. Swift compiler will be able to know the memory requirement. Even in case of Swift enums with associated
+type where the associated type is having simple data types, compiler can figure out memory requirement by considering the
 memory for the case which needs the largest memory.
 This however becomes complicated when we talk about recursive enums. For a recursive enum as the enum's associated value
 can be of the type of enum itself, it can go on recursively and becomes difficult to guess the memory requirement.
@@ -283,7 +287,7 @@ treat this case as associated values as pointers to heap allocation. This is whe
 that the associated value for this case is indirectly stored on heap.
 
 
-## 14. What is the relevance of instancy property, capacity, of an Array in Swift and how does it differs from count?
+## 14. What is the relevance of instance property, capacity, of an Array in Swift and how does it differs from count?
 Array's capacity is an instance property on Array, it gives a count of number of elements array can contain without allocating
 new storage. For Array the compiler will reserve certain amount of memory to hold its contents. When one appends more elements
 to the Array then if more storage is required then the new storage allocate is in multiples of old storage size. So initially
