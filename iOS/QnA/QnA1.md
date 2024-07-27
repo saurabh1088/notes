@@ -683,6 +683,14 @@ initialisers. This can be comlicated especially in case of classes. This becomes
 conform protocol in an extension, one can't add stored properties to extension, also just think about initialisers.
 
 
+## What are previews? Can one use these for UIKit views? How to provide data to previews?
+Previews help provide dynamic, interactive preview of a view without building code for device or simulator. These are also
+available for UIKit views now. One can create data requirement within the preview macro itself, however for better management
+one can use for example JSON files in `Preview Content` folder in Xcode for the project. This folder contains the development
+assets. Benefit of using `Preview Content` is that it keeps all required data at one place and this data will not be part
+of release build so it's not going to impact the release build bundle size.
+
+
 ## TODOs
 - [ ] Explain the differences between UIView and CALayer. How do you optimize performance when working with these components?
 - [ ] Describe a situation where you had to deal with race conditions or deadlocks. How did you resolve it?
