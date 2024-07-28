@@ -18,3 +18,10 @@ which can contain key value pair determining what to use for launch screen. Avai
 1. UIColorName
 2. UIImageName
 3. UIImageRespectsSafeAreaInsets
+
+
+## Can we store an object conforming to ObservableObject protocol in a State property?
+YES, it is possible to declare a State property for an object which conforms to ObservableObject protocol. However one
+important point to note in this regards is that Published properties update will not lead to view update, view will only
+update if the State property changes, which can change only if the reference itself is changed to some other object. Only
+way for view to get updated when Published property changes is to use StateObject or ObservedObject. 
