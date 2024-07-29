@@ -36,3 +36,86 @@ For using wrappers while working with a model using observables, one need to ask
 - Does this model need to be part of the global environment of the application? If so, use `@Environment`. 
 - Does this model just need bindings? If so, use the new `@Bindable`.
 If none of these questions, answers as yes, then use the model as a property of the view.
+
+
+## TODOs
+
+1. **SwiftUI Basics**
+   - Understanding the SwiftUI framework
+   - Views and view composition
+   - Modifiers and view customization
+   - Layout and geometry
+
+2. **State Management**
+   - @State, @Binding, and @StateObject
+   - ObservableObject and @Published
+   - EnvironmentObject and @Environment
+   - Using Combine with SwiftUI
+
+3. **Navigation and App Structure**
+   - NavigationView and NavigationLink
+   - TabView and TabItem
+   - Presentation and sheets
+   - Deep linking and programmatic navigation
+
+4. **Data Handling and Persistence**
+   - Fetching and displaying data from APIs
+   - Core Data integration with SwiftUI
+   - Using Combine for asynchronous data handling
+
+5. **User Input and Forms**
+   - Handling text input and forms
+   - Validating user input
+   - Custom controls and interactions
+
+6. **Animations and Transitions**
+   - Implicit and explicit animations
+   - Custom animations and transitions
+   - GeometryEffect and AnimatableModifier
+
+7. **Styling and Theming**
+   - Customizing view appearance
+   - Dark mode support
+   - Creating reusable style components
+
+8. **Accessibility**
+   - Ensuring accessibility support
+   - VoiceOver and dynamic type
+   - Accessibility modifiers and tools
+
+9. **Advanced SwiftUI Concepts**
+   - Custom view modifiers
+   - PreferenceKey and GeometryReader
+   - Custom containers and layout
+
+10. **Interoperability**
+    - Integrating UIKit with SwiftUI
+    - Using UIViewControllerRepresentable and UIViewRepresentable
+
+11. **Testing and Debugging**
+    - Unit testing SwiftUI views
+    - Snapshot testing
+    - Debugging tools and techniques
+
+12. **Performance Optimization**
+    - Identifying and optimizing performance bottlenecks
+    - Efficient use of resources and memory management
+    - Profiling and analyzing SwiftUI applications
+
+13. **Architectural Patterns**
+    - MVVM (Model-View-ViewModel) pattern
+    - Coordinator pattern
+    - Dependency injection
+
+14. **Concurrency**
+    - Using async/await with SwiftUI
+    - Managing background tasks and updates
+
+15. **Networking**
+    - Integrating RESTful APIs
+    - Handling networking errors
+    - Using URLSession and other networking libraries
+
+16. **App Lifecycle and State Restoration**
+    - Managing app lifecycle events
+    - State restoration and scene management
