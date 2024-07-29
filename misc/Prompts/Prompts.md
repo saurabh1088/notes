@@ -55,3 +55,12 @@ What are different states of an iOS app?
 How to setup a core data stack with multiple managed contexts. Also give practical use cases why a multiple managed
 context could be required 
 ```
+
+```
+Explain and discuss in details why should an iOS application written using Swift language should use Alamofire for
+networking instead of using Apple's URL Loading System.
+- What are specific use cases which calls for using library Alamofire.
+- Don't list reasons like the library is tried and tested and it will reduce development time and effort.
+- Reasons in favour should purely be derived from practical use case and from the functionalities Alamofire provides over
+URL Loading System.
+```
