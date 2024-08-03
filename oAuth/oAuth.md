@@ -131,8 +131,8 @@ instead of creating a new account.
 
 ### 2. Single Sign-On (SSO)
 oAuth2.0 though isn't designed keeping SSO in mind, however can be used to achieve SSO where multiple applications are set
-up using same authorisation server, thus user authenticating with any one application can be free to use any other applications
-as well without the need to sign in again.
+up using same authorisation server, thus user authenticating with any one application can be free to use any other
+applications as well without the need to sign in again.
 
 
 ## What is the format for authorisation server endpoint?
