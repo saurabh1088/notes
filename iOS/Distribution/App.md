@@ -1,5 +1,11 @@
 # App Distribution
 
+## Why Code Signing?
+Code signing process ensures `security` & `integrity` of the app.
+The process establishes trust between:-
+- The App
+- The Device
+- The Developer
 
 ## iOS App Code Signing
 ### Signing Certificate
@@ -25,6 +31,11 @@ The signing certificate is a public private pair with
 - Create a Certificate Signing Request using the keychain Access app from Mac
 - This creates the public and private keys that will identify one’s certificate
 
+### Provisioning Profiles
+Following are types of provisioning profiles :
+1. Development Provisioning Profile
+2. Distribution Provisioning Profile - Developer Account
+3. Distribution Provisioning Profiles - Enterprise Account
 
 ### How to create a development provisioning profile?
 - Sign in with developer account on http://developer.apple.com
