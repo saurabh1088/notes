@@ -108,3 +108,4 @@ caching duty.
 - [ ] https://developer.apple.com/documentation/foundation/nsdiscardablecontent
 - [ ] Try https://medium.com/@mshcheglov/reusable-image-cache-in-swift-9b90eb338e8d
 - [ ] Try https://www.swiftbysundell.com/articles/caching-in-swift/
+- [ ] Good read https://medium.nextlevelswift.com/urlrequest-cache-policy-f7c30a96b698
