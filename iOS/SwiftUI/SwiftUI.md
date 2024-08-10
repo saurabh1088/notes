@@ -37,6 +37,10 @@ For using wrappers while working with a model using observables, one need to ask
 - Does this model just need bindings? If so, use the new `@Bindable`.
 If none of these questions, answers as yes, then use the model as a property of the view.
 
+### One can achieve similar result with ViewModifier and Views, which approach to use when?
+Example explored at below location:
+https://github.com/saurabh1088/SwiftUI/blob/main/SwiftUILearnings/TestPitch/ViewVSViewModifierExampleView.swift
+
 
 ## TODOs
 
