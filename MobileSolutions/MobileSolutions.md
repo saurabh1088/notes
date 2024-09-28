@@ -16,3 +16,17 @@ Tech stack :
 - Jetpack Compone & XML as UI frameworks
 - Android Studio as IDE
 
+## Hybrid Solutions
+
+### Apache Cordova
+
+Tech stack : 
+- HTML, CSS, JavaScript
+- JavaScript frameworks can be used like angularJS
+- Cordova plugins are used to access native capabilities
+
+Apps developed using Apache cordova are technically web apps built using web technologies like HTML, CSS and JavaScript.
+The resulting app running on mobile devices is technically a web app running inside a native container's webview. All the
+UI layer is developed using HTML CSS and JavaScript, business logic is written using JavaScript. This whole web artifacts
+are bundled withing the app bundle. In order to access device capabilities like camera, there are cordova plugins which
+can be used.
