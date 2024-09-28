@@ -41,3 +41,37 @@ in unknown state.
 - Waning developer community support.
 - Newer frameworks like Flutter and ReactNative are now more preferred.
 - Dependency on cordova plugins for accessing device capabilities.
+- Performance issue when compared to native solutions.
+
+### Ionic
+
+Tech stack :
+- HTML, CSS, JavaScript
+- Angular/React/Vue
+- Capacitor
+
+Pros :
+- Technically a web app, so if solution already has a web version, it can be re-used and saves effort.
+
+Cons :
+- Performance issue when compared to native solutions.
+
+### React Native
+
+Tech stack :
+- React, JavaScript
+
+Pros :
+- Cross platform
+- Near-native performance
+
+Cons :
+
+### Flutter
+
+### Xamarin
+
+### NativeScript
+
+## Progressive Web Apps
+
