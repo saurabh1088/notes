@@ -74,3 +74,15 @@ For more details, see https://github.com/react-native-community/cli/blob/main/do
   Run instructions for macOS:
     • See https://aka.ms/ReactNativeGuideMacOS for the latest up-to-date instructions.
     
+
+## Run project on a particular iOS simulator
+
+```
+npx react-native run-ios --simulator='iPhone 16 Pro Max'
+```
+
+Note : Check list of booted iOS simulators and devices list using below command
+
+```
+xcrun simctl list | grep 'Booted'
+```
