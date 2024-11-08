@@ -22,6 +22,9 @@ say there are three operations to perform.
 - image processing operation
 - user interface updates with images operation
 
+Dependencies while working with `OperationQueue` can also be added to `Operation` being executed on different `OperationQueue`'s. Check example at link below
+https://github.com/saurabh1088/swift-playgrounds/blob/main/Concurrency.playground/Pages/OperationQueues.xcplaygroundpage/Contents.swift
+
 
 2. Re-usability
 `Operation` is an abstract class, hence can't be used directly. There are some implementations available ready to use from
