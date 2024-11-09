@@ -176,3 +176,39 @@ New Set@7th Nov 2024
 - What emerging trends or technologies do you think will impact iOS app development over the next few years?
 - Can you describe a project where you applied an innovative solution to a common problem in iOS development?
 
+
+New Set@9th November 2024
+
+
+## Architectural Design:
+
+Scalability: How would you design an iOS app to handle a significant increase in users and data volume? What architectural patterns and techniques would you employ?
+Modularity: How do you break down a large iOS app into smaller, modular components? What are the benefits of modular design?
+Testability: How do you design iOS apps to be easily testable? What strategies do you use to write effective unit and UI tests?
+Maintainability: How do you ensure that your iOS code is maintainable over time? What coding practices and tools do you use?
+Performance Optimization: What are your strategies for optimizing the performance of large-scale iOS apps? How do you identify and address performance bottlenecks?
+
+
+## UI/UX Design:
+
+User Experience: How do you approach designing a user-friendly and intuitive iOS app? What are the key principles of good UI/UX design?
+Adaptive Design: How do you design iOS apps that adapt to different screen sizes and orientations? What are the challenges and solutions?
+Accessibility: How do you ensure that your iOS apps are accessible to users with disabilities? What are the best practices for accessibility?
+Custom UI Components: When and how do you create custom UI components in iOS? What are the benefits and drawbacks of custom components?
+Animation: How do you use animation to enhance the user experience in iOS apps? What are the best practices for animation?
+
+
+## Data Management and Persistence:
+
+Core Data: How do you design a Core Data model for a complex iOS app? What are the performance considerations when using Core Data?
+Real-Time Data: How do you handle real-time data updates in an iOS app? What technologies and techniques do you use?
+Offline First: How do you design an iOS app to work offline and synchronize data when the device is online? What are the challenges and solutions?
+Data Security: How do you protect sensitive user data in an iOS app? What security measures do you implement?
+
+
+## Team Collaboration and Leadership:
+
+Code Reviews: How do you conduct effective code reviews? What are the key things you look for in code reviews?
+Mentoring: How do you mentor junior developers and share your knowledge and experience?
+Agile Development: How do you apply Agile methodologies to iOS development? What are the benefits of Agile?
+Remote Work: How do you collaborate effectively with team members in a remote work environment? What tools and techniques do you use?
