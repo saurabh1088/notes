@@ -15,6 +15,10 @@ Core Data can help to
 Core Data abstracts the details of mapping objects to a store, making it easy to save data from Swift and Objective-C
 without administering a database directly.
 
+Further more one can define Core Data as :-
+A framework used to manage the model layer objects in an application. Core Data provides generalized and automated
+solutions to common tasks associated with object life cycle (runtime) and object graph management, including persistence.
+
 ## What is an Object Graph?
 We say Core Data manages object graph, let's see what an object graph is. Objects can and will have references to other
 objects in any object oriented programming. These relationships form a graph. One can say that an object graph is
@@ -307,6 +311,27 @@ show/use them. This way, we’ll avoid any performance issues.
 ## Can a core data stack have more than one managed object model, the `.xcdatamodeld` file?
 YES, this is possible by merging all the `NSManagedObjectModel` together into one single model using instance method
 `mergedModel(from:)`.
+
+## Explain the concept of faulting in Core Data and its impact on performance.
+Core Data is a framework which is highly performant. Core Data works on records from persistent stores once those are loaded
+into memory. Which is to say that there is no direct actions on the persistent store. This means object need to be loaded
+into memory, but this can cause issues if everything is loaded into memory. So Core Data employs technique of faulting to
+optimise the memory usage. The way faulting works is that Core Data only fetches data which is absolutely needed to satisfy
+requirement of application.
+
+Faulting basically defers loading of actual data until it is needed. What Core Data does is that it in order to manage memory
+usage efficiently, loads lightweight fault placeholders objects instead of fully realised managed objects. When the property
+which at present is a fault is actually accessed then Core Data with fire the fault and fetch data from persistent store
+to fully realise it. This is kind of a lazy loading which reduces memory footprint and imporoves performance when dealing
+with very large datasets.
+
+When objects are fetched in Core Data, usually those start as faults. Faults one can say are lightweight proxies for the
+actual objects. For example while loading say 1000 records of some object model Employee, Core Data will create 1000 fault
+objects for Employee without loading all attributes, relationships until one uses those.
+
+So one can see the impact of performance as that while running faulting leads to : 
+- lesser memory footprint for the app
+- faster initial load time
 
 
 ## TODOs
