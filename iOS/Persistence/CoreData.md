@@ -2,6 +2,7 @@
 
 
 ## What is Core Data?
+
 Simply stating : *Core Data is a FRAMEWORK*
 
 Core Data is first and foremost a framework for managing an object graph.
@@ -19,17 +20,10 @@ Further more one can define Core Data as :-
 A framework used to manage the model layer objects in an application. Core Data provides generalized and automated
 solutions to common tasks associated with object life cycle (runtime) and object graph management, including persistence.
 
-## What is an Object Graph?
-We say Core Data manages object graph, let's see what an object graph is. Objects can and will have references to other
-objects in any object oriented programming. These relationships form a graph. One can say that an object graph is
-conceptualization of all instances of the objects from one's object model (the classes in the program) and their
-interconnections.
-So an Object graph is basically a dependency graph between objects.
 
+## Features of Core Data from bird's eye view
 
-## Features from bird's eye view
 ### 1. Persistence
-
 Core Data as mentioned can be used for data persistence by opting for a persistent store. The default store is SQLite.
 Core Data provides abstraction over objects mapping to persistent store. This makes easy to save data without having to
 administer database directly.
@@ -51,6 +45,7 @@ Core Data has provision for versioning data model and also migrating user data.
 
 
 ## Core Data Stack
+
 - Persistent container (NSPersistentContainer)
     - Model (NSManagedObjectModel)
     - Context (NSManagedObjectContext)
@@ -61,24 +56,8 @@ the persistent stores it manages. So Model, Context and Coordinator are all suff
 Core Data provided one encapsulated type i.e. NSPersistentContainer which represents this entire stack.
 
 
-## Working with Core Data
-### 1. Creating a Data Model File (`.xcdatamodeld`)
-
-Select Core Data checkbox while creating a new project in Xcode, or if project is already created then one needs to add
-a new file of type Data Model from Core Data section. In both the cases one sees a file with extension `.xcdatamodeld` added
-to project.
-
-### 2. Setting up Core Data stack
-Core Data stack refers to set of objects which work together in Core Data framework to manage and persist the app’s objects.
-Following all form the core data stack
-
-- Persistent container (NSPersistentContainer)
-- Model (NSManagedObjectModel)
-- Context (NSManagedObjectContext)
-- Store coordinator (NSPersistentStoreCoordinator)
-
-
 ## NSPersistentContainer
+
 - `NSPersistentContainer` class represents or encapsulates the Core Data stack in an app.
 - It manages and simplifies the creation and management of Core Data stack.
 - Persistent container is defined as a lazy variable (so as to defer instantiation until first use)
@@ -93,6 +72,7 @@ https://github.com/saurabh1088/uikit/blob/main/UIKitLearnings/UIKitLearnings/App
 
 
 ## NSManagedObjectModel
+
 When Core Data is opted for a project either from start or added in between, one ends up with generating a `.xcdatamodeld`
 file. `NSManagedObjectModel` is the programmatic representation of this `.xcdatamodeld` file.
 
@@ -117,6 +97,7 @@ Once entity is added to `.xcdatamodeld` file, Xcode autogenerates the entity fil
 This generated entity is a public class inheriting from `NSManagedObject`.
 
 ## NSManagedObjectContext
+
 Persistent container has a viewContext property of type NSManagedObjectContext, which can be referred as below. NSManagedObjectContext
 represents a context which consists of a group of related model objects. These related model objects can represent internally
 consistent view of one or more persistent stores. 
@@ -140,19 +121,43 @@ Context object has a central role in managing life cycle of managed objects.
 7. Maintains an undo manager
 8. Insert new objects or delete existing
 
+
 ## NSPersistentStoreCoordinator
+
 Responsible for managing the persistent stores. Most of the time a persistent store is a database which lives on filesystem.
 It's possible to have many persistent stores at once. One can also have custome made one derived from NSPersistentStore.
 
+
 ## NSFetchRequest
+
 To fetch records from Core Data, one needs to create an instance of NSFetchRequest and then pass it to NSManagedObjectContext
 API to fetch results.
 
+
 ## Entity Relationships
+
 Three possibilities in relationships:
 1. One to One
 2. One to Many
 3. Many to Many
+
+
+## Working with Core Data
+
+### 1. Creating a Data Model File (`.xcdatamodeld`)
+Select Core Data checkbox while creating a new project in Xcode, or if project is already created then one needs to add
+a new file of type Data Model from Core Data section. In both the cases one sees a file with extension `.xcdatamodeld` added
+to project.
+
+### 2. Setting up Core Data stack
+Core Data stack refers to set of objects which work together in Core Data framework to manage and persist the app’s objects.
+Following all form the core data stack
+
+- Persistent container (NSPersistentContainer)
+- Model (NSManagedObjectModel)
+- Context (NSManagedObjectContext)
+- Store coordinator (NSPersistentStoreCoordinator)
+
 
 ## Core Data and Performance considerations
 
@@ -176,6 +181,7 @@ all data without need will consume resources unnecessarily.
 ### 4. Batch updates
 
 ### 5. Faulting
+
 
 ## UndoManager
 
@@ -205,7 +211,9 @@ part attempting to modify same data or due to concurrency.
 1. Core Data built-in merge policies refer below for more details
 https://developer.apple.com/documentation/coredata/nsmergepolicy/merge_policies
 
+
 ## QnA
+
 ### When is Core Data initialized?
 Core data is initialized on app’s startup.
 
@@ -223,6 +231,7 @@ of persistece store one want to use. Following are options :
 
 
 ## How to specify which persistent store to use and which is default one core data uses?
+
 Core data default persistent store is SQLite. There are options to use XML, Binary o r in-memory as well. To specify a store
 other than the default one, one need to create `NSPersistentStoreDescription` and assign it's `type` property to available
 options like
@@ -251,6 +260,7 @@ to publishers on Core Data object properties.
 
 
 ## Core Data Migration
+
 ### WWDC 2022
 Evolve your Core Data schema
 https://developer.apple.com/videos/play/wwdc2022/10120/
@@ -289,6 +299,7 @@ Lightweight migration automatically analyzes and infers the migration from the d
 
 ## TODO: Move this to proper location
 ## About Transient
+
 Properties—relationships as well as attributes—may be transient. A managed object context knows about transient properties
 and tracks changes made to them. Transient properties are ignored by the persistent store, and not just during saves:
 one cannot fetch using a predicate based on transients (although one can use transient properties to filter in
@@ -297,11 +308,14 @@ memory).
 
 ## TODO: Move this to proper location
 ## NSManagedObjectContext Parent Child scenario
+
 - It has a property `var parent: NSManagedObjectContext?`
 - This property can point to a parent context
 - This can create a chain of parent child relationship which eventually will culminate in a NSManagedObjectContext having parent as nil.
 
-## Good Thing to Know: 
+
+## Good Thing to Know:
+
 When one want to store images, then one have to set the type to Binary Data and check the Allows External Storage
 in the Attribute Inspector. We do this because when we initialize the Core Data, we load all the data to the memory. When 
 we have a lot of saved images, we don’t want them to get loaded every time we open the app, but only when it’s time to 
@@ -309,10 +323,12 @@ show/use them. This way, we’ll avoid any performance issues.
 
 
 ## Can a core data stack have more than one managed object model, the `.xcdatamodeld` file?
+
 YES, this is possible by merging all the `NSManagedObjectModel` together into one single model using instance method
 `mergedModel(from:)`.
 
 ## Explain the concept of faulting in Core Data and its impact on performance.
+
 Core Data is a framework which is highly performant. Core Data works on records from persistent stores once those are loaded
 into memory. Which is to say that there is no direct actions on the persistent store. This means object need to be loaded
 into memory, but this can cause issues if everything is loaded into memory. So Core Data employs technique of faulting to
@@ -334,7 +350,17 @@ So one can see the impact of performance as that while running faulting leads to
 - faster initial load time
 
 
+## What is an Object Graph?
+
+We say Core Data manages object graph, let's see what an object graph is. Objects can and will have references to other
+objects in any object oriented programming. These relationships form a graph. One can say that an object graph is
+conceptualization of all instances of the objects from one's object model (the classes in the program) and their
+interconnections.
+So an Object graph is basically a dependency graph between objects.
+
+
 ## TODOs
+
 - [x] Check how to specify which persistent store to use and which is default one core data uses.
 - [ ] What is Core Data, and what is its primary purpose in iOS development?
 - [ ] Explain the role of the Managed Object Model in Core Data.
