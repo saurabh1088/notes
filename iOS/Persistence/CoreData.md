@@ -353,7 +353,7 @@ So one can see the impact of performance as that while running faulting leads to
 - [ ] What is the typical pattern for managing Core Data contexts in a multithreaded environment?
 - [ ] What is a NSManagedObjectContextDidSave notification, and how can it be useful?
 - [ ] How can you optimize Core Data fetch requests for better performance?
-- [ ] Explain the concept of faulting in Core Data and its impact on performance.
+- [x] Explain the concept of faulting in Core Data and its impact on performance.
 - [ ] How do you handle errors when working with Core Data operations?
 - [ ] What is the purpose of the Core Data lightweight migration?
 - [ ] How do you implement undo and redo functionality using Core Data's undo manager?
@@ -362,3 +362,25 @@ So one can see the impact of performance as that while running faulting leads to
 - [ ] Can a persistent container have multiple managed object model. Case in point NSPersistentContainer has a property managedObjectModel. Explore this.
 - [ ] How to define a transient entity?
 - [ ] What is the role of NSManagedObjectID?
+
+Core Concepts
+- [ ] What is Core Data? How does it differ from SQLite?
+- [ ] Core Data Stack: Explain the components of the Core Data stack (NSManagedObjectModel, NSPersistentStoreCoordinator, NSManagedObjectContext).
+- [ ] Core Data Relationships: Describe the different types of relationships in Core Data (one-to-one, one-to-many, many-to-many). How do you model them?
+- [ ] Faulting and Fetching: Explain the concept of faulting and fetching in Core Data. How can you optimize fetching performance?
+- [ ] Concurrency: How do you handle concurrency in Core Data? What are the best practices for managing multiple contexts?
+
+Advanced Topics
+- [ ] Performance Optimization: What techniques can be used to optimize Core Data performance, especially for large datasets?
+- [ ] Migration: How do you migrate Core Data models when the app's data model changes?
+- [ ] Data Validation: How do you validate data in Core Data to ensure data integrity?
+- [ ] Background Tasks: How do you perform background tasks with Core Data, such as background fetching and saving?
+- [ ] Security: How do you protect sensitive data stored in Core Data?
+
+Practical Scenarios
+- [ ] Large Datasets: How would you handle a large dataset in Core Data? What strategies would you use to optimize performance and user experience?
+- [ ] Complex Data Models: How would you model a complex data model with many relationships and constraints in Core Data?
+- [ ] Offline First: How would you implement an offline-first strategy with Core Data?
+- [ ] Real-time Updates: How would you synchronize Core Data with a remote server in real-time?
+- [ ] Testing Core Data: How do you test Core Data-backed apps, especially unit testing and UI testing?
+
