@@ -362,7 +362,7 @@ So an Object graph is basically a dependency graph between objects.
 ## TODOs
 
 - [x] Check how to specify which persistent store to use and which is default one core data uses.
-- [ ] What is Core Data, and what is its primary purpose in iOS development?
+- [x] What is Core Data, and what is its primary purpose in iOS development?
 - [ ] Explain the role of the Managed Object Model in Core Data.
 - [ ] What is a Managed Object Context, and how is it used in Core Data?
 - [ ] Describe the purpose of the Persistent Store Coordinator in the Core Data stack.
