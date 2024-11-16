@@ -29,3 +29,29 @@ SceneDelegate : scene willConnectTo session with options
 SceneDelegate : scene sceneWillEnterForeground
 SceneDelegate : scene sceneDidBecomeActive
 ```
+
+- App is installed fresh and launched, after launch, home button is pressed.
+
+```
+AppDelegate : application didFinishLaunchingWithOptions
+AppDelegate : application configurationForConnecting
+SceneDelegate : scene willConnectTo session with options
+SceneDelegate : scene sceneWillEnterForeground
+SceneDelegate : scene sceneDidBecomeActive
+SceneDelegate : scene sceneWillResignActive
+SceneDelegate : scene sceneDidEnterBackground
+```
+
+- App is installed fresh and launched, after launch, home button is pressed, after sometime app is launched again.
+
+```
+AppDelegate : application didFinishLaunchingWithOptions
+AppDelegate : application configurationForConnecting
+SceneDelegate : scene willConnectTo session with options
+SceneDelegate : scene sceneWillEnterForeground
+SceneDelegate : scene sceneDidBecomeActive
+SceneDelegate : scene sceneWillResignActive
+SceneDelegate : scene sceneDidEnterBackground
+SceneDelegate : scene sceneWillEnterForeground
+SceneDelegate : scene sceneDidBecomeActive
+```
