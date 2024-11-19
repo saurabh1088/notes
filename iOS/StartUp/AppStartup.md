@@ -68,6 +68,29 @@ and for every subsequent launches it is not called.
 ### Not Running
 - App is yet not launched OR
 - App is terminated by the system
+    - Can happen due to memory issue
+    - Can happen due to app exceeding its allocated time to perform background task
+- App has crashed due to some runtime exception
+- User has terminated app from app switcher to kill it
+
+From Not Running, an app can move to
+- Inactive State
+    - This when user taps to launch an app, the app briefly moves to inactive state befor it moves to active state
+- Background State
+    - If any background activity is trigerred due to location update or a push notification, app can launch directly into
+    background state
+
+States from which app can transition to Not Running state
+- Active
+    - User force quits the app
+    - System terminated the app
+- In-active
+    - User force quits the app
+- Background
+    - Once background task is completed, app is terminated by system
+    - User force quits the app
+- Suspended
+    - System terminated the app
 
 ### Inactive
 - App is in foreground but is not receiving events
