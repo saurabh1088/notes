@@ -1,5 +1,23 @@
 # SwiftUI
 
+## What is SwiftUI?
+*SwiftUI simplifies UI development by allowing developers to describe what the UI should look like and how it behaves in response to state changes, using Swift programming language.*
+- SwiftUI is a framework to develope user interface for Apple platforms.
+- SwiftUI follows declarative programming paradigm unlike the imperative way of UIKit.
+- Using declarative approach, SwiftUI tells iOS about all possible states at once which greatly help in state management.
+- SwiftUI is cross platform user interface layer within Apple's ecosystem.
+
+## Benefits of using SwiftUI
+- Building modern, complex UI faster
+- Declarative way of programming makes program easy to write and maintain
+- Within Apple's ecosystem it is cross platform
+- Offers live previews in Xcode
+- UI is state driven, when state changes, UI is automatically refreshed
+- When compared with UIKit, SwiftUI is less verbose and needs a lot less boilerplate code
+- Lot of accessibility features are supported already when using SwiftUI
+- Seamless integration with Combine framework for data binding solution
+- No autolayout complexity, most of the layout framework itself manages based on screen size
+
 ## Observation in SwiftUI
 
 ### Source
