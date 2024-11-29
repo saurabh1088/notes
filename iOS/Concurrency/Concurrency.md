@@ -51,3 +51,24 @@ completed. This is great if one needs to execute some logic on completion of ind
 8. Maximum concurrent operation limit
 `OperationQueue` has property `maxConcurrentOperationCount` which can be used to set maximum number of concurrent operations
 the queue can perform. For example, setting it to 1 causes queue to perform each operation one by one.
+
+
+## Actors
+
+## What are Actors?
+- Primary goal of actors is to prevent data races and ensure safe access to shared mutable state in concurrent programming.
+- Conceptually Swift actors are classes as actors also are reference type.
+- Major difference wrt classes is that actors don't participate in inheritance.
+- Actors are safe to use in concurrent environment.
+- Swift automatically ensures no attempt is made to access an actor's data simultaneously, this is at compile time itself
+without the need for developers to write boilerplate code using locks.
+- While using an actors mutable state from outside of actor or from another actor, one would need to use await calls.
+- Behind the scenes actors can be thought of operating a private queue and taking request one at a time. If no requests are
+there access to mutable state may be fulfilled straight away, else it can take time, hence the usage of await.
+- For a constant property defined in an actor, await is not required when accessing it, as the constant property isn't
+a mutable one and doesn't needs isolated access.
+
+When one encapsulates data within an actor, one is essentially isolating it from direct access by other parts of the
+program. Any code that wants to interact with the data must go through the actor, effectively ‘lining up’ and waiting
+its turn. This means that even in a concurrent environment, the actor serializes access to its data, ensuring that only
+one piece of code interacts with it at any given time.
