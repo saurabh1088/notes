@@ -67,6 +67,12 @@ without the need for developers to write boilerplate code using locks.
 there access to mutable state may be fulfilled straight away, else it can take time, hence the usage of await.
 - For a constant property defined in an actor, await is not required when accessing it, as the constant property isn't
 a mutable one and doesn't needs isolated access.
+- Methods in actors are isolated by default.
+- If method is not accessing any mutable data, then it is good practice to mark it as nonisolated.
+- nonisolated can be used for computed properties as well of those aren't being computed of any mutable state.
+
+## Can one use nonisolated on a let constant property as those are non mutabled?
+NO, it is not needed and compilor will prevent such attempt.
 
 When one encapsulates data within an actor, one is essentially isolating it from direct access by other parts of the
 program. Any code that wants to interact with the data must go through the actor, effectively ‘lining up’ and waiting
