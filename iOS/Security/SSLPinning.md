@@ -66,8 +66,36 @@ optional func urlSession(
 ```
 
 This delegate callback gets called when server presents any authentication challenge.
-In this callback is received a *URLAuthenticationChallenge* having instance property *protectionSpace*.
+In this callback, is received a *URLAuthenticationChallenge* having instance property *protectionSpace*.
 This *protectionSpace* which is of type *URLProtectionSpace* has an instance property *serverTrust* which represents server's
 SSL transaction state.
 This propery *serverTrust* is only not nil if the authentication challenge callback received is for server trust.
 
+*protectionSpace* provides information whether the authentication challenge is asking one to provide the user’s credentials
+or to verify the TLS credentials provided by the server.
+
+||Server Trust|Users Credentials|
+|---|---|---|
+|serverTrust|NOT NIL|nil|
+
+
+## Issues and remedies while implementing SSL Pinning
+
+### 1. Certificate Expiry
+Probably most common issue could be certificate expiry itself. If the embedded certificate expires, the app will fail to
+establish connection with server.
+
+Reason for expiry
+- All issued certificates have an expiry date and need to be renewed updated periodically.
+
+Possible remedies
+- Pin certificates public key instead of certificate itself
+- Create and follow a schedule to update certificates before expiry and release new app build
+- Bypass SSL pinning temporariy and notify users to update app. (TODO: Is this possible?)
+
+### 2. User device issue
+
+## What is the default SSL pinning enforced by App Transport Security.
+By default, SSL implementation in an iOS app will trust any server with certificate trusted by the operating system’s
+trust store. This is true for other client server communications as well. All operating systems have a trust store which
+includes a bunch of certificates.
