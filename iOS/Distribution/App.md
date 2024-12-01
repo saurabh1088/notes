@@ -48,17 +48,22 @@ A provisional profile may contain:
 3. Team/Developer ID
 4. Entitlements
 5. Destination Devices (UUIDs)
+6. Expiration date
 
 Following are types of provisioning profiles :
 1. Development Provisioning Profile
-    - This profile contains device's UUIDs for all devices which are expected to install app 
+    - This profile contains device's UUIDs for all devices which are expected to install app
+    - Include's developer's certificate
 2. Distribution Provisioning Profile
     - Ad-hoc provisioning profile
         - Generally used to distribut app to Testflight testers
         - This profile contains device's UUIDs for all devices which are expected to install app
+        - Includes distribution certificate
     - Enterprise provisioning profile : TODO Not sure if this is relevant
+        - Includes distribution certificate
     - App store provisioning profile
         - No UUIDs are required here
+        - Includes distribution certificate
 
 ### How to create a development provisioning profile?
 - Sign in with developer account on http://developer.apple.com
