@@ -124,8 +124,27 @@ Context object has a central role in managing life cycle of managed objects.
 
 ## NSPersistentStoreCoordinator
 
-Responsible for managing the persistent stores. Most of the time a persistent store is a database which lives on filesystem.
-It's possible to have many persistent stores at once. One can also have custome made one derived from NSPersistentStore.
+- Responsible for managing the persistent stores.
+- Most of the time a persistent store is a database which lives on filesystem.
+- It's possible to have many persistent stores at once.
+- One can also have custome made one derived from NSPersistentStore.
+
+- Managed object context uses a coordinator to facilitate the persistence of its entities in the coordinator’s registered
+stores.
+- Managed object context cannot function without a coordinator because context relies on coordinator's access to managed object
+model.
+- A persistent store coordinator presents its registered stores as aggregate. This implies that the context can operate on
+the union of those stores instead of individually.
+- A persistent store coordinator performs its work on a private serial queue.
+- One can use multiple coordinators if one requires separate queues.
+- Using persistent store coordinator one can
+    - Add OR remove persistent stores
+    - Change the type of persistent stores
+    - Changes the on-disk location of persistent stores
+    - Query metadata of specific store
+    - Defer store's migration
+    - Determine whether two objects originate from the same store
+    etc.
 
 
 ## NSFetchRequest
