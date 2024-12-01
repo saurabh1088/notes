@@ -96,6 +96,7 @@ An entity's property represented by `NSPropertyDescription` could be of followin
 Once entity is added to `.xcdatamodeld` file, Xcode autogenerates the entity file by naming convention Entity+CoreDataClass.
 This generated entity is a public class inheriting from `NSManagedObject`.
 
+
 ## NSManagedObjectContext
 
 Persistent container has a viewContext property of type NSManagedObjectContext, which can be referred as below. NSManagedObjectContext
@@ -345,6 +346,7 @@ show/use them. This way, we’ll avoid any performance issues.
 
 YES, this is possible by merging all the `NSManagedObjectModel` together into one single model using instance method
 `mergedModel(from:)`.
+
 
 ## Explain the concept of faulting in Core Data and its impact on performance.
 
