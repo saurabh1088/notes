@@ -7,14 +7,23 @@ The process establishes trust between:-
 - The Device
 - The Developer
 
+*Signing app allows iOS to identify who signed the app and to verify that the app hasn’t been modified since it was signed*
+
 ## iOS App Code Signing
 ### Signing Certificate
-A certificate guarantees that one knows Apple and Apple knows the developer. There is a mutual recognition. Once one gets certificate and adds to keychain, any build signed by Xcode uses this certificate which guarantees the code is coming from authorised person or team.
+A certificate guarantees that one knows Apple and Apple knows the developer.
+There is a mutual recognition.
+Another way to look at it is that the developer of app needs to identify himself/herself to Apple.
+This is done by creating a certificate and asking Apple to sign it. For this purpose one creates a Certificate Signing Request.
+Once one gets certificate and adds to keychain, any build signed by Xcode uses this certificate which guarantees the code is coming from authorised person or team.
+
 There are two flavours of signing certificate
-- Development Certificate
+- 1. Development Certificate
+    - This one need in order to build code and install on a device using Xcode.
     - A development certificate identifies one as a developer and contains the developer identifier.
     - Even when one signs up as an apple developer as an individual, one still have both a developer and team identifier.
-- Distribution Certificate
+- 2. Distribution Certificate
+    - Required to distribute app to Testflight or to App store.
     - Belong to the team
     - A distribution certificate contains one’s team identifier and identifies a team.
 
