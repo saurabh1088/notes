@@ -14,10 +14,13 @@ From Apple's official documentation of UserDefaults
 
 Source : https://developer.apple.com/documentation/foundation/userdefaults
 
+- UserDefaults is a key-value store backed by property list(plist) file.
 - UserDefaults is as Apple states in official documentation is an interface to user's default database on device.
 - UserDefaults are stored locally on device, except in case of managed devices in educational institutions.
 - UserDefaults supports storing key-value pairs, where value can be of type NSData, NSString, NSNumber, NSDate, NSArray or
-NSDictionary. Complex objects can be converted to NSData and saved.
+NSDictionary.
+- Complex objects(types other than NSData, NSString, NSNumber, NSDate, NSArray or NSDictionary) can be converted to NSData
+and then saved.
 - UserDefaults is Thread SAFE.
 
 ### What's the limit on data which can be stored in UserDefaults?
@@ -31,6 +34,15 @@ For tvOS the size limit will post the notification when user defaults storage re
 get terminated if user defaults storage reaches 1MB in size.
 
 sizeLimitExceededNotification is posted on the main queue.
+
+### Is UserDefaults a database?
+Some might position UserDefaults as an alternative to a database solution — such as CoreData or SQLite, and while it’s true
+that the user defaults API can act as a database, however one needs to keep in mind that UserDefaults main use case is
+more centered around values that relate to user preferences — which, when looking more closely at the its various
+functionality and how it integrates with the system, makes it look much less like a limited database — and more like a
+focused API that does a core set of things really well.
+Point to be noted is that UserDefaults stores the information in a single plist file, this makes it impractical for large
+datasets.
 
 ## Plists
 
