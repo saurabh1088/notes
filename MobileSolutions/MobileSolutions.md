@@ -1,25 +1,24 @@
 # Mobile Solutions
 
+
 ## Native Solutions
 
 ### iOS
-
 Tech stack : 
 - Swift & Objective C as programming language
 - SwiftUI & UIKit as UI frameworks
 - Xcode as IDE
 
 ### Android
-
 Tech stack : 
 - Kotlin & Java as programming language
 - Jetpack Compone & XML as UI frameworks
 - Android Studio as IDE
 
+
 ## Hybrid Solutions
 
 ### Apache Cordova
-
 Tech stack : 
 - HTML, CSS, JavaScript
 - JavaScript frameworks can be used like angularJS
@@ -44,7 +43,6 @@ in unknown state.
 - Performance issue when compared to native solutions.
 
 ### Ionic
-
 Tech stack :
 - HTML, CSS, JavaScript
 - Angular/React/Vue
@@ -57,7 +55,6 @@ Cons :
 - Performance issue when compared to native solutions.
 
 ### React Native
-
 Tech stack :
 - React, JavaScript
 
