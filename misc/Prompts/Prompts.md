@@ -64,3 +64,13 @@ networking instead of using Apple's URL Loading System.
 - Reasons in favour should purely be derived from practical use case and from the functionalities Alamofire provides over
 URL Loading System.
 ```
+
+```
+Explain the step by step process how the flow will work with oAuth2.0 and Face-ID both for an iOS App. Starting with
+- User logging in for the first time
+- User enabling Face-ID
+- User logs-in with Face-ID
+- User at some point disabled Face-ID
+- User at some point deleted and re-configured Face-ID
+- Scenario when Face-ID fails due to some issue
+```
