@@ -39,6 +39,12 @@
 - Cyclic references causes objects involved in cyclic reference not getting unreachable, preventing memory from being reclaimed.
 - This is where generational garbage collection comes in.
 
+### 3.1.2 How to get reference count for an object?
+The reference count can be examined using the sys.getrefcount() function. One important note about this function is that
+the value returned by this function is always 1 more as the function also has a reference to the object when called.
+Check example *example_reference_counting()* at below location:
+https://github.com/saurabh1088/python/blob/main/learnings/concepts.py
+
 ### 3.2 Generational garbage collection
 - Overcomes limitations of reference counting with respect to cyclic references.
 - Python's garbage collector organizes objects into three generations
@@ -51,4 +57,7 @@
     - This approach is taken to focus on objects more likely to be discarded soon.
 - During collection process, garbage collector detects cyclic references and reclaims the memory.
 
+
+## References
+- https://www.datacamp.com/tutorial/python-garbage-collection
 
