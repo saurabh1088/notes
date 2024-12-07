@@ -60,4 +60,5 @@ https://github.com/saurabh1088/python/blob/main/learnings/concepts.py
 
 ## References
 - https://www.datacamp.com/tutorial/python-garbage-collection
+- https://github.com/python/cpython/blob/main/InternalDocs/garbage_collector.md
 
