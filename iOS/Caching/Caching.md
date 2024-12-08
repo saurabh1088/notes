@@ -1,6 +1,6 @@
 #  Caching
 
-## NSCache
+## 1. NSCache
 
 Declaration as per official documentation :
 ```
@@ -17,7 +17,7 @@ NSCache provides functionality to automatically evict objects to free up memory 
 
 Source : https://developer.apple.com/documentation/foundation/nscache
 
-### Transient
+### 1.1 Transient
 
 In Apple's official documentation, as per definition the mutable collection which is NSCache is *transient*.
 
@@ -27,20 +27,20 @@ These *auto-eviction policies* make sure that cache doesn't ends up using too mu
 
 These auto-eviction policies will remove some data from cache if memory concerns arise.
 
-### Thread Safety
+### 1.2 Thread Safety
 
 While using NSCache, one can add, remove, and query items in cache from different threads without the need of locking the cache.
 
-### Class restricted
+### 1.3 Class restricted
 
 Looking at declaration for NSCache it tell that both key and value are restricted to be of class types only. This restricts
 usage of NSCache to class types only.
 
-### Purgeable
+### 1.4 Purgeable
 
 The way NSCache allocates its memory it is purgeable, so NSCache performs better in memory-constrained environment.
 
-## Caching and Memory
+## 2. Caching and Memory
 
 As discussed in link https://github.com/saurabh1088/notes/blob/main/iOS/Memory/Memory.md regarding memory compressor, that
 how it will compress the memory which is not being accessed for a while, so that it can free up some memory. Now this can
@@ -58,14 +58,14 @@ So important thing to consider about caching is that one might use caching so as
 but if one ends up caching too much, then it can result in memory issues.
 
 
-## Benefits/Advantages of NSCache
+## 3. Benefits/Advantages of NSCache
 
 NSCache is great for:
 1. Performance
 2. Auto-purging
 
 
-## URLCache
+## 4. URLCache
 
 - URLCache provides both in-memory and on-disk cache.
 - One can manipulate size of in-memory and on-disk cache.
@@ -74,7 +74,7 @@ NSCache is great for:
 - URLCache is thread safe.
 
 
-## How to decide between NSCache and URLCache?
+## 5. How to decide between NSCache and URLCache?
 
 NSCache and URLCache both cache data but they serve largely different purposes.
 NSCache is great for performance, but it is in-memory only, so it will consume RAM. Using NSCache means one needs to be
@@ -87,7 +87,7 @@ here is to avoid network calls for data which doesn't changes too often hence ca
 on-disk.
 
 
-## URLSession and cache
+## 6. URLSession and cache
 
 Using URL Loading System one can set cache policies to govern if and how to cache request's responses. There are following
 ways to set a cache policy while using URLSession.
@@ -101,7 +101,7 @@ and will override if any cache policy was set at *URLSessionConfiguration* level
 *URLSessionConfiguration* has instance property *urlCache* of type *URLCache*. This implies URLSession using URLCache for
 caching duty.
 
-## TODOs
+## 7. TODOs
 
 - [ ] URLSession cache
 - [ ] NSDiscardableContent : Explore usage
@@ -109,3 +109,4 @@ caching duty.
 - [ ] Try https://medium.com/@mshcheglov/reusable-image-cache-in-swift-9b90eb338e8d
 - [ ] Try https://www.swiftbysundell.com/articles/caching-in-swift/
 - [ ] Good read https://medium.nextlevelswift.com/urlrequest-cache-policy-f7c30a96b698
+
