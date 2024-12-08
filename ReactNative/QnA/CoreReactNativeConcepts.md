@@ -41,6 +41,19 @@
 - This phase occurs when a component's state or props change.
 - Key methods in mounting phase
     - `static getDerivedStateFromProps(nextProps, prevState)`
+        - Same as in the mounting phase, also called during updates.
+    - `shouldComponentUpdate(nextProps, nextState)`
+        - Determines whether the component should re-render.
+        - Returns true (default) or false.
+        - Useful for optimizing performance.
+    - `render()`
+        - Same as in the mounting phase.
+    - `getSnapshotBeforeUpdate(prevProps, prevState)`
+        - Captures information from the DOM before changes are applied.
+        - Returns a value passed to componentDidUpdate.
+    - `componentDidUpdate(prevProps, prevState, snapshot)`
+        - Called after the component has been updated.
+        - Ideal for performing DOM operations or further updates based on changes.
 
 ### 1.3 Unmounting
 - In this phase, a react component gets removed from actual DOM.
