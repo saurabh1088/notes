@@ -15,6 +15,8 @@
 - In this phase, component instance is created and inserted into the DOM(or the native UI for React Native).
 - Key methods in mounting phase
     - `constructor()`
+        - First method which gets called in the lifecycle of react native component.
+        - Used to initialise the component with initial state.
         - Called before the component is mounted.
         - Commonly used for initializing the state or binding methods.
         - One should avoid API calls here.
@@ -23,14 +25,22 @@
         - Returns an object to update state or null to update nothing.
         - Rarely used instead `useEffect` or similar hooks in functional components are preferred approaches.
     - `render()`
-        - Required method.
+        - Only required method in react component.
+        - It tells what to display on the screen.
         - Returns the JSX to be displayed.
+        - It's a pure function, means it doesn't modify state.
+        - Returns the same result each time it is invoked.
+        - Does not directly interact with the browser.
     - `componentDidMount()`
         - Called immediately after the component is mounted.
-        - Ideal for API calls, setting up subscriptions, or initial DOM/native operations.
+        - Ideal for API calls, setting up subscriptions, state update, or initial DOM/native operations.
+        - This will refresh the UI of our mobile screen.
 
 ### 1.2 Updating
 - In updating phase, a react component is said to be born and it start growing by receiving new updates.
+- This phase occurs when a component's state or props change.
+- Key methods in mounting phase
+    - `static getDerivedStateFromProps(nextProps, prevState)`
 
 ### 1.3 Unmounting
 - In this phase, a react component gets removed from actual DOM.
