@@ -1,16 +1,17 @@
 # oAuth2.0
 
+
 This document covers oAuth2.0 implementation in iOS.
 For detailed discussion on oAuth2.0 in general refer:
 https://github.com/saurabh1088/notes/blob/main/oAuth/oAuth.md
 
 
+## 1. Implementing oAuth2.0 in iOS
 
-## Implementing oAuth2.0 in iOS
 
 For implementing oAuth2.0 flow in an iOS app one need to take care of below steps.
 
-### 1. oAuth Provider
+### 1.1 oAuth Provider
 There need to be some oAuth provider selected for the application for example 
 - Google
 - Facebook
@@ -20,12 +21,12 @@ There need to be some oAuth provider selected for the application for example
 - Okta
 - Amazon Cognito
 
-### 2. Register app with oAuth Provider
+### 1.2 Register app with oAuth Provider
 The app requiring oAuth2.0 implementation need to be registered with the oAuth provider. This process is usually on some
 console provided by oAuth provider where one can add the application and obtain a `client ID` and `client secret`.
 `client secret` is optional.
 
-### 3. Update App for redirect URL
+### 1.3 Update App for redirect URL
 One need to configure a redirect URL, using URL scheme or Universal Links. This redirect URL is required by authorisation
 server to redirect back to app once user is successfully authenticated.
 
@@ -50,7 +51,7 @@ For example, a URL scheme can be added from application target's Info tab under 
 If using universal links, then one need to create a file named `apple-app-site-association` and place it at the root of
 the applications domain or in the .well-known directory.
 
-### 4. oAuth Flow in App
+### 1.4 oAuth Flow in App
 - Usually the starting step when app launches is to present a screen with a login/sign-in button.
 - User taps login/sign-in button
 - Button action triggers logic to call authorisation server URL
@@ -62,12 +63,12 @@ back to app
 - Control comes back to app and call to authorisation server completes with authorisation code OR access token as per
 grant type used.
 
-### 5. Access Token
+### 1.5 Access Token
 Once access token is received, all subsequent API calls, which are access controlled, need to have access token passed in
 the request header. Access token hence need to be stored securely on the app. Usuallly keychain is used for storing access
 token.
 
-### 6. Refresh Token
+### 1.6 Refresh Token
 Access tokens have an expiry. When Authorisation server returns access token to client, then it also includes a refresh
 token. Access tokens are short lived, refresh tokens have a longer expiry. Use of refresh token is to get a new access token
 from authorisation server once access token expires or becomes invalid.
@@ -75,7 +76,7 @@ So the app needs to implement logic, where access token is expired or invalid, t
 endpoint to get new access token by providing the refresh token.
 
 
-## Libraries in iOS for oAuth2.0 Flow
+## 2. Libraries in iOS for oAuth2.0 Flow
 
 1. AppAuth
 https://github.com/openid/AppAuth-iOS
