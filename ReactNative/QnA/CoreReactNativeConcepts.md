@@ -39,15 +39,19 @@
 ### 1.2 Updating
 - In updating phase, a react component is said to be born and it start growing by receiving new updates.
 - This phase occurs when a component's state or props change.
-- Key methods in mounting phase
+- Key methods in updating phase
     - `static getDerivedStateFromProps(nextProps, prevState)`
         - Same as in the mounting phase, also called during updates.
+        - This method gets called whenever any changes occurred in state or props.
     - `shouldComponentUpdate(nextProps, nextState)`
         - Determines whether the component should re-render.
         - Returns true (default) or false.
         - Useful for optimizing performance.
+        - Doesn't gets called on initial render or when forceUpdate is used.
+        - To stop re-rendering on changing state or props, one should return false.
     - `render()`
         - Same as in the mounting phase.
+        - Whenever there is any change in the state or props then render methods gets called again.
     - `getSnapshotBeforeUpdate(prevProps, prevState)`
         - Captures information from the DOM before changes are applied.
         - Returns a value passed to componentDidUpdate.
