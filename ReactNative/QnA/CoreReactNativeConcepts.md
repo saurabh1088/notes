@@ -69,5 +69,14 @@
 
 ### 1.4 Error Handling
 - It is called when any error occurs while rendering the component.
+- Key methods in error handling phase
+    - `static getDerivedStateFromError()`
+        - It is called whenever any error occurred while rendering.
+        - It receives the error as a parameter and returns the value to update the state.
+    - `componentDidCatch()`
+        - Invoked when any error is thrown by descendant component.
+        - Receives error and info objects.
+        - Info object received has information about which component threw that error.
+
 
 
