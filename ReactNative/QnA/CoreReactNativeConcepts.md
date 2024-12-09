@@ -61,6 +61,11 @@
 
 ### 1.3 Unmounting
 - In this phase, a react component gets removed from actual DOM.
+- Key methods in unmounting phase
+    - `componentWillUnmount()`
+        - Gets invoked when component is removed from the DOM.
+        - Called immediately before a component is unmounted.
+        - Ideal for cleanup tasks like canceling API calls, removing event listeners, or invalidating timers.
 
 ### 1.4 Error Handling
 - It is called when any error occurs while rendering the component.
