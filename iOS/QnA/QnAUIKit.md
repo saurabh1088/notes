@@ -2,6 +2,7 @@
 
 
 ## 1. How would you design a complex UIView hierarchy to ensure optimal performance?
+
 In order to design a complex UIVIew hierarchy ensuring optimal performance, one requires a blend of
 - Thoughtful architecture
 - Efficient use of UIKit features
@@ -70,4 +71,65 @@ being rendered.
 - Avoid forced layouts
     - Refrain from calling layoutSubviews or draw(_:) directly. Use system-provided mechanisms to update views.
 
-    
+
+## 2. What is the difference between a `UIView` and a `CALayer`? In what scenarios one would interact with `CALayer` directly?
+
+### 2.1 `UIView` vs `CALayer`
+- In iOS world, every `UIView` is backed by a Core Animation `CALayer`.
+- `UIView` is kind of a light wrapper on top of `CALayer`.
+- What `UIView` provides on top of `CALayer` is the support for user interaction.
+- `CALayer` is available for both iOS and macOS platforms. 
+- `CALayer` can be used without `UIView` as well to display content.
+- While working with `UIView` one may need to dig in deeper and access `CALayer` in some complex animations.
+
+- Main job of a `CALayer` is to
+    - Manage visual content
+    - Maintain information about geometry of its content like
+        - position
+        - size
+        - transform
+
+- One can modify properties of `CALayer` to perform animations.
+
+- When working with `UIView`, the `UIView` assigns itself as a delegate to `CALayer`. This relationship cannot be changed.
+- When used in isolation, `CALayer`'s delegate object can be provided.
+- `UIView` is a container for `CALayer` using UIKit.
+- `CALayer` is where actual content is drawn using `CoreGraphics`.
+
+### 2.2 When to use CALayer?
+Working directly with `CALayer` doesn't gives any significant performance advantages over `UIView`. One of the reasons
+one might want to build a user interface element with `CALayer` instead of `UIView` is that it can be very easily ported
+to the Mac. `UIView` is very different from `NSView`, but `CALayer` is almost identical on the two
+platforms(iOS and macOS).
+
+#### 2.2.1 Fine-Grained Visual Customizations
+- CALayer can be used for
+    - Adding shadows
+    - Rounded corners 
+    - Borders
+efficiently.
+
+#### 2.2.2 High-Performance Rendering
+- For content-heavy applications (e.g., games or animations), where the overhead of UIView is unnecessary.
+    - For e.g. using `CALayer` for lightweight components like particles or custom shapes.
+
+#### 2.2.3 Advanced Animations
+- Performing more complex animations which aren't available or possible working with `UIView`.
+    - For e.g. 
+        - creating keyframe animations
+        - path animations, or 
+        - animating properties not supported by UIView animations.
+
+#### 2.2.4 Custom Layer Content
+- Drawing custom content using `CGContext` for complex graphics.
+
+#### 2.2.5 Layer Backing
+- When a `UIView` is not necessary, but one needs a drawable, animatable object.
+
+#### 2.2.6 Offscreen Rendering
+- Rasterizing complex views for improved performance.
+
+#### 2.2.7 Non-UI Elements
+- Animating or displaying non-UI elements like gradients or masks.
+
+
