@@ -493,26 +493,7 @@ Following are some features/advantages which one gets Alamofire over URLSession.
 3. It's used widely and is tested, so one can opt to use so as to not write networking code and skip testing.
 
 
-## 31. What's the difference in UIView and CALayer?
-In iOS world, every UIView is backed by a Core Animation CALayer. UIView is kind of a light wrapper on top of CALayer.
-What UIView provides on top of CALayer is the support for user interaction.
-CALayer is available for both iOS and macOS platforms. CALayer can be used without UIView as well to display content.
-While working with UIView one may need to dig in deeper and access CALayer in some complex animations.
-
-Main job of a CALayer is to
-- Manage visual content
-- Maintain information about geometry of its content like
-    - position
-    - size
-    - transform
-
-One can modify properties of CALayer to perform animations.
-
-When working with UIView, the UIView assigns itself as a delegate to CALayer. This relationship cannot be changed.
-When used in isolation, CALayer's delegate object can be provided.
-
-
-## 32. How to optimize performance while working with UIView and CALayer?
+## 31. How to optimize performance while working with UIView and CALayer?
 1. View hierarchy should be optimized such that there is no unecessary overlapping of views. This is important so that
 only a minimum number of required only views should get rendered.
 2. Opaque views should be preferred as these help optimizing performance for rendering engine.
@@ -525,7 +506,7 @@ performance issues. As an alternative one can use *CAShapeLayer* for vector base
 7. Rasterization : *shouldRasterize* property of CALayer.
 
 
-## 33. What are options for static code analysis for Swift/Objectice C projects?
+## 32. What are options for static code analysis for Swift/Objectice C projects?
 ### 1. Xcode Static Analyser
 - Xcode -> Product -> Analyse
 
@@ -552,7 +533,7 @@ detailed analysis of code quality, security vulnerabilities, and technical debt.
     - Swift
 
 
-## 34. How many types we have in Swift programming language?
+## 33. How many types we have in Swift programming language?
 Source : https://docs.swift.org/swift-book/documentation/the-swift-programming-language/types/
 
 Swift has two kind of types:
@@ -566,13 +547,13 @@ Swift has two kind of types:
     - Functions
 
 
-## 35. When does deinit is called?
+## 34. When does deinit is called?
 - Deinit is called immediately before a class instance is deallocated.
 - A deinit is available only for class types.
 - One isn't allows to call a deinit, these are called automatically.
 
 
-## 36. How to resolve storyboard merge conflicts?
+## 35. How to resolve storyboard merge conflicts?
 Biggest problem with using a storyboard is when multiple developers work on it and it causes conflicts while merging all
 changes. Conflicts are difficult to comprehend for storyboards hence are difficult to resolve. Following are some ways to
 resolve these.
@@ -607,7 +588,7 @@ source view controllers of the segues. To address these differences interface bu
 when resolving the inferred metrics for the destination view controller.
 
 
-## 37. What's a NIB and what's XIB?
+## 36. What's a NIB and what's XIB?
 `NIB` comes from NeXTSTEP Interface Builder and `XIB` comes from Xcode Interface Builder.
 `XIBs` are what one works with in Xcode's interface builder at the time of development. `NIBs` are what get produced when
 build is created. When one compiles an app, the `XIB` is compiled into a `NIB` file for inclusion in the app. The compiled
@@ -622,7 +603,7 @@ For example: In project [UIKitLearnings](https://github.com/saurabh1088/uikit/tr
 ```
 
 
-## 38. What are size classes?
+## 37. What are size classes?
 Size Classes : These are means for creating adaptive layout which can look great on all sizes and orientations on iPhone and iPad devices.
 - Compact
 - Regular
