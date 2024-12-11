@@ -220,80 +220,80 @@ Centered around UIKit
 ---
 
 ### **Architecture and Design**
-1. **How would you design a complex UIView hierarchy to ensure optimal performance?**
+- [ ] 1. **How would you design a complex UIView hierarchy to ensure optimal performance?**
    - Follow-up: How do you debug and profile layout performance issues in such a hierarchy?
 
-2. **What is the difference between a `UIView` and a `CALayer`? In what scenarios would you interact with `CALayer` directly?**
+- [ ] 2. **What is the difference between a `UIView` and a `CALayer`? In what scenarios would you interact with `CALayer` directly?**
 
-3. **Explain how to create a custom container view controller. What are the use cases for custom container view controllers?**
+- [ ] 3. **Explain how to create a custom container view controller. What are the use cases for custom container view controllers?**
 
-4. **How do you implement dependency injection for view controllers in UIKit-based apps?**
+- [ ] 4. **How do you implement dependency injection for view controllers in UIKit-based apps?**
 
 ---
 
 ### **Core UIKit Concepts**
-5. **Explain the view controller lifecycle in UIKit. How would you handle scenarios where `viewDidAppear` is called multiple times?**
+- [ ] 5. **Explain the view controller lifecycle in UIKit. How would you handle scenarios where `viewDidAppear` is called multiple times?**
 
-6. **What are the different types of segues in `Storyboard`, and how do you manage data passing between view controllers during these segues?**
+- [ ] 6. **What are the different types of segues in `Storyboard`, and how do you manage data passing between view controllers during these segues?**
 
-7. **What is the responder chain in UIKit? How do you use it to handle events or custom actions?**
+- [ ] 7. **What is the responder chain in UIKit? How do you use it to handle events or custom actions?**
 
-8. **What are the differences between `frame`, `bounds`, and `center` properties of a UIView? How does each affect layout and rendering?**
+- [ ] 8. **What are the differences between `frame`, `bounds`, and `center` properties of a UIView? How does each affect layout and rendering?**
 
 ---
 
 ### **Advanced UIKit Components**
-9. **How would you design and implement a custom collection view layout? Provide an example of a scenario requiring such customization.**
+- [ ] 9. **How would you design and implement a custom collection view layout? Provide an example of a scenario requiring such customization.**
 
-10. **Explain the process of creating an adaptive UI using Auto Layout and Size Classes. How do you manage conflicts or priority issues?**
+- [ ] 10. **Explain the process of creating an adaptive UI using Auto Layout and Size Classes. How do you manage conflicts or priority issues?**
 
-11. **How do you optimize a `UITableView` or `UICollectionView` for handling thousands of records efficiently?**
+- [ ] 11. **How do you optimize a `UITableView` or `UICollectionView` for handling thousands of records efficiently?**
     - Follow-up: Explain reuse identifiers and how they contribute to memory optimization.
 
-12. **How would you implement dynamic height cells in `UITableView` or `UICollectionView`? What are the potential pitfalls?**
+- [ ] 12. **How would you implement dynamic height cells in `UITableView` or `UICollectionView`? What are the potential pitfalls?**
 
 ---
 
 ### **Animations and Transitions**
-13. **Explain the difference between implicit and explicit animations in UIKit. When would you use `UIView` animations versus `CAAnimation`?**
+- [ ] 13. **Explain the difference between implicit and explicit animations in UIKit. When would you use `UIView` animations versus `CAAnimation`?**
 
-14. **How would you create a custom transition between two view controllers? What classes or methods in UIKit would you use?**
+- [ ] 14. **How would you create a custom transition between two view controllers? What classes or methods in UIKit would you use?**
 
-15. **How do you handle interactive animations, such as swiping to dismiss a view controller?**
+- [ ] 15. **How do you handle interactive animations, such as swiping to dismiss a view controller?**
 
 ---
 
 ### **Concurrency and Threading**
-16. **What considerations do you have for updating the UI from background threads in UIKit?**
+- [ ] 16. **What considerations do you have for updating the UI from background threads in UIKit?**
     - Follow-up: What happens if UI updates are not performed on the main thread?
 
-17. **How do you use `NSOperationQueue` or `GCD` to manage background tasks while ensuring UI responsiveness?**
+- [ ] 17. **How do you use `NSOperationQueue` or `GCD` to manage background tasks while ensuring UI responsiveness?**
 
 ---
 
 ### **Memory Management and Performance**
-18. **Explain the retain cycle issue in UIKit with an example. How would you prevent it?**
+- [ ] 18. **Explain the retain cycle issue in UIKit with an example. How would you prevent it?**
 
-19. **How do you debug memory leaks or excessive memory usage in a UIKit-based application?**
+- [ ] 19. **How do you debug memory leaks or excessive memory usage in a UIKit-based application?**
     - Follow-up: Discuss tools like Instruments and specific techniques for optimizing memory.
 
-20. **How would you profile and resolve slow rendering or dropped frames in a UIKit app?**
+- [ ] 20. **How would you profile and resolve slow rendering or dropped frames in a UIKit app?**
 
 ---
 
 ### **Localization and Accessibility**
-21. **How do you make a UIKit-based app accessible? What UIKit classes and methods are crucial for implementing accessibility features?**
+- [ ] 21. **How do you make a UIKit-based app accessible? What UIKit classes and methods are crucial for implementing accessibility features?**
 
-22. **Explain the process of localizing a UIKit-based app. How do you handle layout changes for languages with varying text directions (e.g., RTL support)?**
+- [ ] 22. **Explain the process of localizing a UIKit-based app. How do you handle layout changes for languages with varying text directions (e.g., RTL support)?**
 
 ---
 
 ### **Testing and Debugging**
-23. **How do you write unit tests and UI tests for view controllers in UIKit-based applications?**
+- [ ] 23. **How do you write unit tests and UI tests for view controllers in UIKit-based applications?**
     - Follow-up: How do you mock UIKit components for testing?
 
-24. **What is your approach to debugging layout issues in UIKit? Discuss tools and methods you use.**
+- [ ] 24. **What is your approach to debugging layout issues in UIKit? Discuss tools and methods you use.**
 
-25. **Explain how you would implement and debug a custom gesture recognizer.**
+- [ ] 25. **Explain how you would implement and debug a custom gesture recognizer.**
 
 ---
