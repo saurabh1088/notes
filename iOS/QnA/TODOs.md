@@ -220,12 +220,12 @@ Centered around UIKit
 ---
 
 ### **Architecture and Design**
-- [ ] 1. **How would you design a complex UIView hierarchy to ensure optimal performance?**
+- [x] 1. **How would you design a complex UIView hierarchy to ensure optimal performance?**
    - Follow-up: How do you debug and profile layout performance issues in such a hierarchy?
 
-- [ ] 2. **What is the difference between a `UIView` and a `CALayer`? In what scenarios would you interact with `CALayer` directly?**
+- [x] 2. **What is the difference between a `UIView` and a `CALayer`? In what scenarios would you interact with `CALayer` directly?**
 
-- [ ] 3. **Explain how to create a custom container view controller. What are the use cases for custom container view controllers?**
+- [x] 3. **Explain how to create a custom container view controller. What are the use cases for custom container view controllers?**
 
 - [ ] 4. **How do you implement dependency injection for view controllers in UIKit-based apps?**
 
