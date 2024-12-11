@@ -217,8 +217,51 @@ interaction.
     - For e.g. an onboarding screen with a custom page view controller.
 
 
-## 🙋‍♂️4. ❓
+## 🙋‍♂️4. How do you implement dependency injection for view controllers in UIKit-based apps❓
 
+### 4.1 Initializer injection
+- Inject Dependencies When Creating the View Controller.
+
+### 4.2 Property injection
+- Declare dependency as a property and inject it before presentation.
+
+### 4.3 Method injection
+- Define a method to accept the dependency and pass the dependency when needed.
+
+### 4.4 Dependency Injection with Coordinators
+- In larger apps, one can use a coordinator pattern to manage view controllers and their dependencies.
+```
+class DependencyContainer {
+    let userManager: UserManagerProtocol
+    let dataFetcher: DataFetcherProtocol
+    
+    init() {
+        self.userManager = UserManager()
+        self.dataFetcher = DataFetcher()
+    }
+    
+    func makeUserViewController() -> UserViewController {
+        return UserViewController(userManager: userManager)
+    }
+}
+```
+
+```
+class AppCoordinator {
+    private let navigationController: UINavigationController
+    private let container: DependencyContainer
+    
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+        self.container = DependencyContainer()
+    }
+    
+    func start() {
+        let vc = container.makeUserViewController()
+        navigationController.pushViewController(vc, animated: true)
+    }
+}
+```
 
 ## 🙋‍♂️5. ❓
 
