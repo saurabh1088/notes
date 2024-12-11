@@ -134,19 +134,106 @@ efficiently.
 - Animating or displaying non-UI elements like gradients or masks.
 
 
-## 🙋‍♂️3. ❓
+## 🙋‍♂️3. Explain how to create a custom container view controller. What are the use cases for custom container view controllers❓
+
+### 3.1 Implementing a container view controller
+`UIViewController` can be subclassed and configured to act like a container view controller. A container view controller
+manages the presentation of content of other view controllers it owns. These other view controllers are also known as
+its child view controllers. A child’s view can be presented as-is or in conjunction with views owned by the container
+view controller.
+The container view controller decides
+- how many children can be displayed by the container view controller at once
+- when those children are displayed 
+- where they appear in the container view controller’s view hierarchy
+- what relationships, if any, are shared by the children
+
+#### 3.1.1 Setup parent container view controller
+This would be a subclass of `UIViewController`. For e.g. `ContainerViewController`
+
+#### 3.1.2 Create and add child view controller
+Instantiate and create a view controller which will be the child view controller and add it using API:
+`addChild(_:)`
+For e.g. `ChildViewController`.
+```
+let childViewController = ChildViewController()
+addChild(childViewController)
+```
+
+#### 3.1.3 Add Child's View to Parent's View
+Add the child's view to the parent's view hierarchy.
+```
+childViewController.view.frame = view.bounds
+view.addSubview(childViewController.view) // view here is parent viewcontroller's view
+```
+
+#### 3.1.4 Notify Child of Addition
+Call `didMove(toParent:)` on the child view controller to notify it that it has been added to a parent.
+```
+childViewController.didMove(toParent: self)
+```
+
+#### 3.1.5 Manage Layout if needed
+Implement `viewDidLayoutSubviews` or use Auto Layout to adjust the child view's position or size when the parent's view
+changes.
+```
+override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    childViewController.view.frame = view.bounds // Or adjust as needed
+}
+```
+
+#### 3.1.6 Remove Child (if required)
+To remove a child, one need to reverse the process done while adding.
+```
+childViewController.willMove(toParent: nil)
+childViewController.view.removeFromSuperview()
+childViewController.removeFromParent()
+```
+### 3.2 Practical Use Cases for Custom Container View Controllers
+
+#### 3.2.1 Split-Screen Layouts
+- A container that divides the screen into multiple sections, displaying different content in each.
+    - For e.g. a dashboard with charts, tables, and summary widgets.
+
+#### 3.2.2 Custom Tab Bar Interface
+- While `UITabBarController` exists, for custom behaviors or appearances, one can implement a custom container to manage
+multiple view controllers as tabs.
+
+#### 3.2.3 Wizard or Step-by-Step Processes
+- Where one need to guide users through several screens, each managed by its own view controller but under a single
+navigation context.
+
+#### 3.2.4 Split View or Master-Detail Interfaces
+- Custom containers can manage the relationship between master and detail views, offering more control than
+UISplitViewController for specific needs.
+
+#### 3.2.5 Dynamic UI Configurations
+- Create flexible layouts where child view controllers can be added, removed, or swapped dynamically based on user
+interaction.
+    - For e.g. an app where users can drag and drop components to build their own dashboard.
+
+#### 3.2.6 Paging or Carousel-Like Views
+- A container that manages horizontal or vertical paging with custom animations or interactions.
+    - For e.g. an onboarding screen with a custom page view controller.
+
 
 ## 🙋‍♂️4. ❓
 
+
 ## 🙋‍♂️5. ❓
+
 
 ## 🙋‍♂️6. ❓
 
+
 ## 🙋‍♂️7. ❓
+
 
 ## 🙋‍♂️8. ❓
 
+
 ## 🙋‍♂️9. ❓
+
 
 ## 🙋‍♂️10. ❓
 
