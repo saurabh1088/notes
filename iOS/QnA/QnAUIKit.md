@@ -263,7 +263,36 @@ class AppCoordinator {
 }
 ```
 
-## 🙋‍♂️5. ❓
+## 🙋‍♂️5. How would you handle scenarios where `viewDidAppear` is called multiple times?❓
+- `viewDidAppear` can be called multiple times for various reasons like
+    - The view controller is presented modally and then dismissed.
+    - The app comes back from the background.
+    - A parent view controller's view appears, causing child view controllers to appear.
+
+Below are some ways to handle scenarios when `viewDidAppear` is called multiple times
+
+### 5.1 Check for State Changes
+- Use flags or properties to track if certain actions have already been performed.
+
+### 5.2 Use Combine or NotificationCenter
+- If scenario is that updates should happen on every appearance but only if certain conditions are met (like data changes),
+then one can use Combine to handle these in a reactive way or subscribe to notifications.
+
+### 5.3 Avoid Redundant Operations
+- Ensure operations like network requests or heavy computations aren't redundantly performed unless necessary.
+- Use flags or conditional checks to prevent this.
+- Debounce API calls.
+
+### 5.4 Logging for Debugging
+- Log appearances to understand the context in which `viewDidAppear` is being called.
+- This can help in debugging unexpected behavior
+
+### 5.5 View Controller Containment
+- When using child view controllers or custom container view controllers, `viewDidAppear` will be called for each child
+when the parent's view appears. Handle this appropriately by checking parent-child relationships.
+
+### 5.6 Ensure Logic Is Idempotent
+- Design code in such a way that multiple executions do not cause unwanted side effects.
 
 
 ## 🙋‍♂️6. ❓

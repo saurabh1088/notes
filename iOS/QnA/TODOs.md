@@ -227,12 +227,12 @@ Centered around UIKit
 
 - [x] 3. **Explain how to create a custom container view controller. What are the use cases for custom container view controllers?**
 
-- [ ] 4. **How do you implement dependency injection for view controllers in UIKit-based apps?**
+- [x] 4. **How do you implement dependency injection for view controllers in UIKit-based apps?**
 
 ---
 
 ### **Core UIKit Concepts**
-- [ ] 5. **Explain the view controller lifecycle in UIKit. How would you handle scenarios where `viewDidAppear` is called multiple times?**
+- [x] 5. **Explain the view controller lifecycle in UIKit. How would you handle scenarios where `viewDidAppear` is called multiple times?**
 
 - [ ] 6. **What are the different types of segues in `Storyboard`, and how do you manage data passing between view controllers during these segues?**
 

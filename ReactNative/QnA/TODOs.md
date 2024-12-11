@@ -4,7 +4,7 @@
 ## Core React Native Concepts
 - [x] * **Component Lifecycle:** Explain the different lifecycle methods in React Native and when they are used.
 - [x] * **JSX:** Describe JSX syntax and its benefits in React Native.
-- [ ] * **Redux:** Explain the core concepts of Redux: state, actions, reducers, and store. How do you implement Redux in a React Native app?
+- [x] * **Redux:** Explain the core concepts of Redux: state, actions, reducers, and store. How do you implement Redux in a React Native app?
 - [ ] * **Navigation:** Discuss the different navigation libraries available in React Native (React Navigation, React Native Navigation). What are their pros and cons?
 - [ ] * **Performance Optimization:** What techniques do you use to optimize the performance of React Native apps?
 - [ ] * **State Management:** How do you manage state in large-scale React Native apps? Discuss different approaches like Redux, Context API, and MobX.
