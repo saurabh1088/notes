@@ -125,3 +125,77 @@ back and forth between UI design and implementation.
 imperatively manipulating the UI.
 
 
+## 🙋‍♂️3. Explain the core concepts of Redux: state, actions, reducers, and store. How do you implement Redux in a React Native app❓
+
+### 3.1 What is Redux?
+- Redux is a JavaScript library for predictable and maintainable global state management.
+- Often used in React and React Native apps.
+- It provides a central store for the state, enabling better state management, debugging, and testing.
+- In simple words it means that using redux the state of the application is stored in a single place (the Redux store)
+and can be accessed and modified in a consistent and predictable manner.
+
+#### 3.1.1 Why state management at central place?
+When the state of an application is scattered across multiple components, it can become difficult to manage because it
+becomes harder to keep track of where the state is being used and how it is being updated. This can lead to bugs and
+inconsistencies in the behavior of the application.
+By centralizing the state in a single location, such as the Redux store, it becomes easier to manage and update the state
+in a consistent and predictable way. This can help to avoid conflicts and make it easier to debug issues when they arise.
+
+### 3.2 Concepts
+
+#### 3.2.1 State
+- Single source of truth for application's data.
+- It represents the current state of entire or specific part of application in a plain JavaScript object.
+- Immutable, the only way to update it is by dispatching an action.
+- Predictable.
+
+#### 3.2.2 Actions
+- A plain JavaScript object that describes the change one want to make to the state.
+- Must have a type property (a string or symbol describing the action).
+- They can also have a payload or any other fields to carry data.
+
+#### 3.2.3 Reducer
+- Reducers specify how the application's state changes in response to actions.
+- They are pure functions which takes the current state and an action as arguments and returns a new state.
+- They should not mutate the state directly but instead return new state objects.
+
+#### 3.2.4 Store
+- The store holds the application state and provides methods to interact with it.
+- There's only one store in a Redux app.
+
+### 3.3 Basic principles of redux.
+
+#### 3.3.1 Single source of truth
+- The Redux store is the single source of truth for the state of the application.
+- All components that need access to the state can read it from the store.
+#### 3.3.2 State is read-only
+- The state in the Redux store is read-only, which means that components cannot modify it directly.
+- Instead, they must dispatch actions to the store, which will update the state.
+#### 3.3.3 Changes are made with pure functions
+- Changes to the state are made with pure functions called reducers.
+- Reducers take the current state and an action as input, and return a new state as output.
+- This ensures that the state is updated in an immutable way, which makes it easier to reason about the behavior of the
+application.
+#### 3.3.4 Actions describe what happened
+- Actions are plain JavaScript objects that describe what happened in the application.
+- They contain a type property that identifies the type of action, as well as any additional data that is needed to
+update the state.
+#### 3.3.5 Changes are made asynchronously
+- Changes to the state can be made asynchronously, which means that components can dispatch actions that trigger
+asynchronous operations, such as fetching data from an API.
+- Redux provides middleware, such as Redux Thunk, that makes it easy to handle asynchronous actions.
+
+## 🙋‍♂️4. ❓
+
+## 🙋‍♂️5. ❓
+
+## 🙋‍♂️6. ❓
+
+## 🙋‍♂️7. ❓
+
+## 🙋‍♂️8. ❓
+
+## 🙋‍♂️9. ❓
+
+## 🙋‍♂️10. ❓
+
