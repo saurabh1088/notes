@@ -1,7 +1,7 @@
 #  QnA
 
 
-## 1. How would you design a complex UIView hierarchy to ensure optimal performance?
+## 🙋‍♂️1. How would you design a complex UIView hierarchy to ensure optimal performance❓
 
 In order to design a complex UIVIew hierarchy ensuring optimal performance, one requires a blend of
 - Thoughtful architecture
@@ -72,7 +72,8 @@ being rendered.
     - Refrain from calling layoutSubviews or draw(_:) directly. Use system-provided mechanisms to update views.
 
 
-## 2. What is the difference between a `UIView` and a `CALayer`? In what scenarios one would interact with `CALayer` directly?
+
+## 🙋‍♂️2. What is the difference between a `UIView` and a `CALayer`? In what scenarios one would interact with `CALayer` directly❓
 
 ### 2.1 `UIView` vs `CALayer`
 - In iOS world, every `UIView` is backed by a Core Animation `CALayer`.
@@ -132,4 +133,20 @@ efficiently.
 #### 2.2.7 Non-UI Elements
 - Animating or displaying non-UI elements like gradients or masks.
 
+
+## 🙋‍♂️3. ❓
+
+## 🙋‍♂️4. ❓
+
+## 🙋‍♂️5. ❓
+
+## 🙋‍♂️6. ❓
+
+## 🙋‍♂️7. ❓
+
+## 🙋‍♂️8. ❓
+
+## 🙋‍♂️9. ❓
+
+## 🙋‍♂️10. ❓
 
