@@ -349,8 +349,27 @@ controller and a child view controller.
 - Configure the closures in `prepare(for:sender:)` method.
 
 
-## 🙋‍♂️8. ❓
+## TODO: In Progress
+## 🙋‍♂️8. What is the responder chain in UIKit? How do you use it to handle events or custom actions❓
 
+### 8.1 What is responder chain?
+- The responder chain in UIKit is a mechanism used for event distribution and handling in iOS applications.
+- It's essentially a chain of responder objects through which events like 
+    - touch,
+    - motion, and even 
+    - custom actions 
+    propagate if they are not handled by the initial recipient.
+- In UIKit, responders are instances of `UIResponder`.
+- Importance of responders is that these form the BACKBONE of event handling mechanism in UIKit apps.
+- Several key objects in UIKit are responders like
+    - UIApplication
+    - UIViewController
+    - UIView
+    - UIWindow
+    etc.
+- When some event occurs, UIKit dispatches those events to responder objects for handling.
+
+### 8.2 Components of responder chain?
 
 ## 🙋‍♂️9. ❓
 
