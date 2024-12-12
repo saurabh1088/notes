@@ -295,8 +295,45 @@ when the parent's view appears. Handle this appropriately by checking parent-chi
 - Design code in such a way that multiple executions do not cause unwanted side effects.
 
 
-## 🙋‍♂️6. ❓
+## TODO: This questions needs practical example reference.
+## 🙋‍♂️6. What are the different types of segues in `Storyboard`❓
+- In iOS Storyboards, segues are used to define transitions between view controllers. 
+- Following are different types of segues in `Storyboard`
 
+### 6.1 Show (Push)
+- For most view controllers, this segue presents the new content modally over the source view controller.
+- Viewcontrollers can override and do a custom behaviour.
+- A navigation controller pushes the new view controller onto its navigation stack.
+
+### 6.2 Show Detail (Replace)
+- This segue is relevant only for view controllers embedded inside a `UISplitViewController` object.
+- A split view controller, with this segue will replace its second child view controller (the detail controller) with the
+new content.
+- When used on view controllers other than `UISplitViewController`, most view controllers will present the new content
+modally.
+
+### 6.3 Present Modally
+- Presents the destination view controller modally, overlaying the current view controller.
+- This can cover the entire screen or appear in a custom presentation style.
+
+### 6.4 Present as Popover
+- In a horizontally regular environment(iPad), the view controller appears in a popover.
+- In a horizontally compact environment(iPhone), the view controller is displayed using a full-screen modal presentation.
+
+### 6.5 Custom Segue
+- A segue that allows custom animations and transitions.
+- One need to subclass `UIStoryboardSegue` to define custom behaviour.
+- It can be used in scenarios like creating unique transitions that don’t fit the predefined segue types.
+    - For e.g. animating a slide-in menu or a fade transition between view controllers.
+
+### 6.6 Unwind Segue
+- Used to navigate back to a previous view controller in the storyboard hierarchy.
+- The target view controllers must implement an unwind action method.
+
+### 6.7 Embed Segue
+- An Embed Segue in a Storyboard is a special type of segue used to establish a parent-child relationship between a view
+controller and a child view controller.
+- It is most commonly used with container views.
 
 ## 🙋‍♂️7. ❓
 
