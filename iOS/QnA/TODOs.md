@@ -234,7 +234,7 @@ Centered around UIKit
 ### **Core UIKit Concepts**
 - [x] 5. **Explain the view controller lifecycle in UIKit. How would you handle scenarios where `viewDidAppear` is called multiple times?**
 
-- [ ] 6. **What are the different types of segues in `Storyboard`, and how do you manage data passing between view controllers during these segues?**
+- [x] 6. **What are the different types of segues in `Storyboard`, and how do you manage data passing between view controllers during these segues?**
 
 - [ ] 7. **What is the responder chain in UIKit? How do you use it to handle events or custom actions?**
 

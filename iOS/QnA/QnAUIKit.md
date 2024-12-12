@@ -335,7 +335,18 @@ modally.
 controller and a child view controller.
 - It is most commonly used with container views.
 
-## 🙋‍♂️7. ❓
+
+## 🙋‍♂️7. How do you manage data passing between view controllers during these segues❓
+
+### 7.1 Using prepare(for:sender:) method
+- The most common way to pass data is by overriding the `prepare(for:sender:)` method in the source view controller.
+- This method is called automatically before the segue transition occurs.
+
+### 7.2 Using delegation pattern
+- Configure the delegate in `prepare(for:sender:)` method.
+
+### 7.3 Using closures
+- Configure the closures in `prepare(for:sender:)` method.
 
 
 ## 🙋‍♂️8. ❓
