@@ -352,13 +352,7 @@ controller and a child view controller.
 ## TODO: In Progress
 ## 🙋‍♂️8. What is the responder chain in UIKit? How do you use it to handle events or custom actions❓
 
-### 8.1 What is responder chain?
-- The responder chain in UIKit is a mechanism used for event distribution and handling in iOS applications.
-- It's essentially a chain of responder objects through which events like 
-    - touch,
-    - motion, and even 
-    - custom actions 
-    propagate if they are not handled by the initial recipient.
+### 8.1 What is a responder?
 - In UIKit, responders are instances of `UIResponder`.
 - Importance of responders is that these form the BACKBONE of event handling mechanism in UIKit apps.
 - Several key objects in UIKit are responders like
@@ -368,6 +362,30 @@ controller and a child view controller.
     - UIWindow
     etc.
 - When some event occurs, UIKit dispatches those events to responder objects for handling.
+- To handle an event, a responder must override certain methods.
+    - For e.g. to handle touch events, a responder must override below
+        - `touchesBegan(_:with:)`
+        - `touchesMoved(_:with:)`
+        - `touchesEnded(_:with:)`
+        - `touchesCancelled(_:with:)`
+
+### What is a responder chain?
+- As the name indicates, it is a chain of responder objects.
+- This chain of objects is responsible for event handling in UIKit.
+- The responder chain in UIKit is a mechanism used for event distribution and handling in iOS applications.
+- It's essentially a chain of responder objects through which events like 
+    - touch,
+    - motion, and even 
+    - custom actions 
+    propagate if they are not handled by the initial recipient.
+- A responder object can handle event, but when it doesn't handles an event, it will forward it to next object in responder
+chain.
+- This responder chain is managed dynamically by UIKit.
+- Responders receive the raw event data and must either handle the event or forward it to another responder object.
+- When an app receives an event, UIKit automatically directs that event to the most appropriate responder object, known
+as the first responder.
+- So a responder chain is a dynamic configuration of app's responder objects through which unhandled events are passed
+from one object to another till a responder handles the event.
 
 ### 8.2 Components of responder chain?
 
