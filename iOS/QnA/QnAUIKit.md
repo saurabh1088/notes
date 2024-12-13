@@ -389,8 +389,16 @@ from one object to another till a responder handles the event.
 
 ### 8.2 Components of responder chain?
 
-## 🙋‍♂️9. ❓
+## 🙋‍♂️9. How does responder chain works when view has gesture recognizers❓
+In case of gesture recognizers, the gesture recognizer will receive touch and press event before the view on which those
+gestures are applied to. From then its the usual responder chain, where if gesture fails to handle event, it goes to view
+and further up the responder chain.
 
 
-## 🙋‍♂️10. ❓
+## 🙋‍♂️10. Can a responder chain be altered❓
+YES, a responder chain can be altered by overriding `next` property of a responder object. Next property is defined as
+```
+var next: UIResponder? { get }
+```
+When one sets this property then the next responder is the object that is returned from this property.
 
