@@ -402,3 +402,66 @@ var next: UIResponder? { get }
 ```
 When one sets this property then the next responder is the object that is returned from this property.
 
+
+## TODO: This questions needs practical example reference.
+## 🙋‍♂️11. What are the differences between `frame`, `bounds`, and `center` properties of a UIView? How does each affect layout and rendering❓
+
+### 11.1 Frame
+Apple's official definition:
+*The frame rectangle, which describes the view’s location and size in its superview’s coordinate system.*
+
+```
+@MainActor
+var frame: CGRect { get set }
+```
+
+- The `frame` property is a CGRect that defines the view's location and size in the coordinate system of its superview.
+
+#### 11.1.1 Effect of layout
+- Changing the `frame` directly affects the view's position and size relative to its superview.
+- Changing `frame` also changes point specified by the `center` property and changes the size in the `bounds` rectangle
+accordingly.
+- Modifying the `frame`, one is explicitly setting where the view should be in terms of its superview's space.
+- Modifying the `frame` changes where the view appears on the screen and its size.
+- Moving the `frame.origin` shifts the view’s location relative to its superview.
+- Adjusting the `frame.size` resizes the view.
+
+### 11.2 Bounds
+Apple's official definition:
+*The bounds rectangle, which describes the view’s location and size in its own coordinate system.*
+
+```
+@MainActor
+var bounds: CGRect { get set }
+```
+
+- The bounds property is also a CGRect, but it describes the view's location and size in its own coordinate system.
+
+#### 11.2.1 Effect of layout
+- Changing `bounds` affects how content within the view is displayed or how subviews are positioned within this view.
+- Altering `bounds.origin` can simulate scrolling or shifting content within the view without moving the view itself in its
+superview.
+
+### 11.3 Center
+Apple's official definition:
+*The center point of the view’s frame rectangle.*
+
+```
+@MainActor
+var center: CGPoint { get set }
+```
+
+- The `center` property is a CGPoint that defines the center point of the view in the superview's coordinate system.
+- Apple recommends changing `center` property when one want to change the position of a view.
+
+#### 11.3.1 Effect of layout
+- Only the position of the view changes when you adjust center, not its size.
+- This is particularly useful for centering views or aligning them relative to other views by manipulating their center
+points.
+- Changing the `center` moves the view to a new position in its superview, without affecting its size.
+
+### 11.4 Rendering and Layout
+- The `frame` determines the region occupied by the view in the superview.
+- The `bounds` affects the content displayed within the view.
+- The `center` simplifies alignment tasks when positioning the view.
+
