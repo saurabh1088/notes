@@ -295,8 +295,14 @@ when the parent's view appears. Handle this appropriately by checking parent-chi
 - Design code in such a way that multiple executions do not cause unwanted side effects.
 
 
-## TODO: This questions needs practical example reference.
 ## 🙋‍♂️6. What are the different types of segues in `Storyboard`❓
+
+```
+For examples refer below project and PR:
+https://github.com/saurabh1088/ios/tree/main/LearningAppStoryboardSegueOptionsUIKit
+https://github.com/saurabh1088/ios/pull/29
+```
+
 - In iOS Storyboards, segues are used to define transitions between view controllers. 
 - Following are different types of segues in `Storyboard`
 
@@ -403,8 +409,13 @@ var next: UIResponder? { get }
 When one sets this property then the next responder is the object that is returned from this property.
 
 
-## TODO: This questions needs practical example reference.
 ## 🙋‍♂️11. What are the differences between `frame`, `bounds`, and `center` properties of a UIView? How does each affect layout and rendering❓
+
+```
+For example refer below project and PR:
+https://github.com/saurabh1088/ios/tree/main/LearningAppFrameBoundCenterUIKit
+https://github.com/saurabh1088/ios/pull/30
+```
 
 ### 11.1 Frame
 Apple's official definition:
