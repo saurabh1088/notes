@@ -236,9 +236,9 @@ Centered around UIKit
 
 - [x] 6. **What are the different types of segues in `Storyboard`, and how do you manage data passing between view controllers during these segues?**
 
-- [ ] 7. **What is the responder chain in UIKit? How do you use it to handle events or custom actions?**
+- [x] 7. **What is the responder chain in UIKit? How do you use it to handle events or custom actions?**
 
-- [ ] 8. **What are the differences between `frame`, `bounds`, and `center` properties of a UIView? How does each affect layout and rendering?**
+- [x] 8. **What are the differences between `frame`, `bounds`, and `center` properties of a UIView? How does each affect layout and rendering?**
 
 ---
 
