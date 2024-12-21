@@ -1,6 +1,9 @@
 # Python
 
 ## 1. What is CPython? Is it difference from Python?
+- From official documentation https://docs.python.org/3/reference/introduction.html#alternate-implementations
+    - CPython is the original and most-maintained implementation of Python, written in C.
+    - New language features generally appear for CPython first.
 - CPython is the original default Python implementation, written in C.
 - It's called as CPython to distinguish it from the other Python implementations.
 - Python is a language.
