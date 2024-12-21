@@ -61,6 +61,14 @@ https://github.com/saurabh1088/python/blob/main/learnings/concepts.py
 - During collection process, garbage collector detects cyclic references and reclaims the memory.
 
 
+## 4 What is None in Python?
+- `None` is a type in Python which signifies the absence of a value in many situations.
+    - For e.g. It can be returned from functions that don’t explicitly return anything.
+- Its truth value is false.
+- `None` is implemented as a singleton type.
+- `None` has it's own type which is `NoneType`.
+
+
 ## References
 - https://www.datacamp.com/tutorial/python-garbage-collection
 - https://github.com/python/cpython/blob/main/InternalDocs/garbage_collector.md
