@@ -67,6 +67,8 @@ https://github.com/saurabh1088/python/blob/main/learnings/concepts.py
 - Its truth value is false.
 - `None` is implemented as a singleton type.
 - `None` has it's own type which is `NoneType`.
+- Refer examples at
+    - https://github.com/saurabh1088/python/blob/main/learnings/about_none.py
 
 
 ## References
