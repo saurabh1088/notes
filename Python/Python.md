@@ -71,6 +71,16 @@ https://github.com/saurabh1088/python/blob/main/learnings/concepts.py
     - https://github.com/saurabh1088/python/blob/main/learnings/about_none.py
 
 
+## 5 What is Duck Typing in Python?
+- Duck typing is a concept in Python where the type or the class of an object is less important than the methods it implements.
+- This stems from the saying
+    - *If it walks like a duck and quacks like a duck, then it must be a duck.*
+- In programming terms, this means that Python doesn't care about an object's actual type as long as it has the methods or attributes one is trying to use.
+- This allows for more flexible and dynamic code, reducing the need for explicit type checking.
+- Refer example at
+    - https://github.com/saurabh1088/python/blob/main/learnings/about_duck_typing.py
+
+
 ## References
 - https://www.datacamp.com/tutorial/python-garbage-collection
 - https://github.com/python/cpython/blob/main/InternalDocs/garbage_collector.md
