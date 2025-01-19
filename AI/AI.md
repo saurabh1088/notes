@@ -5,33 +5,38 @@
 
 ### Definition:
 
-    AI stands for Artificial Intelligence, which refers to the simulation of human intelligence in machines that are programmed
-    to think, learn, and behave like humans.
-    This includes:
-        Problem Solving: Making decisions and solving puzzles or games, like chess or Go.
-        Understanding Human Speech: Interpreting and responding to spoken language.
-        Visual Perception: Recognizing objects, faces, or scenes from images or videos.
-        Learning from Experience: Improving performance over time based on data or feedback.
+AI stands for Artificial Intelligence, which refers to the simulation of human intelligence in machines that are
+programmed to think, learn, and behave like humans.
+
+This includes:
+- Problem Solving: 
+    - Making decisions and solving puzzles or games, like chess.
+- Understanding Human Speech:
+    - Interpreting and responding to spoken language.
+- Visual Perception:
+    - Recognizing objects, faces, or scenes from images or videos.
+- Learning from Experience:
+    - Improving performance over time based on data or feedback.
 
 
 ### Examples:
 
-    Algorithms for Solving Games:
-    - AI can master complex games by exploring possible moves, learning from outcomes, and optimizing strategies.
-    Examples include AlphaGo by DeepMind which beat world champions in Go.
+#### Algorithms for Solving Games:
+- AI can master complex games by exploring possible moves, learning from outcomes, and optimizing strategies.
+Examples include AlphaGo by DeepMind which beat world champions in Go.
 
-    Self-Driving Cars:
-    - These use AI to navigate, make decisions based on traffic conditions, recognize road signs, and avoid obstacles.
-    They combine multiple AI techniques like computer vision, natural language processing (for understanding road signs),
-    and decision-making algorithms.
+#### Self-Driving Cars:
+- These use AI to navigate, make decisions based on traffic conditions, recognize road signs, and avoid obstacles.
+They combine multiple AI techniques like computer vision, natural language processing (for understanding road signs),
+and decision-making algorithms.
 
-    Predicting Credit Card Defaults:
-    - AI analyzes patterns in historical data like credit history, spending habits, and payment regularity to predict the
-    likelihood of a customer defaulting on their credit card payments.
+#### Predicting Credit Card Defaults:
+- AI analyzes patterns in historical data like credit history, spending habits, and payment regularity to predict the
+likelihood of a customer defaulting on their credit card payments.
 
-    Diagnosing Cancer Risks:
-    - AI models can analyze medical images like X-rays or MRIs to identify patterns associated with cancer, sometimes
-    spotting anomalies that might be missed by human eyes.
+#### Diagnosing Cancer Risks:
+- AI models can analyze medical images like X-rays or MRIs to identify patterns associated with cancer, sometimes
+spotting anomalies that might be missed by human eyes.
 
 
 ## Machine Learning (ML)
@@ -147,4 +152,7 @@ For someone starting to learn AI, understanding these basics will provide a foun
         Evaluation: Testing the model on unseen data to assess performance.
         Deployment: Using the trained model in real-world scenarios.
 
+
+## Imp Links
+- https://huggingface.co/
 
