@@ -5,25 +5,25 @@
 
 ## Distributed Version Control Systems
 
-In a Distributed Version Control Systems when one checks out a repository locally
-then checked out content is not just the latest snapshot, instead it fully mirror 
-the repository. Means one gets the complete repository locally with all its history.
+In a Distributed Version Control System, when one checks out a repository locally,
+the checked-out content is not just the latest snapshot. Instead, it fully mirrors
+the repository, meaning one gets the complete repository locally with all its history.
 
-This has a huge advantage for Distributed Version Control Systems as in case of
-issues with remote hosting the contents, any of the locally checked out repository
+This has a huge advantage for Distributed Version Control Systems, as in case of
+issues with remote hosting, any of the locally checked-out repositories
 can be used to back up and restore.
 
 
 ## GIT vs Other VCS like SVN
 
-Apart from following distributed approach the way Git stores and thinks about
+Apart from following a distributed approach, the way Git stores and thinks about
 information is also very different. Most systems treat information as a set of files
-and then changes to those files over time.
+and then track changes to those files over time.
 
-Git however doesn't stored information this way (i.e. file plus it's deltas over time).
-In Git, information or data is more like a snapshots. Every time some changes are
-made Git will take a snapshot and store a reference to that snapshot. In this way
-for Git information or data is more of a stream of snapshots. 
+Git, however, doesn't store information this way (i.e., file plus its deltas over time).
+In Git, information or data is more like snapshots. Every time some changes are
+made, Git will take a snapshot and store a reference to that snapshot. In this way,
+for Git, information or data is more of a stream of snapshots.
 
 
 
