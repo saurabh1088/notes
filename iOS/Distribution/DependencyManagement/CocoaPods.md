@@ -47,3 +47,9 @@ One should run `pod install` when
 
 ## pod spec file
 A pod spec file is a specification file used by CocoaPods to describe a framework or library. Pod spec file is a ruby file.
+
+
+## How to updated a pod which is pointing to a branch and the branch has got new commits?
+```
+pod update PodNameToBeUpdated
+```
