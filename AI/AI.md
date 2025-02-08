@@ -155,4 +155,6 @@ For someone starting to learn AI, understanding these basics will provide a foun
 
 ## Imp Links
 - https://huggingface.co/
+- https://informationisbeautiful.net/visualizations/the-rise-of-generative-ai-large-language-models-llms-like-chatgpt/
+- https://www.kaggle.com/datasets
 
