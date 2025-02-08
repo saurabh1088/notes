@@ -4,7 +4,9 @@
 ## HDFS
 
 ### What is HDFS?
-- Minimum size 64MB
+- HDFS stands for Hadoop Distributed File System.
+- It is designed to store large data sets reliably and to stream those data sets at high bandwidth to user applications.
+- - The default block size in HDFS is 64MB, which means that files are divided into blocks of at least 64MB in size.
 
 ### Name Node
 
