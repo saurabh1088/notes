@@ -141,3 +141,25 @@ https://github.com/saurabh1088/SwiftUI/blob/main/SwiftUILearnings/TestPitch/View
 16. **App Lifecycle and State Restoration**
     - Managing app lifecycle events
     - State restoration and scene management
+
+
+## TODO: Review, Edit or Discard. Taken from Mac notes.
+
+One advantage of SwiftUI over UIKit is that in UIKit one can design user interface using Storyboards or using code, choosing one means if in future one needs to change the approach, one will have to start all over again.
+However in SwiftUI it’s all code, so no such challenge.
+
+Previews shown in Xcode for a SwiftUI view is prepared by compiling the code itself.
+
+
+View
+
+View in SwiftUI is a struct which instead of inheriting from any base class, conforms to View protocol.
+This means, a view in SwiftUI doesn’t inherit any stored properties. Being struct it’s allocated on stack and passed by value.
+No additional allocation and reference counting overhead is there for SwiftUI views.
+
+Behind the scene, SwiftUI framework uses view and aggressively collapses view hierarchy into a very efficient data structure for rendering. Because of this it is encouraged to make liberal use of small single-purpose views
+
+VIEWS IN SWIFTUI ARE INCREDIBLY LIGHTWEIGHT
+
+A view in SwiftUI defines its dependencies.
+
