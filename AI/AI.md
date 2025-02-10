@@ -8,6 +8,10 @@
 AI stands for Artificial Intelligence, which refers to the simulation of human intelligence in machines that are
 programmed to think, learn, and behave like humans.
 
+So one can say that in Artificial Intelligence
+- Artificial part refers to a computer
+- Intelligence part refers to an algorithm aiming to simulate human intelligence
+
 This includes:
 - Problem Solving: 
     - Making decisions and solving puzzles or games, like chess.
@@ -40,6 +44,8 @@ spotting anomalies that might be missed by human eyes.
 
 
 ## Machine Learning (ML)
+
+Machine learning will be a subset of Artificial Intelligence, and it is all about algorithms learning from data. Machine learning one can say is use of algorithms to learn appropriate rules from data.
 
 ### Definition:
     Machine Learning is a subset of artificial intelligence that involves the development of algorithms that can learn
@@ -105,6 +111,8 @@ For someone starting to learn AI, understanding these basics will provide a foun
 
 ## Deep Learning
 
+Deep Learning is machine learning done for kinds of unstructured data that uses AI in simulating human intelligence.
+
 ### Overview:
 
     Deep Learning is a specialized subset of machine learning that uses neural networks with multiple layers (hence "deep"). These layers can learn and make intelligent decisions on their own by processing data in a way that mimics the human brain.
@@ -151,6 +159,10 @@ For someone starting to learn AI, understanding these basics will provide a foun
         Training: Using data to adjust the model's weights, often with techniques like gradient descent.
         Evaluation: Testing the model on unseen data to assess performance.
         Deployment: Using the trained model in real-world scenarios.
+
+
+
+Artificial Intelligence -> Machine Learning -> Deep Learning -> Gen AI
 
 
 ## Imp Links
