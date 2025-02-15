@@ -164,6 +164,16 @@ Deep Learning is machine learning done for kinds of unstructured data that uses 
 
 Artificial Intelligence -> Machine Learning -> Deep Learning -> Gen AI
 
+## TODOs
+- What are tokens?
+- Prompt engineering
+    - Prompt parameters
+        - Max tokens
+        - Temperature
+        - Top P
+        - Frequency Penalty
+    - Prompt structure
+
 
 ## Imp Links
 - https://huggingface.co/
