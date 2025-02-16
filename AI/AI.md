@@ -170,9 +170,15 @@ Artificial Intelligence -> Machine Learning -> Deep Learning -> Gen AI
     - Prompt parameters
         - Max tokens
         - Temperature
-        - Top P
+        - top_p top_probability
         - Frequency Penalty
     - Prompt structure
+
+- Changing the model's settings can greatly affect its responses.
+- The temperature and top_p settings control how random or creative the responses are.
+- Higher values make responses more creative but also less predictable.
+- If you want unique or fictional answers, use higher values. For more accurate and steady responses, use lower values.
+- It's best to adjust only one setting at a time—either temperature or top_p, but not both.
 
 
 ## Imp Links
