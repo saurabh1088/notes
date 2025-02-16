@@ -179,10 +179,20 @@ Artificial Intelligence -> Machine Learning -> Deep Learning -> Gen AI
 - Higher values make responses more creative but also less predictable.
 - If you want unique or fictional answers, use higher values. For more accurate and steady responses, use lower values.
 - It's best to adjust only one setting at a time—either temperature or top_p, but not both.
+- What is recency bias?
+    - One may get better responses by repeating instructions at the end of the prompt.
+
+
+| **Type**             | **Description**                                   | **Example**                                          |
+|----------------------|-------------------------------------------------|------------------------------------------------------|
+| **Primary Content**  | The main request or task for the AI.            | *"Write a summary of the iPhone 15 features."*      |
+| **Supporting Content** | Extra details to refine the response.          | *"Keep the summary under 100 words and use simple language."* |
+| **Grounding Content** | Trusted facts or sources for accuracy.         | *"Use Apple’s official website as the source."*     |
 
 
 ## Imp Links
 - https://huggingface.co/
 - https://informationisbeautiful.net/visualizations/the-rise-of-generative-ai-large-language-models-llms-like-chatgpt/
 - https://www.kaggle.com/datasets
+- https://learn.microsoft.com/en-gb/training/modules/apply-prompt-engineering-azure-openai/1-introduction
 
