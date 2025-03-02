@@ -190,6 +190,12 @@ Artificial Intelligence -> Machine Learning -> Deep Learning -> Gen AI
 | **Grounding Content** | Trusted facts or sources for accuracy.         | *"Use Apple’s official website as the source."*     |
 
 
+
+## Prompt Engineering
+Zero Shot
+Few Shot
+Chain of thought
+
 ## Imp Links
 - https://huggingface.co/
 - https://informationisbeautiful.net/visualizations/the-rise-of-generative-ai-large-language-models-llms-like-chatgpt/

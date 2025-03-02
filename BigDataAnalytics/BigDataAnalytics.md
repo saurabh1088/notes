@@ -6,9 +6,12 @@
 ### What is HDFS?
 - HDFS stands for Hadoop Distributed File System.
 - It is designed to store large data sets reliably and to stream those data sets at high bandwidth to user applications.
-- - The default block size in HDFS is 64MB, which means that files are divided into blocks of at least 64MB in size.
+- The default block size in HDFS is 64MB, which means that files are divided into blocks of at least 64MB in size.
+- This default 64MB size can be changed and increased in multiples of 64MB by hadoop administrator.
+
 
 ### Name Node
+- Client machine communicates with the Name node
 
 ### What is FSImage (File table)?
 - Where the blocks of original files are going to be stored
