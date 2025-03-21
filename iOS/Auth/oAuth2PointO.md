@@ -9,9 +9,9 @@ https://github.com/saurabh1088/notes/blob/main/oAuth/oAuth.md
 ## 1. Implementing oAuth2.0 in iOS
 
 
-For implementing oAuth2.0 flow in an iOS app one need to take care of below steps.
+To implement the OAuth2.0 flow in an iOS app, one needs to follow these steps.
 
-### 1.1 oAuth Provider
+### 1.1 Select an OAuth Provider
 There need to be some oAuth provider selected for the application for example 
 - Google
 - Facebook
@@ -21,10 +21,11 @@ There need to be some oAuth provider selected for the application for example
 - Okta
 - Amazon Cognito
 
-### 1.2 Register app with oAuth Provider
-The app requiring oAuth2.0 implementation need to be registered with the oAuth provider. This process is usually on some
-console provided by oAuth provider where one can add the application and obtain a `client ID` and `client secret`.
-`client secret` is optional.
+### 1.2 Register the app with the oAuth Provider
+To use OAuth 2.0, the app must be registered with the chosen provider. This process is usually done through the provider's developer console, where the following credentials are obtained:
+
+- Client ID (mandatory)
+- Client Secret (optional, depending on the provider)
 
 ### 1.3 Update App for redirect URL
 One need to configure a redirect URL, using URL scheme or Universal Links. This redirect URL is required by authorisation
