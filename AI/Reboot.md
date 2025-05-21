@@ -25,7 +25,11 @@
 
 ## Image
 - Convolution on Images - What is image convolution operation?
-    - Filter
+    - Filter - Also referred to as kernel, usually 3x3 or 5x5
+        - It is used to process an input image and transform that image to something that might be useful to downstream
+        for processing.
     - Padding
     - Stride
     - Pooling
+
+- Convonutional Neural Network (CNN)
