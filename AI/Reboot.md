@@ -22,3 +22,10 @@
 ## Keras
 ## TensorFlow
 ## PIL - Python Imaging Library
+
+## Image
+- Convolution on Images - What is image convolution operation?
+    - Filter
+    - Padding
+    - Stride
+    - Pooling
