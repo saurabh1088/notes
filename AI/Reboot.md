@@ -23,7 +23,16 @@
 ## TensorFlow
 ## PIL - Python Imaging Library
 
-## Image
+## Image Convolution
+
+### What is image convolution?
+- Image convolution is a mathematical operation used in image processing and computer vision to extract features such as
+    - edges, 
+    - textures, 
+    - or patterns. 
+- It involves applying a small matrix, called a filter or kernel, across an image to produce a feature map (also called 
+an activation map).
+
 - Convolution on Images - What is image convolution operation?
     - Filter - Also referred to as kernel, usually 3x3 or 5x5
         - It is used to process an input image and transform that image to something that might be useful to downstream
@@ -33,3 +42,4 @@
     - Pooling
 
 - Convonutional Neural Network (CNN)
+    - Help to extract features from images leading to better learning for image classification.
