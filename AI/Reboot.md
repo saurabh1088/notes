@@ -63,3 +63,10 @@ an activation map).
 
 - Convonutional Neural Network (CNN)
     - Help to extract features from images leading to better learning for image classification.
+
+
+
+## Transfer Learning
+
+## ImageNet
+- ILSVRC
