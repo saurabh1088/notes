@@ -42,6 +42,16 @@ an activation map).
     - A Sobel filter detects edges.
     - A Gaussian filter blurs an image to reduce noise.
 
+### Padding
+- When applying a filter near the edges of an image, one might run out of pixels.
+- Padding adds extra pixels (usually zeros) around the border of the image.
+- Padding helps preserve spatial dimensions and avoid losing important edge information.
+- Types of padding:
+    - Valid padding
+        - No padding, the output is smaller than the input.
+    - Same padding
+        - Pads the image so that the output size remains the same as the input.
+
 
 - Convolution on Images - What is image convolution operation?
     - Filter - Also referred to as kernel, usually 3x3 or 5x5
