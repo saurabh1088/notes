@@ -34,6 +34,8 @@
 an activation map).
 
 ### Filter (Kernel)
+- Also referred to as Kernel
+- It is used to process an input image and transform that image to something that might be useful to downstream for processing.
 - Filter is a small matrix (usually 3x3, 5x5, or 7x7) containing weights.
 - This filter slides over the input image, and at each location, performs an element-wise multiplication followed by a sum (called a dot product).
 - The result is a single number, which is placed in the output feature map.
@@ -52,14 +54,10 @@ an activation map).
     - Same padding
         - Pads the image so that the output size remains the same as the input.
 
+### Stride
 
-- Convolution on Images - What is image convolution operation?
-    - Filter - Also referred to as kernel, usually 3x3 or 5x5
-        - It is used to process an input image and transform that image to something that might be useful to downstream
-        for processing.
-    - Padding
-    - Stride
-    - Pooling
+### Pooling
+
 
 - Convonutional Neural Network (CNN)
     - Help to extract features from images leading to better learning for image classification.
