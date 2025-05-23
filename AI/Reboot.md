@@ -68,3 +68,48 @@ an activation map).
 
 ## ImageNet
 - ILSVRC
+
+
+## Natural Language Processing
+
+While working with text data in natural language processing, there comes various challenges like syntactic errors, spelling
+mistakes, incorrect words etc. This demands that input body of text to NLP should be processed. For this purpose there
+are certain libraries, some of which are
+
+#### Natural Language Toolkit NLTK
+#### spaCy
+#### Gensim
+#### TextBlob
+
+### NLP Conceptual Terminologies
+
+#### Documents
+- A text body is referred to as document.
+
+#### Corpus
+- Corpus is a large set of text data that all NLP tasks depend upon.
+- Corpus can be a single document or a bunch of documents.
+- Can be multiple languages.
+
+#### Vocabulary
+- Set of distinct words used in the corpus.
+
+#### Out-of-vocabulary
+- Any word in a document which is not found in the relevant corpus vocabulary is considered out-of-vocabulary.
+
+#### Word sense disambiguation
+- The ability to computationally identify the meaning of words in context.
+
+#### Tokenization
+- Tokenization is a step in NLP process which breaks longer strings of text into smaller pieces or tokens.
+- Tokens can be sentences, words or individual characters.
+
+#### Word embeddings
+
+#### N-grams
+
+#### POS Tagging
+
+#### NER
+
+#### Stop words
