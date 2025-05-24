@@ -124,3 +124,10 @@ are certain libraries, some of which are
 #### NER
 
 #### Stop words
+
+### Vectorization
+- Machines can't understand text as input.
+- So to perform machine learning on text one need to convert text into a numerical format.
+- This converted numerical format then machines can understand to find patterns and make prediction on it.
+
+#### Why can't one-hot encoding be used for vectorization?
