@@ -131,3 +131,15 @@ are certain libraries, some of which are
 - This converted numerical format then machines can understand to find patterns and make prediction on it.
 
 #### Why can't one-hot encoding be used for vectorization?
+
+#### Vectorization techniques
+
+##### Bag of words
+##### Term Frequency - Inverse Document Frequency (TF-IDF)
+
+
+word2vec
+- Converts words to vectors
+
+
+## Retrieval Augmented Generation (RAG)
