@@ -55,6 +55,10 @@ an activation map).
         - Pads the image so that the output size remains the same as the input.
 
 ### Stride
+- Stride defines how many pixels the filter moves at each step.
+    - A stride of 1 means the filter moves one pixel at a time (high overlap).
+    - A stride of 2 means the filter skips every other pixel (reduces spatial size).
+- Larger strides lead to smaller output feature maps and faster computation but may miss fine details.
 
 ### Pooling
 
