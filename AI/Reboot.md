@@ -61,6 +61,13 @@ an activation map).
 - Larger strides lead to smaller output feature maps and faster computation but may miss fine details.
 
 ### Pooling
+- Pooling is a downsampling operation used to reduce the dimensions of feature maps while retaining important information.
+- Types of pooling
+    - Max Pooling
+        - Takes the maximum value in each region.
+    - Average Pooling
+        - Takes the average value in each region.
+- Pooling makes the representation more compact and reduces overfitting by introducing spatial invariance.
 
 
 - Convonutional Neural Network (CNN)
