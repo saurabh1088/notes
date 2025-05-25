@@ -128,15 +128,22 @@ are certain libraries, some of which are
 #### Stop words
 
 ### Vectorization
+- Vector is a data structure similar to an array
+- Process of converting text data into vector format is referred to as Vectorization
 - Machines can't understand text as input.
 - So to perform machine learning on text one need to convert text into a numerical format.
 - This converted numerical format then machines can understand to find patterns and make prediction on it.
 
 #### Why can't one-hot encoding be used for vectorization?
+- Consumes lot of memory
+- Computationally very expensive
 
 #### Vectorization techniques
 
 ##### Bag of words
+- Similar to one-hot encoding
+- Instead of registering presence and absence, it registers count/frequency of each words
+
 ##### Term Frequency - Inverse Document Frequency (TF-IDF)
 
 
