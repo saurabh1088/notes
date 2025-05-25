@@ -155,5 +155,7 @@ word2vec
     - Continuous bag of words
     - Skip gram model
 
+GloVe - Global Vectors
+- GloVe attempts to generate word vectors by using the global co-occurence relationship.
 
 ## Retrieval Augmented Generation (RAG)
