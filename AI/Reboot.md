@@ -158,4 +158,12 @@ word2vec
 GloVe - Global Vectors
 - GloVe attempts to generate word vectors by using the global co-occurence relationship.
 
+
+### Recurrent Neural Networks (RNNs)
+
+### LSTMs - Long Short-Term Memory
+- A type of Recurrent Neural Network, widely used for sequential data prediction.
+
+
 ## Retrieval Augmented Generation (RAG)
+
