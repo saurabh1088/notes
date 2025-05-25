@@ -149,6 +149,11 @@ are certain libraries, some of which are
 
 word2vec
 - Converts words to vectors
+- It is a two layer neural network-based method for efficiently creating word embeddings
+- Takes a text corpus as input and returns a set of vectors known as feature vectors
+- Has two models
+    - Continuous bag of words
+    - Skip gram model
 
 
 ## Retrieval Augmented Generation (RAG)
