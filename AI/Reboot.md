@@ -70,8 +70,10 @@ an activation map).
 - Pooling makes the representation more compact and reduces overfitting by introducing spatial invariance.
 
 
-- Convonutional Neural Network (CNN)
-    - Help to extract features from images leading to better learning for image classification.
+### Convonutional Neural Network (CNN)
+- A Convolutional Neural Network is a class of deep learning models particularly effective for image processing tasks 
+like classification, detection, and segmentation.
+- Help to extract features from images leading to better learning for image classification.
 
 
 
