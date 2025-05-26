@@ -164,6 +164,14 @@ GloVe - Global Vectors
 ### LSTMs - Long Short-Term Memory
 - A type of Recurrent Neural Network, widely used for sequential data prediction.
 
+### Applications of NLP
+- Sentiment analysis
+- Machine translation
+- Speech recognition
+- Document summarization
+- Chatbots
+- ... many more
 
 ## Retrieval Augmented Generation (RAG)
+
 
