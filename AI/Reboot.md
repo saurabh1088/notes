@@ -165,31 +165,32 @@ GloVe - Global Vectors
 - A type of Recurrent Neural Network, widely used for sequential data prediction.
 
 ### Applications of NLP
-	•	Sentiment analysis
-	•	Machine translation
-	•	Speech recognition
-	•	Document summarization
-	•	Chatbots
-	•	Text classification (e.g., spam detection)
-	•	Named entity recognition (NER)
-	•	Part-of-speech tagging
-	•	Question answering systems
-	•	Text-to-speech synthesis
-	•	Language modeling and text generation
-	•	Information retrieval (e.g., search engines)
-	•	Automatic keyword extraction
-	•	Optical Character Recognition (OCR) with NLP post-processing
-	•	Voice assistants (e.g., Siri, Alexa)
-	•	Grammar and spell checking
-	•	Plagiarism detection
-	•	Topic modeling (e.g., LDA)
-	•	Semantic search
-	•	Emotion detection
-	•	Legal and medical document analysis
-	•	Fake news and misinformation detection
-	•	Social media monitoring and analysis
-	•	Customer feedback and review analysis
-	•	Dialogue systems for virtual assistants or support
+
+- Sentiment analysis
+- Machine translation
+- Speech recognition
+- Document summarization
+- Chatbots
+- Text classification (e.g., spam detection)
+- Named entity recognition (NER)
+- Part-of-speech tagging
+- Question answering systems
+- Text-to-speech synthesis
+- Language modeling and text generation
+- Information retrieval (e.g., search engines)
+- Automatic keyword extraction
+- Optical Character Recognition (OCR) with NLP post-processing
+- Voice assistants (e.g., Siri, Alexa)
+- Grammar and spell checking
+- Plagiarism detection
+- Topic modeling (e.g., LDA)
+- Semantic search
+- Emotion detection
+- Legal and medical document analysis
+- Fake news and misinformation detection
+- Social media monitoring and analysis
+- Customer feedback and review analysis
+- Dialogue systems for virtual assistants or support
 
 
 ## Retrieval Augmented Generation (RAG)
