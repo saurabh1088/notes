@@ -5,11 +5,15 @@
 - Pulling
 
 ## Neural Networks
+Neural networks are a foundational concept in machine learning, inspired by the structure and functioning of the human brain.
+They consist of layers of interconnected `neurons` that process input data and learn patterns through training.
+
 - Activation function
-    - Sigmoid
-    - Tanh
-    - ReLU Restricted Linear Units
-    - Binary Step function
+    - Activation functions introduce non-linearity into the network, allowing it to learn complex patterns.
+        - Sigmoid
+        - Tanh
+        - ReLU Restricted Linear Units
+        - Binary Step function
 - Hidden layers take weighted inputs
 - Fundamental operating units of neural networks is vector
     - What are vectors?
