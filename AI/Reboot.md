@@ -23,10 +23,17 @@ They consist of layers of interconnected `neurons` that process input data and l
             - Outputs either 0 or 1 based on a threshold.
             - Not used in practice for training neural networks due to its non-differentiable nature.
 - Hidden layers take weighted inputs
-- Fundamental operating units of neural networks is vector
+    - Hidden layers are intermediate layers between the input and output.
+    - Each neuron in a hidden layer receives a weighted sum of inputs from the previous layer and applies an activation function.
+    - These layers are responsible for feature extraction and transformation in the learning process.
+- Vectors and Matrices in Neural Networks 
+    - Fundamental operating units of neural networks is vector
     - What are vectors?
+        - A vector is an ordered set of numbers.
         - For example columns in a spreadsheets are vectors
         - Columns and columns of vectors in arrays form matrices
+        - When vectors are stacked together, they form matrices, which allow parallel processing of multiple inputs.
+        - Matrix multiplication is used to compute outputs at each layer efficiently.
 - Loss functions
     - For example a trading system loss function should consider loss when one looses money not when one gains
 
