@@ -35,7 +35,12 @@ They consist of layers of interconnected `neurons` that process input data and l
         - When vectors are stacked together, they form matrices, which allow parallel processing of multiple inputs.
         - Matrix multiplication is used to compute outputs at each layer efficiently.
 - Loss functions
-    - For example a trading system loss function should consider loss when one looses money not when one gains
+    - Loss functions measure the difference between predicted output and actual target values, guiding the learning process
+    through backpropagation.
+    - The goal of training is to minimize the loss function.
+    - Different tasks require different loss functions.
+    - For example a trading system loss function should consider loss when one looses money not when one gains, it should
+    penalize losses (financial loss) more heavily than gains.
 
 
 ## Keras
