@@ -11,9 +11,17 @@ They consist of layers of interconnected `neurons` that process input data and l
 - Activation function
     - Activation functions introduce non-linearity into the network, allowing it to learn complex patterns.
         - Sigmoid
-        - Tanh
-        - ReLU Restricted Linear Units
+            - Maps input values to a range between 0 and 1.
+            - Useful for binary classification, but can suffer from vanishing gradients.
+        - Tanh (Hyperbolic Tangent)
+            - Outputs values between -1 and 1.
+            - Similar to sigmoid but centered at zero, which can help optimization.
+        - ReLU (Rectified Linear Unit)
+            - Outputs zero for negative inputs and raw input for positive values.
+            - Most commonly used due to its simplicity and efficiency in deep networks.
         - Binary Step function
+            - Outputs either 0 or 1 based on a threshold.
+            - Not used in practice for training neural networks due to its non-differentiable nature.
 - Hidden layers take weighted inputs
 - Fundamental operating units of neural networks is vector
     - What are vectors?
