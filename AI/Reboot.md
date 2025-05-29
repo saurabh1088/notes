@@ -51,6 +51,7 @@ They consist of layers of interconnected `neurons` that process input data and l
     - User-friendly
     - Modular (you can easily plug in different components)
     - Extensible (easy to create custom layers, losses, etc.)
+
 ```
 Example
 from keras.models import Sequential
@@ -61,7 +62,27 @@ model = Sequential([
     Dense(1, activation='sigmoid')
 ])
 ```
+
 ## TensorFlow
+- TensorFlow is an open-source machine learning framework developed by Google.
+- It supports a wide range of ML tasks, especially deep learning.
+- TensorFlow provides both:
+    - Low-level APIs (for flexibility and customization)
+    - High-level APIs (like tf.keras for ease of use)
+- Uses computational graphs to represent operations, making it efficient for GPU/TPU execution.
+- Scalable across CPUs, GPUs, and TPUs
+- Production-ready with deployment tools (TensorFlow Serving, Lite, JS)
+- Rich ecosystem (e.g., TensorBoard for visualization)
+
+```
+import tensorflow as tf
+
+x = tf.constant([[1.0, 2.0]])
+w = tf.constant([[3.0], [4.0]])
+y = tf.matmul(x, w)
+print(y)  # Output: [[11.]]
+```
+
 ## PIL - Python Imaging Library
 
 ## Image Convolution
