@@ -84,6 +84,14 @@ print(y)  # Output: [[11.]]
 ```
 
 ## PIL - Python Imaging Library
+- PIL was the original Python Imaging Library for opening, manipulating, and saving image files.
+- The original PIL is no longer maintained.
+- Its fork, Pillow, is the actively maintained version and is used in its place.
+- It was used to
+    - Open and save images in many formats (JPEG, PNG, GIF, etc.)
+    - Resize, crop, rotate, and filter images
+    - Draw text, shapes, and lines
+    - Convert between color modes (e.g., RGB, grayscale)
 
 ## Image Convolution
 
