@@ -44,6 +44,23 @@ They consist of layers of interconnected `neurons` that process input data and l
 
 
 ## Keras
+- Keras is a high-level neural networks API written in Python.
+- It runs on top of TensorFlow (and previously supported Theano and CNTK).
+- Keras provides a simplified interface for building, training, and evaluating deep learning models.
+- It is known for being:
+    - User-friendly
+    - Modular (you can easily plug in different components)
+    - Extensible (easy to create custom layers, losses, etc.)
+```
+Example
+from keras.models import Sequential
+from keras.layers import Dense
+
+model = Sequential([
+    Dense(64, activation='relu', input_shape=(10,)),
+    Dense(1, activation='sigmoid')
+])
+```
 ## TensorFlow
 ## PIL - Python Imaging Library
 
