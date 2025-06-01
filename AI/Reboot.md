@@ -6,8 +6,6 @@ data from the world — such as images, videos, or live camera feeds.
 Just like humans use eyes and the brain to see and understand the world, computer vision allows machines to “see” and
 “understand” images using algorithms and models.
 
-- Convolution Layer
-- Pulling
 
 ## Neural Networks
 Neural networks are a foundational concept in machine learning, inspired by the structure and functioning of the human brain.
