@@ -20,6 +20,7 @@ designed to learn patterns from data. Each neuron performs a simple computation,
 capable of approximating complex functions. These models are trained by adjusting internal weights based on how well the
 network performs on a given task, using backpropagation and optimization algorithms like gradient descent.
 
+### Activation functions
 - Activation function
     - Activation functions introduce non-linearity into the network, allowing it to learn complex patterns.
         - Sigmoid
@@ -34,10 +35,14 @@ network performs on a given task, using backpropagation and optimization algorit
         - Binary Step function
             - Outputs either 0 or 1 based on a threshold.
             - Not used in practice for training neural networks due to its non-differentiable nature.
+
+### Hidden layers
 - Hidden layers take weighted inputs
     - Hidden layers are intermediate layers between the input and output.
     - Each neuron in a hidden layer receives a weighted sum of inputs from the previous layer and applies an activation function.
     - These layers are responsible for feature extraction and transformation in the learning process.
+
+### Vectors and Matrices
 - Vectors and Matrices in Neural Networks 
     - Fundamental operating units of neural networks is vector
     - What are vectors?
@@ -46,6 +51,9 @@ network performs on a given task, using backpropagation and optimization algorit
         - Columns and columns of vectors in arrays form matrices
         - When vectors are stacked together, they form matrices, which allow parallel processing of multiple inputs.
         - Matrix multiplication is used to compute outputs at each layer efficiently.
+
+
+### Loss functions
 - Loss functions
     - Loss functions measure the difference between predicted output and actual target values, guiding the learning process
     through backpropagation.
