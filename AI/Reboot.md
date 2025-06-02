@@ -1,5 +1,6 @@
 # AI/ML/GenAI - Reboot
 
+
 ## Computer Vision
 Computer Vision (CV) is a field of Artificial Intelligence (AI) that enables computers to understand and interpret visual
 data from the world — such as images, videos, or live camera feeds.
@@ -8,8 +9,16 @@ Just like humans use eyes and the brain to see and understand the world, compute
 
 
 ## Neural Networks
-Neural networks are a foundational concept in machine learning, inspired by the structure and functioning of the human brain.
-They consist of layers of interconnected `neurons` that process input data and learn patterns through training.
+A neural network is a core concept in machine learning (ML) and deep learning (DL), modeled loosely on the way the human
+brain processes information.
+
+One can think of a neural network as a function approximator built using layers of mathematical operations, where each
+layer transforms the data to learn patterns and relationships.
+
+Neural networks are computational models composed of layers of interconnected processing units called “neurons”, which are
+designed to learn patterns from data. Each neuron performs a simple computation, and together they form a layered structure
+capable of approximating complex functions. These models are trained by adjusting internal weights based on how well the
+network performs on a given task, using backpropagation and optimization algorithms like gradient descent.
 
 - Activation function
     - Activation functions introduce non-linearity into the network, allowing it to learn complex patterns.
