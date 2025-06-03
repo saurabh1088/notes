@@ -6,6 +6,7 @@ Computer Vision (CV) is a field of Artificial Intelligence (AI) that enables com
 data from the world — such as images, videos, or live camera feeds.
 Just like humans use eyes and the brain to see and understand the world, computer vision allows machines to “see” and
 “understand” images using algorithms and models.
+Computer vision is accomplished by using large numbers of images to train a model.
 
 
 ## Neural Networks
@@ -21,6 +22,7 @@ capable of approximating complex functions. These models are trained by adjustin
 network performs on a given task, using backpropagation and optimization algorithms like gradient descent.
 
 ### Activation functions
+Activation functions are mathematical operations applied to the output of each neuron in a neural network.
 - Activation function
     - Activation functions introduce non-linearity into the network, allowing it to learn complex patterns.
         - Sigmoid
