@@ -39,6 +39,14 @@ Activation functions are mathematical operations applied to the output of each n
             - Not used in practice for training neural networks due to its non-differentiable nature.
 
 ### Hidden layers
+- Hidden layers are like the “thinking steps” in a neural network.
+- They sit between the input (what one feeds in) and the output (what one want to predict or classify).
+- Each hidden layer is made up of neurons (tiny units of computation)
+    - These neurons
+        - Take in values from the previous layer (input or another hidden layer),
+        - Multiply those inputs by weights (which the network learns during training),
+        - Add a bias (another learnable number), and
+        - Pass the result through an activation function (this adds non-linearity, helping the network learn complex patterns).
 - Hidden layers take weighted inputs
     - Hidden layers are intermediate layers between the input and output.
     - Each neuron in a hidden layer receives a weighted sum of inputs from the previous layer and applies an activation function.
