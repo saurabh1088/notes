@@ -2,6 +2,7 @@
 
 ## Workflows
 - Cursor with sweetpad extension 
+- Claude code
 
 ### Cursor
 - https://www.cursor.com/
@@ -14,6 +15,10 @@
 - SweetPad is a free VS Code (and Cursor) extension.
 - It is designed to let one develop Swift/iOS apps outside of Xcode.
 - It turns VS Code into a powerful iOS development environment.
+
+
+### Claude Code
+- https://www.anthropic.com/claude-code
 
 
 ## TODOs
