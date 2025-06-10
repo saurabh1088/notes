@@ -24,8 +24,16 @@ The client machine communicates directly with the NameNode to -
 - Initiate reads and writes (data transfer is handled separately by DataNodes).
 
 ### What is FSImage (File table)?
+- FSImage is a persistent, point-in-time snapshot of the HDFS file system metadata.
 - Where the blocks of original files are going to be stored
 - Imagine this like a index page of a book showing which topics are on which page number
+- FSImage does not store the actual data blocks—it only contains metadata about the file system’s structure.
+- It is maintained by the NameNode and is loaded into memory when the NameNode starts.
+- It stores critical information such as
+    - The directory structure
+    - File-to-block mappings
+    - Permissions
+    - Replication settings
 
 ### What is Hadoop cluster?
 - Hadoop cluster is deployed in a production environment in multiple racks.
