@@ -10,8 +10,18 @@
 - This default 64MB size can be changed and increased in multiples of 64MB by hadoop administrator.
 
 
-### Name Node
-- Client machine communicates with the Name node
+### NameNode
+- The NameNode is the master server in the HDFS architecture.
+- Client machine communicates with the Name node.
+- It is responsible for managing the file system namespace and regulating access to files by clients.
+- All metadata operations—such as opening, closing, renaming files and directories—are handled by the NameNode.
+- NameNode does not store the actual data; it only stores the metadata about file locations, block mappings, and replication details.
+
+#### For what all purposes client machine communicates directly with the NameNode?
+The client machine communicates directly with the NameNode to -
+- Retrieve metadata (e.g., block locations),
+- Request file system operations,
+- Initiate reads and writes (data transfer is handled separately by DataNodes).
 
 ### What is FSImage (File table)?
 - Where the blocks of original files are going to be stored
