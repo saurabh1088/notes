@@ -3,7 +3,7 @@
 Technical Core – Python Proficiency
 
 - [ ] Basics & Intermediate (for warm-up and baseline)
-    1. [ ] What are Python’s key features that make it suitable for enterprise-scale applications?
+    1. [x] What are Python’s key features that make it suitable for enterprise-scale applications?
     2. [ ] How do generators differ from iterators in Python?
     3. [ ] Explain the Global Interpreter Lock (GIL). How does it affect multithreaded applications?
     4. [ ] What is the difference between @staticmethod, @classmethod, and instance methods?
