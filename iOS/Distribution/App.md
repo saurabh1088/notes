@@ -107,6 +107,17 @@ com.apple.saurabh.SomeAppProject is reverse domain Bundle ID
 Combined, ABCDE12345.com.apple.saurabh.SomeAppProject is the App ID
 ```
 
+
+## How does the verification works in code signing an app?
+- This verification is achieved through cryptographic hashes and digital signatures.
+- When an app is signed, a unique cryptographic hash (a digital fingerprint) of its code is generated and then encrypted
+with the developer's private key.
+    - Here private key can be thought of as a wax seal that only the developer can use.
+- The device uses the corresponding public key (obtained from Apple's certificate authority) to decrypt the hash and then
+compares it to a newly generated hash of the app's code on the device.
+- If they match, the code is deemed untampered and from a trusted source.
+
+
 ## Notes
 - Images, nib files are not signed, so changes to these doesn't invalidates the signature.
 
