@@ -10,9 +10,12 @@ The process establishes trust between:-
 
 *Signing app allows iOS to identify who signed the app and to verify that the app hasn’t been modified since it was signed*
 
-Once iOS or iPadOS kernel has started, the kernel will control which all processes and apps are allowed to run. One check
-here is to mandate apps coming in from a known and approved source and aren't being tampered with. Hence on iPadOS and iOS
-it is required that all executable code is signed using an Apple issued certificate.
+Once iOS or iPadOS kernel has started, the kernel will control which all processes and apps are allowed to run.
+One of the kernel’s key security checks is to ensure that:
+    - Apps originate from a known and trusted source.
+    - The code has not been tampered with.
+Therefore, on iPadOS and iOS it is required that all executable code is signed using an Apple issued certificate.
+
 
 ## 2. iOS App Code Signing
 
