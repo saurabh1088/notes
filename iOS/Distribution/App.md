@@ -109,13 +109,28 @@ Combined, ABCDE12345.com.apple.saurabh.SomeAppProject is the App ID
 
 
 ## How does the verification works in code signing an app?
-- This verification is achieved through cryptographic hashes and digital signatures.
-- When an app is signed, a unique cryptographic hash (a digital fingerprint) of its code is generated and then encrypted
-with the developer's private key.
-    - Here private key can be thought of as a wax seal that only the developer can use.
-- The device uses the corresponding public key (obtained from Apple's certificate authority) to decrypt the hash and then
-compares it to a newly generated hash of the app's code on the device.
-- If they match, the code is deemed untampered and from a trusted source.
+Code signing verification ensures that an app hasn’t been tampered with and is from a trusted developer. This is done
+using cryptographic hashes and digital signatures.
+
+**Here’s how it works**
+
+### 1. Hashing the Code
+- When an app is signed, a unique cryptographic hash (a digital fingerprint) of its code is generated. 
+
+### 2. Creating the Signature
+- Generated hash is then encrypted with the developer’s private key. The result is called a digital signature.
+    - Private key can be thought of as a wax seal which only the developer has and can use.
+
+### 3. Storing the Signature
+- The app bundle contains both the original code and the signature.
+
+### 4. Verification on the Device
+- When the app is run on an iPhone or iPad, the device performs these checks
+    - It uses the developer’s public key (from an Apple-issued certificate) to decrypt the digital signature, getting the original hash.
+    - It then generates a fresh hash from the app’s current code on the device.
+    - If the two hashes match, it confirms that
+        - The code has not been modified.
+        - The app is from a trusted developer.
 
 
 ## Notes
