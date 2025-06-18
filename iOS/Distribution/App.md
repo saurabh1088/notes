@@ -102,6 +102,7 @@ App ID = Team ID . Bundle ID
 
 For e.g.
 ABCDE12345.com.apple.saurabh.SomeAppProject
+
 Here ABCDE12345 is Team ID
 com.apple.saurabh.SomeAppProject is reverse domain Bundle ID
 Combined, ABCDE12345.com.apple.saurabh.SomeAppProject is the App ID
@@ -135,9 +136,6 @@ using cryptographic hashes and digital signatures.
 
 ## Notes
 - Images, nib files are not signed, so changes to these doesn't invalidates the signature.
-
-## TODOs
-- [x] Move size classes to proper place.
 
 
 https://www.bounteous.com/insights/2018/08/08/demystifying-ios-app-provisioning-process
