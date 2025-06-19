@@ -2,9 +2,10 @@
 
 Source : https://developer.apple.com/videos/play/wwdc2025/231/
 
+
 ## Overview
 
-- WebKit is the browser engine powering Safari, Mail, and many apps across Apple platforms (iOS, iPadOS, visionOS, macOS).
+- WebKit is the browser engine powering Safari, Mail, and many apps across Apple platforms.
 - Enables developers to build rich, dynamic web experiences within apps, leveraging Apple platform strengths.
 
 
@@ -25,7 +26,14 @@ Source : https://developer.apple.com/videos/play/wwdc2025/231/
 ## Local Resources and Custom URL Schemes
 
 - URLSchemeHandler protocol allows loading content bundled in the app or from local files.
-- Custom schemes (e.g., `lakes`) can be handled by implementing URLSchemeHandler and registering it with WebPage configuration.
+- Custom schemes can be handled by implementing URLSchemeHandler and registering it with WebPage configuration.
+    - Schemes are the first part of the URL that define how the resource should be accessed
+        - http
+        - https
+        - ftp
+        - mailto
+        - file
+        - tel
 - Enables pre-populating apps with bundled HTML/CSS assets.
 
 
