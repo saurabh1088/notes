@@ -140,4 +140,4 @@ using cryptographic hashes and digital signatures.
 
 https://www.bounteous.com/insights/2018/08/08/demystifying-ios-app-provisioning-process
 https://www.youtube.com/watch?v=IpNRJSULXJs
-
+https://www.freecodecamp.org/news/apple-code-signing-handbook/
