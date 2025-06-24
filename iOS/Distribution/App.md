@@ -143,6 +143,16 @@ using cryptographic hashes and digital signatures.
         - The app is from a trusted developer.
 
 
+## 4. Which Provisioning Profiles Need Device UDIDs?
+
+| Provisioning Profile Type | Requires Device UDIDs? | Purpose                                                                 |
+| :------------------------ | :---------------------- | :---------------------------------------------------------------------- |
+| ✅ Development            | Yes                     | Install and test apps on registered development devices                 |
+| ✅ Ad Hoc Distribution    | Yes                     | Distribute to testers outside the App Store (limited number of devices) |
+| ❌ App Store              | No                      | For App Store submission – can run on any user’s device                 |
+| ❌ Enterprise             | No                      | For internal distribution in large organizations (without App Store)    |
+
+
 ## Notes
 - Images, nib files are not signed, so changes to these doesn't invalidates the signature.
 
