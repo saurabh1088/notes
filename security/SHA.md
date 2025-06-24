@@ -115,3 +115,8 @@ versions of SHA-2 only. There is one latest SHA-3 as well released in Aug, 2015
 ### SHA-3
 - More secure than SHA-2
 - Employs sponge construction
+
+
+## TODOs
+
+- [ ] Document Rainbow Table Attack
