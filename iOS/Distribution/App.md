@@ -157,6 +157,7 @@ using cryptographic hashes and digital signatures.
 - Images, nib files are not signed, so changes to these doesn't invalidates the signature.
 
 
-https://www.bounteous.com/insights/2018/08/08/demystifying-ios-app-provisioning-process
-https://www.youtube.com/watch?v=IpNRJSULXJs
-https://www.freecodecamp.org/news/apple-code-signing-handbook/
+## Important/Reference Links
+- https://www.bounteous.com/insights/2018/08/08/demystifying-ios-app-provisioning-process
+- https://www.youtube.com/watch?v=IpNRJSULXJs
+- https://www.freecodecamp.org/news/apple-code-signing-handbook/
