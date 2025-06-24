@@ -63,7 +63,7 @@ distributed through the App Store or other means.
 
 A provisional profile may contain:
 1. Distribution type
-2. Signing Certificate
+2. Signing Certificate - rather public key of certificate
 3. Team/Developer ID
 4. Entitlements
 5. Destination Devices (UUIDs)
