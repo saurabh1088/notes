@@ -160,3 +160,8 @@ Performance Trace	On-device data collection for remote diagnostics
 ## 📌 Developer Action Item
 
 Try this now: Run your app, collect a power trace using Power Profiler, and examine what you discover. Start building intuition for energy impact before issues appear in production.
+
+
+## TODOs
+
+- [ ] Call tree view - Hide system libraries - Try this in instruments
