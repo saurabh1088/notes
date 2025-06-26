@@ -2,7 +2,7 @@
 
 Source : https://developer.apple.com/videos/play/wwdc2025/306/
 
-Great apps are responsive and provide a smooth user experience. Performance issues, often manifested as hitches, hangs, or delayed animations and scrolling, can significantly degrade this experience. Apple's **Instruments** tool is essential for identifying and resolving these bottlenecks, especially within SwiftUI applications.
+Great apps are responsive and provide a smooth user experience. Performance issues, often manifested as hitches, hangs, or delayed animations and laggy scrolling, can significantly degrade this experience. Apple's **Instruments** tool is essential for identifying and resolving these bottlenecks, especially within SwiftUI applications.
 
 ---
 
@@ -18,9 +18,9 @@ The most effective way to diagnose these problems is by **profiling your app usi
 
 ---
 
-## Introducing the SwiftUI Instrument
+## Introducing the SwiftUI Instrument - New this year
 
-Instruments 26 introduces a next-generation **SwiftUI instrument** specifically designed to help identify performance issues in SwiftUI apps. The updated SwiftUI template in Instruments includes several key instruments:
+Instruments in Xcode 26 introduces a next-generation **SwiftUI instrument** specifically designed to help identify performance issues in SwiftUI apps. The updated SwiftUI template in Instruments includes several key instruments:
 
 * **SwiftUI Instrument:** The core new instrument for analyzing SwiftUI-specific performance.
 * **Time Profiler:** Shows CPU usage over time, helping to identify where your app is spending its processing cycles.
@@ -178,3 +178,7 @@ The Cause & Effect Graph represents environment updates with two main node types
 If, for example, the device switches to dark mode (updating `colorScheme`), the graph will show "External Environment" nodes for all views that read *any* environment value. If a view doesn't read `colorScheme`, its corresponding view update node will appear **dimmed**, indicating that its body didn't actually run because the value it depended on didn't change.
 
 ---
+
+## TODOs
+
+- [ ] Try new SwiftUI Instruments in Xcode 26
