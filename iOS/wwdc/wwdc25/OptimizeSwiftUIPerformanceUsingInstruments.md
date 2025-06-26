@@ -1,5 +1,7 @@
 # Optimizing SwiftUI Performance Using Instruments
 
+Source : https://developer.apple.com/videos/play/wwdc2025/306/
+
 Great apps are responsive and provide a smooth user experience. Performance issues, often manifested as hitches, hangs, or delayed animations and scrolling, can significantly degrade this experience. Apple's **Instruments** tool is essential for identifying and resolving these bottlenecks, especially within SwiftUI applications.
 
 ---
