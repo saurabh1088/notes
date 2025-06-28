@@ -43,7 +43,8 @@ Throughout your answer, adopt a tone that reflects your 20 years of experience â
 
 ### TODOs
 - [ ] Check MetricKit
-- [ ] Add notes for crashes debugging
+- [x] Add notes for crashes debugging
+    - Added at https://github.com/saurabh1088/notes/blob/main/iOS/Debug/Crashes.md
 
 ## Saturday, 28th June 2025
 
