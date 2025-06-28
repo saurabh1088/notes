@@ -43,6 +43,7 @@ Throughout your answer, adopt a tone that reflects your 20 years of experience â
 
 ### TODOs
 - [ ] Check MetricKit
+- [ ] Add notes for crashes debugging
 
 ## Saturday, 28th June 2025
 
