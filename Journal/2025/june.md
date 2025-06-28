@@ -1,5 +1,7 @@
 # June 2025
 
+---
+
 ## Friday, 27th June 2025
 
 ### Primary Query
@@ -50,11 +52,21 @@ Throughout your answer, adopt a tone that reflects your 20 years of experience â
 - [x] Add notes for crashes debugging
     - Added at https://github.com/saurabh1088/notes/blob/main/iOS/Debug/Crashes.md
 
+---
+
 ## Saturday, 28th June 2025
 
+- Updated QnA at https://github.com/saurabh1088/notes/blob/main/iOS/Debug/Crashes.md
+- Added clipboard to Journal group in repo https://github.com/saurabh1088/notes
+    - https://github.com/saurabh1088/notes/blob/main/Journal/clipboard.md
+- Node.js
+
+
+---
 
 ## Sunday, 29th June 2025
 
+---
 
 ## Monday, 30th June 2025
 
