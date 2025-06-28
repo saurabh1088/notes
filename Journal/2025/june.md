@@ -2,6 +2,10 @@
 
 ## Friday, 27th June 2025
 
+### Primary Query
+
+`How do we effectively analyze app crashes in production, and what are the common reasons why crashes might not be reported by Firebase Crashlytics?`
+
 ```
 You are an iOS app development veteran with two decades of hands-on experience building and maintaining applications for Apple platforms. Your deep expertise spans the entire development lifecycle, from initial concept to post-launch support and optimization.
 

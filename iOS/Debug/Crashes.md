@@ -206,17 +206,9 @@ export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
 ### 12.5 Xcode debugger
 
 
-## An Expert Guide to Analyzing Crashes in Production & Troubleshooting Firebase Crash Reporting
+## 13. An Expert Guide to Analyzing Crashes in Production & Troubleshooting Firebase Crash Reporting
 
-### How do we effectively analyze app crashes in production, and what are the common reasons why crashes might not be reported by Firebase Crashlytics?
-
----
-
-#### 🛠 1. Analyzing Crashes in Production
-
----
-
-##### 🚨 The Importance of Crash Reporting
+### 13.1 🚨 The Importance of Crash Reporting
 
 Why do we need it?
 - **User Experience:** Crashes are the single most destructive factor to user trust. Even one unresolved crash can lead to churn.
@@ -225,11 +217,11 @@ Why do we need it?
 
 Without crash reporting, you’re essentially flying blind in production.
 
----
+### 13.2 🛠 Analyzing Crashes in Production
 
-##### 🔧 Primary Tools & Approaches
+#### 13.2.1 🔧 Primary Tools & Approaches
 
-###### ✅ Apple’s Native Mechanisms
+##### 13.2.1.1 ✅ Apple’s Native Mechanisms
 
 Never underestimate the power of what Apple gives you for free. These are your first line of defense and often provide unique insights.
 
@@ -253,7 +245,7 @@ Never underestimate the power of what Apple gives you for free. These are your f
 
 ---
 
-##### ☁️ Third-Party Crash Reporting Tools
+##### 13.2.1.2 ☁️ Third-Party Crash Reporting Tools
 
 | Tool                 | Notable Features                                                        |
 |----------------------|-------------------------------------------------------------------------|
@@ -266,11 +258,11 @@ Never underestimate the power of what Apple gives you for free. These are your f
 
 ---
 
-##### 📄 Interpreting Crash Reports
+### 13.3 📄 Interpreting Crash Reports
 
 Crash logs can feel cryptic, but once you know what to look for, they become powerful.
 
-###### 🔍 Key Elements of a Crash Report
+#### 13.3.1 🔍 Key Elements of a Crash Report
 
 1. **Exception Type / Code**
      - EXC_BAD_ACCESS (SIGSEGV): Access to invalid memory – most common (nil/unretained pointer).
@@ -287,7 +279,7 @@ Crash logs can feel cryptic, but once you know what to look for, they become pow
      - Device model
      - Last user actions (breadcrumbs)
 
-###### 🧬 Symbolication
+#### 13.3.2 🧬 Symbolication
 
 To make crash reports human-readable, we must symbolicate them using dSYM files.
 - If you’re using Firebase:
@@ -298,7 +290,7 @@ To make crash reports human-readable, we must symbolicate them using dSYM files.
 
 ---
 
-##### 🧪 Debugging Strategies
+### 13.4 🧪 Debugging Strategies
 
 Even without direct debugger access, there are effective ways to isolate and fix production crashes:
 - Use Breadcrumbs & Custom Logs: Crashlytics shows logs right before the crash.
@@ -310,15 +302,15 @@ Even without direct debugger access, there are effective ways to isolate and fix
 
 ---
 
-#### 🚫 2. Reasons Crashes Might Not Be Reported in Firebase Crashlytics
+### 13.5 🚫 Reasons Crashes Might Not Be Reported in Firebase Crashlytics
 
 It’s frustrating when you know the app crashed, but Crashlytics shows nothing. Here’s why that might happen.
 
 ---
 
-##### 🔄 Common Integration Issues
+#### 13.5.1 🔄 Common Integration Issues
 
-###### 🔍 SDK Initialization Order
+#### 13.5.2 🔍 SDK Initialization Order
 
 Firebase must initialize before anything else — or it misses early crashes.
 
@@ -344,14 +336,14 @@ Ensure this is in Xcode Build Phases:
 
 ---
 
-##### 🧩 Symbolication Problems
+#### 13.5.3 🧩 Symbolication Problems
 
 - **Bitcode Enabled:** If Bitcode is enabled, dSYMs are generated on Apple’s side. You must download them manually from App Store Connect.
 - Firebase won’t symbolicate crashes unless the correct UUID-matched dSYM is uploaded.
 
 ---
 
-##### 🌐 Network & Lifecycle Limitations
+#### 13.5.4 🌐 Network & Lifecycle Limitations
 
 - **Crash Upload Requires App Relaunch + Network**
     - Crashlytics uploads on next launch.
@@ -363,7 +355,7 @@ Ensure this is in Xcode Build Phases:
 
 ---
 
-##### 👤 User Privacy Settings
+#### 13.5.5 👤 User Privacy Settings
 
 - Firebase Crashlytics respects user opt-out from analytics/crash reporting.
 - Check for:
@@ -376,7 +368,7 @@ Crashlytics.crashlytics().setCrashlyticsCollectionEnabled(true)
 
 ---
 
-##### 💀 Crash Types That Firebase Can Miss
+#### 13.5.6 💀 Crash Types That Firebase Can Miss
 
 - **Watchdog Terminations**
     - System force-kills app for:
@@ -392,7 +384,7 @@ Crashlytics.crashlytics().setCrashlyticsCollectionEnabled(true)
 
 ---
 
-##### 🧪 Debug vs Release Builds
+### 13.6 🧪 Debug vs Release Builds
 
 - Many crashes only occur in release builds due to:
     - Optimizations
@@ -403,7 +395,7 @@ Always test your release builds rigorously before submission.
 
 ---
 
-##### ✅ Best Practices Recap
+### 13.7 ✅ Best Practices Recap
 
 | Area                  | ✅ Best Practice                                 |
 |-----------------------|-------------------------------------------------|
@@ -416,7 +408,7 @@ Always test your release builds rigorously before submission.
 
 ---
 
-##### 📌 Final Thought
+### 13.8 📌 Final Thought
 
 > “A production crash is a customer support issue, a reputation risk, and a business threat — not just a bug.”
 
