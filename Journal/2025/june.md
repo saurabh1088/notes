@@ -69,6 +69,8 @@ Throughout your answer, adopt a tone that reflects your 20 years of experience â
 - Node.js
 - Updated notes at : https://github.com/saurabh1088/notes/blob/main/react/NodeJS.md
 
+### TODOs
+- [ ] If NodeJS is single-threaded, then how does it handle concurrency?
 
 ---
 
