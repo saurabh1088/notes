@@ -117,36 +117,29 @@ JavaScript is synchronous, blocking, single threaded programming language. Node.
 non-blocking which is possible with the help of *libuv*
 
 ## Behind the scenes
-We have a client which makes a http call. The call eventually will be processed
-at a server hosted in a machine on a port. By default the port is 80. All requests
-by default come on port 80. The machine may have various services running on different
-ports. Based on http request the request will be directed to relevant port.
-Node.js doesn't have the capability to listen to incoming network traffic. This
-is where *libuv* comes into play. *libuv* is an interface between the computer and
-the Node.js. Computer has the hardware to listen to incoming requests but someone
-needs to pass this to Node.js for further processing, that's where *libuv* chips in.
+We have a client which makes a http call. The call eventually will be processed at a server hosted in a machine on a port.
+By default the port is 80. All requests by default come on port 80. The machine may have various services running on
+different ports. Based on http request the request will be directed to relevant port. Node.js doesn't have the capability
+to listen to incoming network traffic. This is where *libuv* comes into play. *libuv* is an interface between the computer
+and the Node.js. Computer has the hardware to listen to incoming requests but someone needs to pass this to Node.js for
+further processing, that's where *libuv* chips in.
 
-An incoming request to the computer where server is hosted is not in textual format.
-It's in streams of data or bytes. *libuv* has sections handling incoming requests
-and outgoing responses.
+An incoming request to the computer where server is hosted is not in textual format. It's in streams of data or bytes.
+*libuv* has sections handling incoming requests and outgoing responses.
 
-Requests are mostly consisted of properties. Whereas responses are majorily methods.
-For example one of the methods in response is end(), as responses are also sent
-as streams so the end() will let receiver know where response has ended.
+Requests are mostly consisted of properties. Whereas responses are majorily methods. For example one of the methods in
+response is end(), as responses are also sent as streams so the end() will let receiver know where response has ended.
 
-There are event emitters. JavaScript defines routes, where different routes will
-handle different functionality.
-So *libuv* will look for route in the incoming request and emit an event and then
-Node.js will execute the function associated with that route as per definition.
-While executing the route defined method, Node.js will also provide access to request
-as well.
+There are event emitters. JavaScript defines routes, where different routes will handle different functionality.
+So *libuv* will look for route in the incoming request and emit an event and then Node.js will execute the function
+associated with that route as per definition. While executing the route defined method, Node.js will also provide access
+to request as well.
 
 
 ## Event Loop
 
-Node handles requests using an Event loop inside the NodeJS environment.
-Event could be anything. Event loop basically could be defined as an event listener
-which funtions inside Node.js and is always ready to listen, process and output
+Node handles requests using an Event loop inside the NodeJS environment. Event could be anything. Event loop basically
+could be defined as an event listener which funtions inside Node.js and is always ready to listen, process and output
 for some event.
 
 Technically *Event Loop* is just a C program and it is a part of *libuv*.
