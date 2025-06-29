@@ -185,3 +185,18 @@ Note : It’s like how LLVM compiles Swift into optimized native code.
   - JIT (Just-In-Time) Compiler: Translates JavaScript into native machine code at runtime.
   - Inline Caching, Hidden Classes, and other runtime optimizations.
 
+
+## Web browsers and their JavaScript engines
+
+| Browser             | JavaScript Engine      | Maintained By               |
+|---------------------|------------------------|-----------------------------|
+| Google Chrome       | V8                     | Google                      |
+| Microsoft Edge      | V8 (via Chromium)      | Microsoft                   |
+| Brave               | V8 (via Chromium)      | Brave Software              |
+| Opera               | V8 (via Chromium)      | Opera Software              |
+| Vivaldi             | V8 (via Chromium)      | Vivaldi Technologies        |
+| Safari              | JavaScriptCore (Nitro) | Apple                       |
+| Mozilla Firefox     | SpiderMonkey           | Mozilla                     |
+| Samsung Internet    | V8 (via Chromium)      | Samsung                     |
+| UC Browser          | V8 (via Chromium)      | UCWeb / Alibaba Group       |
+
