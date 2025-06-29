@@ -10,6 +10,8 @@ Node.js is an
 - cross-platform
 JavaScript runtime environment allowing one to execute JavaScript code server-side.
 
+Node.js is a runtime environment that lets one run JavaScript code outside of a browser — usually on the server.
+
 Node is NOT a Programming Language
 Node is NOT a Framework
 
@@ -56,14 +58,12 @@ server.listen(port, hostname, () => {
 
 ## Browser vs Node.js Application
 
-First of all a common aspect of a browser and a Node.js application is JavaScript.
-Both browser and Node.js provide environment allowing JavaScript code to execute.
+First of all a common aspect of a browser and a Node.js application is JavaScript. Both browser and Node.js provide
+environment allowing JavaScript code to execute.
 
-However building an application which runs in a browser is altogether different
-from a Node.js application.
+However building an application which runs in a browser is altogether different from a Node.js application.
 
-We don't have window or document in Node, these are available as a part of runtime
-environment available with browsers.
+We don't have window or document in Node, these are available as a part of runtime environment available with browsers.
 
 *window* is a global object present in browsers.
 *global* is a global object present in Node.
@@ -98,14 +98,13 @@ If not for this behaviour then one will experience UI freezing.
 
 ## Node Module System
 
-Variables by default get added to global scope, which can lead to conflict if same
-name is used in multiple places. Hence a modularity is required to avoid this problem.
+Variables by default get added to global scope, which can lead to conflict if same name is used in multiple places.
+Hence a modularity is required to avoid this problem.
 
-Every file in Node.js is considered a module. All functions and variables defined
-in the file are private and by default not accessible outside of the file. In order
-to use outside one has to explicitly export these. 
-One only need to export the variables and functions that need to be accessed from
-outside of module, rest all which aren't required can stay private or un-exported.
+Every file in Node.js is considered a module. All functions and variables defined in the file are private and by default
+not accessible outside of the file. In order to use outside one has to explicitly export these. One only need to export
+the variables and functions that need to be accessed from outside of module, rest all which aren't required can stay
+private or un-exported.
 
 ### Module wrapper function
 
@@ -114,9 +113,8 @@ outside of module, rest all which aren't required can stay private or un-exporte
 
 ## libuv
 
-JavaScript is synchronous, blocking, single threaded programming language.
-Node.js we defined above as asynchronous and non-blocking which is possible with
-the help of *libuv*
+JavaScript is synchronous, blocking, single threaded programming language. Node.js we defined above as asynchronous and
+non-blocking which is possible with the help of *libuv*
 
 ## Behind the scenes
 We have a client which makes a http call. The call eventually will be processed
