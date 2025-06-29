@@ -156,3 +156,32 @@ associated callback?
 
 Ans: Normal flow of execution will not be interrupted, callback functions will be
 executed only when call stack becomes empty.
+
+
+## .js vs .mjs in Node.js: What’s the Difference?
+
+
+## What is Chrome's V8 JavaScript Engine?
+The V8 JavaScript engine is Google Chrome’s open-source JavaScript and WebAssembly engine. It’s the part of the browser
+(and Node.js) that executes JavaScript code.
+
+
+## What is V8?
+- V8 is a high-performance JavaScript engine written in C++.
+- It was developed by Google for use in Chrome, but it’s now used beyond the browser — like in Node.js to run JavaScript on servers.
+
+### What does V8 do?
+
+#### Parses and Compiles JavaScript
+- When JavaScript is run the V8
+  - Parses the code into an Abstract Syntax Tree (AST)
+  - Converts the AST into bytecode
+  - Optimizes that into machine code for CPU
+
+Note : It’s like how LLVM compiles Swift into optimized native code.
+
+#### Optimizes Performance
+- V8 includes
+  - JIT (Just-In-Time) Compiler: Translates JavaScript into native machine code at runtime.
+  - Inline Caching, Hidden Classes, and other runtime optimizations.
+
