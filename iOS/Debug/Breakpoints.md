@@ -11,8 +11,10 @@
 - Runtime issue breakpoints
     - Xcode records a backtrace and shows it.
 
-// TODO: Check latest on this and confirm
-LLDB consists of two compilers
-- Clang for Objective C
-- Swift compiler
-What's REPL
+
+## TODOs
+
+- [ ] Does LLDB consists of two compilers?
+    - Clang for Objective C
+    - Swift compiler
+- [ ] What's REPL?
