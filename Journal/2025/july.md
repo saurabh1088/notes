@@ -4,6 +4,13 @@
 
 ## Tuesday, 1st July 2025
 
+- PyCharm download, installation
+- Verify the SHA 256 checksum
+    - shasum -a 256 pycharm-2025.1.2-aarch64.dmg
+- Python iterators
+    - Added examples at
+        - https://github.com/saurabh1088/python/blob/main/learnings/about_iterators.py
+
 ---
 
 ## Wednesday, 2nd July 2025
