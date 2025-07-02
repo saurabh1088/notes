@@ -15,6 +15,9 @@
 
 ## Wednesday, 2nd July 2025
 
+- Python iterators
+    - Documented implementation of `Counter` @https://github.com/saurabh1088/python/blob/main/learnings/about_iterators.py
+
 ---
 
 ## Thursday, 3rd July 2025
