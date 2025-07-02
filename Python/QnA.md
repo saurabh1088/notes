@@ -106,3 +106,5 @@ Explicitly Defined: You typically define an iterator by creating a class that im
 Stateful: Iterators maintain their internal state (i.e., where they are in the sequence) to know what the next item is.
 Manual Implementation: Creating custom iterators often involves more boilerplate code.
 Can be finite or infinite: Iterators can represent a finite sequence (like a list) or an infinite sequence (like counting numbers).
+
+Check examples @https://github.com/saurabh1088/python/blob/main/learnings/about_iterators.py

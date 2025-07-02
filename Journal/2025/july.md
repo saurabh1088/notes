@@ -17,6 +17,10 @@
 
 - Python iterators
     - Documented implementation of `Counter` @https://github.com/saurabh1088/python/blob/main/learnings/about_iterators.py
+    - Added example for iterator with error handling for case going beyond limit.
+
+### TODOs
+- [ ] Add an example for iterator to generate fibonacci numbers
 
 ---
 
