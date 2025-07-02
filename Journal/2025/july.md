@@ -19,6 +19,10 @@
     - Documented implementation of `Counter` @https://github.com/saurabh1088/python/blob/main/learnings/about_iterators.py
     - Added example for iterator with error handling for case going beyond limit.
 
+```
+What are some practical, real-world use cases where iterators in Python provide clear advantages? Please include brief code examples to illustrate each use case.
+```
+
 ### TODOs
 - [ ] Add an example for iterator to generate fibonacci numbers
 
