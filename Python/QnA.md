@@ -90,9 +90,9 @@ While Python's execution speed can sometimes be a concern for CPU-bound tasks co
 In Python, both generators and iterators are fundamental concepts related to iteration, but they differ in their creation
 and how they function.
 
-Here's a breakdown of their differences:
+### Here's a breakdown of their differences:
 
-Iterators
+#### Iterators
 An iterator is an object that represents a stream of data. It implements the iterator protocol, which consists of two methods:
 
 
@@ -107,4 +107,33 @@ Stateful: Iterators maintain their internal state (i.e., where they are in the s
 Manual Implementation: Creating custom iterators often involves more boilerplate code.
 Can be finite or infinite: Iterators can represent a finite sequence (like a list) or an infinite sequence (like counting numbers).
 
-Check examples @https://github.com/saurabh1088/python/blob/main/learnings/about_iterators.py
+Check examples https://github.com/saurabh1088/python/blob/main/learnings/about_iterators.py
+
+#### Generators
+
+Python generators are a powerful and memory-efficient way to create iterators. They are especially useful when you need to process a large sequence of data but don't want to load the entire sequence into memory at once.
+
+Concept of Python Generators
+At their core, generators are functions that, instead of returning a single value and exiting, yield a sequence of values over time. When a yield statement is encountered in a generator function, the function's state is frozen, and the yielded value is returned. The next time the generator is called (e.g., in a for loop), it resumes execution from where it left off.
+
+Here's a breakdown of the key concepts:
+
+yield keyword: This is what makes a function a generator. Instead of return, yield is used to send a value back to the caller.
+
+State Suspension: When yield is executed, the function's local variables and execution state are saved. This allows the generator to resume from that exact point when the next value is requested.
+
+Laziness/On-Demand Generation: Generators produce values one at a time, only when requested. This is in contrast to regular functions that compute and return all values at once.
+
+Iterators: Generators are automatically iterators. This means you can use them directly in for loops, next() calls, and other constructs that expect an iterable.
+
+Why use Generators?
+Memory Efficiency: This is the primary advantage. For very large datasets, generating values on demand significantly reduces memory consumption because you don't need to store the entire sequence in memory.
+
+Performance: In some cases, generators can be faster because they don't incur the overhead of building and returning an entire list.
+
+Infinite Sequences: Generators can represent infinite sequences of data (e.g., all natural numbers) because they only generate values as needed.
+
+Cleaner Code: They can make code more readable and concise when dealing with iterative processes.
+
+Check examples https://github.com/saurabh1088/python/blob/main/learnings/about_generators.py
+
