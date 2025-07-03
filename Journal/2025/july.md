@@ -32,8 +32,10 @@ What are some practical, real-world use cases where iterators in Python provide 
 ## Thursday, 3rd July 2025
 
 - Prompt
-- Added python generator example
+- Added python generator examples
     - https://github.com/saurabh1088/python/blob/main/learnings/about_generators.py
+- Added generator notes to QnA
+    - https://github.com/saurabh1088/notes/blob/main/Python/QnA.md
 
 ```
 Explain the practical, real-world advantages of using iterators in Python, providing at least three distinct use cases. For each use case, include:
@@ -49,6 +51,7 @@ Focus on scenarios where iterators offer tangible benefits in terms of performan
 
 ### TODOs
 - [ ] Document prompt
+- [ ] https://www.programiz.com/python-programming/generator
 
 ---
 
