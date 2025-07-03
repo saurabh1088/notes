@@ -25,10 +25,28 @@ What are some practical, real-world use cases where iterators in Python provide 
 
 ### TODOs
 - [ ] Add an example for iterator to generate fibonacci numbers
+- [ ] Document prompt
 
 ---
 
 ## Thursday, 3rd July 2025
+
+- Prompt
+
+```
+Explain the practical, real-world advantages of using iterators in Python, providing at least three distinct use cases. For each use case, include:
+
+A clear explanation of the problem that iterators help solve, highlighting why they are a superior solution compared to alternative approaches (e.g., loading all data into memory).
+
+A brief, illustrative code example that demonstrates the use of iterators in that specific context.
+
+A concise explanation of the code and how the iterator contributes to efficiency, memory management, or other benefits.
+
+Focus on scenarios where iterators offer tangible benefits in terms of performance, resource consumption, or code elegance.
+```
+
+### TODOs
+- [ ] Document prompt
 
 ---
 
