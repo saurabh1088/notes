@@ -54,7 +54,38 @@ So in a nutshell oAuth:
 - Introduces authorization layer
 - Issues different set of credentials to client - access token
 
-*Now going back to out to out app's Google problem* 
+*Now going back to out to out app's Google problem*
+
+OAuth 2.0 introduces a secure delegation mechanism where:
+	•	The app never sees or handles the user’s credentials (username/password).
+	•	The user authenticates directly with Google (the Authorization Server) in a secure environment (usually via a browser or system web view).
+	•	After successful login, Google asks the user for consent:
+➔ “Do you allow this app to access your Google Photos?”
+
+🔐 The Flow in Simple Steps:
+	1.	The app redirects the user to Google’s Authorization page.
+	2.	User logs in to Google securely (credentials are only shared with Google, not the app).
+	3.	User grants permission for the app to access Google Photos.
+	4.	Google issues an Access Token to the app (short-lived, limited in scope).
+	5.	The app uses this Access Token to call Google Photos API and fetch the user’s photos.
+
+👉 The app only has the Access Token, not the password.
+
+🔄 Benefits of OAuth 2.0 in this scenario:
+
+| **Problem Without OAuth 2.0**                              | **Solution with OAuth 2.0**                                 |
+|------------------------------------------------------------|-------------------------------------------------------------|
+| App knows the user’s password                               | App never sees the user’s password                           |
+| No way to limit what the app can access                     | Access is limited to specific scopes (e.g., Photos)          |
+| No way to revoke app access without password reset          | User or Google can revoke token anytime                      |
+| App could misuse the credentials                            | Token-based, time-limited, minimal access                    |
+
+
+🔑 Key Takeaways:
+	•	OAuth 2.0 decouples Authentication from Authorization.
+	•	The app doesn’t need to “impersonate” the user—it receives limited permission via tokens.
+	•	User remains in control of what the app can and cannot do.
+
 
 
 ## Roles in oAuth
