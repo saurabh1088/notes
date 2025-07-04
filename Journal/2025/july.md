@@ -57,6 +57,11 @@ Focus on scenarios where iterators offer tangible benefits in terms of performan
 
 ## Friday, 4th July 2025
 
+- oAuth Revision
+
+### TODOs
+- [ ] Check URL Schemes in current project.
+
 ---
 
 ## Saturday, 5th July 2025
