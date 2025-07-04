@@ -7,13 +7,13 @@ One might slip in these terms interchangeably, HOWEVER, fundamentally Authentica
 *Authentication* is to do with verifying who the user is.
 *Authorization* is to do with verifying what all access user has.
 
-|Authentication|Authorization|
-|---|---|
-|Determines, if the user is who they claim to be|Determines, what all user can access|
-|It's before Authorization|This follows after Authentication is successfull|
-|Usually results in ID Token|Usually results in Access Token|
-|Follows OpenID Connect (OIDC) protocol|Follows OAuth 2.0 framework|
-|This identifies user, to check access to system|This checks user, to provide access to some resource within system|
+| **Authentication**                                        | **Authorization**                                      |
+|-----------------------------------------------------------|--------------------------------------------------------|
+| Determines if the user is who they claim to be            | Determines what the user can access                    |
+| Happens before authorization                              | Happens after successful authentication                |
+| Usually results in an **ID Token**                        | Usually results in an **Access Token**                 |
+| Follows **OpenID Connect (OIDC)** protocol                | Follows **OAuth 2.0** framework                        |
+| Identifies the user to check access to the system         | Checks the user's permissions to access specific resources |
 
 
 ## What is oAuth 2.0?
@@ -53,6 +53,8 @@ owner.
 So in a nutshell oAuth:
 - Introduces authorization layer
 - Issues different set of credentials to client - access token
+
+*Now going back to out to out app's Google problem* 
 
 
 ## Roles in oAuth
