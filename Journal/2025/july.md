@@ -61,6 +61,7 @@ Focus on scenarios where iterators offer tangible benefits in terms of performan
 
 ### TODOs
 - [ ] Check URL Schemes in current project.
+- [ ] Check auth implementation in current project.
 
 ---
 
