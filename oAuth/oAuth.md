@@ -54,7 +54,7 @@ So in a nutshell oAuth:
 - Introduces authorization layer
 - Issues different set of credentials to client - access token
 
-*Now going back to out to out app's Google problem*
+*Now going back to our app's Google problem discussed before, let's see how oAuth2.0 fixes that*
 
 OAuth 2.0 introduces a secure delegation mechanism where:
 	•	The app never sees or handles the user’s credentials (username/password).
