@@ -67,6 +67,14 @@ Focus on scenarios where iterators offer tangible benefits in terms of performan
 
 ## Saturday, 5th July 2025
 
+- iOS Notes Revision
+- Added QnA for NSCacheDelegate
+- Added disadvantages for NSCache
+
+### TODOs
+- [ ] NSCache vs URLCache which one to use for image caching
+- [ ] Can one cache a rendered UI element?
+
 ---
 
 ## Sunday, 6th July 2025
