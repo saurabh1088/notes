@@ -91,6 +91,9 @@ it will cause compressor to decompress memory for it, so in a memory-contrained 
 use more memory.
 So important thing to consider about caching is that one might use caching so as to prevent CPU from doing some task repeatedly,
 but if one ends up caching too much, then it can result in memory issues.
+So as `NSCache` is designed to be purgeable, it is better to rely more heavily on NSCache's auto-eviction policies (by
+setting `totalCostLimit` and `countLimit` appropriately) and the `NSCacheDelegate`'s willEvictObject method for fine-grained
+control, rather than a blanket `removeAllObjects()` in response to every memory warning.
 
 
 ## 4. URLCache
