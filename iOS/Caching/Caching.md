@@ -1,5 +1,6 @@
 #  Caching
 
+
 ## 1. NSCache
 
 Declaration as per official documentation :
@@ -18,7 +19,6 @@ NSCache provides functionality to automatically evict objects to free up memory 
 Source : https://developer.apple.com/documentation/foundation/nscache
 
 ### 1.1 Transient
-
 In Apple's official documentation, as per definition the mutable collection which is NSCache is *transient*.
 
 Transient literally means lasting only for a short time OR impermanent. So this means that data stored in NSCache won't be
@@ -28,17 +28,18 @@ These *auto-eviction policies* make sure that cache doesn't ends up using too mu
 These auto-eviction policies will remove some data from cache if memory concerns arise.
 
 ### 1.2 Thread Safety
-
 While using NSCache, one can add, remove, and query items in cache from different threads without the need of locking the cache.
 
 ### 1.3 Class restricted
-
 Looking at declaration for NSCache it tell that both key and value are restricted to be of class types only. This restricts
 usage of NSCache to class types only.
 
 ### 1.4 Purgeable
-
 The way NSCache allocates its memory it is purgeable, so NSCache performs better in memory-constrained environment.
+
+### 1.5 In-memory cache
+NSCache is an in-memory cache.
+
 
 ## 2. Caching and Memory
 
@@ -100,6 +101,7 @@ and will override if any cache policy was set at *URLSessionConfiguration* level
 
 *URLSessionConfiguration* has instance property *urlCache* of type *URLCache*. This implies URLSession using URLCache for
 caching duty.
+
 
 ## 7. TODOs
 
