@@ -1,6 +1,6 @@
 # Concurrency
 
-`GCD` and `OperationQueue` are two ways once can implement concurrency in iOS/macOS development.
+`GCD` and `OperationQueue` are two ways one can implement concurrency in iOS/macOS development.
 
 ## 1. GCD
 
@@ -55,7 +55,7 @@ the queue can perform. For example, setting it to 1 causes queue to perform each
 
 ## 4. Actors
 
-## 5. What are Actors?
+### 4.1 What are Actors?
 - Primary goal of actors is to prevent data races and ensure safe access to shared mutable state in concurrent programming.
 - Conceptually Swift actors are classes as actors also are reference type.
 - Major difference wrt classes is that actors don't participate in inheritance.
@@ -71,7 +71,12 @@ a mutable one and doesn't needs isolated access.
 - If method is not accessing any mutable data, then it is good practice to mark it as nonisolated.
 - nonisolated can be used for computed properties as well of those aren't being computed of any mutable state.
 
-## 6. Can one use nonisolated on a let constant property as those are non mutabled?
+### 4.3 Actors and isolation
+In Swift, when we say that actors guarantee data isolation, we mean that all mutable properties and functions within an
+actor are isolated from direct access from the outside. This isolation is a core feature of actors and is crucial for
+ensuring thread safety in concurrent programming.
+
+### 4.3 Can one use nonisolated on a let constant property as those are non mutable?
 NO, it is not needed and compilor will prevent such attempt.
 
 When one encapsulates data within an actor, one is essentially isolating it from direct access by other parts of the
