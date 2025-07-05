@@ -66,6 +66,14 @@ NSCache is great for:
 1. Performance
 2. Auto-purging
 
+### 1.7 Disadvantages of NSCache
+1. In-memory only
+2. It's volatile, meaning system will purge it in case of memory issues
+3. No guaranteed order of eviction.
+    - While generally LRU-like, there's no strict guarantee on which objects are evicted first.
+4. Only supports class types.
+5. Does not hold strong references to keys.
+    - Keys are not retained, so if a key is deallocated elsewhere, its entry in the cache is removed.
 
 ## 2. Caching and Memory
 
