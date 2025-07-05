@@ -40,6 +40,32 @@ The way NSCache allocates its memory it is purgeable, so NSCache performs better
 ### 1.5 In-memory cache
 NSCache is an in-memory cache.
 
+### 1.6 System is about to purge NSCache data, now what?
+- In event when system is purging data from NSCache and one needs to take some action, one case use `NSCacheDelegate`.
+- `cache(_:willEvictObject:)` will notify when object is being removed.
+
+```
+class MyCacheDelegate: NSObject, NSCacheDelegate {
+    func cache(_ cache: NSCache<AnyObject, AnyObject>, willEvictObject obj: Any) {
+        if let image = obj as? UIImage {
+            print("NSCache is about to evict an image. You might want to save its identifier or perform other cleanup.")
+            // Example: If you have a way to identify the image (e.g., its URL string),
+            // you might log it or mark it as "needs re-download"
+            // print("Evicted image data size: \(image.jpegData(compressionQuality: 0.8)?.count ?? 0) bytes")
+        } else {
+            print("NSCache is about to evict object: \(obj)")
+        }
+        // Here, you could save a key to a disk-based "recently evicted" list
+        // if you want to prioritize re-downloading these items later.
+    }
+}
+```
+
+### 1.6 Benefits/Advantages of NSCache
+NSCache is great for:
+1. Performance
+2. Auto-purging
+
 
 ## 2. Caching and Memory
 
@@ -57,13 +83,6 @@ it will cause compressor to decompress memory for it, so in a memory-contrained 
 use more memory.
 So important thing to consider about caching is that one might use caching so as to prevent CPU from doing some task repeatedly,
 but if one ends up caching too much, then it can result in memory issues.
-
-
-## 3. Benefits/Advantages of NSCache
-
-NSCache is great for:
-1. Performance
-2. Auto-purging
 
 
 ## 4. URLCache
