@@ -76,8 +76,10 @@ In Swift, when we say that actors guarantee data isolation, we mean that all mut
 actor are isolated from direct access from the outside. This isolation is a core feature of actors and is crucial for
 ensuring thread safety in concurrent programming.
 
-### 4.3 Can one use nonisolated on a let constant property as those are non mutable?
-NO, it is not needed and compilor will prevent such attempt.
+### 4.3 Can one use nonisolated on a let constant property in an actor as those are non mutable?
+YES, one can declare a let constant property as nonisolated in an actor.
+Refer example at below playground:
+- https://github.com/saurabh1088/swift-playgrounds/blob/main/Concurrency.playground/Pages/Actors.xcplaygroundpage/Contents.swift
 
 When one encapsulates data within an actor, one is essentially isolating it from direct access by other parts of the
 program. Any code that wants to interact with the data must go through the actor, effectively ‘lining up’ and waiting
