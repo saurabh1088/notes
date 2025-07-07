@@ -114,6 +114,13 @@ Assume a strong understanding of basic Swift syntax and iOS app architecture. Th
 
 ## Sunday, 6th July 2025
 
+- Swift concurrency revision
+- Added Swift Actor example 6
+    - https://github.com/saurabh1088/swift-playgrounds/blob/main/Concurrency.playground/Pages/Actors.xcplaygroundpage/Contents.swift
+
+### TODOs
+- [ ] What is Livelocks?
+
 ---
 
 ## Monday, 7th July 2025
