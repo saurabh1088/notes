@@ -132,13 +132,20 @@ Assume a strong understanding of basic Swift syntax and iOS app architecture. Th
 
 ## Tuesday, 8th July 2025
 
+- Revision async/await
 - Semaphores
     - unsigned int
     - changes are atomic
-    - 2 operations, wait() and post()
+    - 2 operations it supports
+        - wait() 
+        - post() OR signal()
+- Python's Global Interpreter Lock
+    - Started
+    - https://realpython.com/python-gil/
 
 ### TODOs
 - [ ] What is mutex?
+- [ ] Read https://realpython.com/python-gil/
 
 ---
 
