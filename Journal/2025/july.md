@@ -132,6 +132,14 @@ Assume a strong understanding of basic Swift syntax and iOS app architecture. Th
 
 ## Tuesday, 8th July 2025
 
+- Semaphores
+    - unsigned int
+    - changes are atomic
+    - 2 operations, wait() and post()
+
+### TODOs
+- [ ] What is mutex?
+
 ---
 
 ## Wednesday, 9th July 2025
