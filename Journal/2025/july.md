@@ -125,6 +125,9 @@ Assume a strong understanding of basic Swift syntax and iOS app architecture. Th
 
 ## Monday, 7th July 2025
 
+- Swift concurrency
+    - Playground examples for Task API
+
 ---
 
 ## Tuesday, 8th July 2025
