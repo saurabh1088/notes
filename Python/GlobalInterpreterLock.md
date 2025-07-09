@@ -57,9 +57,20 @@ multiple threads.
 ---
 
 ## Any attempts to make Python GIL free?
+
 - In short Yes.
 - https://realpython.com/python-news-july-2025/
 
 ---
 
+## Does this mean that due to GIL, Python is single threaded?
+
+- NO
+- The GIL is a concurrency limiter, not a threading blocker.
+- The Global Interpreter Lock (GIL) does not mean that Python is single-threaded.
+- Python is indeed a multi-threaded language, meaning one can create and manage multiple threads within a single Python
+program using modules like `threading`.
+- However, the GIL acts as a gatekeeper, ensuring that only one of these threads can execute Python bytecode at any given moment, even on systems with multiple CPU cores.
+- This effectively prevents true parallel execution of CPU-bound tasks across multiple cores within a single Python process, making them run concurrently (interleaving execution) rather than in parallel.
+- For I/O-bound tasks, where threads spend time waiting for external operations, the GIL is released, allowing other threads to run and achieve effective concurrency.
 
