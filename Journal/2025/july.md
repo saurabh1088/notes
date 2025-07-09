@@ -151,6 +151,10 @@ Assume a strong understanding of basic Swift syntax and iOS app architecture. Th
 
 ## Wednesday, 9th July 2025
 
+- Python
+    - Global Interpreter Lock
+        - Added markdown https://github.com/saurabh1088/notes/blob/main/Python/GlobalInterpreterLock.md
+
 ---
 
 ## Thursday, 10th July 2025
