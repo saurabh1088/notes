@@ -56,3 +56,10 @@ multiple threads.
 
 ---
 
+## Any attempts to make Python GIL free?
+- In short Yes.
+- https://realpython.com/python-news-july-2025/
+
+---
+
+
