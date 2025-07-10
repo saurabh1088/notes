@@ -159,6 +159,13 @@ Assume a strong understanding of basic Swift syntax and iOS app architecture. Th
 
 ## Thursday, 10th July 2025
 
+- Python
+    - @staticmethod
+        - Added examples at https://github.com/saurabh1088/python/blob/main/learnings/about_static.py
+    - @classmethod
+    - instance methods
+        - Added examples at https://github.com/saurabh1088/python/blob/main/learnings/about_class_members.py
+
 ---
 
 ## Friday, 11th July 2025
