@@ -190,3 +190,65 @@ This is a common headache, and often comes down to a few key areas. If Crashlyti
 Analyzing production crashes is an ongoing discipline, not a one-time fix. It requires vigilance, a systematic approach, and a deep understanding of your tools. Start with Crashlytics, embrace MetricKit, and always keep your dSYMs organized. Treat every crash report as a direct line of communication from your users, telling you exactly how to make their experience better.
 
 Remember, the goal isn't just to fix the crash, but to understand *why* it happened, prevent similar issues in the future, and continuously improve the overall stability of your app. That's how you build robust, highly-rated apps that stand the test of time, and that's the mark of a seasoned developer. Now go get 'em!
+
+---
+
+## Python
+
+🗓 Week 1: Python Fundamentals & Syntax
+
+| Day    | Topic                                               | Practice Ideas                                |
+| ------ | --------------------------------------------------- | --------------------------------------------- |
+| 11 Jul | Python Introduction, Installing Python, Hello World | Write and run your first script               |
+| 12 Jul | Variables, Types, Basic I/O                         | Convert user input to different types         |
+| 13 Jul | Strings, String interpolation (`f""`), slicing      | Manipulate strings, format output             |
+| 14 Jul | Lists, Tuples, Dictionaries, Sets                   | Implement simple data structure exercises     |
+| 15 Jul | Control Flow: `if`, `for`, `while`                  | Write a simple calculator or game loop        |
+| 16 Jul | Functions, Arguments, Return Values                 | Write functions for math or string operations |
+| 17 Jul | List Comprehensions, Lambdas, Map/Filter            | Solve list transformation problems            |
+
+
+🗓 Week 2: OOP, Modules, Error Handling
+
+| Day    | Topic                                              | Practice Ideas                                        |
+| ------ | -------------------------------------------------- | ----------------------------------------------------- |
+| 18 Jul | Classes & Objects in Python                        | Write a simple class (e.g., `Car`, `Person`)          |
+| 19 Jul | Inheritance, `super()`, Method Overriding          | Model class hierarchies                               |
+| 20 Jul | Special methods: `__str__`, `__repr__`, `__init__` | Implement custom string representation                |
+| 21 Jul | Properties (`@property`), Class & Static methods   | Apply concepts to design a class with utility methods |
+| 22 Jul | Exception Handling (`try`, `except`, `finally`)    | Write robust functions that handle errors             |
+| 23 Jul | Modules & Imports, `__main__` guard                | Break code into multiple files, import them           |
+| 24 Jul | Python Packages & Virtual Environments             | Set up and explore a virtualenv project               |
+
+
+🗓 Week 3: Intermediate Python & Data Handling
+
+| Day    | Topic                                        | Practice Ideas                          |
+| ------ | -------------------------------------------- | --------------------------------------- |
+| 25 Jul | File Handling: `open()`, Read/Write files    | Build a simple log reader/writer        |
+| 26 Jul | JSON, CSV parsing                            | Parse and manipulate structured data    |
+| 27 Jul | DateTime, Time, Timedeltas                   | Work with dates and scheduling          |
+| 28 Jul | Decorators & Closures                        | Write a simple timing/logging decorator |
+| 29 Jul | Iterators & Generators (`yield`)             | Implement a custom iterable             |
+| 30 Jul | Context Managers (`with`), Resource Handling | Create a custom context manager         |
+| 31 Jul | Practice: Small project tying above concepts | E.g., simple contact book, todo app     |
+
+
+🗓 Week 4: Concurrency, Libraries, Testing
+
+| Day   | Topic                                           | Practice Ideas                       |
+| ----- | ----------------------------------------------- | ------------------------------------ |
+| 1 Aug | Multithreading vs Multiprocessing Basics        | Simulate concurrent tasks            |
+| 2 Aug | AsyncIO Introduction                            | Fetch URLs concurrently              |
+| 3 Aug | Unit Testing with `unittest` or `pytest`        | Write tests for Week 3 project       |
+| 4 Aug | Logging & Debugging                             | Add logging to previous code         |
+| 5 Aug | Explore popular libraries: `requests`, `pandas` | Try loading CSVs or making API calls |
+| 6 Aug | Error Patterns & Defensive Programming          | Handle and log unexpected conditions |
+| 7 Aug | Code Review: Refactor and Document Code         | Apply `PEP8`, write docstrings       |
+
+Optional Next Steps:
+Web Development: Flask/FastAPI
+
+Data Analysis: Pandas, Numpy
+
+Automation: Scripting, APIs
