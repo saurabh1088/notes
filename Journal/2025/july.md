@@ -203,37 +203,70 @@ How class properties (static properties) are inherited by subclasses, and how me
 The goal is to gain practical, architectural insights that go beyond simple definitions, enabling a clear understanding of when and why to employ each of these powerful Python features in complex, maintainable codebases.
 ```
 
+- Added PnA to Python folder
+    - https://github.com/saurabh1088/notes/blob/main/Python/PnA.md
+- Added one PnA to clipboard
+    - https://github.com/saurabh1088/notes/blob/main/Journal/clipboard.md
+- Anaconda & Miniconda
+    - https://conda.org/
+    - https://www.anaconda.com/
+
 ---
 
 ## Saturday, 12th July 2025
+
+### P
+
+### A
 
 ---
 
 ## Sunday, 13th July 2025
 
+### P
+### A
+
 ---
 
 ## Monday, 14th July 2025
+
+### P
+### A
 
 ---
 
 ## Tuesday, 15th July 2025
 
+### P
+### A
+
 ---
 
 ## Wednesday, 16th July 2025
+
+### P
+### A
 
 ---
 
 ## Thursday, 17th July 2025
 
+### P
+### A
+
 ---
 
 ## Friday, 18th July 2025
 
+### P
+### A
+
 ---
 
 ## Saturday, 19th July 2025
+
+### P
+### A
 
 ---
 
