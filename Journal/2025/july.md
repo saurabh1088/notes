@@ -215,58 +215,33 @@ The goal is to gain practical, architectural insights that go beyond simple defi
 
 ## Saturday, 12th July 2025
 
-### P
-
-### A
-
 ---
 
 ## Sunday, 13th July 2025
-
-### P
-### A
 
 ---
 
 ## Monday, 14th July 2025
 
-### P
-### A
-
 ---
 
 ## Tuesday, 15th July 2025
-
-### P
-### A
 
 ---
 
 ## Wednesday, 16th July 2025
 
-### P
-### A
-
 ---
 
 ## Thursday, 17th July 2025
-
-### P
-### A
 
 ---
 
 ## Friday, 18th July 2025
 
-### P
-### A
-
 ---
 
 ## Saturday, 19th July 2025
-
-### P
-### A
 
 ---
 
