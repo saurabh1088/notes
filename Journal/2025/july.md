@@ -215,6 +215,10 @@ The goal is to gain practical, architectural insights that go beyond simple defi
 
 ## Saturday, 12th July 2025
 
+- Python
+    - Operators
+    - Added file https://github.com/saurabh1088/python/blob/main/learnings/about_operators.py
+
 ---
 
 ## Sunday, 13th July 2025
