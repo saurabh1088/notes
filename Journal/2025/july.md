@@ -231,6 +231,40 @@ Create a comprehensive and comparative list of operators that are either exclusi
 
 ## Sunday, 13th July 2025
 
+- Prompts
+    - Updated sheet at https://github.com/saurabh1088/notes/blob/main/misc/Prompts/Prompts.md
+- Collections
+    - Swift's lazy evaluation
+        - LazySequence
+        - LazyCollection
+        - .lazy property
+
+### Prompt
+```
+As a senior software engineer, your task is to provide an in-depth, comparative explanation of collections across these programming languages: Swift, Python, JavaScript, and Kotlin.
+Go beyond the basics — focus on advanced usage patterns, performance considerations, and memory efficiency relevant to high-performance and large-scale applications.
+
+Cover topics such as:
+
+- Mutability and immutability of collections
+
+- Typed vs untyped collections
+
+- Collection algorithms and higher-order functions (e.g., map, filter, reduce)
+
+- Lazy evaluation and iteration
+
+- Thread safety and concurrent collection access
+
+- Backing data structures (e.g., arrays vs linked lists, hash tables)
+
+- Performance trade-offs and optimization strategies
+
+- Real-world scenarios where collection design impacts app performance or scalability
+
+Provide code examples and architectural insights for each language, and highlight similarities, differences, and language-specific idioms.
+```
+
 ---
 
 ## Monday, 14th July 2025
