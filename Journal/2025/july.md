@@ -217,8 +217,11 @@ The goal is to gain practical, architectural insights that go beyond simple defi
 
 - Python
     - Operators
+        - walrus operator
+            - https://www.datacamp.com/tutorial/python-walrus-operator
     - Added file https://github.com/saurabh1088/python/blob/main/learnings/about_operators.py
     - f-strings
+        - Added examples : https://github.com/saurabh1088/python/blob/main/learnings/about_strings.py
 
 ```
 Create a comprehensive and comparative list of operators that are either exclusive to Python or implemented in a uniquely Pythonic way. Highlight how these operators differ from or are absent in other mainstream programming languages such as C, Java, Swift, JavaScript, and others. Include practical examples, explanations of their purpose, and notes on whether equivalent functionality exists (or not) in those other languages.
