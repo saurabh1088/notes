@@ -238,6 +238,9 @@ Create a comprehensive and comparative list of operators that are either exclusi
         - LazySequence
         - LazyCollection
         - .lazy property
+- Swift Sequence
+    - Added playground file
+        - https://github.com/saurabh1088/swift-playgrounds/tree/main/Swift/Sequence.playground
 
 ### Prompt
 ```
