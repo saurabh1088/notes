@@ -132,6 +132,35 @@ Assume a strong understanding of basic Swift syntax and iOS app architecture. Th
 ---
 
 ```
+As a seasoned Python architect with over two decades of hands-on experience in designing and implementing robust, scalable systems, please provide a deep dive into the nuanced differences between @classmethod, @staticmethod, and how they interact with class-level properties in Python.
+
+Go beyond the basic syntax. I'm looking for:
+
+Fundamental Conceptual Distinctions: Elaborate on the core philosophy behind each decorator. What problem does each solve, and why would one choose one over the other from an architectural standpoint?
+
+Interaction with Class-Level Properties:
+
+Clearly explain how both @classmethod and @staticmethod access and potentially modify class variables (which serve as static properties).
+
+Discuss the implications of using cls.property_name versus ClassName.property_name within these methods, especially in the context of inheritance.
+
+Real-World Scenarios and Justification: Provide compelling, comprehensive examples from typical project contexts where:
+
+A @staticmethod is the unequivocally correct choice, explaining why it fits that specific utility or helper role.
+
+A @classmethod is the ideal solution, particularly showcasing its power in factory patterns, managing class-level registries, or scenarios requiring awareness of the actual runtime class.
+
+Interchangeability and Purpose: Explicitly state if and when these two method types are not interchangeable, emphasizing their distinct purposes and the pitfalls of misusing them.
+
+Impact of Inheritance: This is crucial. Detail how inheritance affects:
+
+The behavior of @classmethods (polymorphism through cls).
+
+The behavior of @staticmethods (lack of polymorphism).
+
+How class properties (static properties) are inherited by subclasses, and how method calls (both instance and class methods) correctly resolve to the most specific class property in the hierarchy.
+
+The goal is to gain practical, architectural insights that go beyond simple definitions, enabling a clear understanding of when and why to employ each of these powerful Python features in complex, maintainable codebases.
 ```
 
 ---
