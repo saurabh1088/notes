@@ -12,6 +12,8 @@ Consider using oAuth2.0 authorisation code grant flow.
 After explaining design, desribe detailed user journeys covering all possible user flows.
 ```
 
+---
+
 ```
 Describe the entire process for adding a push notification capability to an iOS App. Notification authorisation prompt
 shouldn't be asked at app launch, but at some point later in flow.
@@ -24,11 +26,16 @@ Include in the process:
 - How to design and send rich notifications
 ```
 
+---
+
 ```
 Explain how to create a sample iOS Application with push notification capability. Push notification need to be a rich
 notification which includes images and videos. Also before pushing app to appstore, need to test the rich notification
 locally preferably on iOs simulator. Explain process on how to test this rich notification using Xcode and iOS simulator.
 ```
+
+---
+
 
 ```
 An iOS App need to download some content from a remote server. Implement this scenario using URLSession. 
@@ -44,6 +51,8 @@ An iOS App need to download some content from a remote server. Implement this sc
 - Or what happens when app is killed with some download is in progress?
 ```
 
+---
+
 ```
 What are different states of an iOS app?
 - List each state
@@ -51,10 +60,16 @@ What are different states of an iOS app?
 - Provide scenarios like what happens to states when say a notification is received, or a call is received.
 ```
 
+---
+
+
 ```
 How to setup a core data stack with multiple managed contexts. Also give practical use cases why a multiple managed
 context could be required 
 ```
+
+---
+
 
 ```
 Explain and discuss in details why should an iOS application written using Swift language should use Alamofire for
@@ -65,6 +80,9 @@ networking instead of using Apple's URL Loading System.
 URL Loading System.
 ```
 
+---
+
+
 ```
 Explain the step by step process how the flow will work with oAuth2.0 and Face-ID both for an iOS App. Starting with
 - User logging in for the first time
@@ -73,4 +91,95 @@ Explain the step by step process how the flow will work with oAuth2.0 and Face-I
 - User at some point disabled Face-ID
 - User at some point deleted and re-configured Face-ID
 - Scenario when Face-ID fails due to some issue
+```
+
+---
+
+
+```
+```
+
+---
+
+```
+```
+
+---
+
+```
+```
+
+---
+
+```
+```
+
+---
+
+```
+```
+
+---
+
+```
+```
+
+---
+
+```
+```
+
+---
+
+```
+```
+
+---
+
+```
+```
+
+---
+
+```
+```
+
+---
+
+```
+```
+
+---
+
+```
+```
+
+---
+
+```
+```
+
+---
+
+```
+```
+
+---
+
+```
+```
+
+---
+
+```
+```
+
+---
+
+```
+```
+
+---
+
+```
 ```
