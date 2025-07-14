@@ -272,6 +272,24 @@ Provide code examples and architectural insights for each language, and highligh
 
 ## Monday, 14th July 2025
 
+- Swift's lazy evaluation
+    - Updated example at
+        - https://github.com/saurabh1088/swift-playgrounds/tree/main/Swift/Sequence.playground
+
+- Python
+    - Memory management
+        - https://github.com/saurabh1088/notes/blob/main/Python/MemoryManagement.md
+
+
+### Prompt
+```
+Create a step by step learning plan for Data Structures. Assume learners have some basic knowledge of programming but not
+good understanding of data structures. Plan should be covering all required relevant topics. Preferably 30min each day.
+Plan should consider hands on practice using Python as programming language or suggest any alternative if better suited.
+Include references wherever applicable or needed for further learning. Include some practice programming tasks for cementing
+concepts and gaining hands-on.
+```
+
 ---
 
 ## Tuesday, 15th July 2025
