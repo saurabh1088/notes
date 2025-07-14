@@ -213,6 +213,11 @@ Throughout your answer, adopt a tone that reflects your 20 years of experience â
 ---
 
 ```
+Create a step by step learning plan for Data Structures. Assume learners have some basic knowledge of programming but not
+good understanding of data structures. Plan should be covering all required relevant topics. Preferably 30min each day.
+Plan should consider hands on practice using Python as programming language or suggest any alternative if better suited.
+Include references wherever applicable or needed for further learning. Include some practice programming tasks for cementing
+concepts and gaining hands-on.
 ```
 
 ---
