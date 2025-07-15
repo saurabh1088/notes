@@ -46,6 +46,24 @@ _Data structure is a way of organising data such that it can be used effectively
     - memory layout, and 
     - performance characteristics (Big O)
 
+#### Analogy
+- A Stack ADT can be concretely implemented using an Array (e.g., Python's list using append() and pop()).
+- A Stack ADT can also be concretely implemented using a Linked List.
+- Both implementations fulfill the "Stack" behavior, but they have different performance characteristics 
+    - (e.g., array-based stack might be faster for pop if it doesn't need to reallocate,
+    - but linked list based stack might be better if memory is highly fragmented).
+
+| ADT (Abstract Data Type) | Common Concrete Implementations            | Key Behavior/Purpose                                 |
+| :----------------------- | :----------------------------------------- | :--------------------------------------------------- |
+| List                     | Array                                      | Ordered sequence, random access, mutable.            |
+| Stack                    | Array, Linked List                         | LIFO (Last-In, First-Out) operations.                |
+| Queue                    | Array, Linked List, Circular Buffer        | FIFO (First-In, First-Out) operations.               |
+| Map / Dictionary         | Hash Table                                 | Key-value pairs, fast lookups.                       |
+| Set                      | Hash Table, Balanced Binary Search Tree    | Collection of unique items, fast membership test.    |
+| Graph                    | Adjacency List, Adjacency Matrix           | Represents relationships between entities.           |
+| Tree                     | Node-based structures                      | Hierarchical data, efficient searching/sorting.      |
+
+
 ## The Big-O Notation
 _Big-O notation is a mathematical concept which helps describing performance of an algorithm in terms of time and space relative to size of input_
 
