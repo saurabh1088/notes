@@ -294,6 +294,13 @@ concepts and gaining hands-on.
 
 ## Tuesday, 15th July 2025
 
+- Data Structures
+    - Abstract Data Types (ADTs) vs. Concrete Implementations
+    - Updated https://github.com/saurabh1088/notes/blob/main/DataStructures/DataStructures.md
+    - Big O Notation
+        - O(1)
+        - O(n)
+
 ---
 
 ## Wednesday, 16th July 2025
