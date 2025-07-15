@@ -95,6 +95,24 @@ _Big-O notation is a mathematical concept which helps describing performance of 
 - Accessing a value in a hash table (dictionary) by its key (my_dict['key']).
 
 
+## O(n) - Linear Time
+
+### Meaning
+- The time it takes to complete the operation grows linearly with the input size.
+- If one doubles the input size, the time roughly doubles.
+
+### Analogy
+- Finding a specific book on a shelf when one doesn't knows its position.
+- So one have to look at each book one by one until one finds it.
+    - If there are 10 books, one might look at up to 10.
+    - If there are 100 books, one might look at up to 100.
+    - The effort scales directly with the number of books.
+
+### Examples
+- Searching for an item in an unsorted list (item in my_list).
+- Iterating through all elements of an array or linked list (for item in my_list:).
+- Copying an array.
+
 ## Resources
 
 https://www.youtube.com/playlist?list=PLDV1Zeh2NRsB6SWUrDFW2RmDotAfPbeHu
