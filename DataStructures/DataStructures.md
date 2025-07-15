@@ -67,10 +67,32 @@ _Data structure is a way of organising data such that it can be used effectively
 ## The Big-O Notation
 _Big-O notation is a mathematical concept which helps describing performance of an algorithm in terms of time and space relative to size of input_
 
-1. Time Complexity
+- Big O notation describes the worst-case scenario for
+    - how the runtime or space requirements of an algorithm grow with the input size.
+- It's not about exact time in seconds, but about the rate of growth.
+
+### Time Complexity
 - Time complexity of an algorithm describes how runtime of the algorithm varies with the input size.
-2. Space Complexity
-- Space complexity of an algorithm describes how memory usage varies 
+
+### Space Complexity
+- Space complexity of an algorithm describes how memory usage varies
+
+
+## O(1) - Constant Time
+
+### Meaning
+- The time it takes to complete the operation remains constant, regardless of the input size. 
+- It doesn't matter if one have 1 item or a million items; the operation takes roughly the same amount of time.
+
+### Analogy
+- Finding a book on a shelf when one knows its exact position (e.g., "the 3rd book from the left")
+    - It takes the same effort whether the shelf has 10 books or 1000 books.
+    - One just go directly to that spot.
+
+### Examples
+- Accessing an element in an array by its index (my_list[5]).
+- Adding an element to the end of a Python list (my_list.append(item) - amortized).
+- Accessing a value in a hash table (dictionary) by its key (my_dict['key']).
 
 
 ## Resources
