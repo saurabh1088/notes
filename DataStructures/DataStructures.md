@@ -113,6 +113,22 @@ _Big-O notation is a mathematical concept which helps describing performance of 
 - Iterating through all elements of an array or linked list (for item in my_list:).
 - Copying an array.
 
+
+## O(n^2) - Quadratic Time
+
+### Meaning
+- The time it takes to complete the operation grows proportionally to the square of the input size.
+- If one doubles the input size, the time roughly quadruples.
+- This is often seen with nested loops.
+
+### Analogy
+- Imagine a classroom with n students.
+    - Teacher asks each student to shake hands with every other student exactly once.
+
+### Examples
+- Nested loops where each loop iterates over the entire input (e.g., simple sorting algorithms like Bubble Sort or Selection Sort).
+- Comparing every element in a list to every other element.
+
 ## Resources
 
 https://www.youtube.com/playlist?list=PLDV1Zeh2NRsB6SWUrDFW2RmDotAfPbeHu
