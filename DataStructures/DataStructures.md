@@ -165,6 +165,13 @@ _Big-O notation is a mathematical concept which helps describing performance of 
 - Efficient sorting algorithms like Merge Sort, Heap Sort, or Quick Sort.
 - Many divide-and-conconquer algorithms.
 
+| Big O Notation | Scaling Behavior                                         | Impact of Doubling `n` (approx.)   |
+| :------------- | :------------------------------------------------------- | :--------------------------------- |
+| O(1)           | **Constant:** Time is independent of `n`.                | No change                          |
+| O(log n)       | **Logarithmic:** Time grows very slowly.                 | Increases slightly (e.g., by 1)    |
+| O(n)           | **Linear:** Time grows directly with `n`.                | Doubles                            |
+| O(n log n)     | **Linearithmic:** Time grows a bit faster than linear.   | Slightly more than doubles         |
+| O(n^2)         | **Quadratic:** Time grows very rapidly (square of `n`).  | Quadruples                         |
 
 ## Resources
 
