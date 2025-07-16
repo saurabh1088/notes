@@ -305,6 +305,13 @@ concepts and gaining hands-on.
 
 ## Wednesday, 16th July 2025
 
+- Data Structures
+    - Big O Notation
+        - O(n²)
+        - O(log n) - Logarithmic Time
+        - O(n log n) - Linearithmic Time
+    - Updated https://github.com/saurabh1088/notes/blob/main/DataStructures/DataStructures.md
+
 ---
 
 ## Thursday, 17th July 2025
