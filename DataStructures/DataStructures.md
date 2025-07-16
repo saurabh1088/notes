@@ -129,6 +129,27 @@ _Big-O notation is a mathematical concept which helps describing performance of 
 - Nested loops where each loop iterates over the entire input (e.g., simple sorting algorithms like Bubble Sort or Selection Sort).
 - Comparing every element in a list to every other element.
 
+
+## O(log n) - Logarithmic Time
+
+### Meaning
+- The time it takes to complete the operation decreases as the input size grows, but at a very slow rate.
+- It's incredibly efficient. This often happens when the algorithm repeatedly halves the search space.
+
+### Analogy
+- Finding a word in a dictionary (a physical one).
+    - One doesn't check every word.
+    - One opens to the middle.
+    - Is word before or after?
+    - Then open to the middle of that half.
+    - Keep halving the search space until one find it.
+
+
+### Examples
+- Binary search on a sorted array.
+- Inserting or searching in a balanced binary search tree.
+
+
 ## Resources
 
 https://www.youtube.com/playlist?list=PLDV1Zeh2NRsB6SWUrDFW2RmDotAfPbeHu
