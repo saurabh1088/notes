@@ -144,10 +144,26 @@ _Big-O notation is a mathematical concept which helps describing performance of 
     - Then open to the middle of that half.
     - Keep halving the search space until one find it.
 
-
 ### Examples
 - Binary search on a sorted array.
 - Inserting or searching in a balanced binary search tree.
+
+
+## O(n log n) - Linearithmic Time
+
+### Meaning
+- The time complexity is a combination of linear and logarithmic growth.
+- This is often the best possible performance for comparison-based sorting algorithms.
+
+### Analogy
+- Sorting a large deck of cards by repeatedly dividing the deck in half, sorting each half, and then merging them back together.
+    - You have n cards. Dividing them in half repeatedly is log n steps.
+    - At each level of division/merging, you might do n work (e.g., comparing and merging elements).
+    - So, it's roughly n (for the comparisons/merges) multiplied by log n (for the number of times you divide).
+
+### Examples
+- Efficient sorting algorithms like Merge Sort, Heap Sort, or Quick Sort.
+- Many divide-and-conconquer algorithms.
 
 
 ## Resources
