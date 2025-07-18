@@ -328,13 +328,15 @@ OFF
 
 ## Friday, 18th July 2025
 
-- What is MCP (Model Context Protocol)
-    - https://modelcontextprotocol.io/introduction
-    - https://www.async-let.com/
+- Data Structures
+    - Revise binary search
+    - Added example file
+        - https://github.com/saurabh1088/python/blob/main/projects/data_structures/arrays/array_examples_one.py
 
 ### TODOs
 - Check https://www.async-let.com/
 - Check MCP Model Context Protocol
+- Check https://modelcontextprotocol.io/introduction
 
 
 ---
