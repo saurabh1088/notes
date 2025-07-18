@@ -322,9 +322,20 @@ concepts and gaining hands-on.
 
 ## Thursday, 17th July 2025
 
+OFF
+
 ---
 
 ## Friday, 18th July 2025
+
+- What is MCP (Model Context Protocol)
+    - https://modelcontextprotocol.io/introduction
+    - https://www.async-let.com/
+
+### TODOs
+- Check https://www.async-let.com/
+- Check MCP Model Context Protocol
+
 
 ---
 
