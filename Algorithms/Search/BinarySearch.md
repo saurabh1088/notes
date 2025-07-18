@@ -5,7 +5,8 @@ Binary search is an algorithm which can be defined as searching for a specific e
 repeatedly dividing the search interval into half.
 
 ## Pre-conditions
-Array on which search is to be performed SHOULD BE sorted.
+- Array on which search is to be performed MUST BE sorted.
+- This is a non-negotiable requirement for Binary Search to work correctly and efficiently.
 
 ## What makes it efficient?
 At every step, in binary search half of the elements in array are eliminated. So if one has a large dataset which is sorted
@@ -24,8 +25,12 @@ of inefficiency on a linked list:
 
 - Binary search performs best on arrays stored in contiguous memory. Linked lists however have nodes which have references
 to the next element, all the elements in a linked list may not be in a contiguos memory block. What this limitation lead to
-is that random access to any element in a linked list means there is no escape from traversing the whole linked list. An
-important aspect of a binary search algorith is to access the middle element of the array. For a linked list one would need
+is that random access to any element in a linked list means there is no escape from traversing the whole linked list.
+- An important aspect of a binary search algorith is to access the middle element of the array. For a linked list one would need
 to traverse the whole list making each operation of finding the middle element having a linear time complexity.
+
+- A binary search algorithm relies on the ability to efficiently access any element by its index in O(1) constant time.
+This is because it repeatedly jumps to the middle of the current search space.
+- If accessing to an element isn't O(1) operation then it will make the whole algorithm very poor in performance.
 
 For this limitation, when it comes to linked list, linear search is used.
