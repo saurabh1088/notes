@@ -343,6 +343,12 @@ OFF
 
 ## Saturday, 19th July 2025
 
+- Coding practice
+    - Arrays examples
+    - Added swift examples and unit tests
+        - https://github.com/saurabh1088/swift-programming/blob/main/Sources/swift-programming/Arrays.swift
+        - https://github.com/saurabh1088/swift-programming/blob/main/Tests/swift-programmingTests/ArraysTests.swift
+
 ---
 
 ## Sunday, 20th July 2025
