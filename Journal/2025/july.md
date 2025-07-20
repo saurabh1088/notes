@@ -358,8 +358,10 @@ OFF
     - Updated swift examples and unit tests
         - https://github.com/saurabh1088/swift-programming/blob/main/Sources/swift-programming/Arrays.swift
         - https://github.com/saurabh1088/swift-programming/blob/main/Tests/swift-programmingTests/ArraysTests.swift
+    - Update python examples
+        - https://github.com/saurabh1088/python/blob/main/projects/data_structures/arrays/array_examples_one.py
 
-        
+
 ---
 
 ## Monday, 21st July 2025
