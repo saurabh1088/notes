@@ -366,6 +366,13 @@ OFF
 
 ## Monday, 21st July 2025
 
+- A new beginning
+    - BB
+
+- Coding practice
+    - Documented example
+        - https://github.com/saurabh1088/swift-programming/blob/main/Sources/swift-programming/Arrays.swift
+
 ---
 
 ## Tuesday, 22nd July 2025
