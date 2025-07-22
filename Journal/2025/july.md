@@ -377,6 +377,10 @@ OFF
 
 ## Tuesday, 22nd July 2025
 
+- Python
+    - Revision Global Interpretor Lock
+    - Python dictionaries
+
 ---
 
 ## Wednesday, 23rd July 2025
