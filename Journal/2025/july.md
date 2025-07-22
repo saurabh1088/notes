@@ -380,6 +380,8 @@ OFF
 - Python
     - Revision Global Interpretor Lock
     - Python dictionaries
+        - Added examples
+            - https://github.com/saurabh1088/python/blob/main/learnings/about_dictionaries.py
 
 ---
 
