@@ -223,6 +223,7 @@ concepts and gaining hands-on.
 ---
 
 ```
+Explain why Python chose to make dictionaries ordered by default (as of Python 3.7+). What were the technical and functional benefits of this decision, and what specific problems did it address? Additionally, discuss any potential disadvantages or trade-offs introduced by maintaining insertion order in dictionaries.
 ```
 
 ---
