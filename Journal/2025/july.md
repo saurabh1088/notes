@@ -387,6 +387,16 @@ OFF
 
 ## Wednesday, 23rd July 2025
 
+- Python
+    - Python dictionaries
+        - Added examples
+            - https://github.com/saurabh1088/python/blob/main/learnings/about_dictionaries.py
+
+### Prompt
+```
+Explain why Python chose to make dictionaries ordered by default (as of Python 3.7+). What were the technical and functional benefits of this decision, and what specific problems did it address? Additionally, discuss any potential disadvantages or trade-offs introduced by maintaining insertion order in dictionaries.
+```
+
 ---
 
 ## Thursday, 24th July 2025
