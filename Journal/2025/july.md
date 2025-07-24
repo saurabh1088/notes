@@ -401,6 +401,11 @@ Explain why Python chose to make dictionaries ordered by default (as of Python 3
 
 ## Thursday, 24th July 2025
 
+- Python
+    - Python dictionaries
+        - Added examples
+            - https://github.com/saurabh1088/python/blob/main/learnings/about_dictionaries.py
+
 ---
 
 ## Friday, 25th July 2025
