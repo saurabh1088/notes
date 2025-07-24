@@ -229,16 +229,19 @@ Explain why Python chose to make dictionaries ordered by default (as of Python 3
 ---
 
 ```
+For a Python beginner looking to start with generative AI, what are the absolute essential Python concepts and libraries needed to understand and utilize pre-trained generative models (e.g., text generation, image creation) effectively?
 ```
 
 ---
 
 ```
+As a Python developer interested in research and innovation in generative AI, what advanced Python concepts, specialized libraries, and architectural patterns are crucial for implementing novel generative models (e.g., custom GANs, VAEs, Transformers) and conducting experiments efficiently?
 ```
 
 ---
 
 ```
+For an intermediate Python developer aiming to build and fine-tune generative AI models (e.g., LLMs, diffusion models), what are the critical Python aspects to master? Provide a structured overview covering foundational Python, essential data science libraries, deep learning frameworks, and specific Generative AI concepts, highlighting practical skills and best practices for model development.
 ```
 
 ---
