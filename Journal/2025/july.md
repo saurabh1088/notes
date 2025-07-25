@@ -423,6 +423,13 @@ For an intermediate Python developer aiming to build and fine-tune generative AI
 
 ## Friday, 25th July 2025
 
+- Python
+    - Mutability
+        - Added example file
+            - https://github.com/saurabh1088/python/blob/main/learnings/about_mutability.py
+        - Added QnA for mutability
+            - https://github.com/saurabh1088/notes/blob/main/Python/QnA.md
+
 ---
 
 ## Saturday, 26th July 2025
