@@ -137,3 +137,21 @@ Cleaner Code: They can make code more readable and concise when dealing with ite
 
 Check examples https://github.com/saurabh1088/python/blob/main/learnings/about_generators.py
 
+
+---
+
+## Discuss in depth about concept of mutability in Python.
+
+- In Python, every piece of data is an object.
+- Objects have a value and an identity (memory address).
+- The key difference between mutable and immutable objects lies in whether their value can be changed after they are
+created, while their identity remains the same.
+
+### Immutable Objects
+- Object whose state (value) cannot be modified after it is created.
+- Changing an immutable object, instead creates a new object with desired new value with new identity.
+
+#### Common Immutable Types in Python
+- `int`, `float`, `complex`, `bool`
+
+
