@@ -434,6 +434,11 @@ For an intermediate Python developer aiming to build and fine-tune generative AI
 
 ## Saturday, 26th July 2025
 
+- Python
+    - Mutability
+        - Updated QnA for mutability
+            - https://github.com/saurabh1088/notes/blob/main/Python/QnA.md
+
 ---
 
 ## Sunday, 27th July 2025
