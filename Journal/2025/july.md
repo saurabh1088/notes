@@ -438,6 +438,8 @@ For an intermediate Python developer aiming to build and fine-tune generative AI
     - Mutability
         - Updated QnA for mutability
             - https://github.com/saurabh1088/notes/blob/main/Python/QnA.md
+        - Added example at
+            - https://github.com/saurabh1088/python/blob/main/learnings/about_mutability.py
 
 ---
 
