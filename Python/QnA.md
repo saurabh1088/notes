@@ -154,6 +154,15 @@ created, while their identity remains the same.
 #### Common Immutable Types in Python
 - `int`, `float`, `complex`, `bool`
 
+### Mutable Objects
+- A mutable object is an object whose state (value) can be modified after it is created without changing its identity
+(memory address).
+- A mutable object cannot be used as dictionary keys or set members because their hash value could change, breaking the
+hash table's integrity.
+
+#### Common Mutable Types in Python
+- `list`, `set`, `dict`, `bytearray`, `memoryview`
+
 
 | **Category**       | **Data Type**  | **Mutable?** | **Notes**                                                                |
 |--------------------|----------------|--------------|--------------------------------------------------------------------------|
