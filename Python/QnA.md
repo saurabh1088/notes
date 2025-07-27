@@ -137,7 +137,6 @@ Cleaner Code: They can make code more readable and concise when dealing with ite
 
 Check examples https://github.com/saurabh1088/python/blob/main/learnings/about_generators.py
 
-
 ---
 
 ## Discuss in depth about concept of mutability in Python.
@@ -181,4 +180,26 @@ hash table's integrity.
 |                    | `bytearray`    | ✅ Mutable   | Mutable sequence of bytes.                                               |
 |                    | `memoryview`   | ✅ Mutable   | Can modify the underlying object if it’s mutable.                        |
 | **None Type**      | `NoneType`     | ❌ Immutable | Only one instance `None`.                                                |
+
+---
+
+## The key of a dictionary in Python can be mutable or immutable? Why or why not?
+- The key of a dictionary in Python must be immutable.
+
+### The why of it
+- Python dictionaries are implemented as hash tables.
+- A hash table works by taking the key, passing it through a hash function, which computes an integer hash value.
+- This hash value is then used to determine the memory location (or "bucket") where the key-value pair will be stored.
+- When one later tries to retrieve a value using a key,
+    - the same hash function is applied to the key, and 
+        - the dictionary goes directly to that calculated memory location to find the value.
+
+### What if mutable keys are allowed
+- If a key were mutable (e.g., a list or a set), its content could change after it has been used as a key in the dictionary.
+- If the content changes, its hash value would also change.
+- Now, when one tries to look up the key again (even if it's the "same" object, but with modified content),
+    - the dictionary would calculate a different hash value.
+- This different hash value would lead it to a different memory location (bucket) than where the key-value pair was originally stored.
+- The dictionary would then fail to find the key, even though it technically exists in the dictionary's storage.
+    - This breaks the fundamental lookup mechanism of a hash table.
 
