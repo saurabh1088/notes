@@ -449,6 +449,28 @@ For an intermediate Python developer aiming to build and fine-tune generative AI
     - Mutability
         - Added example at
             - https://github.com/saurabh1088/python/blob/main/learnings/about_mutability.py
+        - Added QnA for dictionary hash table requirement
+            - https://github.com/saurabh1088/notes/blob/main/Python/QnA.md
+
+- AI
+    - Computer Vision
+        - Updated notes https://github.com/saurabh1088/notes/blob/main/AI/Reboot.md
+
+### Prompt
+```
+Teach comprehensive computer vision concepts in AI, focusing on their application and relevance for a mobile app developer.
+
+Emphasize:
+- Fundamental computer vision techniques (image classification, object detection, segmentation, image preprocessing).
+- Use of modern AI models and frameworks (e.g., TensorFlow Lite, Core ML, ONNX) suitable for mobile deployment.
+- Strategies for integrating computer vision features into mobile apps, considering device constraints (on-device inference, edge/cloud trade-offs, performance optimization).
+- Practical workflows: collecting/annotating datasets, training models, optimizing and deploying them to iOS and Android.
+- Real-world mobile use cases: face recognition, barcode scanning, AR, document scanning, accessibility, etc.
+- Guidance on available APIs/SDKs (Vision API, ML Kit, etc.).
+- Common pitfalls, security/privacy considerations, and best practices for mobile computer vision apps.
+
+Ensure the instruction is hands-on and example-driven, enabling software developers to translate computer vision concepts into tangible mobile app features.
+```
 
 ---
 
