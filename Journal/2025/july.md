@@ -476,6 +476,12 @@ Ensure the instruction is hands-on and example-driven, enabling software develop
 
 ## Monday, 28th July 2025
 
+- AI
+    - Computer Vision
+        - Added file for topic
+            - https://github.com/saurabh1088/notes/blob/main/AI/ComputerVision.md
+        - Tensors
+
 ---
 
 ## Tuesday, 29th July 2025
