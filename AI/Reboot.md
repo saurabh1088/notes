@@ -13,6 +13,8 @@ data from the world such as
 - One can say that at its core, Computer Vision is a field of Artificial Intelligence that enables computers to "see" and "understand" digital images and videos in the same way humans do.
 - It's about teaching machines to interpret and make sense of the visual world.
 
+NOTE : Further elaborated at : https://github.com/saurabh1088/notes/blob/main/AI/ComputerVision.md
+
 
 ## Neural Networks
 A neural network is a core concept in machine learning (ML) and deep learning (DL), modeled loosely on the way the human
