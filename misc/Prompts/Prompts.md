@@ -264,6 +264,28 @@ Ensure the instruction is hands-on and example-driven, enabling software develop
 ---
 
 ```
+Teach in-depth about the critical role of tensors in artificial intelligence, particularly in computer vision and machine learning systems. Explain:
+
+What is a tensor?
+Define tensors, their mathematical foundation, and how they generalize scalars, vectors, and matrices.
+
+Why are tensors important in AI?
+Discuss their role as the fundamental data structure for representing, storing, and manipulating numerical data in deep learning frameworks (e.g., TensorFlow, PyTorch).
+
+How do tensors power model operations?
+Illustrate how multidimensional data (images, audio, video, text, etc.) are structured as tensors, enabling complex computations (dot products, convolutions, batch processing).
+
+Tensors in computer vision:
+Show concrete mobile examples—such as how an RGB image is represented as a 3D tensor (height, width, color channels) and passed through neural networks for classification or detection.
+
+Benefits of using tensors:
+Explain efficiency gains for parallel processing (GPU/TPU), consistency in model training/inference across platforms, and support for automatic differentiation.
+
+Hands-on exercises:
+Include practical demonstrations on creating, manipulating, and visualizing tensors with popular frameworks for both training and deploying models on mobile devices.
+
+End Goal:
+Make the learner understand—at both a conceptual and hands-on coding level—how tensors are the backbone of modern AI, why mastering them is essential for developers in computer vision and AI-driven mobile development, and how they underpin nearly every operation in neural networks.
 ```
 
 ---
