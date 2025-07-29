@@ -24,7 +24,17 @@ data from the world such as
 - A tensor is a multi-dimensional array that generalizes scalars, vectors, and matrices to higher dimensions.
 - It’s the fundamental building block for representing numerical data (e.g., pixel values) that neural networks operate on.
 
-### 2.2 Tensors in Computer Vision
+### 2.2 Why Tensor is important?
+- Understanding tensors is fundamental to working with deep learning models, as all data (inputs, outputs, weights, biases) in neural networks are represented as tensors.
+- Tensors are fundamental to
+    - modern AI,
+    - machine learning, and
+    - computer vision
+    because they provide a standardized way to represent and manipulate multidimensional data
+        - (e.g., images, videos, text embeddings).
+- They are the building blocks for deep learning models and are essential for high-performance numerical computation.
+
+### 2.3 Tensors in Computer Vision
 - In computer vision, a tensor is the core data structure used to represent
     - images,
     - videos, and
@@ -46,3 +56,4 @@ data from the world such as
 - All CV tasks start with understanding how images are represented and processed.
 
 ### Image Representation & Preprocessing
+
