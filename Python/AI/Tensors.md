@@ -15,4 +15,6 @@
     - Tensor: An n-dimensional array of numbers.
 
 
-## Tensors as NumPy Arrays
+## Tensors as NumPy Arrays (ndarray)
+- NumPy's `ndarray` is the fundamental data structure for numerical computing in Python and serves as the conceptual basis for tensors in deep learning.
+
