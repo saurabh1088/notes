@@ -486,6 +486,17 @@ Ensure the instruction is hands-on and example-driven, enabling software develop
 
 ## Tuesday, 29th July 2025
 
+- AI/Python
+    - Added folder
+        - https://github.com/saurabh1088/notes/tree/main/Python/AI
+    - Tensors in Python
+        - Added file
+            - https://github.com/saurabh1088/notes/blob/main/Python/AI/Tensors.md
+- AI
+    - Computer Vision
+        - Updated file
+            - https://github.com/saurabh1088/notes/blob/main/AI/ComputerVision.md
+
 ---
 
 ## Wednesday, 30th July 2025
