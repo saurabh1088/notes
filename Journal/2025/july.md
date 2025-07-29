@@ -242,7 +242,7 @@ Create a comprehensive and comparative list of operators that are either exclusi
     - Added playground file
         - https://github.com/saurabh1088/swift-playgrounds/tree/main/Swift/Sequence.playground
 
-### Prompt
+### Prompts
 ```
 As a senior software engineer, your task is to provide an in-depth, comparative explanation of collections across these programming languages: Swift, Python, JavaScript, and Kotlin.
 Go beyond the basics — focus on advanced usage patterns, performance considerations, and memory efficiency relevant to high-performance and large-scale applications.
@@ -281,7 +281,7 @@ Provide code examples and architectural insights for each language, and highligh
         - https://github.com/saurabh1088/notes/blob/main/Python/MemoryManagement.md
 
 
-### Prompt
+### Prompts
 ```
 Create a step by step learning plan for Data Structures. Assume learners have some basic knowledge of programming but not
 good understanding of data structures. Plan should be covering all required relevant topics. Preferably 30min each day.
@@ -392,7 +392,7 @@ OFF
         - Added examples
             - https://github.com/saurabh1088/python/blob/main/learnings/about_dictionaries.py
 
-### Prompt
+### Prompts
 ```
 Explain why Python chose to make dictionaries ordered by default (as of Python 3.7+). What were the technical and functional benefits of this decision, and what specific problems did it address? Additionally, discuss any potential disadvantages or trade-offs introduced by maintaining insertion order in dictionaries.
 ```
@@ -406,7 +406,7 @@ Explain why Python chose to make dictionaries ordered by default (as of Python 3
         - Added examples
             - https://github.com/saurabh1088/python/blob/main/learnings/about_dictionaries.py
 
-### Prompt
+### Prompts
 ```
 For a Python beginner looking to start with generative AI, what are the absolute essential Python concepts and libraries needed to understand and utilize pre-trained generative models (e.g., text generation, image creation) effectively?
 ```
@@ -456,7 +456,7 @@ For an intermediate Python developer aiming to build and fine-tune generative AI
     - Computer Vision
         - Updated notes https://github.com/saurabh1088/notes/blob/main/AI/Reboot.md
 
-### Prompt
+### Prompts
 ```
 Teach comprehensive computer vision concepts in AI, focusing on their application and relevance for a mobile app developer.
 
@@ -496,6 +496,32 @@ Ensure the instruction is hands-on and example-driven, enabling software develop
     - Computer Vision
         - Updated file
             - https://github.com/saurabh1088/notes/blob/main/AI/ComputerVision.md
+
+### Prompts
+```
+Teach in-depth about the critical role of tensors in artificial intelligence, particularly in computer vision and machine learning systems. Explain:
+
+What is a tensor?
+Define tensors, their mathematical foundation, and how they generalize scalars, vectors, and matrices.
+
+Why are tensors important in AI?
+Discuss their role as the fundamental data structure for representing, storing, and manipulating numerical data in deep learning frameworks (e.g., TensorFlow, PyTorch).
+
+How do tensors power model operations?
+Illustrate how multidimensional data (images, audio, video, text, etc.) are structured as tensors, enabling complex computations (dot products, convolutions, batch processing).
+
+Tensors in computer vision:
+Show concrete mobile examples—such as how an RGB image is represented as a 3D tensor (height, width, color channels) and passed through neural networks for classification or detection.
+
+Benefits of using tensors:
+Explain efficiency gains for parallel processing (GPU/TPU), consistency in model training/inference across platforms, and support for automatic differentiation.
+
+Hands-on exercises:
+Include practical demonstrations on creating, manipulating, and visualizing tensors with popular frameworks for both training and deploying models on mobile devices.
+
+End Goal:
+Make the learner understand—at both a conceptual and hands-on coding level—how tensors are the backbone of modern AI, why mastering them is essential for developers in computer vision and AI-driven mobile development, and how they underpin nearly every operation in neural networks.
+```
 
 ---
 
