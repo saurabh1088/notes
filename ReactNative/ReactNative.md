@@ -2,8 +2,8 @@
 
 
 - React Native is an open-source Framework which was developed by FaceBook. 
-- React Native enables one to build mobile applications using JavaScript and React. Aim here is to create cross-platform 
-applications which can run both on iOS and Android platforms sharing a huge chunk of codebase.
+- React Native enables one to build mobile applications using JavaScript and React.
+- Aim here is to create cross-platform applications which can run both on iOS and Android platforms sharing a huge chunk of codebase.
 - Code is written in JavaScript and further rendered with native code.
 - React Native provides native components which map directly to target platform's native ones.
 - Similar to concept of views in iOS and Android, React Native also has views as the basic building blocks of user interface.
@@ -46,10 +46,10 @@ So one can say
 
 React + React Native = React Native Mobile Apps
 
-|Web|Android|iOS|React Native JSX|
-|---|---|---|---|
-|<div>|android.View|UIView|<View>|
-|<input>|EditText|UITextField|<TextInput>|
+| Web       | Android        | iOS          | React Native JSX |
+| :-------- | :------------- | :----------- | :--------------- |
+| `<div>`   | `android.View` | `UIView`     | `<View>`         |
+| `<input>` | `EditText`     | `UITextField`| `<TextInput>`    |
 
 React Native will map and compile components to their platform equivalents. UI elements as mentioned above gets compiled
 to native ones as per the targeted platform, however along with UI, there is also JavaScript code for logic. This JavaScript
