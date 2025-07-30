@@ -539,6 +539,13 @@ Make the learner understand—at both a conceptual and hands-on coding level—h
         - Added page
             - https://github.com/saurabh1088/notes/blob/main/security/ThreatModelling.md
 
+### TODOs
+- [ ] Static Application Security Testing (SAST)
+- [ ] Software composition analysis (SCA)
+- [ ] Interactive Application Security Testing (IAST)
+- [ ] Dynamic Application Security Testing (DAST)
+- [ ] Distroless images(Docker)
+
 ---
 
 ## Thursday, 31st July 2025
