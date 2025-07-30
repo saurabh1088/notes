@@ -527,6 +527,18 @@ Make the learner understand—at both a conceptual and hands-on coding level—h
 
 ## Wednesday, 30th July 2025
 
+- ReactNative
+    - Revision
+- Security
+    - Static Application Security Testing (SAST)
+    - Software composition analysis (SCA)
+    - Interactive Application Security Testing (IAST)
+    - Dynamic Application Security Testing (DAST)
+    - Distroless images(Docker)
+    - Threat Modelling
+        - Added page
+            - https://github.com/saurabh1088/notes/blob/main/security/ThreatModelling.md
+
 ---
 
 ## Thursday, 31st July 2025
