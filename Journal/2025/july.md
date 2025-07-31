@@ -550,4 +550,9 @@ Make the learner understand—at both a conceptual and hands-on coding level—h
 
 ## Thursday, 31st July 2025
 
+- Security
+    - Static Application Security Testing (SAST)
+        - Added file
+            - https://github.com/saurabh1088/notes/blob/main/security/SAST.md
+
 ---
