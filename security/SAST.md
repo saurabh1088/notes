@@ -25,3 +25,9 @@
 
 ### White box approach
 - SAST has full access to internal workings of the code
+
+
+## References
+- https://www.blackduck.com/glossary/what-is-sast.html
+- https://owasp.org/www-community/Source_Code_Analysis_Tools
+
