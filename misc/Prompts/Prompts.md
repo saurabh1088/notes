@@ -291,6 +291,13 @@ Make the learner understand—at both a conceptual and hands-on coding level—h
 ---
 
 ```
+You are acting as an interviewer evaluating a Senior Mobile Architect for a security-conscious organization.
+
+Question: “How do you approach threat modeling in the context of mobile application architecture?”
+
+Describe how you would expect a strong candidate to respond — including the concepts they should cover, tools or methodologies they might mention, and how their experience should reflect in their answer.
+
+Also, provide an example of a high-quality response that demonstrates technical depth, practical application, and architectural thinking tailored to mobile platforms (iOS/Android).
 ```
 
 ---
