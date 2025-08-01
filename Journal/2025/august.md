@@ -11,6 +11,8 @@
             - https://github.com/saurabh1088/notes/blob/main/ReactNative/Plan.md
 - JavaScript
     - Just in time compilation
+        - Added notes
+            - https://github.com/saurabh1088/notes/blob/main/JavaScript/JustInTimeCompilation.md
 
 ### Prompts
 ```
