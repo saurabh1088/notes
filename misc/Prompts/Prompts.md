@@ -303,6 +303,23 @@ Also, provide an example of a high-quality response that demonstrates technical 
 ---
 
 ```
+Create a focused, time-efficient learning plan for a X_REPLACE_ME_X (X_REPLACE_ME_X years IT experience, X_REPLACE_ME_X years iOS/Swift/SwiftUI) seeking to transition into hybrid app development with React Native. The plan should:
+
+Be structured for a maximum of 30 minutes of learning per day.
+
+Combine hands-on coding exercises, conceptual learning, and guided projects.
+
+Leverage the developer’s prior native mobile experience (especially in iOS).
+
+Include suggested resources: official docs, high-quality courses, and practical tutorials.
+
+Progress from fundamentals (JavaScript/React) to advanced React Native concepts (navigation, performance, native modules).
+
+Highlight cross-platform differences, best practices, and app optimization strategies.
+
+Periodically schedule project-based milestones for deeper comprehension.
+
+The end goal: Within a practical timeframe, enable the developer to confidently build, test, optimize, and publish real-world React Native mobile apps for both iOS and Android.
 ```
 
 ---
