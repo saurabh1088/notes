@@ -14,6 +14,13 @@
 - This is highly inefficient for "hot" code—code that is executed frequently.
 
 
+## How JIT Compilation Works?
+- JIT compilation aims to solve this inefficiency of traditional interpretation.
+- Instead of just interpreting code, JIT compilers observe and analyze the code as it runs.
+- The core idea is to identify the "hot" code and compile it into highly optimized machine code at runtime.
+- This compiled code can then be executed much faster on subsequent runs.
+
+
 ## References
 - https://www.youtube.com/watch?v=d7KHAVaX_Rs
 
