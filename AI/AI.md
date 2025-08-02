@@ -1,5 +1,21 @@
 # AI/ML/Generative AI
 
+```
+Artificial Intelligence (AI)
+├── Machine Learning (ML)
+│   ├── Deep Learning (DL)
+│   │   ├── Generative AI (GenAI)
+│   │   │   ├── Large Language Models (LLMs)
+│   │   │   └── Diffusion Models (e.g., for image generation)
+│   │   ├── Convolutional Neural Networks (CNNs)
+│   │   └── Recurrent Neural Networks (RNNs)
+│   └── Traditional (Classical) ML
+│       ├── Regression (Linear, Logistic, etc.)
+│       ├── Decision Trees and Ensemble Methods (e.g., Random Forests)
+│       └── Clustering (e.g., K-means, Hierarchical)
+└── Symbolic AI
+    └── Rule-based Systems (Good Old-Fashioned AI, GOFAI)
+```
 
 ## Artificial Intelligence (AI)
 
