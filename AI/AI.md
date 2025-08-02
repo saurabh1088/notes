@@ -1,5 +1,7 @@
 # AI/ML/Generative AI
 
+---
+
 ```
 Artificial Intelligence (AI)
 ├── Machine Learning (ML)
@@ -17,26 +19,27 @@ Artificial Intelligence (AI)
     └── Rule-based Systems (Good Old-Fashioned AI, GOFAI)
 ```
 
+---
+
 ## Artificial Intelligence (AI)
 
 ### Definition:
-
-AI stands for Artificial Intelligence, which refers to the simulation of human intelligence in machines that are
+- AI stands for Artificial Intelligence, which refers to the simulation of human intelligence in machines that are
 programmed to think, learn, and behave like humans.
 
-So one can say that in Artificial Intelligence
-- Artificial part refers to a computer
-- Intelligence part refers to an algorithm aiming to simulate human intelligence
+- So one can say that in Artificial Intelligence
+    - Artificial part refers to a computer
+    - Intelligence part refers to an algorithm aiming to simulate human intelligence
 
-This includes:
-- Problem Solving: 
-    - Making decisions and solving puzzles or games, like chess.
-- Understanding Human Speech:
-    - Interpreting and responding to spoken language.
-- Visual Perception:
-    - Recognizing objects, faces, or scenes from images or videos.
-- Learning from Experience:
-    - Improving performance over time based on data or feedback.
+- This includes:
+    - Problem Solving: 
+        - Making decisions and solving puzzles or games, like chess.
+    - Understanding Human Speech:
+        - Interpreting and responding to spoken language.
+    - Visual Perception:
+        - Recognizing objects, faces, or scenes from images or videos.
+    - Learning from Experience:
+        - Improving performance over time based on data or feedback.
 
 
 ### Examples:
@@ -58,6 +61,7 @@ likelihood of a customer defaulting on their credit card payments.
 - AI models can analyze medical images like X-rays or MRIs to identify patterns associated with cancer, sometimes
 spotting anomalies that might be missed by human eyes.
 
+---
 
 ## Machine Learning (ML)
 
@@ -124,6 +128,7 @@ For someone starting to learn AI, understanding these basics will provide a foun
         Learning from historical data to predict outcomes on unseen data. 
         Essentially, recognizing patterns in data.
 
+---
 
 ## Deep Learning
 
@@ -180,6 +185,8 @@ Deep Learning is machine learning done for kinds of unstructured data that uses 
 
 Artificial Intelligence -> Machine Learning -> Deep Learning -> Gen AI
 
+---
+
 ## TODOs
 - What are tokens?
 - Prompt engineering
@@ -205,7 +212,7 @@ Artificial Intelligence -> Machine Learning -> Deep Learning -> Gen AI
 | **Supporting Content** | Extra details to refine the response.          | *"Keep the summary under 100 words and use simple language."* |
 | **Grounding Content** | Trusted facts or sources for accuracy.         | *"Use Apple’s official website as the source."*     |
 
-
+---
 
 ## Prompt Engineering
 Zero Shot
