@@ -325,6 +325,35 @@ The end goal: Within a practical timeframe, enable the developer to confidently 
 ---
 
 ```
+You are a JavaScript architect with 30 years of experience in building large-scale, high-performance web applications. Explain in detail:
+
+
+
+Value vs. Reference Types in JavaScript:
+
+Does JavaScript use value semantics, reference semantics, or both?
+
+How does JavaScript distinguish between primitive and non-primitive types in this context?
+
+Memory Management & Data Representation:
+
+How are different data types (primitives, objects, functions, arrays, etc.) stored and referenced in memory?
+
+What happens under the hood when variables are assigned, copied, or passed as function arguments?
+
+Behavioral Implications:
+
+Why do primitives appear to behave as values, while objects behave as references?
+
+How does immutability (or lack thereof) factor into this model?
+
+Best Practices & Pitfalls:
+
+Common misconceptions developers have about value vs. reference behavior in JavaScript.
+
+Patterns or techniques to avoid unintended side effects when working with objects and arrays.
+
+Provide clear explanations with code examples and conceptual diagrams (if helpful) to illustrate memory behavior and semantics.
 ```
 
 ---
