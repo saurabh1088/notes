@@ -8,6 +8,9 @@ to interpret it line by line and execute it on the fly.
 
 ## Just In Time Compilation
 
+- Detailed discussion at
+  - https://github.com/saurabh1088/notes/blob/main/JavaScript/JustInTimeCompilation.md
+
 Nowadays we have JavaScript engines like :
 - V8 in Chrome
 - SpiderMonkey in Firefox
