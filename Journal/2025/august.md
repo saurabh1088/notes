@@ -98,6 +98,11 @@ Provide clear explanations with code examples and conceptual diagrams (if helpfu
             - https://github.com/saurabh1088/notes/blob/main/JavaScript/NodeJS.md
             - https://github.com/saurabh1088/notes/blob/main/JavaScript/npm.md
 
+- Common SEnCS
+    - Added group SEnCS
+        - Added notes file for Concurrency & Parallelism
+            - https://github.com/saurabh1088/notes/blob/main/SEnCS/ConcurrencyAndParallelism.md
+
 ---
 
 ## Monday, 4th August 2025
