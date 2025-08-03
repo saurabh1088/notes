@@ -1,5 +1,6 @@
 #  JavaScript QnA
 
+---
 
 ## Explain JavaScript in terms of value type and reference type semantics, what happend in it.
 - JavaScript does not adhere to a single semantic model.
@@ -22,6 +23,7 @@
 - Date
 - RegExp etc
 
+---
 
 ## What Is the JavaScript Runtime Environment?
 - The JavaScript Runtime Environment (JRE) is not part of JavaScript itself—it’s the ecosystem in which JavaScript code executes.
@@ -72,3 +74,4 @@
         - Macro-tasks (e.g., setTimeout callbacks, I/O events)
         - Micro-tasks (e.g., Promises, Mutation Observers)
 
+---
