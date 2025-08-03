@@ -94,6 +94,9 @@ Provide clear explanations with code examples and conceptual diagrams (if helpfu
     - QnA
         - Added QnA
             - https://github.com/saurabh1088/notes/blob/main/JavaScript/QnA.md
+        - Moved NodeJS and npm notes filed from react folder to JavaScript folder
+            - https://github.com/saurabh1088/notes/blob/main/JavaScript/NodeJS.md
+            - https://github.com/saurabh1088/notes/blob/main/JavaScript/npm.md
 
 ---
 
