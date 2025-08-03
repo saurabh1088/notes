@@ -90,6 +90,11 @@ Provide clear explanations with code examples and conceptual diagrams (if helpfu
 
 ## Sunday, 3rd August 2025
 
+- JavaScript
+    - QnA
+        - Added QnA
+            - https://github.com/saurabh1088/notes/blob/main/JavaScript/QnA.md
+
 ---
 
 ## Monday, 4th August 2025
