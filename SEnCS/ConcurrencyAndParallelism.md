@@ -20,3 +20,7 @@
 - Running a data-processing operation split across all CPU cores, such that each core processes a distinct chunk in parallel.
 
 
+## 2. Single vs Multiple Cores
+- Concurrency can be achieved on a single core via time-slicing (context switching).
+- Parallelism necessarily requires multiple hardware computation units (multi-core CPU, GPU, distributed nodes).
+
