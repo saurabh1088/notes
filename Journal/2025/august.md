@@ -107,6 +107,59 @@ Provide clear explanations with code examples and conceptual diagrams (if helpfu
 
 ## Monday, 4th August 2025
 
+- Common SEnCS
+    - Updated notes
+        - 
+
+### Prompts
+```
+As a veteran software engineering architect, discuss Concurrency and Parallelism in depth. Beyond defining each, elaborate on their practical implications and trade-offs in building large-scale, high-performance systems.
+
+Specifically, address the following from an engineering perspective:
+
+Fundamental Concepts & Distinctions:
+
+Revisit the core definitions, emphasizing the difference between managing multiple tasks (concurrency) and simultaneously executing multiple tasks (parallelism).
+
+Explain how a single-core system can achieve concurrency, and why true parallelism requires multi-core hardware.
+
+Architectural Patterns & Design Choices:
+
+When would you choose a concurrent design (e.g., event loops, async/await, coroutines) over a parallel design (e.g., multi-threading, distributed computing), and vice-versa? Provide real-world system examples (e.g., web servers, data processing pipelines).
+
+Discuss common architectural patterns for implementing each (e.g., Actor Model, Thread Pools, Message Queues).
+
+Performance & Scalability Implications:
+
+How do concurrency and parallelism impact system responsiveness, throughput, and latency?
+
+Discuss the challenges of scalability with each approach, including Amdahl's Law and Gustafson's Law.
+
+Address the overheads associated with context switching, synchronization, and communication between concurrent/parallel units.
+
+Challenges & Pitfalls:
+
+Detail common problems like deadlocks, race conditions, starvation, and contention.
+
+Explain debugging strategies and tools for identifying and resolving these issues in complex systems.
+
+Discuss the complexity of state management in concurrent and parallel environments.
+
+Language & Platform Specifics (Illustrative Examples):
+
+Briefly touch upon how different languages (e.g., JavaScript/Node.js, Python, Java/Go/Rust) approach concurrency and parallelism, highlighting their built-in mechanisms and common libraries.
+
+Provide examples of how these concepts manifest in real-world engineering scenarios (e.g., a high-traffic API, a batch processing job, a real-time analytics dashboard).
+
+Future Trends & Best Practices:
+
+What emerging trends (e.g., WebAssembly, serverless, new language features) are shaping the future of concurrency and parallelism in web applications and backend systems?
+
+What are your top 3 best practices for designing, implementing, and maintaining robust concurrent/parallel systems?
+
+This refined prompt aims to elicit a comprehensive, experience-driven discussion that directly addresses the practical concerns and strategic decisions faced by software engineers in the field
+```
+
 ---
 
 ## Tuesday, 5th August 2025
