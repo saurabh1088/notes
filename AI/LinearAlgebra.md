@@ -9,6 +9,11 @@ At its heart, AI, especially machine learning and deep learning, is about proces
 
 - Linear algebra deals with vectors, matrices, and their transformations.
 - It enables efficient handling of large datasets.
+- Most data used in AI—images, audio, text embeddings, sensor data—is represented as vectors, matrices, or higher-dimensional tensors.
+    - For example
+        - A grayscale image → a 2D matrix (pixels)
+        - RGB image → a 3D tensor (Height × Width × Channels)
+        - Batch of images → a 4D tensor
 - Machine learning leverages linear algebra for data processing and analysis.
 - Many AI algorithms depend on linear algebra for core computations.
 - Data modeling and manipulation become more efficient with linear algebra.
