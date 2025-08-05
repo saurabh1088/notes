@@ -109,7 +109,7 @@ Provide clear explanations with code examples and conceptual diagrams (if helpfu
 
 - Common SEnCS
     - Updated notes
-        - 
+        - https://github.com/saurabh1088/notes/blob/main/SEnCS/ConcurrencyAndParallelism.md
 
 ### Prompts
 ```
@@ -163,6 +163,22 @@ This refined prompt aims to elicit a comprehensive, experience-driven discussion
 ---
 
 ## Tuesday, 5th August 2025
+
+- AI
+    - Added file for Linear Algebra in AI
+        - https://github.com/saurabh1088/notes/blob/main/AI/LinearAlgebra.md
+
+### Prompts
+```
+Design a step-by-step AI learning roadmap for an experienced software developer who wants to go beyond theoretical knowledge. The goal is to:
+
+Understand AI fundamentals and advanced concepts,
+
+Learn how to architect solutions that integrate AI into software development workflows, and
+
+Identify practical strategies to leverage AI for measurable business and technical benefits.
+The roadmap should combine conceptual understanding, hands-on practice, and real-world application, with recommendations for tools, frameworks, and reference materials.
+```
 
 ---
 
