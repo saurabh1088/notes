@@ -1,3 +1,20 @@
 # Linear Algebra & AI
 
+`Linear Algebra is the language of AI`
+
+## Why Linear Algebra is Important in AI
+To truly understand how machine learning and deep learning algorithms function, how to debug them effectively, and how to optimize their performance, a solid grasp of linear algebra is essential. It is not about becoming a mathematician, but about understanding the core operations that underpin almost every AI model.
+
+At its heart, AI, especially machine learning and deep learning, is about processing and transforming data. This data is rarely a single number; it's usually collections of numbers, images, text, or other complex structures. Linear algebra provides the mathematical framework to represent these diverse forms of data and perform efficient operations on them.
+
+- Linear algebra deals with vectors, matrices, and their transformations.
+- It enables efficient handling of large datasets.
+- Machine learning leverages linear algebra for data processing and analysis.
+- Many AI algorithms depend on linear algebra for core computations.
+- Data modeling and manipulation become more efficient with linear algebra.
+- Most AI and machine learning tasks would be challenging without it.
+
+
+## TODOs
+- [ ] https://medium.com/@ebimsv/mastering-linear-algebra-part-1-introduction-to-linear-algebra-in-machine-learning-fafcae1a5879
 
