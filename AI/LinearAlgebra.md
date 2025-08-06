@@ -9,6 +9,8 @@ To truly understand how machine learning and deep learning algorithms function, 
 
 ---
 
+Below are some detailed topics reasoning importance of Linear Algebra in AI.
+
 ### 1.1 Data Representation
 At its heart, AI, especially machine learning and deep learning, is about processing and transforming data. This data is rarely a single number; it's usually collections of numbers, images, text, or other complex structures. Linear algebra provides the mathematical framework to represent these diverse forms of data and perform efficient operations on them.
 
@@ -26,6 +28,15 @@ Linear algebra is central to data representation in AI because it provides a str
         - Represent higher-dimensional data (e.g., batches of RGB images as Batch × Height × Width × Channels)
 - Without linear algebra, handling these structured forms of data would require manual, element-wise operations, making computation inefficient.
 
+### 1.2 Model Parameters - Weights and Biases
+- AI models, like neural networks, use vectors and matrices to store weights and biases.
+- Weights in a neural network layer are organized as a matrix, connecting inputs to outputs.
+
+### 1.3 Efficient Computations
+- Linear algebra operations (e.g., matrix multiplication, dot products) enable fast and efficient calculations in AI algorithms.
+
+### 1.4 Transformations
+- Linear algebra allows data transformations, like scaling, rotating, or projecting data, which are crucial in AI tasks.
 
 ## 2. Pointers
 - Linear algebra deals with vectors, matrices, and their transformations.
