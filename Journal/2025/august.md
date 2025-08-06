@@ -189,6 +189,9 @@ The roadmap should combine conceptual understanding, hands-on practice, and real
         - https://github.com/saurabh1088/notes/blob/main/AI/LinearAlgebra.md
     - macOS Tahoe, Xcode 26 beta etc
         - Updated mac/iPad to beta
+    - Added TODOs file and updated
+        - https://github.com/saurabh1088/notes/blob/main/AI/TODOs.md
+        - https://www.youtube.com/playlist?list=PLRDl2inPrWQW1QSWhBU0ki-jq_uElkh2a
 
 ---
 
