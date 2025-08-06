@@ -14,6 +14,19 @@ At its heart, AI, especially machine learning and deep learning, is about proces
 
 Linear algebra is central to data representation in AI because it provides a structured way to organize, manipulate, and compute on the massive quantities of data used in modern machine learning and deep learning systems.
 
+#### 1.1.1 Efficient Representation of Complex Data
+- Most data used in AI—images, audio, text embeddings, sensor data—is represented as vectors, matrices, or higher-dimensional tensors.
+    - Scalars(0D)
+        - Represent single values (e.g., a temperature reading)
+    - Vectors(1D)
+        - Represent features of a single entity (e.g., a 300-dimensional word embedding)
+    - Matrices(2D)
+        - Represent structured data (e.g., grayscale images as Height × Width, or tabular data as Samples × Features)
+    - Tensors(3D+)
+        - Represent higher-dimensional data (e.g., batches of RGB images as Batch × Height × Width × Channels)
+- Without linear algebra, handling these structured forms of data would require manual, element-wise operations, making computation inefficient.
+
+
 ## 2. Pointers
 - Linear algebra deals with vectors, matrices, and their transformations.
 - It enables efficient handling of large datasets.
