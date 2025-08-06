@@ -184,6 +184,12 @@ The roadmap should combine conceptual understanding, hands-on practice, and real
 
 ## Wednesday, 6th August 2025
 
+- AI
+    - Updated linear algebra notes
+        - https://github.com/saurabh1088/notes/blob/main/AI/LinearAlgebra.md
+    - macOS Tahoe, Xcode 26 beta etc
+        - Updated mac/iPad to beta
+
 ---
 
 ## Thursday, 7th August 2025
