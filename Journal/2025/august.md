@@ -197,6 +197,10 @@ The roadmap should combine conceptual understanding, hands-on practice, and real
 
 ## Thursday, 7th August 2025
 
+- AI-ML
+    - Create repo
+        - https://github.com/saurabh1088/ai-ml-foundations
+
 ---
 
 ## Friday, 8th August 2025
