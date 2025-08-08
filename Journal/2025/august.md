@@ -200,10 +200,17 @@ The roadmap should combine conceptual understanding, hands-on practice, and real
 - AI-ML
     - Create repo
         - https://github.com/saurabh1088/ai-ml-foundations
+    - Added jupyter notebook
+        - https://github.com/saurabh1088/ai-ml-foundations/blob/main/notebooks/linear-algebra-an-introduction.ipynb
+        
 
 ---
 
 ## Friday, 8th August 2025
+
+- AI-ML
+    - Added julyter notebook example for linear algebra
+        - https://github.com/saurabh1088/ai-ml-foundations/blob/main/notebooks/linear-algebra-an-introduction.ipynb
 
 ---
 
