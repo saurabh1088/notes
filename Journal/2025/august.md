@@ -240,6 +240,8 @@ The roadmap should combine conceptual understanding, hands-on practice, and real
         - Explore Speech
         - Azure AI Foundry
             - One can build deploy manage models, tools etc into single scalable one place
+    - Added jupyter notebook
+        - https://github.com/saurabh1088/ai-ml-foundations/blob/main/notebooks/linear-algebra/linear-algebra-example-one.ipynb
 
 ---
 
