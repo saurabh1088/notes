@@ -216,6 +216,31 @@ The roadmap should combine conceptual understanding, hands-on practice, and real
 
 ## Saturday, 9th August 2025
 
+- AI-ML
+    - Session Great Learnings
+        - NLP Concepts
+            - Tokenization
+                - Foundational step in NLP where raw text is broken down in smaller units called tokens
+            - Corpus
+                - Large and structured set of texts used to train and evaluate NLP models
+            - Naive Bayes
+                - Machine learning algorith based on Bayes Theorem
+                - Performs well in spam detection
+                - It requires very low resources
+            - TF-IDF Term Frequency-Inverse Document Frequency
+                - Used to evaluate how important a word is in a document
+            - Machine learning for NLP
+                - Machine LEarning enables NLP systems to learn from data rather relying from hard coded rules
+            - Semantic Language Models
+                - These advanced models understand not just words but their meaning and context
+            - Speech processing in NLP
+                - Converting spoken language into text and vice versa
+        - Analyse text with Language
+        - Use CLU with Language
+        - Explore Speech
+        - Azure AI Foundry
+            - One can build deploy manage models, tools etc into single scalable one place
+
 ---
 
 ## Sunday, 10th August 2025
