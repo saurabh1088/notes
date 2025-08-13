@@ -22,3 +22,4 @@ In this analogy, the final “decision score” is calculated as the weighted su
 Final Decision Score = Σ (feature × weight) + bias
 
 Learning is the iterative process of tuning these weights and biases using training data to minimize prediction error.
+

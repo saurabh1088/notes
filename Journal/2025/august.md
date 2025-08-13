@@ -269,6 +269,8 @@ The roadmap should combine conceptual understanding, hands-on practice, and real
 
 - AI/ML
     - Weights and Biases
+        - Added notes
+            - https://github.com/saurabh1088/notes/blob/main/AI/WeightsAndBiases.md
 
 ### Prompts
 ```
