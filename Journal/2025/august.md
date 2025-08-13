@@ -247,17 +247,25 @@ The roadmap should combine conceptual understanding, hands-on practice, and real
 
 ## Sunday, 10th August 2025
 
+- BREAK
+
 ---
 
 ## Monday, 11th August 2025
+
+- BREAK
 
 ---
 
 ## Tuesday, 12th August 2025
 
+- BREAK
+
 ---
 
 ## Wednesday, 13th August 2025
+
+- RESUME
 
 ---
 
