@@ -267,6 +267,20 @@ The roadmap should combine conceptual understanding, hands-on practice, and real
 
 - RESUME
 
+- AI/ML
+    - Weights and Biases
+
+### Prompts
+```
+Explain the concepts of "weights" and "biases" as used in machine learning and neural networks.
+The explanation should be:
+
+- Accessible and intuitive, enabling someone to quickly grasp the core idea.
+- Deep and precise enough for a seasoned software engineer, such that they can understand not just what weights and biases are, but how and why they are used, and how one would implement them in code.
+- Where helpful, include analogies, mathematical intuition, and practical implications for engineering/model design.
+- Avoid unnecessary jargon, but do not oversimplify critical details that would aid in a practical, engineering-level understanding.
+```
+
 ---
 
 ## Thursday, 14th August 2025
