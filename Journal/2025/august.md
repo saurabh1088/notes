@@ -287,6 +287,10 @@ The explanation should be:
 
 ## Thursday, 14th August 2025
 
+- AI/ML
+    - Weights & Biases continues
+        - https://github.com/saurabh1088/notes/blob/main/AI/WeightsAndBiases.md
+
 ---
 
 ## Friday, 15th August 2025
