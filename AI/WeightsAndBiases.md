@@ -4,6 +4,8 @@
 ## What are weights and biases?
 Weights and biases are the fundamental learnable parameters of a machine learning model, such as a neural network. They are the numerical values that the model adjusts during training to transform input data into a meaningful output.
 
+Another way to put, weights and biases are the fundamental parameters that a model "learns." They are the knobs and dials that the model tunes during training to make accurate predictions.
+
 
 ## An Intuitive Analogy
 
@@ -22,4 +24,23 @@ In this analogy, the final “decision score” is calculated as the weighted su
 Final Decision Score = Σ (feature × weight) + bias
 
 Learning is the iterative process of tuning these weights and biases using training data to minimize prediction error.
+
+
+## Why Are They Necessary?
+
+### Weights
+- They determine how strongly each input influences the output.
+- Without tailored weights, a model cannot adjust to patterns in data.
+
+### Biases
+- Provide a mechanism to adjust the output regardless of input—they allow the model to fit the data more flexibly.
+- Without a bias, function is forced to always pass through the origin (i.e., output=0 when all inputs are 0), which is a mathematical and practical limitation in most applications.
+
+
+## Practical Implications & Model Design
+- Every connection between neurons (in dense layers) gets a weight; every neuron typically has its bias.
+- In a deep neural network, hundreds of thousands (or millions) of weights and biases are optimized during training by an algorithm like gradient descent, based on a loss function.
+- The initial values for weights and biases are chosen (often randomly), and they are updated during training as the model sees more data.
+
+
 
