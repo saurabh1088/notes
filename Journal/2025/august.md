@@ -290,6 +290,8 @@ The explanation should be:
 - AI/ML
     - Weights & Biases continues
         - https://github.com/saurabh1088/notes/blob/main/AI/WeightsAndBiases.md
+- Data structures
+    - Stack & Hash Tables
 
 ---
 
