@@ -8,7 +8,6 @@ Another way to put, weights and biases are the fundamental parameters that a mod
 
 
 ## An Intuitive Analogy
-
 Consider a single-person committee tasked with deciding whether a new movie is good. The decision is based on three key inputs (features):
 
 1. The movie's rating on Rotten Tomatoes.
@@ -41,7 +40,6 @@ This raw score of 54.15 is the output of the linear combination. In a real neura
 
 
 ## Why Are They Necessary?
-
 ### Weights
 - They determine how strongly each input influences the output.
 - Without tailored weights, a model cannot adjust to patterns in data.
@@ -57,4 +55,20 @@ This raw score of 54.15 is the output of the linear combination. In a real neura
 - The initial values for weights and biases are chosen (often randomly), and they are updated during training as the model sees more data.
 
 
+## Weight Initialization Techniques
+Weight initialization is the process of setting the initial values for the weights of a neural network before training begins.
+
+### Why is it required?
+- Weight initialization is critical for the stable and efficient training of deep neural networks. Without a proper starting point, the network can run into two major problems:
+    - Vanishing Gradients
+        - If weights are initialized to very small values, the gradients (the signals used to update weights) become progressively smaller as they propagate backward through the layers. This causes the weights in the early layers to change very little, and the network fails to learn.
+    - Exploding Gradients
+        - Conversely, if weights are too large, the gradients can grow exponentially with each layer. This leads to unstable learning, causing the weights to become so large that the model's performance diverges and becomes erratic.
+- A third, equally important issue that proper initialization solves is the symmetry problem. If all weights are initialized to the same value (like zero), every neuron in a given layer will compute the same output and receive the same gradient update. This means all neurons will remain identical, making the network no more powerful than a single neuron.
+
+### What it achieves?
+- The goal of weight initialization is to set the weights in a way that keeps the signal variance stable across all layers during both the forward and backward passes. It ensures that the gradients are in a "healthy" range—neither too small nor too large—allowing the model to converge efficiently.
+- Modern techniques, such as Xavier/Glorot Initialization and He Initialization, are designed to achieve this by setting the initial weights from a random distribution with a specific variance that depends on the number of input and output neurons in a layer.
+    - **Xavier Initialization** is tailored for activation functions like **tanh** and **sigmoid**.
+    - **He Initialization** is specifically designed for **ReLU** and its variants, which are the most common activation functions in deep learning today.
 
