@@ -25,6 +25,20 @@ Final Decision Score = Σ (feature × weight) + bias
 
 Learning is the iterative process of tuning these weights and biases using training data to minimize prediction error.
 
+Suppose a movie committee is trying to score a film based on three key features:
+
+- Rotten Tomatoes: 80%
+- Length: 120 minutes
+- Awards: 3
+
+The committee's learned importance for each feature is represented by a set of weights: [0.5,0.1,0.05]. They also have a baseline positive score, or bias, of 2.
+
+The final decision score is calculated as a weighted sum of the features plus the bias:
+
+0.5×80+0.1×120+0.05×3+2=40+12+0.15+2=54.15
+
+This raw score of 54.15 is the output of the linear combination. In a real neural network, this value would then be passed through an activation function to produce the final prediction, such as a probability score or a classification.
+
 
 ## Why Are They Necessary?
 
