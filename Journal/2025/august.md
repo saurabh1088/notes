@@ -297,6 +297,11 @@ The explanation should be:
 
 ## Friday, 15th August 2025
 
+- AI/ML
+    - Weights & Biases
+        - Updated sheet
+            - https://github.com/saurabh1088/notes/blob/main/AI/WeightsAndBiases.md
+
 ---
 
 ## Saturday, 16th August 2025
