@@ -306,6 +306,11 @@ The explanation should be:
 
 ## Saturday, 16th August 2025
 
+- Python
+    - List comprehension
+        - Added examples file
+            - https://github.com/saurabh1088/python/blob/main/learnings/about_lists.py
+
 ---
 
 ## Sunday, 17th August 2025
