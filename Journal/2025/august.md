@@ -319,6 +319,9 @@ The explanation should be:
     - List comprehension
         - Added examples file
             - https://github.com/saurabh1088/python/blob/main/learnings/about_lists.py
+    - Negative indexes
+        - Added examples
+            - https://github.com/saurabh1088/python/blob/main/learnings/about_lists.py
 
 ---
 
