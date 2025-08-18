@@ -327,6 +327,11 @@ The explanation should be:
 
 ## Monday, 18th August 2025
 
+- Python
+    - Simple web app using Flask
+        - Created starter app with Flask
+            - https://github.com/saurabh1088/python/tree/main/projects/simple_calculator
+
 ---
 
 ## Tuesday, 19th August 2025
