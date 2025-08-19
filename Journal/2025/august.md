@@ -340,6 +340,9 @@ The explanation should be:
     - Flask
         - Documented starter project app.py implementation
             - https://github.com/saurabh1088/python/tree/main/projects/simple_calculator
+        - Added sample project with detailed README steps for reference
+            - https://github.com/saurabh1088/python/tree/main/projects/simple_flask
+            - https://github.com/saurabh1088/python/blob/main/projects/simple_flask/README.md
 
 ---
 
