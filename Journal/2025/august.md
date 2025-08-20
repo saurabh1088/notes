@@ -348,6 +348,10 @@ The explanation should be:
 
 ## Wednesday, 20th August 2025
 
+- Git
+    - Created new rep for Git playground
+        - https://github.com/saurabh1088/git-playground
+
 ---
 
 ## Thursday, 21st August 2025
