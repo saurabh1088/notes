@@ -356,6 +356,10 @@ The explanation should be:
 
 ## Thursday, 21st August 2025
 
+- Python/Flask
+    - Updated README for managing virtual environment
+        - https://github.com/saurabh1088/python/blob/main/projects/simple_flask/README.md
+
 ---
 
 ## Friday, 22nd August 2025
