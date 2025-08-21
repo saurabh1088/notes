@@ -361,6 +361,8 @@ The explanation should be:
         - https://github.com/saurabh1088/python/blob/main/projects/simple_flask/README.md
     - Added new decorator for routing to function serving HTML.
         - https://github.com/saurabh1088/python/tree/main/projects/simple_flask
+- Reference
+    - https://flask.palletsprojects.com/en/stable/
 
 ---
 
