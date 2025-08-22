@@ -368,6 +368,10 @@ The explanation should be:
 
 ## Friday, 22nd August 2025
 
+- Python/Flask
+    - Added new route with variables
+        - https://github.com/saurabh1088/python/tree/main/projects/simple_flask
+
 ---
 
 ## Saturday, 23rd August 2025
