@@ -378,9 +378,29 @@ The explanation should be:
 
 - AI/ML
     - Session
+        - https://learn.microsoft.com/en-us/training/modules/introduction-computer-vision/
+        - https://learn.microsoft.com/en-us/training/modules/get-started-computer-vision-azure/
+        - https://learn.microsoft.com/en-us/training/modules/introduction-information-extraction/
+        - https://learn.microsoft.com/en-us/training/modules/ai-information-extraction/
+        - https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/quickstarts-sdk/image-analysis-client-library-40?tabs=visual-studio%2Cwindows&pivots=programming-language-python
+        - https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/vision/azure-ai-vision-imageanalysis/samples
+        - https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/vision/Azure.AI.Vision.ImageAnalysis/samples
+        - https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/quickstarts-sdk/identity-client-library?tabs=windows%2Cvisual-studio&pivots=programming-language-python
+        - https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/tutorials/build-enrollment-app?tabs=android
+        - https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/tutorials/liveness?tabs=csharp%2Cmobile-kotlin
+        - https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/quickstarts-sdk/client-library?tabs=windows%2Cvisual-studio&pivots=programming-language-python
+        - https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/invoice?view=doc-intel-4.0.0
+        - https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/receipt?view=doc-intel-4.0.0
+        - https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/quickstarts/studio-custom-project?view=doc-intel-4.0.0
+        - https://github.com/Azure-Samples/document-intelligence-code-samples/blob/main/Python(v4.0)/Layout_model/README.md
+        - https://learn.microsoft.com/en-us/previous-versions/azure/search/cognitive-search-custom-skill-form?view=doc-intel-4.0.0
+        - https://learn.microsoft.com/en-us/training/paths/explore-azure-machine-learning-workspace/
+        - https://learn.microsoft.com/en-us/sysinternals/downloads/zoomit
 - Python
     - Updated README for flask sample project for another command to run project
         - https://github.com/saurabh1088/python/blob/main/projects/simple_flask/README.md
+    - Create new flask project
+        - https://github.com/saurabh1088/python/tree/main/projects/flask_project
 
 ---
 
