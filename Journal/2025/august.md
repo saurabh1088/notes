@@ -405,6 +405,9 @@ The explanation should be:
     - Added a sample index.html file
     - Updated example for index rounte in app.py in flask_project to serve html file using Jinja2
         - https://github.com/saurabh1088/python/tree/main/projects/flask_project
+    - Added group Web in notes
+    - Added notes for Flask framework
+        - https://github.com/saurabh1088/notes/blob/main/Web/Frameworks/Flask/About.md
 
 ---
 
