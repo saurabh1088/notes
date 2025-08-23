@@ -399,7 +399,11 @@ The explanation should be:
 - Python
     - Updated README for flask sample project for another command to run project
         - https://github.com/saurabh1088/python/blob/main/projects/simple_flask/README.md
-    - Create new flask project
+    - Created new flask project
+        - https://github.com/saurabh1088/python/tree/main/projects/flask_project
+    - Installed Jinja2 in flask_project virtual environment
+    - Added a sample index.html file
+    - Updated example for index rounte in app.py in flask_project to serve html file using Jinja2
         - https://github.com/saurabh1088/python/tree/main/projects/flask_project
 
 ---
