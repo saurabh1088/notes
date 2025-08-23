@@ -376,6 +376,12 @@ The explanation should be:
 
 ## Saturday, 23rd August 2025
 
+- AI/ML
+    - Session
+- Python
+    - Updated README for flask sample project for another command to run project
+        - https://github.com/saurabh1088/python/blob/main/projects/simple_flask/README.md
+
 ---
 
 ## Sunday, 24th August 2025
