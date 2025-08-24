@@ -413,6 +413,10 @@ The explanation should be:
 
 ## Sunday, 24th August 2025
 
+- Flask
+    - Added task tracking TODO list for project flask_project
+        - https://github.com/saurabh1088/python/blob/main/projects/flask_project/README.md
+
 ---
 
 ## Monday, 25th August 2025
