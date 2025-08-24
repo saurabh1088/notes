@@ -416,6 +416,8 @@ The explanation should be:
 - Flask
     - Added task tracking TODO list for project flask_project
         - https://github.com/saurabh1088/python/blob/main/projects/flask_project/README.md
+    - Added style.css and update index.html to use the same
+    - Updated project folder structure to group css and images inside static folder
 
 ---
 
