@@ -423,6 +423,10 @@ The explanation should be:
 
 ## Monday, 25th August 2025
 
+- Flask
+    - Added route for form submission
+    - Added a success.html to show submitted data if success.
+
 ---
 
 ## Tuesday, 26th August 2025
