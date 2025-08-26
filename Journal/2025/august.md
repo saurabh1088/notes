@@ -431,6 +431,10 @@ The explanation should be:
 
 ## Tuesday, 26th August 2025
 
+- Flask
+    - Added error handling for hero form
+    - Updated route hero_form_data to handle GET and POST both
+
 ---
 
 ## Wednesday, 27th August 2025
