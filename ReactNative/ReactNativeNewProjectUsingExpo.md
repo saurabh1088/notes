@@ -16,7 +16,8 @@ expo init react-native-starter-project
 
 ### Start development server
 
-
+cd react-native-starter-project
+npm start
 
 
 
