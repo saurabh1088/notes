@@ -439,6 +439,11 @@ The explanation should be:
 
 ## Wednesday, 27th August 2025
 
+- React Native
+    - Kick start
+    - Basic concepts
+    - Handon creating project using expo
+
 ---
 
 ## Thursday, 28th August 2025
