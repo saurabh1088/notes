@@ -10,15 +10,18 @@
 
 ### Create a new project
 
+```
 expo init react-native-starter-project
+```
 
 - This will prompt to choose a template
 
 ### Start development server
 
+```
 cd react-native-starter-project
 npm start
-
+```
 
 
 ## Detailed logs
