@@ -1,7 +1,6 @@
 #  ReactNative
 
 
-## What is React Native?
 - React Native is an open-source Framework which was developed by FaceBook. 
 - React Native enables one to build mobile applications using 
     - JavaScript and
