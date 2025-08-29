@@ -458,6 +458,8 @@ The explanation should be:
     - Hands-on creating project using expo
     - Updated steps for set up react native project with Expo
         - https://github.com/saurabh1088/notes/blob/main/ReactNative/ReactNativeNewProjectUsingExpo.md
+    - Updated notes at
+        - https://github.com/saurabh1088/notes/blob/main/ReactNative/ReactNative.md
 
 ---
 
