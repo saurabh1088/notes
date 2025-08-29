@@ -442,15 +442,22 @@ The explanation should be:
 - React Native
     - Kick start
     - Basic concepts
-    - Handon creating project using expo
+    - Hands-on creating project using expo
 
 ---
 
 ## Thursday, 28th August 2025
 
+- BREAK
+
 ---
 
 ## Friday, 29th August 2025
+
+- React Native
+    - Hands-on creating project using expo
+    - Updated steps for set up react native project with Expo
+        - https://github.com/saurabh1088/notes/blob/main/ReactNative/ReactNativeNewProjectUsingExpo.md
 
 ---
 
