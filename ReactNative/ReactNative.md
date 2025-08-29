@@ -23,6 +23,21 @@ native components.
     - Bridge (or JSI in new architecture), and
     - Native layer
 
+
+## So does React Native uses React?
+- Yes, React Native uses React.
+- It is built on top of the React library and applies its core principles to create native mobile applications.
+- While React Native uses React, it's essential to understand the distinction:
+    - No HTML or CSS
+        - Instead of HTML tags, React Native's core components (e.g., <View> and <Text>) are used.
+        - For styling, one uses a subset of CSS properties, primarily Flexbox, which is applied directly to the components via a style prop.
+    - No DOM
+        - React Native does not use the Document Object Model (DOM).
+        - Instead, it directly communicates with the native UI layer, making it fundamentally different from web-based rendering.
+    - Platform APIs
+        - App interacts with device-specific APIs (like the camera, GPS, or accelerometer) through React Native's built-in modules or third-party libraries, rather than web APIs.
+
+
 ## React Native UI Components
 <View>
 <Text>
