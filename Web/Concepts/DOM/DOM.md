@@ -61,3 +61,10 @@ this content.
 In short, HTML provides the initial content, the browser uses it to create the DOM in memory, and JavaScript uses the DOM to manipulate that content and make the page interactive.
 
 ---
+
+## Key points about DOM
+- It’s not HTML itself, but a live representation of it.
+- It allows JavaScript to interact with the page.
+- It’s tree-structured (parent → child elements).
+- Browsers constantly re-render when the DOM is updated.
+
