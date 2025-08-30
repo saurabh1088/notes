@@ -469,6 +469,18 @@ The explanation should be:
     - DOM
         - Added DOM notes file
             - https://github.com/saurabh1088/notes/blob/main/Web/Concepts/DOM/DOM.md
+- AI/ML
+    - Session
+        - https://microsoftlearning.github.io/mslearn-ai-studio/Instructions/02a-AI-foundry-sdk.html
+        - https://learn.microsoft.com/en-us/training/modules/explore-models-azure-ai-studio/
+        - https://learn.microsoft.com/en-us/training/modules/ai-foundry-sdk/
+        - https://learn.microsoft.com/en-us/training/modules/build-copilot-ai-studio/
+        - https://learn.microsoft.com/en-us/training/modules/finetune-model-copilot-ai-studio/
+        - https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/
+        - https://learn.microsoft.com/en-us/training/modules/get-started-generative-ai-azure/
+        - https://microsoftlearning.github.io/mslearn-ai-studio/Instructions/02-Explore-model-catalog.html
+        - https://microsoftlearning.github.io/mslearn-ai-studio/Instructions/04-Use-own-data.html
+        - Recommendation - Azure AI 102 Certification
 
 ---
 
