@@ -22,7 +22,7 @@
 
     - Text Nodes:
         - These nodes hold the text content within an element.
-        - For example, the text "Welcome" inside an <h1> tag would be a text node.
+        - For example, the text "Welcome" inside an `<h1>` tag would be a text node.
 
 - This tree-like structure defines the relationships between all parts of the document, such as parent, child, and sibling nodes, allowing developers to programmatically access and manipulate them.
 
