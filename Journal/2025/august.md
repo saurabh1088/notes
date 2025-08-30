@@ -465,6 +465,11 @@ The explanation should be:
 
 ## Saturday, 30th August 2025
 
+- Web
+    - DOM
+        - Added DOM notes file
+            - https://github.com/saurabh1088/notes/blob/main/Web/Concepts/DOM/DOM.md
+
 ---
 
 ## Sunday, 31st August 2025
