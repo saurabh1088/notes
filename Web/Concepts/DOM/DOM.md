@@ -1,14 +1,16 @@
 # DOM - Document Object Model
 
+---
 
 ## What is DOM?
 - DOM is Document Object Model
 - It is a programming interface (an object representation) of a web page that browsers create when they load HTML.
 - The DOM models a web page as a tree of objects (nodes), where each element, attribute, and piece of text is a node.
 
----
 
 - The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM models a web page as a hierarchical tree of objects, where each object, or node, represents a part of the document.
+
+---
 
 ## DOM Tree Structure
 - The tree begins with the Document node at the top. Everything else in the web page is a descendant of this node.
@@ -26,6 +28,7 @@
 
 - This tree-like structure defines the relationships between all parts of the document, such as parent, child, and sibling nodes, allowing developers to programmatically access and manipulate them.
 
+---
 
 ## DOM, HTML, JavaScript - How these all come together to render page on web browser
 - These can be thought of as three distinct but interconnected components of a web page.
@@ -57,3 +60,4 @@ this content.
 
 In short, HTML provides the initial content, the browser uses it to create the DOM in memory, and JavaScript uses the DOM to manipulate that content and make the page interactive.
 
+---
