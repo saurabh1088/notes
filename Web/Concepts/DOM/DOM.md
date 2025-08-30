@@ -13,7 +13,7 @@
 ## DOM Tree Structure
 - The tree begins with the Document node at the top. Everything else in the web page is a descendant of this node.
     - Element Nodes:
-        - These nodes represent HTML tags, such as <html>, <head>, <body>, <h1>, and <p>.
+        - These nodes represent HTML tags, such as `<html>`, `<head>`, `<body>`, `<h1>`, and `<p>`.
         - They are the main building blocks of the tree.
 
     - Attribute Nodes:
